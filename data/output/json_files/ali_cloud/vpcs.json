@@ -1,0 +1,3283 @@
+{
+    "redirect": false,
+    "eagleEyeTraceId": "ac1b434517574854718235105d0089",
+    "Vpcs": {
+        "Vpc": [
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.254.64/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kylq5htglrk4t1rl9g9s"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky8u8xgplq1wsnwvs90f",
+                "AdvancedResource": false,
+                "Department": 60,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 67,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": []
+                },
+                "VpcId": "vpc-5ky0doqnldvpni7bkuvmm",
+                "CreationTime": "2025-09-04T08:58:45Z",
+                "DepartmentName": "ES-业务测试专区",
+                "VpcName": "ipv6",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "fd00:1:1205:18::/61",
+                "Ipv6CidrBlocks": {
+                    "Ipv6CidrBlock": [
+                        {
+                            "Ipv6Isp": "BGP",
+                            "Ipv6CidrBlock": "fd00:1:1205:18::/61"
+                        }
+                    ]
+                },
+                "ResourceGroupName": "ResourceSet(业务测试)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.254.32/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyhsvuzz47nfb669xlel"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky1ch0c72lpm72mnif18",
+                "AdvancedResource": false,
+                "Department": 60,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 67,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": []
+                },
+                "VpcId": "vpc-5ky7y1mgeyiszf7qr81az",
+                "CreationTime": "2025-09-04T08:58:08Z",
+                "DepartmentName": "ES-业务测试专区",
+                "VpcName": "",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "fd00:1:1205:20::/61",
+                "Ipv6CidrBlocks": {
+                    "Ipv6CidrBlock": [
+                        {
+                            "Ipv6Isp": "BGP",
+                            "Ipv6CidrBlock": "fd00:1:1205:20::/61"
+                        }
+                    ]
+                },
+                "ResourceGroupName": "ResourceSet(业务测试)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "192.168.0.0/16"
+                    ]
+                },
+                "CidrBlock": "172.28.39.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyc56pdwbavm0h1z3z41"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyw5ydhmmuyy19d8zn28",
+                "AdvancedResource": false,
+                "Department": 134,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 168,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyg0s6pxsl4o34aquxwf",
+                        "vsw-5kywvs093hlwbxo62grha",
+                        "vsw-5ky1dor97n3d2w19ahsm5",
+                        "vsw-5kyrmicmx4y9c1nrnfl36"
+                    ]
+                },
+                "VpcId": "vpc-5kylnkj55k8t1wbpvzlof",
+                "CreationTime": "2025-09-01T06:39:04Z",
+                "DepartmentName": "ZCE-集团化OA应用-生产环境",
+                "VpcName": "VPC-ZCE集团化办公系统-生产环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(ZCE-集团化OA应用-生产环境)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.34.208/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kygoh9dj1lax24l3px6f"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyo3da3kzyc1y8126iwm",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 165,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyoty96fosnqtrl6vrvf",
+                        "vsw-5ky9fywwpb80cd4z45rnc"
+                    ]
+                },
+                "VpcId": "vpc-5kydv0cq6k6m6ozd38mk5",
+                "CreationTime": "2025-08-15T06:01:52Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-党务工作部-党建e家",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-党务工作部-党建e家"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "10.1.1.0/24",
+                        "10.1.2.0/24",
+                        "10.1.3.0/24",
+                        "10.1.4.0/24",
+                        "10.19.1.160/27"
+                    ]
+                },
+                "CidrBlock": "172.28.141.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyall9g5ybzxxq6l6tnn"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky1jgk24slz0xmdvaaw2",
+                "AdvancedResource": true,
+                "Department": 131,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kym7gw882beo44umy1oo"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 163,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Attached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyazkcv8j9pmhnlcmlz6",
+                        "vsw-5kyc3yyholw1ud03vs98a",
+                        "vsw-5kyqrz74vd3hsq7juqf21",
+                        "vsw-5kyp139qnbcdgnm3pcbnr",
+                        "vsw-5ky72596oa3is7aucym5i",
+                        "vsw-5kyvx57f64yr1ciaakohy",
+                        "vsw-5kyety3a9g2b3ok0awnfp",
+                        "vsw-5kyr0mwbunu06knkdo1l1"
+                    ]
+                },
+                "VpcId": "vpc-5kydqwpfia0hfivh5k3oh",
+                "CreationTime": "2025-08-06T06:06:08Z",
+                "DepartmentName": "光大期货",
+                "VpcName": "VPC01-光大期货-CTP灾备",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(光大期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.37.96/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kymnvhgix5l2iiq3d61r"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kykkzjvmp1t0av76w3by",
+                "AdvancedResource": false,
+                "Department": 124,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 162,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyo1395tx7jugve89m5z"
+                    ]
+                },
+                "VpcId": "vpc-5kyetc7tjy1rnis3zven1",
+                "CreationTime": "2025-07-24T07:15:29Z",
+                "DepartmentName": "ZCE-会员管理部",
+                "VpcName": "vpc-会员部-金服投教系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-会员管理部-投教平台"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.137.64/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky3z9b0k8bhytpomf41s"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky6mi09r9cq76t0tzfwf",
+                "AdvancedResource": false,
+                "Department": 129,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky0ycg2g5l48wqskaqf5"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 158,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyu37wrt6dg9qj8gx8qr"
+                    ]
+                },
+                "VpcId": "vpc-5kyncsb1j66tyzkmkz9ry",
+                "CreationTime": "2025-07-16T00:31:56Z",
+                "DepartmentName": "西部",
+                "VpcName": "VPC01-西部期货-官网系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(西部)"
+            },
+            {
+                "shared": 0,
+                "Description": "网络工程中心业务VPC",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.8.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky7qg7aklkst0j7t53eo"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyif7pw9w6p9cjo8jl33",
+                "AdvancedResource": false,
+                "Department": 52,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 157,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyixlecz5lxnop935081",
+                        "vsw-5kyu0my3wke3ud46erko0"
+                    ]
+                },
+                "VpcId": "vpc-5kyrr2ej85im2ualtj9tq",
+                "CreationTime": "2025-06-17T06:15:48Z",
+                "DepartmentName": "ES-网络工程中心",
+                "VpcName": "VPC-ES-网络工程中心",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ES-易盛技术服务平台"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.37.128/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kygwojzoh0db54sk4y28"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyri98grnmehdlugc7lb",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 156,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyhg9zclfuf6bhgtmt0y",
+                        "vsw-5ky0ogzy1utiskgai9kdt"
+                    ]
+                },
+                "VpcId": "vpc-5kyroxug5eup5yqi1pmy6",
+                "CreationTime": "2025-06-13T02:06:08Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-商品一部-现货价格指数系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-商品一部-现货价格指数系统"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.137.0/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky6ijttcvq0vt8gkntie"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky6jx1l1sajfkgry17ad",
+                "AdvancedResource": false,
+                "Department": 127,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kywhydp3oafebjj7woho"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 154,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kynyctmg42hx4btlwqgp"
+                    ]
+                },
+                "VpcId": "vpc-5ky9hy04pa9lzsdpv33tw",
+                "CreationTime": "2025-05-27T05:42:16Z",
+                "DepartmentName": "国盛期货",
+                "VpcName": "VPC_国盛_SIM-CTP_01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(国盛期货有限责任公司)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.136.192/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyyaigkdars6gcz4w3c7"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kynjbg5fq9eqzxqhpt5y",
+                "AdvancedResource": false,
+                "Department": 121,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 145,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky8ddxnkvkembpk4fn33"
+                    ]
+                },
+                "VpcId": "vpc-5kyh5snsai54m45lcr011",
+                "CreationTime": "2025-05-19T07:11:25Z",
+                "DepartmentName": "新世纪期货",
+                "VpcName": "VPC01-新世纪期货-系统测试",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(新世纪期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.38.0/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky4w7ybua2p7imloque5"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyics831ma7q2i48a9uk",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 152,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyu0hh8fd8e7afbl2l3y"
+                    ]
+                },
+                "VpcId": "vpc-5ky2crynkfigi16d2bot7",
+                "CreationTime": "2025-05-09T00:46:55Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-集团化公共数据库-测试环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-集团化公共数据库-测试环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.37.64/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky1xl4ca55xf8kaxlkwq"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kylcbv9v7zhwymn01mvt",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 151,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyihhqutu0amu9jfjtaz"
+                    ]
+                },
+                "VpcId": "vpc-5kyg7x7ajuo7w1gx4cgew",
+                "CreationTime": "2025-05-09T00:42:38Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-集团化公共数据库-生产环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-集团化公共数据库-生产环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.34.224/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyos4mtihd9ct06v32dq"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kypzq2kknzgutddhhtql",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 149,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky8acke1j6szxomev2rz"
+                    ]
+                },
+                "VpcId": "vpc-5kylg4kusegh6mq8pcczw",
+                "CreationTime": "2025-04-21T02:32:52Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-会员管理部-郑商所模拟大赛",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-会员管理部-“郑商所杯”模拟交易系统"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.37.0/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky6xa9jtar48qkyd2k8u"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyd4fdnqavntfaa5nbp9",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 75,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky9mi210atz9n0hxo2kf"
+                    ]
+                },
+                "VpcId": "vpc-5kyaty0wzptwpgck2vwfw",
+                "CreationTime": "2025-04-18T07:20:44Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-集团化应用-IAM生产环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-IAM生产环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.138.0/23",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kybryya7kgibmt3wfowt"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyl887ye2qiwsau4ii1o",
+                "AdvancedResource": false,
+                "Department": 68,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 76,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": []
+                },
+                "VpcId": "vpc-5kynik3u1w5zyk7mxsfrv",
+                "CreationTime": "2025-04-15T07:36:33Z",
+                "DepartmentName": "东吴期货",
+                "VpcName": "VPC01-东吴期货-上云系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(东吴期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.136.64/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kysgfmp29v9aekvd9h37"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyue5mxcexj9zczb7zr6",
+                "AdvancedResource": false,
+                "Department": 123,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 147,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kywgl5x0c6h5ly1isd6s"
+                    ]
+                },
+                "VpcId": "vpc-5kya0bol045ep6d7dkg5d",
+                "CreationTime": "2025-04-10T02:09:39Z",
+                "DepartmentName": "广发期货",
+                "VpcName": "VPC01-广发期货-系统测试",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(广发期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.136.0/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky8fihqnm8awhfj395zg"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky9ktwjkakbhkeurdmdn",
+                "AdvancedResource": false,
+                "Department": 122,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 146,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kywchilxmgxhwwkt7p31"
+                    ]
+                },
+                "VpcId": "vpc-5kydx4wtnqdw8dtmw7pmy",
+                "CreationTime": "2025-04-09T06:15:05Z",
+                "DepartmentName": "中财期货",
+                "VpcName": "VPC01-中财期货-系统测试",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(中财期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "用于软件服务部对郑商所内部应用系统的运维监控工具",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.36.192/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky3wtt6xivj9wpe8cl7l"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyfbvd4xjjsa05p8sbq8",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 142,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyqcscss7o1lyaxyuq8y"
+                    ]
+                },
+                "VpcId": "vpc-5kyf44h40ezj61ukt0hnj",
+                "CreationTime": "2025-01-08T02:25:52Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC-郑商所内部应用运维监控",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-交易所应用运维监控"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.240/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyp8u5rkfwj9xg3u4w7s"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky6lw4t1rc3xx2uzkydz",
+                "AdvancedResource": false,
+                "Department": 99,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky6rteh1oh0bj3biwm55"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 110,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky4ip9iefj6s1e0jjlg0"
+                    ]
+                },
+                "VpcId": "vpc-5kyhm1s5ilcyyw0m6eyvq",
+                "CreationTime": "2024-12-18T06:52:24Z",
+                "DepartmentName": "河南省证券期货基金业协会",
+                "VpcName": "VPC-河南协会-数据报送系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(河南省证券期货基金业协会)"
+            },
+            {
+                "shared": 0,
+                "Description": "场外综合业务平台",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.24.0/21",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyupeatfm9l4n61usn3a"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyh2gct022c1w7q8urc5",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 140,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky8m73pmxx4wa0ojgfji",
+                        "vsw-5kyulwiynz15q5slv74ks",
+                        "vsw-5ky59a8kg9aocxkrteqb1",
+                        "vsw-5ky69qnqwdtqzrq7yfuek",
+                        "vsw-5ky7nkaw40tezs4r8jl4b"
+                    ]
+                },
+                "VpcId": "vpc-5kyxsfpumfnvpaxhgvm5g",
+                "CreationTime": "2024-12-13T08:09:19Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC-场外综合业务平台",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-期货衍生品部-场外综合业务平台-生产环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.36.128/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyhtn7bcyaxoudclpga5"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyxcc2c2oitymrrqaiss",
+                "AdvancedResource": false,
+                "Department": 35,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyu6v5hnl82eutisrwz2"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 138,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyxqb5rjozylb5f57b2u"
+                    ]
+                },
+                "VpcId": "vpc-5ky5a71qwv0cgu39i26jv",
+                "CreationTime": "2024-11-25T07:32:34Z",
+                "DepartmentName": "郑商所",
+                "VpcName": "VPC01-人力资源部-人力系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-人力资源部-集团人力资源管理项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.16.0/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyczke1o6m2tvt9qhbyk"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyepe1dyfhtnb9bz6j0r",
+                "AdvancedResource": false,
+                "Department": 116,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 134,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": []
+                },
+                "VpcId": "vpc-5ky3sf863pgtwfuzbjqoa",
+                "CreationTime": "2024-11-25T06:02:49Z",
+                "DepartmentName": "ES-金融产品开发部",
+                "VpcName": "VPC01-金融产品部",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ES-金融产品开发部默认项目"
+            },
+            {
+                "shared": 1,
+                "Description": "一部智能客服生产环境",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.36.64/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kycmcmxzfrrgx9wbozhx"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyh3d5zgns03shbml67o",
+                "AdvancedResource": false,
+                "Department": 50,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kytwdtxcnis7rdkc4s6q"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 133,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyncxrwlxt0nlnbm68xi",
+                        "vsw-5kyimno71hiba3urcm9w3"
+                    ]
+                },
+                "VpcId": "vpc-5ky0d8c2rik6e6qn52tv7",
+                "CreationTime": "2024-11-21T09:31:51Z",
+                "DepartmentName": "ZCE-信科一部-智能客服",
+                "VpcName": "vpc-智能客服-生产",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-智能客服-生产环境"
+            },
+            {
+                "shared": 2,
+                "Description": "测试",
+                "ResourceGroupId": "rg-acfm3alda42jdvq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "192.168.0.0/16",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kylnq008buz26xuk461e"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kywp3e9bau2kq2zuu2s1",
+                "AdvancedResource": false,
+                "Department": 44,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1792609782370774,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 60,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": []
+                },
+                "VpcId": "vpc-5kycat1bqp73tc0g4q2kw",
+                "CreationTime": "2024-11-21T07:50:24Z",
+                "DepartmentName": "COMS测试组织",
+                "VpcName": "a-vpc",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "测试项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.131.192/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky3gq5os79w46b25qa9x"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky8pjepbtj9wr7koil50",
+                "AdvancedResource": false,
+                "Department": 115,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 132,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyxvmjyu44bmvboa8qrq"
+                    ]
+                },
+                "VpcId": "vpc-5kyu6k7ri1zi7wtqlhrpf",
+                "CreationTime": "2024-11-20T08:32:16Z",
+                "DepartmentName": "福能期货",
+                "VpcName": "VPC-福能期货-Web",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(福能期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.36.0/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kylhn9hk2n7jyh5vvynl"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyvnkp1q8igg3b1n22i8",
+                "AdvancedResource": false,
+                "Department": 113,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyvik8k6x38h906igard"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 130,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kybmyhso9185jjzf0qwd",
+                        "vsw-5kyyb9sw5keiv1hiojrxu"
+                    ]
+                },
+                "VpcId": "vpc-5kys3oa709f53rp1s21in",
+                "CreationTime": "2024-11-15T04:38:55Z",
+                "DepartmentName": "ZCE-商品一部-业务流程协同平台",
+                "VpcName": "VPC-郑商所-业务流程协同平台",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-商品一部-业务流程协同平台项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.35.128/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kye3o1xypzuo1v0438wb"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyegvt1ngu5z13e1cm2y",
+                "AdvancedResource": false,
+                "Department": 97,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kygxwawalyioojchm4tp"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 108,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyx5cimje1yw9qnogbn0",
+                        "vsw-5kybrthfj8dl0bpscqzt9",
+                        "vsw-5kyskdt5gnhvp1ur0rirw"
+                    ]
+                },
+                "VpcId": "vpc-5kywtcifv7pb3kovpdya1",
+                "CreationTime": "2024-11-07T01:09:18Z",
+                "DepartmentName": "ZCE-商品一部",
+                "VpcName": "vpc-ZCE商品一部-冷链物流指数中台-生产环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-市场监察部-冷链物流中台项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.131.64/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyonkkx7gst4pvm1wgc2"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky73teoipwhj24r6o5gx",
+                "AdvancedResource": false,
+                "Department": 105,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 118,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kybjgpyb1c7m64ghbovn"
+                    ]
+                },
+                "VpcId": "vpc-5kyc4qat2fzc5hp8074q8",
+                "CreationTime": "2024-11-04T06:45:29Z",
+                "DepartmentName": "宏源期货",
+                "VpcName": "VPC01-宏源期货-易盛V10系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(宏源期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.34.176/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky9anip0gk45m46wc34n"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kytkjalct8z5cfxzcyxi",
+                "AdvancedResource": false,
+                "Department": 106,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyx1jt1m7kzbz3tloq1k"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "全面风险管理",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 120,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky6hc2x56b4i60jljusv"
+                    ]
+                },
+                "VpcId": "vpc-5ky0hmx3lbyuwbjtzks7p",
+                "CreationTime": "2024-11-04T06:19:58Z",
+                "DepartmentName": "ZCE-风险管理部",
+                "VpcName": "vpc_ZCE风险管理部_全面风险管理系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-风险管理部-全面风险管理项目"
+            },
+            {
+                "shared": 0,
+                "Description": "华源期货-飞创主席双中心灾备环境",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "10.19.1.32/27",
+                        "10.4.178.0/24",
+                        "10.209.49.0/24",
+                        "10.113.144.0/24"
+                    ]
+                },
+                "CidrBlock": "172.28.131.0/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky1hhgu4tk89g7puc7mk"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kypc6grnr22yob0da1ln",
+                "AdvancedResource": true,
+                "Department": 104,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky32anovr0r5k3owfwt1"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 117,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Attached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kypk8aibzbl8wirbsdnu",
+                        "vsw-5kyelfuxyhekk9znd6kjx",
+                        "vsw-5kypz4749liadi6nusuo4",
+                        "vsw-5kybk2lem3tbtauol73qa",
+                        "vsw-5kybanjvujg0170kjztlp",
+                        "vsw-5kyazvakzmyqom6go2yf1"
+                    ]
+                },
+                "VpcId": "vpc-5ky6elndrd63d0532q0m2",
+                "CreationTime": "2024-11-01T01:15:36Z",
+                "DepartmentName": "华源期货",
+                "VpcName": "华源期货-飞创主席双中心灾备环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "华源-飞创主席双中心"
+            },
+            {
+                "shared": 0,
+                "Description": "VPC_一部-WPS中台生产",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.34.160/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyankcnrhu3ncro5qun7"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyxohje8216ebtv1h8ki",
+                "AdvancedResource": false,
+                "Department": 103,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "WPS",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 115,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyx3iw9m6mlzeap5xrj8"
+                    ]
+                },
+                "VpcId": "vpc-5ky9a743s5p9txfdivl41",
+                "CreationTime": "2024-10-25T08:06:09Z",
+                "DepartmentName": "ZCE-信科一部-WPS中台",
+                "VpcName": "VPC_ZCE信科一部_WPS中台",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-WPS中台项目"
+            },
+            {
+                "shared": 0,
+                "Description": "郑商所-OTC测试业务",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.35.0/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky6pub91pfcq3nij2bo0"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky7pouz6rhb45pkpp8y7",
+                "AdvancedResource": false,
+                "Department": 102,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky8beufkwioutp79tkrs"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "邮箱POC",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 114,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky94vpw3b1hnxqdur1jp"
+                    ]
+                },
+                "VpcId": "vpc-5kyjm1tby8pf2i37rihzi",
+                "CreationTime": "2024-10-23T01:23:23Z",
+                "DepartmentName": "ZCE-邮箱POC测试业务",
+                "VpcName": "vpc_ZCE-邮箱POC测试",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-OTC测试业务项目"
+            },
+            {
+                "shared": 0,
+                "Description": "信达期货自研系统生产vpc",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.64/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky2lfnuy5saxucsn9d84"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kycynkut5cyrcf11quk3",
+                "AdvancedResource": false,
+                "Department": 58,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky6x4sp4yo723qjvtgnl"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 65,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky0ycg2g5l1key4ecotm",
+                        "vsw-5kynpula55ernbw09oq97",
+                        "vsw-5ky97rmajvssm1n9fbuid"
+                    ]
+                },
+                "VpcId": "vpc-5kynw89iyxv2qzx2rbl0y",
+                "CreationTime": "2024-10-08T06:53:40Z",
+                "DepartmentName": "信达期货",
+                "VpcName": "vpc-信达-自研生产",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.34.128/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyow8a4l72q16qo2o8fy"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky1h6j3zabnm2ajork59",
+                "AdvancedResource": false,
+                "Department": 98,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "数据报送",
+                            "Key": "APP"
+                        }
+                    ]
+                },
+                "ResourceGroup": 109,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky77x1zlfm0lo8f8dv3z"
+                    ]
+                },
+                "VpcId": "vpc-5kytgl45rap40cif694u4",
+                "CreationTime": "2024-09-25T01:57:50Z",
+                "DepartmentName": "ZCE-市场监察部",
+                "VpcName": "vpc-ZCE市场监察部_数据报送",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-市场监察部-数据报送"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.32.192/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kytzvls4ar6q06gmi29w"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky7065y9vicglbnunklf",
+                "AdvancedResource": false,
+                "Department": 97,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "冷链指数",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 108,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky3uebdp8z0sf4432mmd"
+                    ]
+                },
+                "VpcId": "vpc-5kygoh9dj1l6a36d1h6v6",
+                "CreationTime": "2024-09-24T07:02:34Z",
+                "DepartmentName": "ZCE-商品一部",
+                "VpcName": "vpc-ZCE商品一部-冷链物流指数中台-测试环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-市场监察部-冷链物流中台项目"
+            },
+            {
+                "shared": 0,
+                "Description": "wyx-cs",
+                "ResourceGroupId": "rg-acfm3alda42jdvq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "192.168.0.0/16",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kynthtzzk9gdt37e1sun"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyo0xsar5l5ddchaunv2",
+                "AdvancedResource": false,
+                "Department": 44,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1792609782370774,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 48,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": []
+                },
+                "VpcId": "vpc-5kyvrivhq6lp7af2jprgt",
+                "CreationTime": "2024-09-18T01:09:18Z",
+                "DepartmentName": "COMS测试组织",
+                "VpcName": "wyx-cs",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "COMS测试组织默认项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.224/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kykd37018ekfyqhyq53f"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyoc0zbd5rjtlvywtdmy",
+                "AdvancedResource": false,
+                "Department": 66,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyos4mt41tr9qpmdmgg3"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 73,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kydyyj6kxt62auyvd558"
+                    ]
+                },
+                "VpcId": "vpc-5kyawze6xhqtx09oq583t",
+                "CreationTime": "2024-09-18T00:43:25Z",
+                "DepartmentName": "浙江期货行业协会",
+                "VpcName": "VPC01-浙期协会-数据报送系统-生产环境",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(浙江期货行业协会)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.208/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyme5i8092zoeb0o2fbr"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyk2wt5vtxu9g8o9vkeu",
+                "AdvancedResource": false,
+                "Department": 58,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 65,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kygj0earfb3wemq7n0jt"
+                    ]
+                },
+                "VpcId": "vpc-5kyhtso6u5glp8j9khixh",
+                "CreationTime": "2024-09-11T08:07:47Z",
+                "DepartmentName": "信达期货",
+                "VpcName": "VPC04-信达期货-AI项目",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.34.0/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kys9whl5pskb2q1ilvrt"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyr32e5hd9r41hh7mk2g",
+                "AdvancedResource": false,
+                "Department": 92,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky6eapn7ee3q0x2hwpi2"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "企业微信",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 102,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky3h13exqiitf891rxt6",
+                        "vsw-5ky5w2i1zc4kugmsb8k2x",
+                        "vsw-5kyejrpg41lfy8erc1btm",
+                        "vsw-5kysuk6z7mf5kwdi2lw8h",
+                        "vsw-5kyegqc669ofpluq30qcw",
+                        "vsw-5kyqx54h30lfpplxriyy7",
+                        "vsw-5kyq4flbk0mm6tqlzqh66",
+                        "vsw-5kygh6rxu7vqsoyncrsdp"
+                    ]
+                },
+                "VpcId": "vpc-5kyqsl2l6fkgwkpq13yfr",
+                "CreationTime": "2024-08-16T07:34:51Z",
+                "DepartmentName": "ZCE-信科一部-企微生产",
+                "VpcName": "vpc_ZCE信科一部_企微_生产",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-企微生产环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "172.28.131.128/27"
+                    ]
+                },
+                "CidrBlock": "172.28.129.128/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kystcg2lhgwzp1owhdu0"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 1,
+                "VRouterId": "vrt-5kyajgpcos4iwgvwppbnr",
+                "AdvancedResource": false,
+                "Department": 85,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kydjgr4qoong1wffj99k"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 95,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyc5n3z4m5llkfumhbmh",
+                        "vsw-5kyh7x7vd8sxfek3hf7ez",
+                        "vsw-5kyevrpms7y3nabwyqurt",
+                        "vsw-5kyfhy3oenubki2v16e48"
+                    ]
+                },
+                "VpcId": "vpc-5kygk857dk9bwyifpv87a",
+                "CreationTime": "2024-08-09T05:40:26Z",
+                "DepartmentName": "云财富期货",
+                "VpcName": "VPC-云财富-OA系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(云财富期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.192/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyrsl36e98p92rjcyrxx"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyyaczpoyot3f9jvj7xw",
+                "AdvancedResource": false,
+                "Department": 58,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 65,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyoc0zbd5rj91q6o6tbq"
+                    ]
+                },
+                "VpcId": "vpc-5ky3ll5bn6m7m1le7owkz",
+                "CreationTime": "2024-08-09T00:22:51Z",
+                "DepartmentName": "信达期货",
+                "VpcName": "VPC03-信达-用户托管",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.160/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyami2mmk1izumtrh6fa"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kys4w13medc1r5d9c3id",
+                "AdvancedResource": false,
+                "Department": 91,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 101,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyk5hrtsfx5nsl5qz38d"
+                    ]
+                },
+                "VpcId": "vpc-5kyk32a0ylk3pe6eiiymc",
+                "CreationTime": "2024-07-30T00:44:47Z",
+                "DepartmentName": "华融融达期货",
+                "VpcName": "VPC-华融融达期货",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(华融融达期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.130.128/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyimt52ionyob4cl5ak4"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kykqgeysqv51hwht1sxf",
+                "AdvancedResource": false,
+                "Department": 90,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyh8ok6r2wbsuuxd3iap"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 100,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky1hhgu4tk6v6tg4swxh"
+                    ]
+                },
+                "VpcId": "vpc-5kyqz47phf6h84v28hfoy",
+                "CreationTime": "2024-07-26T05:37:41Z",
+                "DepartmentName": "中泰期货",
+                "VpcName": "VPC-中泰期货",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(中泰期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.2.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kys204ore2ls93sy04jm"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kym1ukadoex0jkyzs64h",
+                "AdvancedResource": false,
+                "Department": 89,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 99,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyjd36eez6w8siba4ra4",
+                        "vsw-5ky512xyatvj1a3uszkzn"
+                    ]
+                },
+                "VpcId": "vpc-5kymjmdadftm5dl2tm58g",
+                "CreationTime": "2024-07-24T01:18:56Z",
+                "DepartmentName": "ES-公共服务专区",
+                "VpcName": "公共服务",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(公共服务)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.6.0/23",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyg6ux90hc58n02wztrt"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kywj0nqn1m9cadr5tda0",
+                "AdvancedResource": false,
+                "Department": 51,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky5bv78rate8lowmediw"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 55,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kya8og28b6oz0uoridqs",
+                        "vsw-5kyrqb288qyiqo7uc85he",
+                        "vsw-5kymb44y2h5zd65vzq68j",
+                        "vsw-5kyo7rv4t8waxdqouijgx",
+                        "vsw-5kypro8ti06kdx3n8xfpd",
+                        "vsw-5kyx4qn6mr482736gdshn",
+                        "vsw-5kyogqi2ciersmcow75ql",
+                        "vsw-5kyvqm2b9kvzxsln0zzay"
+                    ]
+                },
+                "VpcId": "vpc-5kyr7mg1sdu4ie1j5rsdz",
+                "CreationTime": "2024-07-17T03:19:11Z",
+                "DepartmentName": "ES-软件服务部",
+                "VpcName": "VPC-软件服务部",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ES-软件服务部默认项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.80.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyuw2wsexyentkdj5psc"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky94fbav06m305j66g23",
+                "AdvancedResource": false,
+                "Department": 38,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky2qg4chh7hsl3axk0k8"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 40,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kypzf4uf4qsrkr2up1fa"
+                    ]
+                },
+                "VpcId": "vpc-5ky5sf9c4x9twtvl0fqoa",
+                "CreationTime": "2024-07-17T02:13:07Z",
+                "DepartmentName": "未来金服",
+                "VpcName": "VPC-未来金服",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(未来金服)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.4.32/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyy69cem8z90vxfbk47l"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyeo6ahcajj6vargfck0",
+                "AdvancedResource": false,
+                "Department": 88,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 98,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky96ut4hpmhzd0501p3m"
+                    ]
+                },
+                "VpcId": "vpc-5kyquk5t6em363ddwaqmn",
+                "CreationTime": "2024-07-10T07:14:18Z",
+                "DepartmentName": "ES-上海分公司-产品开发部",
+                "VpcName": "VPC01-上海产品开发部",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ES-产品开发部项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.5.128/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyim1sqqf153vwhh4xoh"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 1,
+                "VRouterId": "vrt-5kyip3609reqbseyquoao",
+                "AdvancedResource": false,
+                "Department": 87,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyxo6lo2iskqu7ztsfwm"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 97,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyir298o5zs51smf4egu",
+                        "vsw-5ky2vgkuf864oo7aksfgd",
+                        "vsw-5kykbpz7xwalv4c3nngxu"
+                    ]
+                },
+                "VpcId": "vpc-5kyieawptagvzxlcrdi7z",
+                "CreationTime": "2024-07-09T06:07:08Z",
+                "DepartmentName": "ES-上海分公司-产品运行部",
+                "VpcName": "VPC01-上海产品运行部",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ES-产品运行部项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.129.96/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyxynx8rw19wiy4xdnhq"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyd82mdz59o7bsqux7al",
+                "AdvancedResource": false,
+                "Department": 86,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyliv0e67lebdmq9rp8d"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 96,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyhi92klevx2owhyswaa",
+                        "vsw-5kyro119ot4vwmp5mxcoh"
+                    ]
+                },
+                "VpcId": "vpc-5ky0crxhj7pa83il7dy5o",
+                "CreationTime": "2024-07-05T05:40:12Z",
+                "DepartmentName": "中粮期货",
+                "VpcName": "VPC01-中粮期货-推广系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(中粮期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.32.160/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyq9543c8co9acv83osq"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kypwdrkvsd74w793as7d",
+                "AdvancedResource": false,
+                "Department": 84,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kysjrxp5l0puvrqukner"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "集团财务",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 94,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky3thi7n2sq1mwcvwf9n"
+                    ]
+                },
+                "VpcId": "vpc-5kyfjm9693ndhz7sh9rgo",
+                "CreationTime": "2024-06-18T07:57:18Z",
+                "DepartmentName": "ZCE-财务部",
+                "VpcName": "vpc-ZCE财务部_集团财务_生产外网",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-财务部-集团财务项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "192.168.1.0/24",
+                        "192.168.2.0/24"
+                    ]
+                },
+                "CidrBlock": "172.28.33.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kygp34u8jlo53zoqiekk"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky2z3tk9n0tugivuus77",
+                "AdvancedResource": false,
+                "Department": 83,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "集团化办公",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 93,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky1er1ackvqfntozfazv",
+                        "vsw-5ky6b9cdo20hadhy15sh6",
+                        "vsw-5kyi4kxhameetaeuq86dj",
+                        "vsw-5ky8880aysirrg6mbhe12",
+                        "vsw-5kykipixvmavdxvpt39l1",
+                        "vsw-5ky1e55u1ielyjzja0mj0"
+                    ]
+                },
+                "VpcId": "vpc-5kyuier3wbsns20teuqma",
+                "CreationTime": "2024-06-18T01:10:00Z",
+                "DepartmentName": "ZCE-集团化OA应用-测试环境",
+                "VpcName": "vpc_ZCE信科一部_集团化应用",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-集团化OA应用"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.32.128/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky3gf7ymo19lsxcw2rib"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyluk2uoupheht0gggjm",
+                "AdvancedResource": false,
+                "Department": 81,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "合同管理",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 91,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kydch7f7e7rjz3s4vfg6"
+                    ]
+                },
+                "VpcId": "vpc-5ky07b2ed5vslc4yqkb7l",
+                "CreationTime": "2024-06-06T00:27:40Z",
+                "DepartmentName": "ZCE-信科一部-合同代理DMZ",
+                "VpcName": "vpc_信科一部_合同代理DMZ",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-合同代理DMZ默认项目"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "172.28.131.224/27",
+                        "172.28.132.0/26",
+                        "172.28.133.0/24",
+                        "10.0.0.0/8"
+                    ]
+                },
+                "CidrBlock": "172.28.129.32/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyfqlsvdykt0feo02eqy"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky4anfqxc6vn5stepr1l",
+                "AdvancedResource": true,
+                "Department": 79,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyp5hurvkab1u62qfqr1"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 89,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Attached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyk9ahepme8gz7ch1cmd",
+                        "vsw-5kyvf2gpf9uurw378e51q",
+                        "vsw-5kyul56mvpedqpzmejxno",
+                        "vsw-5ky02ljndt8ns2d39f9xp",
+                        "vsw-5kybanjvg3wmygm8f28mb",
+                        "vsw-5kypcmvcw1wz393uvrk0c",
+                        "vsw-5ky77gndyp7to6tcbnbw9",
+                        "vsw-5ky0nv4hqscctlyk6dfpe",
+                        "vsw-5ky7ijuez4xmuul7oexvi",
+                        "vsw-5kyfnvdcekz9selfr3oks",
+                        "vsw-5kysynuaac4qt6efld3sq",
+                        "vsw-5kypat8zkey5ogf3r235z",
+                        "vsw-5kycw831kvgfww49g53xn"
+                    ]
+                },
+                "VpcId": "vpc-5ky2rysz95e9owk6jufxk",
+                "CreationTime": "2024-05-30T05:58:30Z",
+                "DepartmentName": "新湖期货",
+                "VpcName": "VPC01-新湖期货-系统测试",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(新湖期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.32.96/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kykhn8wc8ywoafgd8aan"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kybycmju7zjbhi8bk5cu",
+                "AdvancedResource": false,
+                "Department": 76,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "企微dmz",
+                            "Key": "use"
+                        }
+                    ]
+                },
+                "ResourceGroup": 86,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyvosfycdgmi8vjv3128"
+                    ]
+                },
+                "VpcId": "vpc-5kyibkh6twv9bz8ixjzfh",
+                "CreationTime": "2024-05-29T01:34:38Z",
+                "DepartmentName": "ZCE-信科一部-企微测试",
+                "VpcName": "vpc_信科一部_企微_测试-dmz",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-企微测试环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.32.64/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kympjmyrshwqxwje3k7w"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky51zr55v4lmeikxq32z",
+                "AdvancedResource": false,
+                "Department": 76,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "企业微信",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 86,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kymfd94me16nvjorg3z5"
+                    ]
+                },
+                "VpcId": "vpc-5kycvb9vipa6ju1sxby8q",
+                "CreationTime": "2024-05-29T01:32:37Z",
+                "DepartmentName": "ZCE-信科一部-企微测试",
+                "VpcName": "vpc_ZCE信科一部_企微_测试",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-企微测试环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.32.32/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kydlqs2w6yt5flikevip"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kypobxtt4kdls11f53bk",
+                "AdvancedResource": false,
+                "Department": 50,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kysm7fhzfdr6jfmvx3me"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "DMZ",
+                            "Key": "use"
+                        },
+                        {
+                            "Value": "智能客服",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 54,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyqv0keepgwqm918493m"
+                    ]
+                },
+                "VpcId": "vpc-5kycynkv7kwbvrp2ikutr",
+                "CreationTime": "2024-05-28T08:46:58Z",
+                "DepartmentName": "ZCE-信科一部-智能客服",
+                "VpcName": "VPC_ZCE信科一部_智能客服_测试dmz",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-智能客服-测试环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.129.0/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyf3z09c2wkwg611qupy"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyp7rvqfi3wxumz44551",
+                "AdvancedResource": false,
+                "Department": 75,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kymiv0yzlq71no93qf9m"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 85,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky3i8ubjvgm71ltv74qj"
+                    ]
+                },
+                "VpcId": "vpc-5kyl9ai0bvlrqsk9yhd6s",
+                "CreationTime": "2024-05-27T02:10:17Z",
+                "DepartmentName": "浙商期货",
+                "VpcName": "VPC01-浙商期货-测试系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(浙商期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "192.168.1.0/24",
+                        "172.28.134.0/23",
+                        "10.19.1.96/27",
+                        "172.26.0.0/16"
+                    ]
+                },
+                "CidrBlock": "172.28.128.192/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kygf27urh7sqrvv2qk6o"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 13,
+                "VRouterId": "vrt-5kyhoxojz6475pmwnfmi7",
+                "AdvancedResource": false,
+                "Department": 58,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 65,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyoxak5q4vd0ws92git2",
+                        "vsw-5kymnf2vp1u4w2gll3o7t",
+                        "vsw-5ky9obodxi9bvbkuagvy4",
+                        "vsw-5kymo6f6oge3ld46g0696",
+                        "vsw-5kyeijyjhwnaj0w6l3thv",
+                        "vsw-5kykf2a7mrwunb78h3jm5",
+                        "vsw-5kyxcc2c2oivf2s7tonpo",
+                        "vsw-5kyqaibv14xaji5sh7hf9",
+                        "vsw-5ky7svp3svh8blo2afqpy",
+                        "vsw-5ky57m330911whwpjn94k",
+                        "vsw-5kyty1zf73bwbg1pgk7ic",
+                        "vsw-5kylj5y3xbamqaa1d2877",
+                        "vsw-5ky8gfax47xys7qhibhtc",
+                        "vsw-5kyh18lwdx44qywg5kw6n",
+                        "vsw-5kyvwosuc9n5lxj0ababf",
+                        "vsw-5ky856n1fg566sy9htr0a",
+                        "vsw-5kyq8ophphyep40hnodrl"
+                    ]
+                },
+                "VpcId": "vpc-5ky4gvn52skc2374v3gry",
+                "CreationTime": "2024-05-24T06:24:16Z",
+                "DepartmentName": "信达期货",
+                "VpcName": "vpc01-信达-数据中台",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "172.28.34.192/28"
+                    ]
+                },
+                "CidrBlock": "172.28.32.0/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kynqwvba378n5c0dj0kj"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyx9lmsovdq7f8itdm76",
+                "AdvancedResource": false,
+                "Department": 50,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kybnvaz4uqu6eb8twpsn"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "Tags": {
+                    "Tag": [
+                        {
+                            "Value": "应用",
+                            "Key": "use"
+                        },
+                        {
+                            "Value": "企业微信",
+                            "Key": "app"
+                        }
+                    ]
+                },
+                "ResourceGroup": 54,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyjh1cuexa79tbszsph6",
+                        "vsw-5kygd8li8pbv0jlztqqra",
+                        "vsw-5kyc8j0dzmg9bhh0zrawl",
+                        "vsw-5kyckj0knssx46f9fjrtx",
+                        "vsw-5kycc693flrjrfy596zl0"
+                    ]
+                },
+                "VpcId": "vpc-5kyt70lrij61d3gvjmowx",
+                "CreationTime": "2024-05-23T01:41:12Z",
+                "DepartmentName": "ZCE-信科一部-智能客服",
+                "VpcName": "vpc_ZCE郑商所_智能客服_测试01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ZCE-信科一部-智能客服-测试环境"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.128.16/28",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky0lfmoiifs0sf452wlz"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky1wiuaccaexadjtnv6e",
+                "AdvancedResource": false,
+                "Department": 72,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kyd132ofusswe0vxvtfc"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 80,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky7b3w3t42f1a9mq8pso"
+                    ]
+                },
+                "VpcId": "vpc-5kyslambito2lnprf0xw5",
+                "CreationTime": "2024-05-20T02:13:07Z",
+                "DepartmentName": "国投安信期货",
+                "VpcName": "VPC01-国投安信-测试系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(国投安信期货有限公司)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "10.19.1.0/27",
+                        "172.28.129.224/27",
+                        "172.28.129.192/27"
+                    ]
+                },
+                "CidrBlock": "172.28.128.96/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky7kixmz3z5u33ehcem6"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kytzf77affpqrfm5n6kd",
+                "AdvancedResource": false,
+                "Department": 71,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5ky1xw2218uz01gd5opli"
+                    ]
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 79,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyb4qa7umb7hxb4f87t3",
+                        "vsw-5kywgw3n5vey5kymn7wr3",
+                        "vsw-5kyfoxndjirrbnyewjz1w",
+                        "vsw-5kyp63q8l2au635slr01r"
+                    ]
+                },
+                "VpcId": "vpc-5kyxn4bmxl00lyoplsdto",
+                "CreationTime": "2024-05-20T01:13:57Z",
+                "DepartmentName": "长安期货",
+                "VpcName": "VPC01-长安期货-启明星",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(长安期货有限公司)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.128.128/26",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky5h14ldduucrmtbdst7"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kylxfz95fgs5vqcxsz6i",
+                "AdvancedResource": false,
+                "Department": 70,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 78,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyivmb4kr0q2s6o737z0"
+                    ]
+                },
+                "VpcId": "vpc-5kyurz9hc88u14jyhf5eh",
+                "CreationTime": "2024-05-09T03:32:20Z",
+                "DepartmentName": "期货市场监控中心",
+                "VpcName": "VPC01-期货监控中心-测试系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(期货市场监控中心)"
+            },
+            {
+                "shared": 0,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.128.64/27",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyvgl5bsii3wqb3bemtz"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky07gj9fxi29774mgnpy",
+                "AdvancedResource": false,
+                "Department": 69,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 77,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kymf2begusm98c1bl8iw"
+                    ]
+                },
+                "VpcId": "vpc-5kya130wdy8o7iy61abkl",
+                "CreationTime": "2024-05-09T03:00:52Z",
+                "DepartmentName": "国元期货",
+                "VpcName": "VPC01-国元期货-测试系统",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(国元期货)"
+            },
+            {
+                "shared": 1,
+                "Description": "用于期货公司下各种业务的功能性验证测试用途，构建于该VPC内的实例不应包含有效数据，并及时释放。",
+                "ResourceGroupId": "rg-acfmytbjkxlc7tq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "192.168.0.0/24",
+                        "10.1.1.0/24",
+                        "10.1.2.0/24"
+                    ]
+                },
+                "CidrBlock": "172.28.254.128/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kye3o1xkagcromwcs4is"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyx9wkiuem9uh9ho0wrn",
+                "AdvancedResource": true,
+                "Department": 61,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1452612900499406,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 68,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Attached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky2lw2gkw6ojyu1vzhzq",
+                        "vsw-5kym888jlwet2poptg7j8"
+                    ]
+                },
+                "VpcId": "vpc-5kytwdtxcnip2cqavfc2q",
+                "CreationTime": "2024-04-19T08:02:17Z",
+                "DepartmentName": "业务测试专区",
+                "VpcName": "VPC01-业务测试-大商所飞创",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(业务测试1)"
+            },
+            {
+                "shared": 1,
+                "Description": "用于集团下各种业务的功能性验证测试用途，构建与该VPC内的实例不应包含有效数据，并及时释放。",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "192.168.200.0/24"
+                    ]
+                },
+                "CidrBlock": "172.28.255.128/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky2o0mjnmuejj1aruhkd"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 1,
+                "VRouterId": "vrt-5ky9kzden26ghe3pmzmng",
+                "AdvancedResource": true,
+                "Department": 60,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 67,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyqv619hh39fukgk4u4u",
+                        "vsw-5kyg56rr61j1csalviq2h"
+                    ]
+                },
+                "VpcId": "vpc-5ky5os0moxyi79evfn5nv",
+                "CreationTime": "2024-04-19T07:58:10Z",
+                "DepartmentName": "ES-业务测试专区",
+                "VpcName": "vpc-易盛-业务测试-02",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "fd00:1:1205:10::/61",
+                "Ipv6CidrBlocks": {
+                    "Ipv6CidrBlock": [
+                        {
+                            "Ipv6Isp": "BGP",
+                            "Ipv6CidrBlock": "fd00:1:1205:10::/61"
+                        }
+                    ]
+                },
+                "ResourceGroupName": "ResourceSet(业务测试)"
+            },
+            {
+                "shared": 1,
+                "Description": "用于集团下各种业务的功能性验证测试用途，构建与该VPC内的实例不应包含有效数据，并及时释放。",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": [
+                        "192.168.201.0/24"
+                    ]
+                },
+                "CidrBlock": "172.28.255.0/25",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyy9apnr5te1y4s223tr"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5ky09fmhfwjorkc83dlni",
+                "AdvancedResource": true,
+                "Department": 60,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kynaia3dnwhya4isysnt"
+                    ]
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 67,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Attached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyxp8vq0bo22rplemr9l",
+                        "vsw-5ky5lfpn02ccww4axn62g"
+                    ]
+                },
+                "VpcId": "vpc-5kyqik5lpd6k5u19jpiot",
+                "CreationTime": "2024-04-19T07:53:38Z",
+                "DepartmentName": "ES-业务测试专区",
+                "VpcName": "VPC-易盛-业务测试-01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "fd00:1:1205:8::/61",
+                "Ipv6CidrBlocks": {
+                    "Ipv6CidrBlock": [
+                        {
+                            "Ipv6Isp": "BGP",
+                            "Ipv6CidrBlock": "fd00:1:1205:8::/61"
+                        }
+                    ]
+                },
+                "ResourceGroupName": "ResourceSet(业务测试)"
+            },
+            {
+                "shared": 1,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.64.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky8k80hmyve397dih01j"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyf7bb8miza2flq91hme",
+                "AdvancedResource": false,
+                "Department": 37,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 39,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyiqrbi477r86b72g60r"
+                    ]
+                },
+                "VpcId": "vpc-5kya2r6e8e1pzbf33utmd",
+                "CreationTime": "2024-03-07T03:42:48Z",
+                "DepartmentName": "运营公司",
+                "VpcName": "运营公司_办公VPC",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(运营公司)"
+            },
+            {
+                "shared": 1,
+                "Description": "",
+                "ResourceGroupId": "rg-acfmwmd4xnfah6i",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.48.0/20",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5kyptsswkquemk82rmo16"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kyiano0db5js7erfkfft",
+                "AdvancedResource": false,
+                "Department": 36,
+                "NatGatewayIds": {
+                    "NatGatewayIds": []
+                },
+                "OwnerId": 1140709782586361,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 38,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5kyq2lyz18qm5vw4uc8xi"
+                    ]
+                },
+                "VpcId": "vpc-5kycv5t0fxnvb1dl1f3u0",
+                "CreationTime": "2024-03-07T03:41:35Z",
+                "DepartmentName": "研究所",
+                "VpcName": "研究所_办公VPC",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(研究所)"
+            },
+            {
+                "shared": 1,
+                "Description": "",
+                "ResourceGroupId": "rg-acfm3alda42jdvq",
+                "SecondaryCidrBlocks": {
+                    "SecondaryCidrBlock": []
+                },
+                "CidrBlock": "172.28.0.0/24",
+                "RouterTableIds": {
+                    "RouterTableIds": [
+                        "vtb-5ky2d8d8sqd4krf0d6fec"
+                    ]
+                },
+                "UserCidrs": {
+                    "UserCidr": []
+                },
+                "NetworkAclNum": 0,
+                "VRouterId": "vrt-5kywrzanrvla19e6cz0c3",
+                "AdvancedResource": false,
+                "Department": 33,
+                "NatGatewayIds": {
+                    "NatGatewayIds": [
+                        "ngw-5kygp8lpbb7wqhgdxx3r0"
+                    ]
+                },
+                "OwnerId": 1792609782370774,
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "ResourceGroup": 35,
+                "Status": "Available",
+                "IsDefault": false,
+                "CenStatus": "Detached",
+                "VSwitchIds": {
+                    "VSwitchId": [
+                        "vsw-5ky1npo8a9xlcp4k1jlt0"
+                    ]
+                },
+                "VpcId": "vpc-5kyry1y8rfza7t07nsfhu",
+                "CreationTime": "2024-03-07T03:34:14Z",
+                "DepartmentName": "运营平台",
+                "VpcName": "运营VPC",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "Ipv6CidrBlock": "",
+                "ResourceGroupName": "ResourceSet(运营平台)"
+            }
+        ]
+    },
+    "asapiSuccess": true,
+    "code": "200",
+    "cost": 19,
+    "PageSize": 100,
+    "message": "",
+    "TotalCount": 70,
+    "innerCall": false,
+    "PageNumber": 1,
+    "success": true,
+    "pureListData": false,
+    "innerTotalCount": 70
+}

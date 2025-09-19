@@ -1,0 +1,173 @@
+# 设备类型映射配置文件
+# 用于根据设备名称或主机名模式匹配对应的group和platform
+
+device_mapping:
+  # Cisco设备
+  - pattern: "cisco"
+    group: "dev_group"
+    platform: "cisco_ios"
+    
+  - pattern: "3750"
+    group: "dev_group"
+    platform: "cisco_ios"
+    
+  - pattern: "3850"
+    group: "dev_group"
+    platform: "cisco_ios"
+    
+  - pattern: "2960"
+    group: "dev_group"
+    platform: "cisco_ios"
+    
+  - pattern: "4500"
+    group: "dev_group"
+    platform: "cisco_ios"
+    
+  - pattern: "4948"
+    group: "dev_group"
+    platform: "cisco_ios"
+    
+  - pattern: "n3548"
+    group: "dev_group"
+    platform: "cisco_nxos"
+    
+  - pattern: "nxos"
+    group: "dev_group"
+    platform: "cisco_nxos"
+    
+  # Huawei设备
+  - pattern: "huawei"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "eudemon"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "s5700"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "s6700"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "s7700"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "s9300"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "hw5720"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  - pattern: "hw8861"
+    group: "dev_group"
+    platform: "huawei_vrp"
+    
+  # Juniper设备
+  - pattern: "junip"
+    group: "dev_group"
+    platform: "juniper_junos"
+    
+  - pattern: "j5100"
+    group: "dev_group"
+    platform: "juniper_junos"
+    
+  - pattern: "j1000"
+    group: "dev_group"
+    platform: "juniper_screenos"
+    
+  - pattern: "j2000"
+    group: "dev_group"
+    platform: "juniper_screenos"
+    
+  # HP设备
+  - pattern: "hp"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "procurve"
+    group: "dev_group"
+    platform: "hp_procurve"
+    
+  - pattern: "comware"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "5560"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "5130"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "6520"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "3610"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "5030"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "u5200"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "u7800"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "7800"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "6600"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "hs5560"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "hs5130"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "hs6520"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "hs5110"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  - pattern: "hs5200"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  # H3C设备
+  - pattern: "h3c"
+    group: "dev_group"
+    platform: "hp_comware"
+    
+  # 默认设备类型（通用终端服务器）
+  - pattern: ".*"  # 匹配所有设备
+    group: "dev_group"
+    platform: "generic_termserver"
+
+# 默认配置
+defaults:
+  group: "dev_group"
+  platform: "generic_termserver"
+  username: "esunny"
+  password: "Bwxsgdj@2022"
+  secret: "esunnytrunk"

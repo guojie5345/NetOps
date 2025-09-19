@@ -1,0 +1,8 @@
+---
+connection_options:
+  netmiko:
+    extras:
+      secret: esunnytrunk
+password: python
+platform: unknown
+username: ''

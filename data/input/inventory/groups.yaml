@@ -1,0 +1,27 @@
+---
+hp_comware:
+  platform: "hp_comware"
+
+huawei_vrp:
+  platform: "huawei_vrp"
+
+ali_group:
+  username: "rconfig1"
+  password: "RconFig6"
+
+oa_group:
+  username: "esunny"
+  password: "Bwxsgdj@2022"
+
+dev_group:
+  username: "esunny"
+  password: "Bwxsgdj@2022"
+
+mgt_group:
+  username: "esunny"
+  password: "Bwxsgdj@2022"
+
+default_group:
+  username: "esunny"
+  password: "Bwxsgdj@2022"
+

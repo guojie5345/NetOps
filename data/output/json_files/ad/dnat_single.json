@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "associated_application_group": "Default",
+      "destination_address": {
+        "ref_custom_address_group": "1.192.170.218和39.165.248.84-信达期货1",
+        "type": "CUSTOM-ADDRESS-GROUP"
+      },
+      "destination_ports": [
+        "8099"
+      ],
+      "dnat_process": {
+        "translated_address": {
+          "address": "172.27.136.220",
+          "type": "IP-ADDRESS"
+        },
+        "translated_ports": [
+          "8099"
+        ]
+      },
+      "inbound_links": [
+        "vlan1897-CT-IPV4(公用)",
+        "vlan1898-CM-IPV4(公用)"
+      ],
+      "name": "信达期货-信创官网",
+      "position": 72,
+      "protocol": "TCP",
+      "source_address": {
+        "type": "ALL"
+      },
+      "source_port": "0",
+      "state": "ENABLE",
+      "type": "IPV4"
+    }
+  ],
+  "items_length": 100,
+  "maximum_items": 3000,
+  "total_items": 100
+}

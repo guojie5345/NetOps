@@ -1,0 +1,55 @@
+{
+    "success": true,
+    "total": "1",
+    "result": [
+        {
+            "id": "1",
+            "name": {
+                "name": "默认禁止策略"
+            },
+            "src_addr": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_addr": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "0",
+            "service": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "action": "1",
+            "enable": "3",
+            "log_deny": "1",
+            "log_end": "1",
+            "log_start": "1",
+            "idp": {
+                "name": "predef_default"
+            },
+            "av": {
+                "name": "predef_high"
+            },
+            "family": "2",
+            "seqno": "0"
+        }
+    ],
+    "exception": {}
+}

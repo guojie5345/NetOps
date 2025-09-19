@@ -1,0 +1,3047 @@
+131.6.200.136:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.136
+  platform: hp_comware
+131.6.200.175:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.175
+  platform: hp_comware
+131.6.200.2:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.2
+  platform: hp_comware
+131.6.200.4:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.4
+  platform: hp_comware
+172.16.253.44:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.44
+  platform: generic_termserver
+172.16.253.45:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.45
+  platform: generic_termserver
+172.16.253.46:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.46
+  platform: generic_termserver
+172.16.253.47:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.47
+  platform: generic_termserver
+172.16.253.8:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.8
+  platform: hp_comware
+ASW-308-B02.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.163
+  platform: hp_comware
+ASW-308-B05.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.164
+  platform: hp_comware
+ASW-308-C01.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.165
+  platform: hp_comware
+ASW-308-C05.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.166
+  platform: hp_comware
+ASW-308-D01.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.167
+  platform: hp_comware
+ASW-308-D07.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.162
+  platform: hp_comware
+Backup-server:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.8
+  platform: linux
+CSW-VM-VPC-G1-1.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.172
+  platform: hp_comware
+CSW-VM-VPC-G1-2.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.173
+  platform: hp_comware
+DCIM:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.6
+  platform: linux
+DSW-VM-G1-P-1.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.168
+  platform: hp_comware
+DSW-VM-G1-P-2.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.169
+  platform: hp_comware
+Dingding-tiaoban:
+  groups:
+  - dev_group
+  hostname: 172.16.251.2
+  platform: linux
+ECCA01-ON-AShw5731-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.126
+  platform: huawei_vrp
+ELK-SNMP:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.7
+  platform: linux
+HPE-Nimble-HF60:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.212
+  platform: hp_comware
+IPAM:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.5
+  platform: linux
+ISW-VM-G1-1.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.174
+  platform: hp_comware
+ISW-VM-G1-2.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.175
+  platform: hp_comware
+J20A03-ON-AShs5130-CU:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.2
+  platform: hp_comware
+J20A04-ON-AShs5130-CT:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.3
+  platform: hp_comware
+J20A05-DT-DShs5560-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.58
+  platform: hp_comware
+J20B02-ON-AShw5731-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.15
+  platform: huawei_vrp
+J20C02-DT-AShs5560-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.116
+  platform: hp_comware
+J20C3C4-F5030:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.200
+  platform: hp_comware
+J21F01-DT-AShs5560A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.34
+  platform: hp_comware
+J21F07-DT-ASu5200A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.21
+  platform: hp_comware
+J21F13-DT-ASu5200A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.40
+  platform: hp_comware
+J21F13-DT-RThs3610:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.39
+  platform: cisco_ios
+J21F14-DT-AShs5130A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.38
+  platform: hp_comware
+J21G01-DT-AShs5130B:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.23
+  platform: hp_comware
+J21G04-14U-compute1:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.134
+  platform: hp_comware
+J21G04-17U-compute3:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.135
+  platform: hp_comware
+J21G04-2U-moderator:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.130
+  platform: hp_comware
+J21G04-5U-rabbitmq1:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.131
+  platform: hp_comware
+J21G05-11U-bro2:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.141
+  platform: hp_comware
+J21G05-14U-compute2:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.142
+  platform: hp_comware
+J21G05-17U-compute4:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.143
+  platform: hp_comware
+J21G05-20U-compute6:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.144
+  platform: hp_comware
+J21G05-2U-cispweb:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.138
+  platform: hp_comware
+J21G05-5U-rabbitmq2:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.139
+  platform: hp_comware
+J21G05-8U-collector2:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.140
+  platform: hp_comware
+J21G06-6U-database1:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.145
+  platform: hp_comware
+J21G08-6U-database2:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.146
+  platform: hp_comware
+J21H01-DT-AShs5130A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.7
+  platform: hp_comware
+J21H01-DT-AShs6520A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.32
+  platform: hp_comware
+J21H01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.8
+  platform: hp_comware
+J21H09-23U-Unis-R380G5:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.6
+  platform: hp_comware
+J21H09-26U-Unis-R380G5:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.7
+  platform: hp_comware
+J21H09-hw5885-12U:
+  groups:
+  - dev_group
+  - compute_cluster
+  hostname: 172.16.233.55
+  platform: generic_termserver
+J21H13-DT-ASc3548A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.20
+  platform: cisco_ios
+J21H13-DT-ASc3548B:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.22
+  platform: cisco_ios
+J21H13-DT-AShs1410B:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.13
+  platform: hp_comware
+J21H13-DT-AShw8861A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.12
+  platform: huawei_vrp
+J21H13-DT-FWj1000:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.9
+  platform: juniper_junos
+J21H14-DT-AShs5560:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.10
+  platform: hp_comware
+J21I01-DT-AShs5130A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.14
+  platform: hp_comware
+J21I01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.18
+  platform: hp_comware
+J21I01-FZ-CSB-ASc3548A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.16
+  platform: cisco_ios
+J21I01-FZ-CSB-ASc3750A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.17
+  platform: cisco_ios
+J21I12-DT-ASc3548A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.15
+  platform: cisco_ios
+J21J02-DT-FWj2000A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.42
+  platform: juniper_junos
+J21J02-DT-FWj2000B:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.24
+  platform: juniper_junos
+J21J06-DT-DShs7503AB:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.33
+  platform: hp_comware
+J21J06-DT-FWhw6680A:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.29
+  platform: huawei_vrp
+J21J06-DT-FWhw6680B:
+  groups:
+  - dev_group
+  - development_network
+  hostname: 172.16.245.30
+  platform: huawei_vrp
+J21J07-Inspur-Server-2:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.25
+  platform: generic_termserver
+J23A01-DT-ASc3850-CMCC:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.7
+  platform: cisco_ios
+J23A01-DT-AShs5560-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.5
+  platform: hp_comware
+J23A01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.41
+  platform: hp_comware
+J23A01-DT-FWj1000A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.100
+  platform: juniper_junos
+J23A01-DT-FWj1000B:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.101
+  platform: juniper_junos
+J23A01-MGT-ASc3750A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.254
+  platform: cisco_ios
+J23A01A02-DT-FWhs5030:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.107
+  platform: hp_comware
+J23A02-DT-ASc2960A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.8
+  platform: cisco_ios
+J23B01-DT-ASj5100A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.30
+  platform: juniper_junos
+J23B01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.40
+  platform: hp_comware
+J23B01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.252
+  platform: hp_comware
+J23B02-DT-ASu7800-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.24
+  platform: hp_comware
+J23B07-lx658-13U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.139
+  platform: generic_termserver
+J23C01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.42
+  platform: hp_comware
+J23C01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.250
+  platform: hp_comware
+J23D01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.43
+  platform: hp_comware
+J23D01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.248
+  platform: hp_comware
+J23E01-DT-AShs5560-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.18
+  platform: hp_comware
+J23E01-DT-AShs5560-B:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.29
+  platform: hp_comware
+J23E01-DT-AShs6520-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.19
+  platform: hp_comware
+J23E01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.246
+  platform: hp_comware
+J23E03-DT-ASc3548-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.20
+  platform: cisco_ios
+J23E03-DT-ASc3548-B:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.21
+  platform: cisco_ios
+J23E06-DT-ASc3548-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.22
+  platform: cisco_ios
+J23E08-MGT-ASc2960A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.243
+  platform: cisco_ios
+J23E10-DT-AShw5720A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.13
+  platform: huawei_vrp
+J23F01-DT-ASu5200A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.44
+  platform: hp_comware
+J23F01-MGT-AShs5560-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.11
+  platform: hp_comware
+J23F01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.244
+  platform: hp_comware
+J23F02-DT-ASu7800-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.23
+  platform: hp_comware
+J23F02F03-DT-AShs5560-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.12
+  platform: hp_comware
+J23F04-hp380-12U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.137
+  platform: hp_comware
+J23F04-hp380-15U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.138
+  platform: hp_comware
+J23F04-lc5260-3U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.130
+  platform: generic_termserver
+J23F04-lc5260-6U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.131
+  platform: generic_termserver
+J23F04-lc5260-9U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.132
+  platform: generic_termserver
+J23F05-SR658HV2-12U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.147
+  platform: generic_termserver
+J23F05-SR658HV2-15U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.148
+  platform: generic_termserver
+J23F05-SR658HV2-18U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.149
+  platform: generic_termserver
+J23F05-kl2280-3U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.143
+  platform: generic_termserver
+J23F05-kl2280-6U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.144
+  platform: generic_termserver
+J23F05-kl2280-9U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.145
+  platform: generic_termserver
+J23G01-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.31
+  platform: hp_comware
+J23G01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.241
+  platform: hp_comware
+J23G04-DT-ASc3548-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.34
+  platform: cisco_ios
+J23G04-DT-ASc3548-B:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.35
+  platform: cisco_ios
+J23G04-DT-AShw6866-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.32
+  platform: huawei_vrp
+J23G04-DT-AShw6866-B:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.33
+  platform: huawei_vrp
+J23G04-lc5260-11U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.229
+  platform: generic_termserver
+J23G04-lc5260-14U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.228
+  platform: generic_termserver
+J23G04-lc5260-2U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.233
+  platform: generic_termserver
+J23G04-lc5260-5U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.234
+  platform: generic_termserver
+J23G04-lc5260-8U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.227
+  platform: generic_termserver
+J23G05-lc5260-11U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.226
+  platform: generic_termserver
+J23G05-lc5260-14U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.232
+  platform: generic_termserver
+J23G05-lc5260-2U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.231
+  platform: generic_termserver
+J23G05-lc5260-5U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.235
+  platform: generic_termserver
+J23G05-lc5260-8U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.230
+  platform: generic_termserver
+J23G06-lx658-11U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.223
+  platform: generic_termserver
+J23G06-lx658-14U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.224
+  platform: generic_termserver
+J23G06-lx658-17U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.225
+  platform: generic_termserver
+J23G06-lx658-2U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.220
+  platform: generic_termserver
+J23G06-lx658-5U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.221
+  platform: generic_termserver
+J23G06-lx658-8U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.222
+  platform: generic_termserver
+J23H01-DT-AShs6520-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.15
+  platform: hp_comware
+J23H01-DT-AShs6520-B:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.16
+  platform: hp_comware
+J23H01-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.17
+  platform: hp_comware
+J23H01-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - server_network
+  hostname: 172.16.201.238
+  platform: hp_comware
+J23H06-SugonR6237HA-20U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.150
+  platform: generic_termserver
+J23H08-ts2280-2U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.133
+  platform: generic_termserver
+J23H08-ts2280-5U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.134
+  platform: generic_termserver
+J23H08-ts2280-8U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.135
+  platform: generic_termserver
+J23H09-kl2280-2U:
+  groups:
+  - dev_group
+  - storage_network
+  hostname: 172.16.235.136
+  platform: generic_termserver
+JA2NA2-DT-AShs5110A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.67
+  platform: hp_comware
+JA2NA3-DT-ASc2960A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.86
+  platform: cisco_ios
+JA2SA2-DT-ASc4948A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.89
+  platform: cisco_ios
+JA302-C2960A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.71
+  platform: cisco_ios
+JA311-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.102
+  platform: hp_comware
+JA3A01-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.69
+  platform: hp_comware
+JA3NA01-DT-AShw5731-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.131
+  platform: huawei_vrp
+JA3NA1-DT-AShw5731B:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.132
+  platform: huawei_vrp
+JB2NA02-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.61
+  platform: hp_comware
+JB2NA02-DT-ASu5200-B:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.36
+  platform: hp_comware
+JB2NA2-DT-AShs5130A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.94
+  platform: hp_comware
+JB2NA2-DT-AShs5130B:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.66
+  platform: hp_comware
+JB2NA3-DT-ASc4948A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.117
+  platform: cisco_ios
+JB2SA02-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.65
+  platform: hp_comware
+JB2SA2-DT-AShs5130B:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.64
+  platform: hp_comware
+JB2SA2-DT-AShs5200-B:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.63
+  platform: hp_comware
+JB4A02-DT-AShw5731-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.128
+  platform: huawei_vrp
+JB4A02-DT-ASu5200-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.62
+  platform: hp_comware
+JB4A2-DT-AShs5130A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.60
+  platform: hp_comware
+JB6A2-DT-AShs5120:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.59
+  platform: hp_comware
+JSECCA02-ON-ASu5200-A:
+  groups:
+  - dev_group
+  - office_network
+  hostname: 172.16.244.84
+  platform: hp_comware
+LSW-VM-G1-1.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.170
+  platform: hp_comware
+LSW-VM-G1-2.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.171
+  platform: hp_comware
+OASW.10GE.1-308-B03.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.180
+  platform: hp_comware
+OASW.10GE.2-308-B06.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.181
+  platform: hp_comware
+OASW.10GE.3-308-C02.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.182
+  platform: hp_comware
+OASW.10GE.4-308-C06.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.183
+  platform: hp_comware
+OASW.10GE.5-308-D02.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.184
+  platform: hp_comware
+OASW.GE.1-308-D07.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.179
+  platform: hp_comware
+OSW-308-A03-N-1.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.178
+  platform: hp_comware
+Q14-DT-ASu5200A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.9
+  platform: hp_comware
+Q14K0-MGT-AShs5560A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.29
+  platform: hp_comware
+Q14K0-MGT-AShs5560B:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.30
+  platform: hp_comware
+Q14K03-DT-ASu6600-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.31
+  platform: hp_comware
+Q14K03-HW2280-3U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.27
+  platform: generic_termserver
+Q14K03-HW2280-6U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.28
+  platform: generic_termserver
+Q14K03-HW2280-9U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.29
+  platform: generic_termserver
+Q14K03-MS7040G2-18U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.32
+  platform: generic_termserver
+Q14K03-TS2280-12U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.30
+  platform: generic_termserver
+Q14K03-TS2280-15U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.31
+  platform: generic_termserver
+Q14K04-DT-ASu6600-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.32
+  platform: hp_comware
+Q14K04-KunLun2280-12U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.36
+  platform: generic_termserver
+Q14K04-KunLun2280-15U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.37
+  platform: generic_termserver
+Q14K04-KunLun2280-3U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.33
+  platform: generic_termserver
+Q14K04-KunLun2280-6U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.34
+  platform: generic_termserver
+Q14K04-KunLun2280-9U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.35
+  platform: generic_termserver
+Q14K05-R6230HA-12U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.41
+  platform: generic_termserver
+Q14K05-R6230HA-15U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.42
+  platform: generic_termserver
+Q14K05-R6230HA-18U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.43
+  platform: generic_termserver
+Q14K05-R6230HA-3U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.38
+  platform: generic_termserver
+Q14K05-R6230HA-6U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.39
+  platform: generic_termserver
+Q14K05-R6230HA-9U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.40
+  platform: generic_termserver
+Q14K07-12U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.85
+  platform: generic_termserver
+Q14K07-15U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.86
+  platform: generic_termserver
+Q14K07-21U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.87
+  platform: generic_termserver
+Q14K07-24U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.88
+  platform: generic_termserver
+Q14K07-27U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.89
+  platform: generic_termserver
+Q14K07-3U-SR658Hv2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.82
+  platform: generic_termserver
+Q14K07-6U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.83
+  platform: generic_termserver
+Q14K07-9U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.84
+  platform: generic_termserver
+Q14K08-MGT-ASu5200-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.38
+  platform: hp_comware
+Q14K08-NF5280M6-14U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.98
+  platform: generic_termserver
+Q14K08-PC-FWQlc5280M6-11U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.99
+  platform: generic_termserver
+Q14K08-SR658HV2-3U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.100
+  platform: generic_termserver
+Q14K08-SR658HV2-6U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.101
+  platform: generic_termserver
+Q14K08-SR658HV2-9U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.102
+  platform: generic_termserver
+Q14K09-KunLun2280-12U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.93
+  platform: generic_termserver
+Q14K09-KunLun2280-15U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.94
+  platform: generic_termserver
+Q14K09-KunLun2280-18U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.95
+  platform: generic_termserver
+Q14K09-KunLun2280-21U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.96
+  platform: generic_termserver
+Q14K09-KunLun2280-24U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.97
+  platform: generic_termserver
+Q14K09-KunLun2280-3U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.90
+  platform: generic_termserver
+Q14K09-KunLun2280-6U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.91
+  platform: generic_termserver
+Q14K09-KunLun2280-9U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.92
+  platform: generic_termserver
+Q14K0L0_F5030A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.5
+  platform: hp_comware
+Q14K0L0_S12504A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.2
+  platform: hp_comware
+Q14L00_S5560A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.4
+  platform: hp_comware
+Q14L00_S5560B:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.26
+  platform: hp_comware
+Q14L00_S6800A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.7
+  platform: hp_comware
+Q14L00_S6860A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.3
+  platform: hp_comware
+Q14L01-DL380G10-2U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.51
+  platform: hp_comware
+Q14L01-DL380G10-5U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.52
+  platform: hp_comware
+Q14L01-DL380G10-8U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.53
+  platform: hp_comware
+Q14L01-HP380G10-11U-SNA:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.56
+  platform: hp_comware
+Q14L01-HP380G10-17U-SNA:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.58
+  platform: hp_comware
+Q14L02-2U-node9:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.1
+  platform: hp_comware
+Q14L02-DL380G10-11U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.4
+  platform: hp_comware
+Q14L02-DL380G10-14U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.5
+  platform: hp_comware
+Q14L02-DL380G10-17U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.6
+  platform: hp_comware
+Q14L02-DL380G10-5U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.2
+  platform: hp_comware
+Q14L02-DL380G10-8U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.3
+  platform: hp_comware
+Q14L03-DL380G10-11U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.10
+  platform: hp_comware
+Q14L03-DL380G10-14U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.11
+  platform: hp_comware
+Q14L03-DL380G10-17U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.12
+  platform: hp_comware
+Q14L03-DL380G10-2U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.7
+  platform: hp_comware
+Q14L03-DL380G10-8U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.9
+  platform: hp_comware
+Q14L04-DL380G10-11U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.16
+  platform: hp_comware
+Q14L04-DL380G10-14U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.17
+  platform: hp_comware
+Q14L04-DL380G10-17U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.18
+  platform: hp_comware
+Q14L04-DL380G10-2U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.13
+  platform: hp_comware
+Q14L04-DL380G10-5U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.14
+  platform: hp_comware
+Q14L04-DL380G10-8U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.15
+  platform: hp_comware
+Q14L05-DL380G10-2U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.19
+  platform: hp_comware
+Q14L05-DL380G10-5U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.20
+  platform: hp_comware
+Q14L06-DL380G10-11U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.64
+  platform: hp_comware
+Q14L06-DL380G10-14U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.65
+  platform: hp_comware
+Q14L06-DL380G10-2U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.61
+  platform: hp_comware
+Q14L06-DL380G10-5U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.62
+  platform: hp_comware
+Q14L06-DL380G10-8U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.63
+  platform: hp_comware
+Q14L06_S6800A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.8
+  platform: hp_comware
+Q14L07-NF5280M5-11U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.24
+  platform: generic_termserver
+Q14L07-NF5280M5-14U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.25
+  platform: generic_termserver
+Q14L07-NF5280M5-17U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.26
+  platform: generic_termserver
+Q14L07-NF5280M5-2U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.21
+  platform: generic_termserver
+Q14L07-NF5280M5-5U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.22
+  platform: generic_termserver
+Q14L07-NF5280M5-8U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.23
+  platform: generic_termserver
+Q14M0-DT-AShs5560A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.27
+  platform: hp_comware
+Q14M0-DT-AShs5560B:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.28
+  platform: hp_comware
+Q14M0-S5130A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.20
+  platform: hp_comware
+Q14P01-DT-ASc3750-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.36
+  platform: cisco_ios
+Q14P01-MGT-ASc3750-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.37
+  platform: cisco_ios
+Q14P02-15U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.105
+  platform: generic_termserver
+Q14P02-18U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.104
+  platform: generic_termserver
+Q14P02-21U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.103
+  platform: generic_termserver
+Q14P02-24U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.135
+  platform: generic_termserver
+Q14P02-27U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.134
+  platform: generic_termserver
+Q14P02-3U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.109
+  platform: generic_termserver
+Q14P02-6U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.108
+  platform: generic_termserver
+Q14P03-DT-ASc3548-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.34
+  platform: cisco_ios
+Q14P03-DT-ASc3548-B:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.35
+  platform: cisco_ios
+Q14P05-NF5280M6-12U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.129
+  platform: generic_termserver
+Q14P05-NF5280M6-15U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.130
+  platform: generic_termserver
+Q14P05-NF5280M6-18U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.131
+  platform: generic_termserver
+Q14P05-NF5280M6-21U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.132
+  platform: generic_termserver
+Q14P05-NF5280M6-24U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.133
+  platform: generic_termserver
+Q14P05-NF5280M6-3U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.126
+  platform: generic_termserver
+Q14P05-NF5280M6-6U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.127
+  platform: generic_termserver
+Q14P05-NF5280M6-9U:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.128
+  platform: generic_termserver
+Q14P06-11U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.139
+  platform: generic_termserver
+Q14P06-14U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.140
+  platform: generic_termserver
+Q14P06-2U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.136
+  platform: generic_termserver
+Q14P06-5U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.137
+  platform: generic_termserver
+Q14P06-8U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.138
+  platform: generic_termserver
+Q14P07-11U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.144
+  platform: generic_termserver
+Q14P07-14U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.145
+  platform: generic_termserver
+Q14P07-2U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.141
+  platform: generic_termserver
+Q14P07-5U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.142
+  platform: generic_termserver
+Q14P07-8U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.143
+  platform: generic_termserver
+Q14P07-MGT-AShs5560-A:
+  groups:
+  - dev_group
+  - testing_network
+  hostname: 172.16.247.39
+  platform: hp_comware
+Q14P08-11U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.151
+  platform: generic_termserver
+Q14P08-14U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.146
+  platform: generic_termserver
+Q14P08-17U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.147
+  platform: generic_termserver
+Q14P08-2U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.148
+  platform: generic_termserver
+Q14P08-5U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.149
+  platform: generic_termserver
+Q14P08-8U-SR658HV2:
+  groups:
+  - dev_group
+  - terminal_servers
+  hostname: 172.16.253.150
+  platform: generic_termserver
+Q16F01-COMMhs5800-A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.60
+  platform: hp_comware
+Rconfig:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.4
+  platform: linux
+T38A3-6U-FC-FWhw12004A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.35
+  platform: huawei_vrp
+T38A3A4-27U-MGT-OMRu7800A:
+  groups:
+  - dev_group
+  - mgt_group
+  hostname: 172.16.190.1
+  platform: hp_comware
+T38A4-6U-FC-FWhw12004B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.36
+  platform: huawei_vrp
+T38A5-11U-CU-Rhs6604:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.56
+  platform: hp_comware
+T38A5-14U-CM-Rc1002:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.53
+  platform: cisco_ios
+T38A5-23U-ON-FWss6000A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.45
+  platform: generic_termserver
+T38A5-26U-CDL-FWss6000A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.41
+  platform: generic_termserver
+T38A5-29U-TRD-FWhw6655A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.43
+  platform: huawei_vrp
+T38A5-31U-MGT-FWhw6625A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.51
+  platform: huawei_vrp
+T38A5A6-21U-FC-DSu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.37
+  platform: hp_comware
+T38A5A6-21U-FC-DSu7800A-ERROR:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.37
+  platform: hp_comware
+T38A5A6-33U-CDL-ASu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.54
+  platform: hp_comware
+T38A5A6-35U-TRD-ASu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.55
+  platform: hp_comware
+T38A5A6-44U-COMMu7800-A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.38
+  platform: hp_comware
+T38A6-11U-CT-Rc1002:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.57
+  platform: cisco_ios
+T38A6-23U-ON-FWss6000B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.46
+  platform: generic_termserver
+T38A6-26U-CDL-FWss6000B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.42
+  platform: generic_termserver
+T38A6-29U-TRD-FWhw6655B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.44
+  platform: huawei_vrp
+T38A6-31U-MGT-FWhw6625B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.52
+  platform: huawei_vrp
+T38A7-22U-MGT-OSWNu5200A:
+  groups:
+  - dev_group
+  - mgt_group
+  hostname: 172.16.190.2
+  platform: hp_comware
+T38A7-32U-ISP-FWss6000A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.23
+  platform: generic_termserver
+T38A7-41U-ISP-LBsx1000A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.21
+  platform: generic_termserver
+T38A7A8-11U-FC-ASu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.39
+  platform: hp_comware
+T38A7A8-30U-FC-DSu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.25
+  platform: hp_comware
+T38A7A8-44U-ISP-ASu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.20
+  platform: hp_comware
+T38A8-32U-ISP-FWss6000B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.24
+  platform: generic_termserver
+T38A8-41U-ISP-LBsx1000B:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.22
+  platform: generic_termserver
+T38B01-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.59
+  platform: generic_termserver
+T38B01-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.63
+  platform: generic_termserver
+T38B01-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.57
+  platform: generic_termserver
+T38B01-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.62
+  platform: generic_termserver
+T38B01-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.70
+  platform: generic_termserver
+T38B01-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.71
+  platform: generic_termserver
+T38B02-FC-FWQkl2280-20:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.27
+  platform: generic_termserver
+T38B02-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.62
+  platform: generic_termserver
+T38B02-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.72
+  platform: generic_termserver
+T38B02-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.78
+  platform: generic_termserver
+T38B02-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.127
+  platform: generic_termserver
+T38B02-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.79
+  platform: generic_termserver
+T38B02-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.83
+  platform: generic_termserver
+T38B03-FC-FWQkl2280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.19
+  platform: generic_termserver
+T38B03-FC-FWQkl2280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.28
+  platform: generic_termserver
+T38B03-FC-FWQkl2280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.17
+  platform: generic_termserver
+T38B03-FC-FWQkl2280-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.56
+  platform: generic_termserver
+T38B03-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.88
+  platform: generic_termserver
+T38B03-FC-FWQlx658-20:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.147
+  platform: generic_termserver
+T38B04-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.91
+  platform: generic_termserver
+T38B04-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.93
+  platform: generic_termserver
+T38B04-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.89
+  platform: generic_termserver
+T38B04-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.94
+  platform: generic_termserver
+T38B04-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.64
+  platform: generic_termserver
+T38B04-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.148
+  platform: generic_termserver
+T38B05-FC-FWQkl2280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.37
+  platform: generic_termserver
+T38B05-FC-FWQkl2280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.14
+  platform: generic_termserver
+T38B05-FC-FWQkl2280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.29
+  platform: generic_termserver
+T38B05-FC-FWQkl2280-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.10
+  platform: generic_termserver
+T38B05-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.113
+  platform: generic_termserver
+T38B05-FC-FWQlx658-20:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.96
+  platform: generic_termserver
+T38B06-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.95
+  platform: generic_termserver
+T38B06-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.98
+  platform: generic_termserver
+T38B06-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.65
+  platform: generic_termserver
+T38B06-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.66
+  platform: generic_termserver
+T38B06-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.67
+  platform: generic_termserver
+T38B06-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.68
+  platform: generic_termserver
+T38B07-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.65
+  platform: generic_termserver
+T38B07-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.114
+  platform: generic_termserver
+T38B07-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.115
+  platform: generic_termserver
+T38B07-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.116
+  platform: generic_termserver
+T38B07-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.118
+  platform: generic_termserver
+T38B07-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.117
+  platform: generic_termserver
+T38B08-FC-FWQlc5280-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.44
+  platform: generic_termserver
+T38B08-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.63
+  platform: generic_termserver
+T38B08-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.90
+  platform: generic_termserver
+T38B08-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.97
+  platform: generic_termserver
+T38B08-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.69
+  platform: generic_termserver
+T38B08-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.109
+  platform: generic_termserver
+T38C01-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.30
+  platform: generic_termserver
+T38C01-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.38
+  platform: generic_termserver
+T38C01-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.36
+  platform: generic_termserver
+T38C01-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.76
+  platform: generic_termserver
+T38C02-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.99
+  platform: generic_termserver
+T38C02-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.73
+  platform: generic_termserver
+T38C02-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.74
+  platform: generic_termserver
+T38C02-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.75
+  platform: generic_termserver
+T38C02-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.110
+  platform: generic_termserver
+T38C02-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.112
+  platform: generic_termserver
+T38C03-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.20
+  platform: generic_termserver
+T38C03-FC-FWQlc5280-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.48
+  platform: generic_termserver
+T38C03-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.100
+  platform: generic_termserver
+T38C03-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.101
+  platform: generic_termserver
+T38C03-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.102
+  platform: generic_termserver
+T38C03-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.77
+  platform: generic_termserver
+T38C03-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.111
+  platform: generic_termserver
+T38C04-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.40
+  platform: generic_termserver
+T38C04-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.55
+  platform: generic_termserver
+T38C04-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.31
+  platform: generic_termserver
+T38C04-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.104
+  platform: generic_termserver
+T38C04-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.130
+  platform: generic_termserver
+T38C05-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.125
+  platform: generic_termserver
+T38C05-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.119
+  platform: generic_termserver
+T38C05-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.120
+  platform: generic_termserver
+T38C05-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.121
+  platform: generic_termserver
+T38C05-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.122
+  platform: generic_termserver
+T38C05-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.124
+  platform: generic_termserver
+T38C05-FC-FWQlx658-20:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.123
+  platform: generic_termserver
+T38C06-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.105
+  platform: generic_termserver
+T38C06-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.106
+  platform: generic_termserver
+T38C06-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.126
+  platform: generic_termserver
+T38C06-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.72
+  platform: generic_termserver
+T38C06-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.81
+  platform: generic_termserver
+T38C07-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.35
+  platform: generic_termserver
+T38C07-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.84
+  platform: generic_termserver
+T38C07-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.85
+  platform: generic_termserver
+T38C07-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.146
+  platform: generic_termserver
+T38C08-FC-FWQlc5280-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.52
+  platform: generic_termserver
+T38C08-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.50
+  platform: generic_termserver
+T38C08-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.45
+  platform: generic_termserver
+T38D01-FC-FWQkl2280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.11
+  platform: generic_termserver
+T38D01-FC-FWQkl2280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.12
+  platform: generic_termserver
+T38D01-FC-FWQkl2280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.26
+  platform: generic_termserver
+T38D01-FC-FWQlc5280-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.42
+  platform: generic_termserver
+T38D01-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.108
+  platform: generic_termserver
+T38D02-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.46
+  platform: generic_termserver
+T38D02-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.43
+  platform: generic_termserver
+T38D02-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.140
+  platform: generic_termserver
+T38D02-FC-FWQlx658-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.143
+  platform: generic_termserver
+T38D03-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.53
+  platform: generic_termserver
+T38D03-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.18
+  platform: generic_termserver
+T38D03-FC-FWQlc5280-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.21
+  platform: generic_termserver
+T38D03-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.144
+  platform: generic_termserver
+T38D04-FC-FWQkl2280-17:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.15
+  platform: generic_termserver
+T38D04-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.107
+  platform: generic_termserver
+T38D04-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.87
+  platform: generic_termserver
+T38D04-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.86
+  platform: generic_termserver
+T38D04-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.82
+  platform: generic_termserver
+T38D04-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.23
+  platform: generic_termserver
+T38D04-FC-FWQlx658-20:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.141
+  platform: generic_termserver
+T38D05-FC-FWQlc5280-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.51
+  platform: generic_termserver
+T38D05-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.16
+  platform: generic_termserver
+T38D05-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.41
+  platform: generic_termserver
+T38D05-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.39
+  platform: generic_termserver
+T38D06-FC-FWQlc5280-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.24
+  platform: generic_termserver
+T38D06-FC-FWQlc5280-05:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.10
+  platform: generic_termserver
+T38D06-FC-FWQlc5280-08:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.41
+  platform: generic_termserver
+T38D06-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.54
+  platform: generic_termserver
+T38D07-FC-FWQlx658-017:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.129
+  platform: generic_termserver
+T38D07-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.135
+  platform: generic_termserver
+T38D07-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - management_am11
+  hostname: 172.16.193.74
+  platform: generic_termserver
+T38D07-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.137
+  platform: generic_termserver
+T38D07-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.138
+  platform: generic_termserver
+T38D07-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.139
+  platform: generic_termserver
+T38D07-FC-FWQlx658-20:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.128
+  platform: generic_termserver
+T38D08-FC-FWQlx658-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.134
+  platform: generic_termserver
+T38D08-FC-FWQlx658-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.131
+  platform: generic_termserver
+T38D08-FC-FWQlx658-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.132
+  platform: generic_termserver
+T38D08-FC-FWQlx658-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.133
+  platform: generic_termserver
+T38D08-FC-FWQlx658-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.58
+  platform: generic_termserver
+T38E01-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.32
+  platform: generic_termserver
+T38E02-FC-FWQkl2280-05:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.25
+  platform: generic_termserver
+T38E02-FC-FWQkl2280-08:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.22
+  platform: generic_termserver
+T38E02-FC-FWQlc5280-02:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.47
+  platform: generic_termserver
+T38E02-FC-FWQlc5280-14:
+  groups:
+  - dev_group
+  - core_layer_am11
+  hostname: 172.16.192.34
+  platform: generic_termserver
+T38E03-FC-FWQlc5280-03:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.134
+  platform: generic_termserver
+T38E03-FC-FWQlc5280-06:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.133
+  platform: generic_termserver
+T38E03-FC-FWQlc5280-09:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.131
+  platform: generic_termserver
+T38E03-FC-FWQlc5280-12:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.130
+  platform: generic_termserver
+T38E04-FC-FWQlc5280-11:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.135
+  platform: generic_termserver
+T38E04-FC-FWQlc5280-14:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.132
+  platform: generic_termserver
+T38E05-FC-FWQlx658-19:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.136
+  platform: generic_termserver
+T38E05-FC-FWQlx658-22:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.137
+  platform: generic_termserver
+T38E05-FC-FWQlx658-25:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.138
+  platform: generic_termserver
+T38E3-38-40U-FCE-DSu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.61
+  platform: hp_comware
+T38E4-38-40U-FCE-ASu7800A:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.62
+  platform: hp_comware
+T38E4-42U-MGT-OSWNu5800A:
+  groups:
+  - dev_group
+  - mgt_group
+  hostname: 172.16.190.3
+  platform: hp_comware
+TAPSW-308-A04.AM11:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.176
+  platform: hp_comware
+TFT:
+  groups:
+  - dev_group
+  - distribution_layer_am11
+  hostname: 172.16.191.3
+  platform: generic_termserver
+VM-Server-172.16.248.50:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.50
+  platform: hp_comware
+VM-Server-172.16.248.51:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.51
+  platform: hp_comware
+VM-Server-172.16.248.52:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.52
+  platform: hp_comware
+VM-Server-172.16.248.53:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.53
+  platform: hp_comware
+VM-Server-172.16.248.54:
+  groups:
+  - dev_group
+  - management_servers
+  hostname: 172.16.248.54
+  platform: hp_comware
+XCvdesktop-MCNA01:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.161
+  platform: generic_termserver
+XCvdesktop-MCNA02:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.162
+  platform: generic_termserver
+XCvdesktop-SCNA01:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.160
+  platform: generic_termserver
+Zabbix server:
+  groups:
+  - dev_group
+  - loopback_addresses
+  hostname: 127.0.0.1
+  platform: linux
+inspur-trap-test:
+  groups:
+  - dev_group
+  - loopback_addresses
+  hostname: 127.0.0.1
+  platform: generic_termserver
+test:
+  groups:
+  - dev_group
+  - access_layer_am11
+  hostname: 172.16.190.162
+  platform: hp_comware
+vdi-node1:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.201
+  platform: hp_comware
+vdi-node10:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.225
+  platform: hp_comware
+vdi-node11:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.224
+  platform: hp_comware
+vdi-node12:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.223
+  platform: hp_comware
+vdi-node14:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.179
+  platform: generic_termserver
+vdi-node15:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.180
+  platform: generic_termserver
+vdi-node16:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.181
+  platform: generic_termserver
+vdi-node17:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.182
+  platform: generic_termserver
+vdi-node2:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.202
+  platform: hp_comware
+vdi-node3:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.203
+  platform: hp_comware
+vdi-node4:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.204
+  platform: hp_comware
+vdi-node5:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.205
+  platform: hp_comware
+vdi-node6:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.206
+  platform: hp_comware
+vdi-node7:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.207
+  platform: hp_comware
+vdi-node9:
+  groups:
+  - dev_group
+  - core_network_devices
+  hostname: 131.6.200.209
+  platform: hp_comware

@@ -1,0 +1,602 @@
+{
+    "result": [
+        {
+            "name": "中金所服务端口",
+            "type": "0",
+            "search_type": "0",
+            "show_name": "中金所服务端口",
+            "member_count": "4",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "TCP-3202",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-3204",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-3888",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-53888",
+                    "flag": "0"
+                }
+            ]
+        },
+        {
+            "name": "大商所服务端口",
+            "type": "0",
+            "search_type": "0",
+            "show_name": "大商所服务端口",
+            "member_count": "5",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "TCP-7000",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-7100",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-7200",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-7300",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-7400",
+                    "flag": "0"
+                }
+            ]
+        },
+        {
+            "name": "广期所服务端口",
+            "type": "0",
+            "search_type": "0",
+            "show_name": "广期所服务端口",
+            "member_count": "6",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "TCP-5001",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-5007",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-5025",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-6010",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-6030",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-6050",
+                    "flag": "0"
+                }
+            ]
+        },
+        {
+            "name": "郑商所服务端口",
+            "type": "0",
+            "search_type": "0",
+            "show_name": "郑商所服务端口",
+            "member_count": "6",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "TCP-22677",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-22678",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-22679",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-32678",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-32677",
+                    "flag": "0"
+                },
+                {
+                    "name": "TCP-32679",
+                    "flag": "0"
+                }
+            ]
+        },
+        {
+            "name": "SRV_COMMON_PROTOCOL",
+            "type": "2",
+            "description": "Session Group",
+            "search_type": "0",
+            "show_name": "SRV_COMMON_PROTOCOL",
+            "member_count": "17",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "DayTime",
+                    "flag": "64"
+                },
+                {
+                    "name": "GIT",
+                    "flag": "64"
+                },
+                {
+                    "name": "LLMNR",
+                    "flag": "64"
+                },
+                {
+                    "name": "McIDAS",
+                    "flag": "64"
+                },
+                {
+                    "name": "MDNS",
+                    "flag": "64"
+                },
+                {
+                    "name": "Razor",
+                    "flag": "64"
+                },
+                {
+                    "name": "RMI",
+                    "flag": "64"
+                },
+                {
+                    "name": "RSH",
+                    "flag": "64"
+                },
+                {
+                    "name": "RTIP",
+                    "flag": "64"
+                },
+                {
+                    "name": "SMS",
+                    "flag": "64"
+                },
+                {
+                    "name": "Time",
+                    "flag": "64"
+                },
+                {
+                    "name": "TimeServer",
+                    "flag": "64"
+                },
+                {
+                    "name": "VMware",
+                    "flag": "64"
+                },
+                {
+                    "name": "WINS",
+                    "flag": "64"
+                },
+                {
+                    "name": "XDMCP",
+                    "flag": "64"
+                },
+                {
+                    "name": "DoT",
+                    "flag": "64"
+                },
+                {
+                    "name": "FTPS",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_EMAIL",
+            "type": "2",
+            "description": "Email Service Group",
+            "search_type": "0",
+            "show_name": "SRV_EMAIL",
+            "member_count": "6",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "SMTPS",
+                    "flag": "64"
+                },
+                {
+                    "name": "IMAP4",
+                    "flag": "64"
+                },
+                {
+                    "name": "SMTP",
+                    "flag": "64"
+                },
+                {
+                    "name": "POP3",
+                    "flag": "64"
+                },
+                {
+                    "name": "IMAPS",
+                    "flag": "64"
+                },
+                {
+                    "name": "POP3S",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_FILE_SHARING",
+            "type": "2",
+            "description": "File sharing Group",
+            "search_type": "0",
+            "show_name": "SRV_FILE_SHARING",
+            "member_count": "2",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "AFS",
+                    "flag": "64"
+                },
+                {
+                    "name": "NFS",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_GENERAL",
+            "type": "2",
+            "description": "General Group",
+            "search_type": "0",
+            "show_name": "SRV_GENERAL",
+            "member_count": "2",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "Rsync",
+                    "flag": "64"
+                },
+                {
+                    "name": "WHOIS",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_INDUSTRY",
+            "type": "2",
+            "description": "Industry Group",
+            "search_type": "0",
+            "show_name": "SRV_INDUSTRY",
+            "member_count": "1",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "COPA-WEBSERVER",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_INTERNET_PROTOCOL",
+            "type": "2",
+            "description": "Normal Internet Protocol Service Group",
+            "search_type": "0",
+            "show_name": "SRV_INTERNET_PROTOCOL",
+            "member_count": "70",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "ICMP",
+                    "flag": "64"
+                },
+                {
+                    "name": "TCP-ANY",
+                    "flag": "64"
+                },
+                {
+                    "name": "UDP-ANY",
+                    "flag": "64"
+                },
+                {
+                    "name": "AIM",
+                    "flag": "64"
+                },
+                {
+                    "name": "BGP",
+                    "flag": "64"
+                },
+                {
+                    "name": "CHARGEN",
+                    "flag": "64"
+                },
+                {
+                    "name": "DHCP-Relay",
+                    "flag": "64"
+                },
+                {
+                    "name": "DISCARD",
+                    "flag": "64"
+                },
+                {
+                    "name": "DNS",
+                    "flag": "64"
+                },
+                {
+                    "name": "ECHO",
+                    "flag": "64"
+                },
+                {
+                    "name": "FINGER",
+                    "flag": "64"
+                },
+                {
+                    "name": "FTP",
+                    "flag": "64"
+                },
+                {
+                    "name": "Gnutella",
+                    "flag": "64"
+                },
+                {
+                    "name": "GOPHER",
+                    "flag": "64"
+                },
+                {
+                    "name": "GRE",
+                    "flag": "64"
+                },
+                {
+                    "name": "HTTP",
+                    "flag": "64"
+                },
+                {
+                    "name": "HTTP-EXT",
+                    "flag": "64"
+                },
+                {
+                    "name": "HTTPS",
+                    "flag": "64"
+                },
+                {
+                    "name": "IDENT",
+                    "flag": "64"
+                },
+                {
+                    "name": "Internet-Locator-Service",
+                    "flag": "64"
+                },
+                {
+                    "name": "IRC",
+                    "flag": "64"
+                },
+                {
+                    "name": "L2TP",
+                    "flag": "64"
+                },
+                {
+                    "name": "LDAP",
+                    "flag": "64"
+                },
+                {
+                    "name": "LPR",
+                    "flag": "64"
+                },
+                {
+                    "name": "MS-SQL",
+                    "flag": "64"
+                },
+                {
+                    "name": "MSRPC",
+                    "flag": "64"
+                },
+                {
+                    "name": "MySQL",
+                    "flag": "64"
+                },
+                {
+                    "name": "NBDS",
+                    "flag": "64"
+                },
+                {
+                    "name": "NBNAME",
+                    "flag": "64"
+                },
+                {
+                    "name": "NNTP",
+                    "flag": "64"
+                },
+                {
+                    "name": "NTP",
+                    "flag": "64"
+                },
+                {
+                    "name": "PING",
+                    "flag": "64"
+                },
+                {
+                    "name": "PPTP",
+                    "flag": "64"
+                },
+                {
+                    "name": "RADIUS",
+                    "flag": "64"
+                },
+                {
+                    "name": "REXEC",
+                    "flag": "64"
+                },
+                {
+                    "name": "RIP",
+                    "flag": "64"
+                },
+                {
+                    "name": "OSPF",
+                    "flag": "64"
+                },
+                {
+                    "name": "BFD",
+                    "flag": "64"
+                },
+                {
+                    "name": "RLOGIN",
+                    "flag": "64"
+                },
+                {
+                    "name": "RSH",
+                    "flag": "64"
+                },
+                {
+                    "name": "SMB",
+                    "flag": "64"
+                },
+                {
+                    "name": "...",
+                    "flag": "2048"
+                }
+            ]
+        },
+        {
+            "name": "SRV_P2P_STREAM",
+            "type": "2",
+            "description": "P2P Stream Software Group",
+            "search_type": "0",
+            "show_name": "SRV_P2P_STREAM",
+            "member_count": "1",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "RTMP",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_STREAM_MEDIA",
+            "type": "2",
+            "description": "Streaming Media Service Group",
+            "search_type": "0",
+            "show_name": "SRV_STREAM_MEDIA",
+            "member_count": "2",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "RealMedia",
+                    "flag": "64"
+                },
+                {
+                    "name": "RTSP",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_VIDEO_SURVEILLANCE",
+            "type": "2",
+            "description": "IP Camera And Video Surveillance",
+            "search_type": "0",
+            "show_name": "SRV_VIDEO_SURVEILLANCE",
+            "member_count": "1",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "ONVIF",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_VOIP",
+            "type": "2",
+            "description": "VOIP Service Group",
+            "search_type": "0",
+            "show_name": "SRV_VOIP",
+            "member_count": "5",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "SIP",
+                    "flag": "64"
+                },
+                {
+                    "name": "Q.931",
+                    "flag": "64"
+                },
+                {
+                    "name": "MGCP-CA",
+                    "flag": "64"
+                },
+                {
+                    "name": "MGCP-UA",
+                    "flag": "64"
+                },
+                {
+                    "name": "RAS",
+                    "flag": "64"
+                }
+            ]
+        },
+        {
+            "name": "SRV_VPN",
+            "type": "2",
+            "description": "VPN Service Group",
+            "search_type": "0",
+            "show_name": "SRV_VPN",
+            "member_count": "5",
+            "is_referenced": "0",
+            "reference_count": "0",
+            "service": [
+                {
+                    "name": "OpenVPN",
+                    "flag": "64"
+                },
+                {
+                    "name": "SCVPN",
+                    "flag": "64"
+                },
+                {
+                    "name": "IPSEC",
+                    "flag": "64"
+                },
+                {
+                    "name": "IKE",
+                    "flag": "64"
+                },
+                {
+                    "name": "IKE-NAT",
+                    "flag": "64"
+                }
+            ]
+        }
+    ],
+    "success": true,
+    "total": "15"
+}

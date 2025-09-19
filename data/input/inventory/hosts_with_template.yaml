@@ -1,0 +1,100 @@
+ASW-308-B02.AM11:
+  groups:
+  - dev_group
+  hostname: 172.16.190.163
+  template: HP Comware HH3C SNMPv2, unis 5200
+ASW-308-B05.AM11:
+  groups:
+  - dev_group
+  hostname: 172.16.190.164
+  template: HP Comware HH3C SNMPv2, unis 5200
+ASW-308-C01.AM11:
+  groups:
+  - dev_group
+  hostname: 172.16.190.165
+  template: HP Comware HH3C SNMPv2, unis 5200
+Backup-server:
+  groups:
+  - dev_group
+  hostname: 172.16.248.8
+  template: Linux SNMP
+Dingding-tiaoban:
+  groups:
+  - dev_group
+  hostname: 172.16.251.2
+  template: Linux SNMP
+J21J06-DT-DShs7503AB:
+  groups:
+  - dev_group
+  hostname: 172.16.245.33
+  template: HP Comware HH3C SNMPv2
+J23A01-MGT-ASc3750A:
+  groups:
+  - dev_group
+  hostname: 172.16.201.254
+  template: Cisco IOS SNMP
+J23B01-MGT-ASc2960A:
+  groups:
+  - dev_group
+  hostname: 172.16.201.253
+  template: Cisco IOS SNMP
+J23G04-DT-AShw6866-A:
+  groups:
+  - dev_group
+  hostname: 172.16.201.32
+  template: Huawei VRP SNMP
+J23G04-DT-AShw6866-B:
+  groups:
+  - dev_group
+  hostname: 172.16.201.33
+  template: Huawei VRP SNMP
+JB2NA02-DT-ASu5200-B:
+  groups:
+  - dev_group
+  hostname: 172.16.244.36
+  template: HP Comware HH3C SNMPv2, unis 5200
+JB2NA1-WIFI-S5110:
+  groups:
+  - dev_group
+  hostname: 172.16.244.54
+  template: HP Comware HH3C SNMPv2
+JB301-C2960A:
+  groups:
+  - dev_group
+  hostname: 172.16.244.87
+  template: Cisco IOS SNMP
+Q14-ON-ASu5200-A:
+  groups:
+  - dev_group
+  hostname: 172.16.247.15
+  template: HP Comware HH3C SNMPv2, unis 5200
+Q14K0K1-S7503:
+  groups:
+  - dev_group
+  hostname: 172.16.255.42
+  template: HP Comware HH3C SNMPv2
+aTrust-Controller-zhu:
+  groups:
+  - dev_group
+  hostname: 172.16.244.105
+  template: ''
+aTrust-Proxy-bei:
+  groups:
+  - dev_group
+  hostname: 172.16.244.108
+  template: ''
+aTrust-Proxy-zhu:
+  groups:
+  - dev_group
+  hostname: 172.16.244.106
+  template: ''
+test:
+  groups:
+  - dev_group
+  hostname: 172.16.190.162
+  template: HP Comware HH3C SNMPv2, unis 5200
+vdi-node12:
+  groups:
+  - dev_group
+  hostname: 131.6.200.223
+  template: HP iLO SNMP

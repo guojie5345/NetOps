@@ -1,0 +1,298 @@
+{
+    "redirect": false,
+    "eagleEyeTraceId": "ac1b434517574854719445127d0089",
+    "asapiSuccess": true,
+    "code": "200",
+    "cost": 14,
+    "PageSize": 100,
+    "message": "",
+    "TotalCount": 10,
+    "HaVips": {
+        "HaVip": [
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5ky1dor97n3d2w19ahsm5",
+                "CreateTime": "2025-09-09T08:27:59Z",
+                "HaVipId": "havip-5kyr8oq3br68x5p2yhaht",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "i-5ky05a0vb9kkbe6kgb4f",
+                        "i-5ky05a0vb9kkbe6kgb4g"
+                    ]
+                },
+                "Department": 134,
+                "VpcId": "vpc-5kylnkj55k8t1wbpvzlof",
+                "MasterInstanceId": "i-5ky05a0vb9kkbe6kgb4f",
+                "ChargeType": "",
+                "DepartmentName": "ZCE-集团化OA应用-生产环境",
+                "IpAddress": "172.28.39.228",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "EcsInstance",
+                "ResourceGroup": 168,
+                "ResourceGroupName": "ResourceSet(ZCE-集团化OA应用-生产环境)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": [
+                        "eip-5kywm7hv95m9y162w2glb"
+                    ]
+                },
+                "VSwitchId": "vsw-5kyh18lwdx44qywg5kw6n",
+                "CreateTime": "2025-07-24T08:45:32Z",
+                "HaVipId": "havip-5kyl1e54bzfem4sy1dim2",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "eni-5ky05pejqt7x0ibleh0h",
+                        "eni-5ky05a0vb9jx3qm8aonf"
+                    ]
+                },
+                "Department": 58,
+                "VpcId": "vpc-5ky4gvn52skc2374v3gry",
+                "MasterInstanceId": "eni-5ky05pejqt7x0ibleh0h",
+                "ChargeType": "",
+                "DepartmentName": "信达期货",
+                "IpAddress": "172.28.134.3",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "NetworkInterface",
+                "ResourceGroup": 65,
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5ky8gfax47xys7qhibhtc",
+                "CreateTime": "2025-07-24T08:28:53Z",
+                "HaVipId": "havip-5kyadzu9x5ulotssjne8x",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "eni-5ky05a0vb9jx7ird2gy6",
+                        "eni-5ky05pejqt811d6a3hs7"
+                    ]
+                },
+                "Department": 58,
+                "VpcId": "vpc-5ky4gvn52skc2374v3gry",
+                "MasterInstanceId": "eni-5ky05a0vb9jx7ird2gy6",
+                "ChargeType": "",
+                "DepartmentName": "信达期货",
+                "IpAddress": "172.28.134.163",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "NetworkInterface",
+                "ResourceGroup": 65,
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5ky8gfax47xys7qhibhtc",
+                "CreateTime": "2025-07-11T02:45:23Z",
+                "HaVipId": "havip-5kylqayoxsx8fbx1f2ntq",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "eni-5ky05pejqt7mq48q7ns1",
+                        "eni-5ky05a0vb9jishooeun3"
+                    ]
+                },
+                "Department": 58,
+                "VpcId": "vpc-5ky4gvn52skc2374v3gry",
+                "MasterInstanceId": "eni-5ky05pejqt7mq48q7ns1",
+                "ChargeType": "",
+                "DepartmentName": "信达期货",
+                "IpAddress": "172.28.134.149",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "NetworkInterface",
+                "ResourceGroup": 65,
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5kyh18lwdx44qywg5kw6n",
+                "CreateTime": "2025-07-11T02:44:53Z",
+                "HaVipId": "havip-5kygjrqm59emiydu9y7ag",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "eni-5ky05pejqt7mq48q7ns0",
+                        "eni-5ky05a0vb9jishooeun2"
+                    ]
+                },
+                "Department": 58,
+                "VpcId": "vpc-5ky4gvn52skc2374v3gry",
+                "MasterInstanceId": "eni-5ky05pejqt7mq48q7ns0",
+                "ChargeType": "",
+                "DepartmentName": "信达期货",
+                "IpAddress": "172.28.134.22",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "NetworkInterface",
+                "ResourceGroup": 65,
+                "ResourceGroupName": "ResourceSet(信达期货)"
+            },
+            {
+                "Status": "Available",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5ky5lfpn02ccww4axn62g",
+                "CreateTime": "2025-02-24T06:27:41Z",
+                "HaVipId": "havip-5ky294py4g75064edpgyy",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": []
+                },
+                "Department": 60,
+                "VpcId": "vpc-5kyqik5lpd6k5u19jpiot",
+                "MasterInstanceId": "",
+                "ChargeType": "",
+                "DepartmentName": "ES-业务测试专区",
+                "IpAddress": "172.28.255.108",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "",
+                "ResourceGroup": 67,
+                "ResourceGroupName": "ResourceSet(业务测试)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5ky0nv4hqscctlyk6dfpe",
+                "CreateTime": "2025-02-20T08:42:45Z",
+                "HaVipId": "havip-5kyqgl2dpe51r23so9k9t",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "i-5ky06lp9sj19jw8qy5hs",
+                        "i-5ky05a0vb9hoy1y2qr77"
+                    ]
+                },
+                "Department": 79,
+                "VpcId": "vpc-5ky2rysz95e9owk6jufxk",
+                "MasterInstanceId": "i-5ky06lp9sj19jw8qy5hs",
+                "ChargeType": "",
+                "DepartmentName": "新湖期货",
+                "IpAddress": "172.28.133.204",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "EcsInstance",
+                "ResourceGroup": 89,
+                "ResourceGroupName": "ResourceSet(新湖期货)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5ky0nv4hqscctlyk6dfpe",
+                "CreateTime": "2025-02-20T08:40:56Z",
+                "HaVipId": "havip-5ky15sectbdc4w6qixyhs",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "i-5ky05a0vb9hoyjpcr8z8",
+                        "i-5ky06lp9sj19ke00yn9w"
+                    ]
+                },
+                "Department": 79,
+                "VpcId": "vpc-5ky2rysz95e9owk6jufxk",
+                "MasterInstanceId": "i-5ky05a0vb9hoyjpcr8z8",
+                "ChargeType": "",
+                "DepartmentName": "新湖期货",
+                "IpAddress": "172.28.133.203",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "EcsInstance",
+                "ResourceGroup": 89,
+                "ResourceGroupName": "ResourceSet(新湖期货)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5kypat8zkey5ogf3r235z",
+                "CreateTime": "2024-11-21T05:35:36Z",
+                "HaVipId": "havip-5kykvrt635zju8hhxyky5",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "i-5ky058hi3mfkdoo24spa",
+                        "i-5ky058hi3mfkdoo24sp9"
+                    ]
+                },
+                "Department": 79,
+                "VpcId": "vpc-5ky2rysz95e9owk6jufxk",
+                "MasterInstanceId": "i-5ky058hi3mfkdoo24sp9",
+                "ChargeType": "",
+                "DepartmentName": "新湖期货",
+                "IpAddress": "172.28.131.236",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "EcsInstance",
+                "ResourceGroup": 89,
+                "ResourceGroupName": "ResourceSet(新湖期货)"
+            },
+            {
+                "Status": "InUse",
+                "Description": "",
+                "AssociatedEipAddresses": {
+                    "associatedEipAddresse": []
+                },
+                "VSwitchId": "vsw-5kybrthfj8dl0bpscqzt9",
+                "CreateTime": "2024-11-14T08:34:24Z",
+                "HaVipId": "havip-5kytrts1g2ht8mdxhjhgn",
+                "Name": "",
+                "AssociatedInstances": {
+                    "associatedInstance": [
+                        "i-5ky058hi3mfd50p2fu3q",
+                        "i-5ky058hi3mfd50p2fu3p"
+                    ]
+                },
+                "Department": 97,
+                "VpcId": "vpc-5kywtcifv7pb3kovpdya1",
+                "MasterInstanceId": "i-5ky058hi3mfd50p2fu3p",
+                "ChargeType": "",
+                "DepartmentName": "ZCE-商品一部",
+                "IpAddress": "172.28.35.219",
+                "RMRegionId": "cn-zhengzhou-zcefc-d01",
+                "RegionId": "cn-zhengzhou-zcefc-d01",
+                "AssociatedInstanceType": "EcsInstance",
+                "ResourceGroup": 108,
+                "ResourceGroupName": "ZCE-市场监察部-冷链物流中台项目"
+            }
+        ]
+    },
+    "innerCall": false,
+    "PageNumber": 1,
+    "success": true,
+    "pureListData": false,
+    "innerTotalCount": 10
+}

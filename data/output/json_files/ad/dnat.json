@@ -1,0 +1,3601 @@
+{
+    "total_items": 101,
+    "items_length": 101,
+    "maximum_items": 3000,
+    "items": [
+        {
+            "name": "备案-业务管理口",
+            "description": "行业云ISP资质备案系统-互联网业务管理",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "信安和备案互联网源IP"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.234-信安和备案"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "7301",
+                "7201",
+                "3842",
+                "27017",
+                "16001"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.244",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "7301",
+                    "7201",
+                    "3842",
+                    "27017",
+                    "16001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 1
+        },
+        {
+            "name": "信安IRCS-业务管理口",
+            "description": "行业云ISP资质备案系统-互联网业务管理",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "信安和备案互联网源IP"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.230-信安IRCS"
+            },
+            "protocol": "ALL",
+            "destination_ports": [],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.243",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": []
+            },
+            "associated_application_group": "Default",
+            "position": 2
+        },
+        {
+            "name": "信安ISMS-业务管理口",
+            "description": "行业云ISP资质备案系统-互联网业务管理",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "信安和备案互联网源IP"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.233-信安ISMS"
+            },
+            "protocol": "ALL",
+            "destination_ports": [],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.242",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": []
+            },
+            "associated_application_group": "Default",
+            "position": 3
+        },
+        {
+            "name": "aTrust-VPN-CU和CMCC-1",
+            "description": "行业云零信任VPN-联通和移动出口映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.147和117.160.150.31"
+            },
+            "protocol": "TCP_UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "8443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.2",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 4
+        },
+        {
+            "name": "aTrust-VPN-CU和CMCC-2",
+            "description": "行业云零信任VPN-联通和移动出口映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.147和117.160.150.31"
+            },
+            "protocol": "TCP_UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "441"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.5",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "441"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 5
+        },
+        {
+            "name": "新湖期货-CT和CM自有01",
+            "description": "新湖期货自有互联网-CT和CM",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1801-新湖期货CT",
+                "vlan1802-新湖期货CM"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "171.15.18.37和39.162.50.71-新湖"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "10-65534"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.185",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "10-65534"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 6
+        },
+        {
+            "name": "华融融达期货测试-1",
+            "description": "华融融达期货测试",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8111"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.32",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8111"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 7
+        },
+        {
+            "name": "国投安信测试-1",
+            "description": "国投安信测试",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.215和39.165.248.41-国投安信"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8886-8887",
+                "18886-18887"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.11",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8886-8887",
+                    "18886-18887"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 8
+        },
+        {
+            "name": "浙江期货行业协会测试",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "18080"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.208",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "18080"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 9
+        },
+        {
+            "name": "宏源期货-中继服务-1",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1899-CU-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.224和218.28.38.66-宏源期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "55021"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.138.118",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "55021"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 10
+        },
+        {
+            "name": "宏源期货-中继服务-2",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1899-CU-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.224和218.28.38.66-宏源期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "55022"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.47",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "55021"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 11
+        },
+        {
+            "name": "长安期货测试-1",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "9898"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.181",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6666"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 12
+        },
+        {
+            "name": "长安期货测试-2",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "31508"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.181",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6767"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 13
+        },
+        {
+            "name": "浙商期货测试-1",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.217和39.165.248.40-浙商期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "21515-21546"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.215",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "21515-21546"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 14
+        },
+        {
+            "name": "新湖期货测试-CU和CMCC-1",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8090-8091"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.189",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8090-8091"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 15
+        },
+        {
+            "name": "新湖期货测试-CU和CMCC-2",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8092"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.189",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8092"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 16
+        },
+        {
+            "name": "云财富-OA系统映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.204和39.165.248.2-云财富1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "18081",
+                "18999",
+                "15222",
+                "17070",
+                "28081"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.171",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "18081",
+                    "18999",
+                    "15222",
+                    "17070",
+                    "28081"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 17
+        },
+        {
+            "name": "云财富-邮箱系统映射1",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.205和39.165.248.3-云财富2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "16025",
+                "16465"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.171",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "16025",
+                    "16465"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 18
+        },
+        {
+            "name": "云财富-邮箱系统映射2",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.206和39.165.248.11-云财富3"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "17110",
+                "17995",
+                "17143",
+                "17993",
+                "17025",
+                "17465",
+                "17080"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.171",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "17110",
+                    "17995",
+                    "17143",
+                    "17993",
+                    "17025",
+                    "17465",
+                    "17080"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 19
+        },
+        {
+            "name": "云财富-CTP行情和交易映射1",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.207和39.165.248.12-云财富4"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "42205",
+                "42213",
+                "50001",
+                "8889"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.11",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "42205",
+                    "42213",
+                    "50001",
+                    "8889"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 20
+        },
+        {
+            "name": "云财富-FCE易捷云Web服务",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.207和39.165.248.12-云财富4"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "10443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.20",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 21
+        },
+        {
+            "name": "云财富-CTP行情和交易映射2",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.208和39.165.248.20-云财富5"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "42205",
+                "42213"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.12",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "42205",
+                    "42213"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 22
+        },
+        {
+            "name": "一部智能客服测试-1",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "21547",
+                "18701"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.77",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "21547",
+                    "18701"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 23
+        },
+        {
+            "name": "一部智能客服测试-2",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "21548"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.213",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "21548"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 24
+        },
+        {
+            "name": "一部智能客服测试-3",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6661",
+                "6663",
+                "1252"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.95",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6661",
+                    "6663",
+                    "1252"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 25
+        },
+        {
+            "name": "一部智能客服测试-4",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP_UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "10000-10019",
+                "15060",
+                "16060"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.97",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "10000-10019",
+                    "15060",
+                    "16060"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 26
+        },
+        {
+            "name": "一部智能客服测试-5",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8081"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8081"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 27
+        },
+        {
+            "name": "交易所财务税务系统",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "80"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 28
+        },
+        {
+            "name": "上海产品开发部测试-1",
+            "description": "上海产品开发部测试",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "56021-56022",
+                "56029-56030",
+                "56080"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.166",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "0"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 29
+        },
+        {
+            "name": "上海产品运行部测试-1",
+            "description": "上海产品运行部部测试",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6102",
+                "6103",
+                "6104",
+                "15323",
+                "15324",
+                "8101",
+                "8102",
+                "9000",
+                "8022",
+                "8996",
+                "8999",
+                "8306"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.127",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6102",
+                    "6103",
+                    "6104",
+                    "15323",
+                    "15324",
+                    "8101",
+                    "8102",
+                    "9000",
+                    "8022",
+                    "8996",
+                    "8999",
+                    "8306"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 30
+        },
+        {
+            "name": "企微测试映射443-8443",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.149"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.249",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 31
+        },
+        {
+            "name": "企微测试映射8080-6060",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.149"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6060"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.249",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8080"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 32
+        },
+        {
+            "name": "长安期货测试-3",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6660",
+                "28080",
+                "6668",
+                "6670",
+                "6671"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.45",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6660",
+                    "28080",
+                    "6668",
+                    "6670",
+                    "6671"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 33
+        },
+        {
+            "name": "数字化IAM和MK",
+            "description": "数字化IAM和MK",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "IP-ADDRESS",
+                "address": "218.28.144.151"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "80"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "18002"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 34
+        },
+        {
+            "name": "长安期货测试-4",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "6667"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.45",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6667"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 35
+        },
+        {
+            "name": "数字化IAM和MK-复制",
+            "description": "数字化IAM和MK",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8100"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "18001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 36
+        },
+        {
+            "name": "交易所财务系统临时远程运维开启",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6322",
+                "6422",
+                "6522",
+                "6622",
+                "6722",
+                "8722",
+                "8822",
+                "6300",
+                "6301",
+                "6381",
+                "6400",
+                "6401",
+                "6481",
+                "6500",
+                "6501",
+                "7189",
+                "8761",
+                "8762",
+                "8763",
+                "8764",
+                "8765",
+                "8766",
+                "8767",
+                "8768",
+                "8861",
+                "8862",
+                "8863",
+                "8864",
+                "8865",
+                "8866",
+                "8867",
+                "8868",
+                "6636",
+                "6736"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.27",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6322",
+                    "6422",
+                    "6522",
+                    "6622",
+                    "6722",
+                    "8722",
+                    "8822",
+                    "6300",
+                    "6301",
+                    "6381",
+                    "6400",
+                    "6401",
+                    "6481",
+                    "6500",
+                    "6501",
+                    "7189",
+                    "8761",
+                    "8762",
+                    "8763",
+                    "8764",
+                    "8765",
+                    "8766",
+                    "8767",
+                    "8768",
+                    "8861",
+                    "8862",
+                    "8863",
+                    "8864",
+                    "8865",
+                    "8866",
+                    "8867",
+                    "8868",
+                    "6636",
+                    "6736"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 37
+        },
+        {
+            "name": "交易所财务税务系统-01",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8880"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28002"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 38
+        },
+        {
+            "name": "浙期协会-数据报送系统映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.216和39.165.248.45-浙期协会"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "30022",
+                "30023",
+                "30080",
+                "30081",
+                "33306",
+                "33307"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.92",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "30022",
+                    "30023",
+                    "30080",
+                    "30081",
+                    "33306",
+                    "33307"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 39
+        },
+        {
+            "name": "中泰期货-仿真系统映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "vlan1897-CT-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.209-中泰期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "31803",
+                "31807",
+                "38080",
+                "36668",
+                "36670",
+                "36671",
+                "36660"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.133",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "31803",
+                    "31807",
+                    "38080",
+                    "36668",
+                    "36670",
+                    "36671",
+                    "36660"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 40
+        },
+        {
+            "name": "中泰期货-仿真系统映射-UDP",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "vlan1897-CT-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.209-中泰期货"
+            },
+            "protocol": "UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "36666"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.133",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "36666"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 41
+        },
+        {
+            "name": "郑商所IAM平台-生产环境",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.150和117.160.199.227"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8100"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8100"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 42
+        },
+        {
+            "name": "交易所冷链物流指数-测试环境",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "20443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "20443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 43
+        },
+        {
+            "name": "交易所冷链物流指数K8S业务-测试环境",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "26443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.59",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 44
+        },
+        {
+            "name": "市场监察部-数据填报系统-TCP4680",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "4680-4681"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "4680-4681"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 45
+        },
+        {
+            "name": "上海行为分析系统nginx",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8885"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.188",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8886"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 46
+        },
+        {
+            "name": "上海行为分析系统数据库",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "15432"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.188",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "5432"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 47
+        },
+        {
+            "name": "企微生产映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.150和117.160.199.227"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8443",
+                "9090",
+                "8444"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.132.200",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8443",
+                    "9090",
+                    "8444"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 48
+        },
+        {
+            "name": "上海新闻资讯系统",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6379",
+                "27017"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.188",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6379",
+                    "27017"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 49
+        },
+        {
+            "name": "企微测试映射1080，9090",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.149"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "1080",
+                "9090"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.249",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "1080",
+                    "9090"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 50
+        },
+        {
+            "name": "郑商所POC阿里邮箱测试环境-1",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "33080"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28005"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 51
+        },
+        {
+            "name": "郑商所POC阿里邮箱测试环境-2",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "25"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.132.204",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "25"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 52
+        },
+        {
+            "name": "郑商所POC阿里邮箱测试环境-3",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "44025",
+                "44110",
+                "44143",
+                "30079",
+                "18880",
+                "30921",
+                "32716"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.132.203",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "25",
+                    "110",
+                    "143",
+                    "30079",
+                    "18880",
+                    "30921",
+                    "32716"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 53
+        },
+        {
+            "name": "华源期货SDwan-TCP",
+            "description": "华源期货SDwan-TCP",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6514",
+                "2003-2503",
+                "9091-9093"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.114",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6514",
+                    "2003-2503",
+                    "9091-9093"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 54
+        },
+        {
+            "name": "华源期货SDwan-TCP-复制",
+            "description": "华源期货SDwan-TCP",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.210和39.165.248.22-华源期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6514",
+                "2003-2503",
+                "9091-9093"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.114",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6514",
+                    "2003-2503",
+                    "9091-9093"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 55
+        },
+        {
+            "name": "华源期货SDwan-UDP",
+            "description": "华源期货SDwan-UDP",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "514",
+                "500",
+                "4500"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.114",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "514",
+                    "500",
+                    "4500"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 56
+        },
+        {
+            "name": "华源期货SDwan-UDP-复制",
+            "description": "华源期货SDwan-UDP",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.210和39.165.248.22-华源期货"
+            },
+            "protocol": "UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "514",
+                "500",
+                "4500"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.114",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "514",
+                    "500",
+                    "4500"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 57
+        },
+        {
+            "name": "交易所冷链物流指数-生产环境",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 58
+        },
+        {
+            "name": "交易所冷链物流指数K8S业务-生产环境",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.101",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 59
+        },
+        {
+            "name": "信达证通呼叫系统",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.220和39.165.248.74-信达期货3"
+            },
+            "protocol": "UDP",
+            "source_port": "0",
+            "destination_ports": [
+                "15070",
+                "16000-16059",
+                "16061-18081",
+                "18083-18117",
+                "18119-19999"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.93",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "15070",
+                    "16000-16059",
+                    "16061-18081",
+                    "18083-18117",
+                    "18119-19999"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 60
+        },
+        {
+            "name": "福能期货官网系统",
+            "description": "福能期货官网系统",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "23389"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.157",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "3389"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 61
+        },
+        {
+            "name": "华源期货飞创灾备环境",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "7000",
+                "7100",
+                "7200",
+                "9999"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.126",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "7000",
+                    "7100",
+                    "7200",
+                    "9999"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 62
+        },
+        {
+            "name": "华源期货飞创灾备环境-复制",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.210和39.165.248.22-华源期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "7000",
+                "7100",
+                "7200",
+                "9999"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.126",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "7000",
+                    "7100",
+                    "7200",
+                    "9999"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 63
+        },
+        {
+            "name": "郑商所人力系统",
+            "description": "郑商所人力系统",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6022-6025",
+                "6323",
+                "6380",
+                "6381",
+                "6423",
+                "6480",
+                "6481",
+                "6523",
+                "6581",
+                "6560",
+                "6623",
+                "6680",
+                "6681",
+                "6321",
+                "6421",
+                "6521",
+                "6621"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.249",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6022-6025",
+                    "6323",
+                    "6380",
+                    "6381",
+                    "6423",
+                    "6480",
+                    "6481",
+                    "6523",
+                    "6581",
+                    "6560",
+                    "6623",
+                    "6680",
+                    "6681",
+                    "6321",
+                    "6421",
+                    "6521",
+                    "6621"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 64
+        },
+        {
+            "name": "郑商所人力系统-安全网关",
+            "description": "郑商所人力系统",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6580"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6580"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 65
+        },
+        {
+            "name": "郑商所集团——风险速报系统",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "28003"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28003"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 66
+        },
+        {
+            "name": "郑商所集团——业务流程平台",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.150和117.160.199.227"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "80"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28004"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 67
+        },
+        {
+            "name": "新世纪期货-网站系统",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.214和39.165.248.55-新世纪期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8080",
+                "8043"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.138.112",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8080",
+                    "8043"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 68
+        },
+        {
+            "name": "新湖期货上传-临时策略",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "12322"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.123",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "22"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 69
+        },
+        {
+            "name": "首创期货CTP环境交易和行情端口映射-04",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.211和39.165.248.35-首创期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "41208",
+                "41216",
+                "50004"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.44",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "41205",
+                    "41213",
+                    "50001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 70
+        },
+        {
+            "name": "信达期货-赢+色谱分析系统web端",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.220和39.165.248.74-信达期货3"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "4431"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.169",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "4431"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 71
+        },
+        {
+            "name": "网络安全组防护验证-1",
+            "description": "网络安全组防护验证-1",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "28010"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28010"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 72
+        },
+        {
+            "name": "信达期货-信创官网",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.218和39.165.248.84-信达期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "443",
+                "8099"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.57",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "443",
+                    "8099"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 73
+        },
+        {
+            "name": "信达期货-自研系统和信创官网",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.220和39.165.248.74-信达期货3"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "4429",
+                "4430",
+                "4432-4439"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.57",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "4431",
+                    "4430",
+                    "4432-4439"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 74
+        },
+        {
+            "name": "网络安全组防护验证-2",
+            "description": "网络安全组防护验证-2",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "28011"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28011"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 75
+        },
+        {
+            "name": "首创期货CTP环境交易和行情端口映射-02",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.211和39.165.248.35-首创期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "41206",
+                "41214",
+                "50002"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.42",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "41205",
+                    "41213",
+                    "50001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 76
+        },
+        {
+            "name": "首创期货CTP环境交易和行情端口映射-03",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.211和39.165.248.35-首创期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "41207",
+                "41215",
+                "50003"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.43",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "41205",
+                    "41213",
+                    "50001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 77
+        },
+        {
+            "name": "首创期货CTP环境交易和行情端口映射-01",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.211和39.165.248.35-首创期货"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "41205",
+                "41213",
+                "50001"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.41",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "41205",
+                    "41213",
+                    "50001"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 78
+        },
+        {
+            "name": "河南协会-数据报送系统映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "39.165.248.46-河南协会"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "48080",
+                "40022",
+                "43306"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.62",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "48080",
+                    "40022",
+                    "43306"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 79
+        },
+        {
+            "name": "场外-官网出云测试-80端口-1224临时",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "180"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.76",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "80"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 80
+        },
+        {
+            "name": "渤海期货CTP环境交易和行情端口映射-01",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.212和39.165.248.26-渤海期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "43305",
+                "43313"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.71",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "43205",
+                    "43213"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 81
+        },
+        {
+            "name": "渤海期货CTP环境交易和行情端口映射-02",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.213和39.165.248.27-渤海期货2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "43307",
+                "43315"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.72",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "43205",
+                    "43213"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 82
+        },
+        {
+            "name": "渤海期货CTP环境交易和行情端口映射-03",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.212和39.165.248.26-渤海期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "43205",
+                "43213",
+                "43207",
+                "43215",
+                "60002"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.71",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "13205",
+                    "13213",
+                    "23205",
+                    "23213",
+                    "60002"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 83
+        },
+        {
+            "name": "渤海期货CTP环境交易和行情端口映射-04",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.213和39.165.248.27-渤海期货2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "43205",
+                "43213",
+                "43207",
+                "43215",
+                "60002"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.140.72",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "13205",
+                    "13213",
+                    "23205",
+                    "23213",
+                    "60002"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 84
+        },
+        {
+            "name": "WPS中台SLB对外映射-80",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "IP-ADDRESS",
+                "address": "218.28.144.152"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "80"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28081"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 85
+        },
+        {
+            "name": "企微测试映射8447",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE",
+                "inside-net9"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.149"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8447"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.249",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "8447"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 86
+        },
+        {
+            "name": "WPS中台测试环境",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "ALL"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "IP-ADDRESS",
+                "address": "218.28.144.149"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "80",
+                "443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "28080",
+                    "28443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 87
+        },
+        {
+            "name": "一部智能客服测试-6",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "6662",
+                "18082",
+                "18118"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.250.131",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "6662",
+                    "18082",
+                    "18118"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 88
+        },
+        {
+            "name": "信达期货飞马系统-生产",
+            "description": "信达期货",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.220和39.165.248.74-信达期货3"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "9090"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.247",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "9090"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 89
+        },
+        {
+            "name": "信达期货飞马系统",
+            "description": "信达期货",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.219和39.165.248.85-信达期货2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "29090"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.138.86",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "9090"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 90
+        },
+        {
+            "name": "信达期货-易星系统-1",
+            "description": "信达期货",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.218和39.165.248.84-信达期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "3021"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.58",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "22"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 91
+        },
+        {
+            "name": "信达期货-易星系统-2",
+            "description": "信达期货",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.218和39.165.248.84-信达期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "3022"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.121",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "22"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 92
+        },
+        {
+            "name": "信达期货-易星系统-3",
+            "description": "信达期货",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.218和39.165.248.84-信达期货1"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "3023"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.100",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "22"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 93
+        },
+        {
+            "name": "信达恒生测试系统",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.219和39.165.248.85-信达期货2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "7020",
+                "7006",
+                "7036",
+                "7640"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.175",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "9020",
+                    "9006",
+                    "9036",
+                    "9640"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 94
+        },
+        {
+            "name": "信达恒生仿真系统-1",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.219和39.165.248.85-信达期货2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "9020",
+                "9006",
+                "9036",
+                "9640"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.142",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "9020",
+                    "9006",
+                    "9036",
+                    "9640"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 95
+        },
+        {
+            "name": "信达恒生仿真系统-2",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "vlan1897-CT-IPV4(公用)",
+                "vlan1898-CM-IPV4(公用)"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "1.192.170.219和39.165.248.85-信达期货2"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "8020",
+                "8006",
+                "8036",
+                "8640"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.117",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "9020",
+                    "9006",
+                    "9036",
+                    "9640"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 96
+        },
+        {
+            "name": "东吴期货-企微+官网系统",
+            "description": "东吴期货-企微+官网系统",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "5443",
+                "9443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.221",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "5443",
+                    "9443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 97
+        },
+        {
+            "name": "东吴期货-企微系统",
+            "description": "东吴期货-企微+官网系统",
+            "state": "DISABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "7443"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.148",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "7443"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 98
+        },
+        {
+            "name": "郑商所模拟大赛映射01",
+            "description": "郑商所模拟大赛映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "55021"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.24",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "55021"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 99
+        },
+        {
+            "name": "郑商所模拟大赛映射02",
+            "description": "郑商所模拟大赛映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "55024"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.136.146",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "55021"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 100
+        },
+        {
+            "name": "郑商所模拟大赛映射03",
+            "description": "郑商所模拟大赛映射",
+            "state": "ENABLE",
+            "type": "IPV4",
+            "inbound_links": [
+                "CU-IPV4-ZCE",
+                "CM-IPV4-ZCE"
+            ],
+            "source_address": {
+                "type": "ALL"
+            },
+            "destination_address": {
+                "type": "CUSTOM-ADDRESS-GROUP",
+                "ref_custom_address_group": "218.28.144.148和117.160.199.225"
+            },
+            "protocol": "TCP",
+            "source_port": "0",
+            "destination_ports": [
+                "55025"
+            ],
+            "dnat_process": {
+                "translated_address": {
+                    "address": "172.27.137.225",
+                    "type": "IP-ADDRESS"
+                },
+                "translated_ports": [
+                    "55021"
+                ]
+            },
+            "associated_application_group": "Default",
+            "position": 101
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+  "template_mapping": {
+    "cisco_ios": [
+      "cisco ios"
+    ],
+    "cisco_nxos": [
+      "cisco nxos",
+      "n3548"
+    ],
+    "huawei_vrp": [
+      "huawei vrp"
+    ],
+    "juniper_junos": [
+      "juniper"
+    ],
+    "juniper_screenos": [
+      "screenos"
+    ],
+    "hp_procurve": [
+      "procurve"
+    ],
+    "hp_comware": [
+      "hp",
+      "comware",
+      "h3c"
+    ],
+    "linux": [
+      "linux"
+    ],
+    "windows": [
+      "windows"
+    ],
+    "generic_termserver": [
+      "termserver"
+    ]
+  },
+  "hostname_mapping": {
+    "cisco_ios": [
+      "cisco",
+      "3750",
+      "3850",
+      "2960",
+      "4500",
+      "4948"
+    ],
+    "huawei_vrp": [
+      "huawei",
+      "eudemon",
+      "s5700",
+      "s6700",
+      "s7700",
+      "s9300"
+    ],
+    "juniper_junos": [
+      "junip"
+    ],
+    "linux": [
+      "linux"
+    ],
+    "windows": [
+      "windows"
+    ],
+    "hp_procurve": [
+      "hp",
+      "procurve"
+    ],
+    "hp_comware": [
+      "h3c",
+      "comware"
+    ],
+    "generic_termserver": [
+      "termserver"
+    ]
+  },
+  "network_device_types": [
+    "cisco_ios",
+    "cisco_nxos",
+    "huawei_vrp",
+    "juniper_junos",
+    "juniper_screenos",
+    "hp_procurve",
+    "hp_comware",
+    "generic_termserver"
+  ],
+  "network_group_mapping": {
+    "172.16.190.0/28": "ali_net_mgt_group",
+    "172.16.190.0/24": "ali_network_group",
+    "172.16.191.0/24": "ali_server_group",
+    "172.16.201.0/24": "dev_group",
+    "172.16.245.0/24": "dev_group",
+    "172.16.247.0/24": "dev_group"
+  }
+}

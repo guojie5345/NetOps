@@ -1,0 +1,2542 @@
+{
+    "test": {
+        "host": "172.16.190.162",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ASW-308-B02.AM11": {
+        "host": "172.16.190.163",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21J06-DT-DShs7503AB": {
+        "host": "172.16.245.33",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2NA02-DT-ASu5200-B": {
+        "host": "172.16.244.36",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Backup-server": {
+        "host": "172.16.248.8",
+        "device_type": "linux",
+        "port": 161
+    },
+    "J23A01-MGT-ASc3750A": {
+        "host": "172.16.201.254",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J23G04-DT-AShw6866-A": {
+        "host": "172.16.201.32",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "vdi-node12": {
+        "host": "131.6.200.223",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G04-DT-AShw6866-B": {
+        "host": "172.16.201.33",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Dingding-tiaoban": {
+        "host": "172.16.251.2",
+        "device_type": "linux",
+        "port": 161
+    },
+    "ASW-308-B05.AM11": {
+        "host": "172.16.190.164",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ASW-308-C01.AM11": {
+        "host": "172.16.190.165",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ASW-308-C05.AM11": {
+        "host": "172.16.190.166",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ASW-308-D01.AM11": {
+        "host": "172.16.190.167",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "IPAM": {
+        "host": "172.16.248.5",
+        "device_type": "linux",
+        "port": 161
+    },
+    "Rconfig": {
+        "host": "172.16.248.4",
+        "device_type": "linux",
+        "port": 161
+    },
+    "J21G04-2U-moderator": {
+        "host": "172.16.233.130",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G04-DT-ASc3548-B": {
+        "host": "172.16.201.35",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "ASW-308-D07.AM11": {
+        "host": "172.16.190.162",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "CSW-VM-VPC-G1-1.AM11": {
+        "host": "172.16.190.172",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K08-PC-FWQlc5280M6-11U": {
+        "host": "172.16.253.99",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "CSW-VM-VPC-G1-2.AM11": {
+        "host": "172.16.190.173",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "DSW-VM-G1-P-1.AM11": {
+        "host": "172.16.190.168",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "DSW-VM-G1-P-2.AM11": {
+        "host": "172.16.190.169",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ISW-VM-G1-1.AM11": {
+        "host": "172.16.190.174",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ISW-VM-G1-2.AM11": {
+        "host": "172.16.190.175",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23H01-DT-ASu5200-A": {
+        "host": "172.16.201.17",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node11": {
+        "host": "131.6.200.224",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23A01-DT-ASc3850-CMCC": {
+        "host": "172.16.201.7",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-24U": {
+        "host": "172.16.253.97",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "VM-Server-172.16.248.51": {
+        "host": "172.16.248.51",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21F13-DT-RThs3610": {
+        "host": "172.16.245.39",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J21F13-DT-ASu5200A": {
+        "host": "172.16.245.40",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23E01-DT-AShs5560-B": {
+        "host": "172.16.201.29",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21I01-FZ-CSB-ASc3750A": {
+        "host": "172.16.245.17",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J23A02-DT-ASc2960A": {
+        "host": "172.16.201.8",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "LSW-VM-G1-1.AM11": {
+        "host": "172.16.190.170",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JA2NA3-DT-ASc2960A": {
+        "host": "172.16.244.86",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "LSW-VM-G1-2.AM11": {
+        "host": "172.16.190.171",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21F07-DT-ASu5200A": {
+        "host": "172.16.245.21",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JA2SA2-DT-ASc4948A": {
+        "host": "172.16.244.89",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J23B01-MGT-ASu5200-A": {
+        "host": "172.16.201.252",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OASW.10GE.1-308-B03.AM11": {
+        "host": "172.16.190.180",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23H01-MGT-ASu5200-A": {
+        "host": "172.16.201.238",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J20A05-DT-DShs5560-A": {
+        "host": "172.16.244.58",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J20C02-DT-AShs5560-A": {
+        "host": "172.16.244.116",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21H01-DT-ASu5200A": {
+        "host": "172.16.245.8",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21I01-DT-ASu5200A": {
+        "host": "172.16.245.18",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JA302-C2960A": {
+        "host": "172.16.244.71",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J23E08-MGT-ASc2960A": {
+        "host": "172.16.201.243",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J23E01-DT-AShs6520-A": {
+        "host": "172.16.201.19",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OASW.10GE.2-308-B06.AM11": {
+        "host": "172.16.190.181",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OASW.10GE.3-308-C02.AM11": {
+        "host": "172.16.190.182",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OASW.10GE.4-308-C06.AM11": {
+        "host": "172.16.190.183",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L04-DL380G10-2U": {
+        "host": "172.16.253.13",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23A01-DT-AShs5560-A": {
+        "host": "172.16.201.5",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K0L0_F5030A": {
+        "host": "172.16.247.5",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node16": {
+        "host": "131.6.200.181",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L00_S5560B": {
+        "host": "172.16.247.26",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23E06-DT-ASc3548-A": {
+        "host": "172.16.201.22",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "TFT": {
+        "host": "172.16.191.3",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F02-DT-ASu7800-A": {
+        "host": "172.16.201.23",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23A01A02-DT-FWhs5030": {
+        "host": "172.16.201.107",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14M0-DT-AShs5560B": {
+        "host": "172.16.247.28",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21F01-DT-AShs5560A": {
+        "host": "172.16.245.34",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14M0-DT-AShs5560A": {
+        "host": "172.16.247.27",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23F02F03-DT-AShs5560-A": {
+        "host": "172.16.201.12",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21F14-DT-AShs5130A": {
+        "host": "172.16.245.38",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G01-DT-AShs5130B": {
+        "host": "172.16.245.23",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node10": {
+        "host": "131.6.200.225",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21H01-DT-AShs5130A": {
+        "host": "172.16.245.7",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21H01-DT-AShs6520A": {
+        "host": "172.16.245.32",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23B02-DT-ASu7800-A": {
+        "host": "172.16.201.24",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "inspur-trap-test": {
+        "host": "127.0.0.1",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21I01-DT-AShs5130A": {
+        "host": "172.16.245.14",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JA2NA2-DT-AShs5110A": {
+        "host": "172.16.244.67",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21H14-DT-AShs5560": {
+        "host": "172.16.245.10",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23H01-DT-AShs6520-A": {
+        "host": "172.16.201.15",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14P03-DT-ASc3548-A": {
+        "host": "172.16.247.34",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "Q14P01-DT-ASc3750-A": {
+        "host": "172.16.247.36",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J23H01-DT-AShs6520-B": {
+        "host": "172.16.201.16",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J20C3C4-F5030": {
+        "host": "172.16.244.200",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L06_S6800A": {
+        "host": "172.16.247.8",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L00_S6800A": {
+        "host": "172.16.247.7",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OASW.10GE.5-308-D02.AM11": {
+        "host": "172.16.190.184",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L00_S6860A": {
+        "host": "172.16.247.3",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OASW.GE.1-308-D07.AM11": {
+        "host": "172.16.190.179",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J20B02-ON-AShw5731-A": {
+        "host": "172.16.244.15",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "J23E01-DT-AShs5560-A": {
+        "host": "172.16.201.18",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2NA2-DT-AShs5130B": {
+        "host": "172.16.244.66",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K03-DT-ASu6600-A": {
+        "host": "172.16.247.31",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L03-DL380G10-2U": {
+        "host": "172.16.253.7",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K04-DT-ASu6600-A": {
+        "host": "172.16.247.32",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23C01-MGT-ASu5200-A": {
+        "host": "172.16.201.250",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Zabbix server": {
+        "host": "127.0.0.1",
+        "device_type": "linux",
+        "port": 10050
+    },
+    "vdi-node17": {
+        "host": "131.6.200.182",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P03-DT-ASc3548-B": {
+        "host": "172.16.247.35",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "Q14P01-MGT-ASc3750-A": {
+        "host": "172.16.247.37",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "JB6A2-DT-AShs5120": {
+        "host": "172.16.244.59",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K0L0_S12504A": {
+        "host": "172.16.247.2",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K04-KunLun2280-15U": {
+        "host": "172.16.253.37",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L05-DL380G10-2U": {
+        "host": "172.16.253.19",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L04-DL380G10-17U": {
+        "host": "172.16.253.18",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K08-NF5280M6-14U": {
+        "host": "172.16.253.98",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L04-DL380G10-14U": {
+        "host": "172.16.253.17",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L04-DL380G10-11U": {
+        "host": "172.16.253.16",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23F01-MGT-AShs5560-A": {
+        "host": "172.16.201.11",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2SA2-DT-AShs5200-B": {
+        "host": "172.16.244.63",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L04-DL380G10-8U": {
+        "host": "172.16.253.15",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-21U": {
+        "host": "172.16.253.132",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-21U": {
+        "host": "172.16.253.96",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "VM-Server-172.16.248.53": {
+        "host": "172.16.248.53",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K0-MGT-AShs5560B": {
+        "host": "172.16.247.30",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K0-MGT-AShs5560A": {
+        "host": "172.16.247.29",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L00_S5560A": {
+        "host": "172.16.247.4",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node14": {
+        "host": "131.6.200.179",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J20A03-ON-AShs5130-CU": {
+        "host": "172.16.244.2",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "OSW-308-A03-N-1.AM11": {
+        "host": "172.16.190.178",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A3-6U-FC-FWhw12004A": {
+        "host": "172.16.190.35",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Q14K03-HW2280-3U": {
+        "host": "172.16.253.27",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21H13-DT-FWj1000": {
+        "host": "172.16.245.9",
+        "device_type": "juniper_junos",
+        "port": 161
+    },
+    "J21J02-DT-FWj2000A": {
+        "host": "172.16.245.42",
+        "device_type": "juniper_junos",
+        "port": 161
+    },
+    "J21H09-23U-Unis-R380G5": {
+        "host": "172.16.233.6",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21H09-26U-Unis-R380G5": {
+        "host": "172.16.233.7",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2SA2-DT-AShs5130B": {
+        "host": "172.16.244.64",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21J02-DT-FWj2000B": {
+        "host": "172.16.245.24",
+        "device_type": "juniper_junos",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-6U": {
+        "host": "172.16.253.91",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23A01-DT-FWj1000A": {
+        "host": "172.16.201.100",
+        "device_type": "juniper_junos",
+        "port": 161
+    },
+    "VM-Server-172.16.248.54": {
+        "host": "172.16.248.54",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2NA3-DT-ASc4948A": {
+        "host": "172.16.244.117",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "VM-Server-172.16.248.50": {
+        "host": "172.16.248.50",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J20A04-ON-AShs5130-CT": {
+        "host": "172.16.244.3",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23E03-DT-ASc3548-A": {
+        "host": "172.16.201.20",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "vdi-node15": {
+        "host": "131.6.200.180",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23E03-DT-ASc3548-B": {
+        "host": "172.16.201.21",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "T38A3A4-27U-MGT-OMRu7800A": {
+        "host": "172.16.190.1",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A4-6U-FC-FWhw12004B": {
+        "host": "172.16.190.36",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "T38A5-11U-CU-Rhs6604": {
+        "host": "172.16.190.56",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A5-14U-CM-Rc1002": {
+        "host": "172.16.190.53",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "T38A5-29U-TRD-FWhw6655A": {
+        "host": "172.16.190.43",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-3U": {
+        "host": "172.16.253.90",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21J07-Inspur-Server-2": {
+        "host": "172.16.248.25",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23A01-DT-FWj1000B": {
+        "host": "172.16.201.101",
+        "device_type": "juniper_junos",
+        "port": 161
+    },
+    "J21H13-DT-ASc3548A": {
+        "host": "172.16.245.20",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J21H13-DT-ASc3548B": {
+        "host": "172.16.245.22",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J21I01-FZ-CSB-ASc3548A": {
+        "host": "172.16.245.16",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "J21I12-DT-ASc3548A": {
+        "host": "172.16.245.15",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "JB4A2-DT-AShs5130A": {
+        "host": "172.16.244.60",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G04-5U-rabbitmq1": {
+        "host": "172.16.233.131",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-12U": {
+        "host": "172.16.253.129",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-24U": {
+        "host": "172.16.253.133",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14M0-S5130A": {
+        "host": "172.16.247.20",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ECCA01-ON-AShw5731-A": {
+        "host": "172.16.244.126",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "T38A5-31U-MGT-FWhw6625A": {
+        "host": "172.16.190.51",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "J21J06-DT-FWhw6680A": {
+        "host": "172.16.245.29",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "T38A5A6-33U-CDL-ASu7800A": {
+        "host": "172.16.190.54",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21J06-DT-FWhw6680B": {
+        "host": "172.16.245.30",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "T38A5A6-21U-FC-DSu7800A": {
+        "host": "172.16.190.37",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "ELK-SNMP": {
+        "host": "172.16.248.7",
+        "device_type": "linux",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-15U": {
+        "host": "172.16.253.130",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21G04-14U-compute1": {
+        "host": "172.16.233.134",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G04-17U-compute3": {
+        "host": "172.16.233.135",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K03-HW2280-6U": {
+        "host": "172.16.253.28",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21G05-2U-cispweb": {
+        "host": "172.16.233.138",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G05-5U-rabbitmq2": {
+        "host": "172.16.233.139",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G05-8U-collector2": {
+        "host": "172.16.233.140",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G05-11U-bro2": {
+        "host": "172.16.233.141",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G05-14U-compute2": {
+        "host": "172.16.233.142",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K07-6U-SR658HV2": {
+        "host": "172.16.253.83",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A5A6-35U-TRD-ASu7800A": {
+        "host": "172.16.190.55",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A6-11U-CT-Rc1002": {
+        "host": "172.16.190.57",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "JB2NA2-DT-AShs5130A": {
+        "host": "172.16.244.94",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K03-HW2280-9U": {
+        "host": "172.16.253.29",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A6-23U-ON-FWss6000B": {
+        "host": "172.16.190.46",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A6-26U-CDL-FWss6000B": {
+        "host": "172.16.190.42",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L07-NF5280M5-5U": {
+        "host": "172.16.253.22",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21G05-17U-compute4": {
+        "host": "172.16.233.143",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G05-20U-compute6": {
+        "host": "172.16.233.144",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G06-6U-database1": {
+        "host": "172.16.233.145",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21G08-6U-database2": {
+        "host": "172.16.233.146",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-9U": {
+        "host": "172.16.253.92",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K05-R6230HA-15U": {
+        "host": "172.16.253.42",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K05-R6230HA-3U": {
+        "host": "172.16.253.38",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K04-KunLun2280-9U": {
+        "host": "172.16.253.35",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K03-MS7040G2-18U": {
+        "host": "172.16.253.32",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L07-NF5280M5-11U": {
+        "host": "172.16.253.24",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L05-DL380G10-5U": {
+        "host": "172.16.253.20",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L06-DL380G10-5U": {
+        "host": "172.16.253.62",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L03-DL380G10-8U": {
+        "host": "172.16.253.9",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A5-23U-ON-FWss6000A": {
+        "host": "172.16.190.45",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "JA3NA1-DT-AShw5731B": {
+        "host": "172.16.244.132",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "J23F01-MGT-ASu5200-A": {
+        "host": "172.16.201.244",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L06-DL380G10-14U": {
+        "host": "172.16.253.65",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A6-29U-TRD-FWhw6655B": {
+        "host": "172.16.190.44",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "T38A6-31U-MGT-FWhw6625B": {
+        "host": "172.16.190.52",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Q14L01-DL380G10-5U": {
+        "host": "172.16.253.52",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K05-R6230HA-12U": {
+        "host": "172.16.253.41",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B02-FC-FWQlx658-17": {
+        "host": "172.16.192.83",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L06-DL380G10-11U": {
+        "host": "172.16.253.64",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L06-DL380G10-2U": {
+        "host": "172.16.253.61",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L01-DL380G10-8U": {
+        "host": "172.16.253.53",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A7-32U-ISP-FWss6000A": {
+        "host": "172.16.190.23",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "172.16.253.44": {
+        "host": "172.16.253.44",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "172.16.253.47": {
+        "host": "172.16.253.47",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L06-DL380G10-8U": {
+        "host": "172.16.253.63",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-9U": {
+        "host": "172.16.253.128",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-3U": {
+        "host": "172.16.253.126",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "VM-Server-172.16.248.52": {
+        "host": "172.16.248.52",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-12U": {
+        "host": "172.16.253.93",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L02-DL380G10-11U": {
+        "host": "172.16.253.4",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K05-R6230HA-6U": {
+        "host": "172.16.253.39",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L02-DL380G10-17U": {
+        "host": "172.16.253.6",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "XCvdesktop-MCNA02": {
+        "host": "131.6.200.162",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L02-DL380G10-14U": {
+        "host": "172.16.253.5",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23E10-DT-AShw5720A": {
+        "host": "172.16.201.13",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Q14K04-KunLun2280-12U": {
+        "host": "172.16.253.36",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "JB4A02-DT-AShw5731-A": {
+        "host": "172.16.244.128",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Q14K04-KunLun2280-3U": {
+        "host": "172.16.253.33",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L04-DL380G10-5U": {
+        "host": "172.16.253.14",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L02-2U-node9": {
+        "host": "172.16.253.1",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L02-DL380G10-8U": {
+        "host": "172.16.253.3",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L07-NF5280M5-17U": {
+        "host": "172.16.253.26",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L07-NF5280M5-8U": {
+        "host": "172.16.253.23",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L02-DL380G10-5U": {
+        "host": "172.16.253.2",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "172.16.253.8": {
+        "host": "172.16.253.8",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node1": {
+        "host": "131.6.200.201",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L03-DL380G10-11U": {
+        "host": "172.16.253.10",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "131.6.200.2": {
+        "host": "131.6.200.2",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "131.6.200.4": {
+        "host": "131.6.200.4",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "172.16.253.46": {
+        "host": "172.16.253.46",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "131.6.200.136": {
+        "host": "131.6.200.136",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "131.6.200.175": {
+        "host": "131.6.200.175",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-15U": {
+        "host": "172.16.253.94",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G04-DT-ASc3548-A": {
+        "host": "172.16.201.34",
+        "device_type": "cisco_ios",
+        "port": 161
+    },
+    "XCvdesktop-MCNA01": {
+        "host": "131.6.200.161",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A7A8-11U-FC-ASu7800A": {
+        "host": "172.16.190.39",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node2": {
+        "host": "131.6.200.202",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node3": {
+        "host": "131.6.200.203",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node4": {
+        "host": "131.6.200.204",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node5": {
+        "host": "131.6.200.205",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node6": {
+        "host": "131.6.200.206",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A7A8-30U-FC-DSu7800A": {
+        "host": "172.16.190.25",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "vdi-node7": {
+        "host": "131.6.200.207",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "HPE-Nimble-HF60": {
+        "host": "131.6.200.212",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-6U": {
+        "host": "172.16.253.127",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P05-NF5280M6-18U": {
+        "host": "172.16.253.131",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "JA3NA01-DT-AShw5731-A": {
+        "host": "172.16.244.131",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "Q14K07-24U-SR658HV2": {
+        "host": "172.16.253.88",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A7A8-44U-ISP-ASu7800A": {
+        "host": "172.16.190.20",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "XCvdesktop-SCNA01": {
+        "host": "131.6.200.160",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L01-DL380G10-2U": {
+        "host": "172.16.253.51",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K05-R6230HA-9U": {
+        "host": "172.16.253.40",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K09-KunLun2280-18U": {
+        "host": "172.16.253.95",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K05-R6230HA-18U": {
+        "host": "172.16.253.43",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K04-KunLun2280-6U": {
+        "host": "172.16.253.34",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G04-lc5260-14U": {
+        "host": "172.16.235.228",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K03-TS2280-15U": {
+        "host": "172.16.253.31",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K03-TS2280-12U": {
+        "host": "172.16.253.30",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L07-NF5280M5-14U": {
+        "host": "172.16.253.25",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23B01-DT-ASj5100A": {
+        "host": "172.16.201.30",
+        "device_type": "juniper_junos",
+        "port": 161
+    },
+    "Q14L07-NF5280M5-2U": {
+        "host": "172.16.253.21",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L03-DL380G10-17U": {
+        "host": "172.16.253.12",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L03-DL380G10-14U": {
+        "host": "172.16.253.11",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "172.16.253.45": {
+        "host": "172.16.253.45",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21H13-DT-AShs1410B": {
+        "host": "172.16.245.13",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J21H13-DT-AShw8861A": {
+        "host": "172.16.245.12",
+        "device_type": "huawei_vrp",
+        "port": 161
+    },
+    "vdi-node9": {
+        "host": "131.6.200.209",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G04-lc5260-11U": {
+        "host": "172.16.235.229",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A8-32U-ISP-FWss6000B": {
+        "host": "172.16.190.24",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G05-lc5260-8U": {
+        "host": "172.16.235.230",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G05-lc5260-14U": {
+        "host": "172.16.235.232",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G04-lc5260-2U": {
+        "host": "172.16.235.233",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G05-lc5260-5U": {
+        "host": "172.16.235.235",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F04-lc5260-3U": {
+        "host": "172.16.235.130",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23D01-MGT-ASu5200-A": {
+        "host": "172.16.201.248",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38C06-FC-FWQlx658-11": {
+        "host": "172.16.193.72",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23H08-ts2280-5U": {
+        "host": "172.16.235.134",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E4-42U-MGT-OSWNu5800A": {
+        "host": "172.16.190.3",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "TAPSW-308-A04.AM11": {
+        "host": "172.16.190.176",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38B02-FC-FWQkl2280-20": {
+        "host": "172.16.192.27",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E3-38-40U-FCE-DSu7800A": {
+        "host": "172.16.190.61",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23H06-SugonR6237HA-20U": {
+        "host": "172.16.235.150",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "DCIM": {
+        "host": "172.16.248.6",
+        "device_type": "linux",
+        "port": 161
+    },
+    "T38A7-22U-MGT-OSWNu5200A": {
+        "host": "172.16.190.2",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23E01-MGT-ASu5200-A": {
+        "host": "172.16.201.246",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38B01-FC-FWQlx658-05": {
+        "host": "172.16.192.63",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J21H09-hw5885-12U": {
+        "host": "172.16.233.55",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23H08-ts2280-2U": {
+        "host": "172.16.235.133",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23H08-ts2280-8U": {
+        "host": "172.16.235.135",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23H09-kl2280-2U": {
+        "host": "172.16.235.136",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14-DT-ASu5200A": {
+        "host": "172.16.247.9",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JA3A01-DT-ASu5200-A": {
+        "host": "172.16.244.69",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JA311-DT-ASu5200-A": {
+        "host": "172.16.244.102",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JSECCA02-ON-ASu5200-A": {
+        "host": "172.16.244.84",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2SA02-DT-ASu5200-A": {
+        "host": "172.16.244.65",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB2NA02-DT-ASu5200-A": {
+        "host": "172.16.244.61",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14K08-MGT-ASu5200-A": {
+        "host": "172.16.247.38",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G01-DT-ASu5200-A": {
+        "host": "172.16.201.31",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G01-MGT-ASu5200-A": {
+        "host": "172.16.201.241",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G05-lc5260-11U": {
+        "host": "172.16.235.226",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G04-lc5260-8U": {
+        "host": "172.16.235.227",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23A01-DT-ASu5200A": {
+        "host": "172.16.201.41",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23C01-DT-ASu5200A": {
+        "host": "172.16.201.42",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23D01-DT-ASu5200A": {
+        "host": "172.16.201.43",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23F01-DT-ASu5200A": {
+        "host": "172.16.201.44",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23B01-DT-ASu5200A": {
+        "host": "172.16.201.40",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23G05-lc5260-2U": {
+        "host": "172.16.235.231",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G04-lc5260-5U": {
+        "host": "172.16.235.234",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F04-lc5260-6U": {
+        "host": "172.16.235.131",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F04-lc5260-9U": {
+        "host": "172.16.235.132",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B03-FC-FWQkl2280-05": {
+        "host": "172.16.192.19",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B03-FC-FWQkl2280-08": {
+        "host": "172.16.192.28",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B03-FC-FWQkl2280-11": {
+        "host": "172.16.192.17",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B03-FC-FWQkl2280-14": {
+        "host": "172.16.192.56",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B05-FC-FWQkl2280-05": {
+        "host": "172.16.192.37",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B05-FC-FWQkl2280-08": {
+        "host": "172.16.192.14",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B05-FC-FWQkl2280-11": {
+        "host": "172.16.192.29",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B05-FC-FWQkl2280-14": {
+        "host": "172.16.192.10",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C01-FC-FWQlc5280-05": {
+        "host": "172.16.192.30",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C01-FC-FWQlc5280-08": {
+        "host": "172.16.192.38",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C01-FC-FWQlc5280-11": {
+        "host": "172.16.192.36",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B08-FC-FWQlc5280-17": {
+        "host": "172.16.192.44",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlc5280-08": {
+        "host": "172.16.192.20",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C04-FC-FWQlc5280-05": {
+        "host": "172.16.192.40",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C04-FC-FWQlc5280-08": {
+        "host": "172.16.192.55",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C04-FC-FWQlc5280-11": {
+        "host": "172.16.192.31",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C08-FC-FWQlc5280-02": {
+        "host": "172.16.192.52",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C08-FC-FWQlc5280-05": {
+        "host": "172.16.192.50",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C08-FC-FWQlc5280-11": {
+        "host": "172.16.192.45",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D01-FC-FWQkl2280-05": {
+        "host": "172.16.192.11",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D01-FC-FWQkl2280-08": {
+        "host": "172.16.192.12",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D01-FC-FWQkl2280-11": {
+        "host": "172.16.192.26",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D01-FC-FWQlc5280-17": {
+        "host": "172.16.192.42",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D02-FC-FWQlc5280-05": {
+        "host": "172.16.192.46",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D02-FC-FWQlc5280-08": {
+        "host": "172.16.192.43",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D03-FC-FWQlc5280-05": {
+        "host": "172.16.192.53",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D03-FC-FWQlc5280-08": {
+        "host": "172.16.192.18",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlc5280-17": {
+        "host": "172.16.192.48",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C07-FC-FWQlc5280-08": {
+        "host": "172.16.192.35",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D03-FC-FWQlc5280-17": {
+        "host": "172.16.192.21",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F04-hp380-12U": {
+        "host": "172.16.235.137",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38D04-FC-FWQkl2280-17": {
+        "host": "172.16.192.15",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E01-FC-FWQlc5280-11": {
+        "host": "172.16.192.32",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D05-FC-FWQlc5280-02": {
+        "host": "172.16.192.51",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D05-FC-FWQlc5280-05": {
+        "host": "172.16.192.16",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D05-FC-FWQlc5280-08": {
+        "host": "172.16.192.41",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D05-FC-FWQlc5280-11": {
+        "host": "172.16.192.39",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D06-FC-FWQlc5280-02": {
+        "host": "172.16.192.24",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D06-FC-FWQlc5280-05": {
+        "host": "172.16.193.10",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D06-FC-FWQlc5280-08": {
+        "host": "172.16.193.41",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D06-FC-FWQlc5280-11": {
+        "host": "172.16.192.54",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E02-FC-FWQkl2280-05": {
+        "host": "172.16.192.25",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E02-FC-FWQkl2280-08": {
+        "host": "172.16.192.22",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E02-FC-FWQlc5280-02": {
+        "host": "172.16.192.47",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E02-FC-FWQlc5280-14": {
+        "host": "172.16.192.34",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E03-FC-FWQlc5280-03": {
+        "host": "172.16.191.134",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E03-FC-FWQlc5280-06": {
+        "host": "172.16.191.133",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E03-FC-FWQlc5280-09": {
+        "host": "172.16.191.131",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E03-FC-FWQlc5280-12": {
+        "host": "172.16.191.130",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E04-FC-FWQlc5280-11": {
+        "host": "172.16.191.135",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E04-FC-FWQlc5280-14": {
+        "host": "172.16.191.132",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A5A6-44U-COMMu7800-A": {
+        "host": "172.16.190.38",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "J23F04-hp380-15U": {
+        "host": "172.16.235.138",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A5-26U-CDL-FWss6000A": {
+        "host": "172.16.190.41",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-02": {
+        "host": "172.16.192.125",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D04-FC-FWQlx658-14": {
+        "host": "172.16.192.23",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F05-kl2280-3U": {
+        "host": "172.16.235.143",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F05-kl2280-6U": {
+        "host": "172.16.235.144",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F05-kl2280-9U": {
+        "host": "172.16.235.145",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K07-3U-SR658Hv2": {
+        "host": "172.16.253.82",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A7-41U-ISP-LBsx1000A": {
+        "host": "172.16.190.21",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q16F01-COMMhs5800-A": {
+        "host": "172.16.190.60",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "JB4A02-DT-ASu5200-A": {
+        "host": "172.16.244.62",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14P07-MGT-AShs5560-A": {
+        "host": "172.16.247.39",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38A8-41U-ISP-LBsx1000B": {
+        "host": "172.16.190.22",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G06-lx658-5U": {
+        "host": "172.16.235.221",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K08-SR658HV2-6U": {
+        "host": "172.16.253.101",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F05-SR658HV2-18U": {
+        "host": "172.16.235.149",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-27U-SR658HV2": {
+        "host": "172.16.253.134",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E4-38-40U-FCE-ASu7800A": {
+        "host": "172.16.190.62",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38B02-FC-FWQlx658-14": {
+        "host": "172.16.192.79",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B04-FC-FWQlx658-08": {
+        "host": "172.16.192.89",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-14": {
+        "host": "172.16.192.122",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B07-FC-FWQlx658-14": {
+        "host": "172.16.192.118",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B08-FC-FWQlx658-08": {
+        "host": "172.16.192.97",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E05-FC-FWQlx658-25": {
+        "host": "172.16.191.138",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D04-FC-FWQlx658-20": {
+        "host": "172.16.192.141",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P08-2U-SR658HV2": {
+        "host": "172.16.253.148",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlx658-11": {
+        "host": "172.16.192.77",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K07-27U-SR658HV2": {
+        "host": "172.16.253.89",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B01-FC-FWQlx658-08": {
+        "host": "172.16.192.57",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B01-FC-FWQlx658-17": {
+        "host": "172.16.192.71",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C02-FC-FWQlx658-11": {
+        "host": "172.16.192.75",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-14": {
+        "host": "172.16.192.139",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlx658-14": {
+        "host": "172.16.192.111",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B06-FC-FWQlx658-14": {
+        "host": "172.16.192.67",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P07-8U-SR658HV2": {
+        "host": "172.16.253.143",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C02-FC-FWQlx658-14": {
+        "host": "172.16.192.110",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P08-5U-SR658HV2": {
+        "host": "172.16.253.149",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-3U-SR658HV2": {
+        "host": "172.16.253.109",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B06-FC-FWQlx658-11": {
+        "host": "172.16.192.66",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P08-14U-SR658HV2": {
+        "host": "172.16.253.146",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-6U-SR658HV2": {
+        "host": "172.16.253.108",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C07-FC-FWQlx658-02": {
+        "host": "172.16.192.84",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P06-11U-SR658HV2": {
+        "host": "172.16.253.139",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B05-FC-FWQlx658-02": {
+        "host": "172.16.192.113",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-24U-SR658HV2": {
+        "host": "172.16.253.135",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C02-FC-FWQlx658-08": {
+        "host": "172.16.192.74",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B04-FC-FWQlx658-14": {
+        "host": "172.16.192.64",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G06-lx658-14U": {
+        "host": "172.16.235.224",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K07-21U-SR658HV2": {
+        "host": "172.16.253.87",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K08-SR658HV2-9U": {
+        "host": "172.16.253.102",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P06-14U-SR658HV2": {
+        "host": "172.16.253.140",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P06-2U-SR658HV2": {
+        "host": "172.16.253.136",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G06-lx658-2U": {
+        "host": "172.16.235.220",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-18U-SR658HV2": {
+        "host": "172.16.253.104",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P07-14U-SR658HV2": {
+        "host": "172.16.253.145",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G06-lx658-17U": {
+        "host": "172.16.235.225",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P07-11U-SR658HV2": {
+        "host": "172.16.253.144",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D08-FC-FWQlx658-08": {
+        "host": "172.16.192.132",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D08-FC-FWQlx658-02": {
+        "host": "172.16.192.134",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C04-FC-FWQlx658-02": {
+        "host": "172.16.192.104",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F05-SR658HV2-15U": {
+        "host": "172.16.235.148",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-08": {
+        "host": "172.16.192.137",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C06-FC-FWQlx658-08": {
+        "host": "172.16.192.126",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P07-2U-SR658HV2": {
+        "host": "172.16.253.141",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B01-FC-FWQlx658-11": {
+        "host": "172.16.192.62",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-017": {
+        "host": "172.16.192.129",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-21U-SR658HV2": {
+        "host": "172.16.253.103",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K07-9U-SR658HV2": {
+        "host": "172.16.253.84",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P08-11U-SR658HV2": {
+        "host": "172.16.253.151",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B01-FC-FWQlx658-14": {
+        "host": "172.16.192.70",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B06-FC-FWQlx658-05": {
+        "host": "172.16.192.98",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B08-FC-FWQlx658-14": {
+        "host": "172.16.192.109",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P07-5U-SR658HV2": {
+        "host": "172.16.253.142",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K07-12U-SR658HV2": {
+        "host": "172.16.253.85",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K07-15U-SR658HV2": {
+        "host": "172.16.253.86",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C01-FC-FWQlx658-02": {
+        "host": "172.16.192.76",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P02-15U-SR658HV2": {
+        "host": "172.16.253.105",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G06-lx658-8U": {
+        "host": "172.16.235.222",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23B07-lx658-13U": {
+        "host": "172.16.235.139",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P06-5U-SR658HV2": {
+        "host": "172.16.253.137",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D08-FC-FWQlx658-11": {
+        "host": "172.16.192.133",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P06-8U-SR658HV2": {
+        "host": "172.16.253.138",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P08-17U-SR658HV2": {
+        "host": "172.16.253.147",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23F05-SR658HV2-12U": {
+        "host": "172.16.235.147",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-11": {
+        "host": "172.16.192.138",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14P08-8U-SR658HV2": {
+        "host": "172.16.253.150",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlx658-08": {
+        "host": "172.16.192.102",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B06-FC-FWQlx658-02": {
+        "host": "172.16.192.95",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C02-FC-FWQlx658-17": {
+        "host": "172.16.192.112",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-02": {
+        "host": "172.16.192.135",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14K08-SR658HV2-3U": {
+        "host": "172.16.253.100",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B06-FC-FWQlx658-17": {
+        "host": "172.16.192.68",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "J23G06-lx658-11U": {
+        "host": "172.16.235.223",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C02-FC-FWQlx658-05": {
+        "host": "172.16.192.73",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B04-FC-FWQlx658-17": {
+        "host": "172.16.192.148",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B03-FC-FWQlx658-20": {
+        "host": "172.16.192.147",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "Q14L01-HP380G10-11U-SNA": {
+        "host": "172.16.253.56",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "Q14L01-HP380G10-17U-SNA": {
+        "host": "172.16.253.58",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38B02-FC-FWQlx658-11": {
+        "host": "172.16.192.127",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C06-FC-FWQlx658-14": {
+        "host": "172.16.192.81",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38A5A6-21U-FC-DSu7800A-ERROR": {
+        "host": "172.16.190.37",
+        "device_type": "hp_comware",
+        "port": 161
+    },
+    "T38C02-FC-FWQlx658-02": {
+        "host": "172.16.192.99",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-17": {
+        "host": "172.16.192.124",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B04-FC-FWQlx658-02": {
+        "host": "172.16.192.91",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-05": {
+        "host": "172.16.192.119",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B02-FC-FWQlx658-08": {
+        "host": "172.16.192.78",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B04-FC-FWQlx658-05": {
+        "host": "172.16.192.93",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B07-FC-FWQlx658-02": {
+        "host": "172.16.193.65",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E05-FC-FWQlx658-19": {
+        "host": "172.16.191.136",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B02-FC-FWQlx658-05": {
+        "host": "172.16.192.72",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B03-FC-FWQlx658-02": {
+        "host": "172.16.192.88",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D04-FC-FWQlx658-02": {
+        "host": "172.16.192.107",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B07-FC-FWQlx658-05": {
+        "host": "172.16.192.114",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B07-FC-FWQlx658-11": {
+        "host": "172.16.192.116",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D04-FC-FWQlx658-08": {
+        "host": "172.16.192.86",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B01-FC-FWQlx658-02": {
+        "host": "172.16.193.59",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B08-FC-FWQlx658-11": {
+        "host": "172.16.192.69",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B08-FC-FWQlx658-05": {
+        "host": "172.16.192.90",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B07-FC-FWQlx658-17": {
+        "host": "172.16.192.117",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B07-FC-FWQlx658-08": {
+        "host": "172.16.192.115",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B02-FC-FWQlx658-02": {
+        "host": "172.16.193.62",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlx658-02": {
+        "host": "172.16.192.100",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38E05-FC-FWQlx658-22": {
+        "host": "172.16.191.137",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B08-FC-FWQlx658-02": {
+        "host": "172.16.193.63",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-11": {
+        "host": "172.16.192.121",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-08": {
+        "host": "172.16.192.120",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C05-FC-FWQlx658-20": {
+        "host": "172.16.192.123",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D02-FC-FWQlx658-02": {
+        "host": "172.16.192.140",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C07-FC-FWQlx658-05": {
+        "host": "172.16.192.85",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D02-FC-FWQlx658-17": {
+        "host": "172.16.192.143",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D01-FC-FWQlx658-02": {
+        "host": "172.16.192.108",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C07-FC-FWQlx658-11": {
+        "host": "172.16.192.146",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D04-FC-FWQlx658-11": {
+        "host": "172.16.192.82",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B04-FC-FWQlx658-11": {
+        "host": "172.16.192.94",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D03-FC-FWQlx658-02": {
+        "host": "172.16.192.144",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D04-FC-FWQlx658-05": {
+        "host": "172.16.192.87",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D08-FC-FWQlx658-14": {
+        "host": "172.16.192.58",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D08-FC-FWQlx658-05": {
+        "host": "172.16.192.131",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C06-FC-FWQlx658-05": {
+        "host": "172.16.192.106",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-20": {
+        "host": "172.16.192.128",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C06-FC-FWQlx658-02": {
+        "host": "172.16.192.105",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C04-FC-FWQlx658-17": {
+        "host": "172.16.192.130",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38C03-FC-FWQlx658-05": {
+        "host": "172.16.192.101",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38D07-FC-FWQlx658-05": {
+        "host": "172.16.193.74",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B06-FC-FWQlx658-08": {
+        "host": "172.16.192.65",
+        "device_type": "generic_termserver",
+        "port": 161
+    },
+    "T38B05-FC-FWQlx658-20": {
+        "host": "172.16.192.96",
+        "device_type": "generic_termserver",
+        "port": 161
+    }
+}

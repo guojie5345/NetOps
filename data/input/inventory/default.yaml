@@ -1,0 +1,8 @@
+---
+username: ''
+password: 'python'
+platform: unknown  # 初始设置为unknown
+connection_options:
+  netmiko:
+    extras:
+      secret: esunnytrunk

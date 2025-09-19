@@ -1,0 +1,94 @@
+template_mapping:
+  Cisco IOS SNMP:
+    group: dev_group
+    platform: cisco_ios
+  Cisco IOS SNMP, Template SNMP Cisco IP SLA:
+    group: dev_group
+    platform: cisco_ios
+  Cisco IOS versions 12.0_3_T-12.2_3.5 SNMP:
+    group: dev_group
+    platform: cisco_ios
+  H3C RackServer Monitor:
+    group: dev_group
+    platform: hp_comware
+  H3C_Server_Basic:
+    group: dev_group
+    platform: hp_comware
+  H3C_basic_monitoring:
+    group: dev_group
+    platform: hp_comware
+  HP Comware HH3C SNMP, unis 5200:
+    group: dev_group
+    platform: hp_comware
+  HP Comware HH3C SNMP-ERROR:
+    group: dev_group
+    platform: hp_comware
+  HP Comware HH3C SNMPv2:
+    group: dev_group
+    platform: hp_comware
+  HP Comware HH3C SNMPv2, unis 5200:
+    group: dev_group
+    platform: hp_comware
+  HP Comware HH3C SNMPv2, unis 5200, NQA:
+    group: dev_group
+    platform: hp_comware
+  HP Comware HH3C SNMPv2-0vtest:
+    group: dev_group
+    platform: hp_comware
+  HP iLO SNMP:
+    group: dev_group
+    platform: hp_comware
+  HPE ProLiant DL380 SNMP:
+    group: dev_group
+    platform: hp_comware
+  Huawei Server iBMC:
+    group: dev_group
+    platform: huawei_vrp
+  Huawei VRP SNMP:
+    group: dev_group
+    platform: huawei_vrp
+  Huawei VRP SNMP, Template-USG6620:
+    group: dev_group
+    platform: huawei_vrp
+  Juniper SNMP:
+    group: dev_group
+    platform: juniper_junos
+  KunLun Server iBMC Template:
+    group: dev_group
+    platform: generic_termserver
+  Lenovo SNMP Template cn:
+    group: dev_group
+    platform: generic_termserver
+  Linux SNMP:
+    group: dev_group
+    platform: linux
+  Linux by Zabbix agent, Zabbix server health:
+    group: dev_group
+    platform: linux
+  Network Generic Device SNMP:
+    group: dev_group
+    platform: generic_termserver
+  Server Inspur BMC All Items 4 Zabbix5.0:
+    group: dev_group
+    platform: generic_termserver
+  Sugon RackServer Monitor:
+    group: dev_group
+    platform: generic_termserver
+  TOPSEC-AF:
+    group: dev_group
+    platform: generic_termserver
+  Template CS5280H2 BMC SNMPv3:
+    group: dev_group
+    platform: generic_termserver
+  Template Module ICMP Ping:
+    group: dev_group
+    platform: generic_termserver
+  Template Server Inspur BMC SNMPv3 V6.0.0 For Zabbix 5.0-NF5280M6:
+    group: dev_group
+    platform: generic_termserver
+  Template Server Lenovo XCC SNMPv3:
+    group: dev_group
+    platform: generic_termserver
+  Wangkang:
+    group: dev_group
+    platform: generic_termserver

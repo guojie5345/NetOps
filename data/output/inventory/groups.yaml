@@ -1,0 +1,46 @@
+---
+access_layer_am11:
+  platform: generic_termserver
+cisco_ios:
+  platform: cisco_ios
+compute_cluster:
+  platform: generic_termserver
+core_layer_am11:
+  platform: generic_termserver
+core_network_devices:
+  platform: generic_termserver
+dev_group:
+  password: Bwxsgdj@2022
+  username: esunny
+development_network:
+  platform: generic_termserver
+distribution_layer_am11:
+  platform: generic_termserver
+generic_termserver:
+  platform: generic_termserver
+hp_comware:
+  platform: hp_comware
+huawei_vrp:
+  platform: huawei_vrp
+juniper_junos:
+  platform: juniper_junos
+linux:
+  platform: linux
+loopback_addresses:
+  platform: generic_termserver
+management_am11:
+  platform: generic_termserver
+management_servers:
+  platform: generic_termserver
+mgt_group:
+  platform: generic_termserver
+office_network:
+  platform: generic_termserver
+server_network:
+  platform: generic_termserver
+storage_network:
+  platform: generic_termserver
+terminal_servers:
+  platform: generic_termserver
+testing_network:
+  platform: generic_termserver

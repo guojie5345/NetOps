@@ -1,0 +1,12 @@
+# 项目依赖包
+# Python 3.12
+
+requests
+pytest
+netmiko
+jinja2
+selenium
+openpyxl
+pandas
+mysql-connector-python
+sendgrid

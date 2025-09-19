@@ -1,0 +1,469 @@
+{
+    "success": true,
+    "total": "6",
+    "result": [
+        {
+            "id": "2",
+            "name": {
+                "name": "Permit-Ping"
+            },
+            "src_addr": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_addr": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "84808",
+            "service": [
+                {
+                    "member": "PING",
+                    "type": "0"
+                }
+            ],
+            "description": {
+                "content": "默认Ping允许"
+            },
+            "action": "2",
+            "enable": "3",
+            "log_deny": "1",
+            "log_end": "1",
+            "log_start": "1",
+            "idp": {
+                "name": "predef_default"
+            },
+            "av": {
+                "name": "predef_high"
+            },
+            "family": "2",
+            "seqno": "0"
+        },
+        {
+            "id": "3",
+            "name": {
+                "name": "FC-用户访问ZLTest网"
+            },
+            "src_addr": [
+                {
+                    "member": "42.30.1.0/24-中泰期货",
+                    "type": "0"
+                },
+                {
+                    "member": "42.30.3.0/24-新湖期货",
+                    "type": "0"
+                },
+                {
+                    "member": "42.30.4.0/24-信达期货",
+                    "type": "0"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_addr": [
+                {
+                    "member": "42.24.6.0/24-上期新交易",
+                    "type": "0"
+                },
+                {
+                    "member": "192.21.34.0/24-上海黄金交易所",
+                    "type": "0"
+                }
+            ],
+            "dst_subnet": [
+                {
+                    "ip": "42.24.3.0",
+                    "netmask": "24"
+                },
+                {
+                    "ip": "42.24.4.0",
+                    "netmask": "24"
+                },
+                {
+                    "ip": "42.24.1.0",
+                    "netmask": "24"
+                },
+                {
+                    "ip": "42.24.2.0",
+                    "netmask": "24"
+                },
+                {
+                    "ip": "42.0.9.0",
+                    "netmask": "24"
+                },
+                {
+                    "ip": "42.0.10.0",
+                    "netmask": "24"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "15724849",
+            "service": [
+                {
+                    "member": "TCP-7100",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-7200",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-7000",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-7300",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-22678",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-22677",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-22679",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5901",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5903",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-43005",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-43011",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5801",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5802",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5204",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5202",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-6010",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-6030",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5001",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5007",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-4901",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-4903",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-32005",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-32011",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-6050",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-5025",
+                    "type": "0"
+                },
+                {
+                    "member": "HTTP",
+                    "type": "0"
+                },
+                {
+                    "member": "HTTPS",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-7002",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-19322",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-19324",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-19326",
+                    "type": "0"
+                },
+                {
+                    "member": "TCP-8081",
+                    "type": "0"
+                }
+            ],
+            "description": {
+                "content": "FC-用户访问ZLTest网"
+            },
+            "action": "2",
+            "enable": "3",
+            "log_deny": "1",
+            "log_end": "1",
+            "log_start": "1",
+            "idp": {
+                "name": "predef_default"
+            },
+            "av": {
+                "name": "predef_high"
+            },
+            "family": "2",
+            "seqno": "1"
+        },
+        {
+            "id": "4",
+            "name": {
+                "name": "信达期货-证联网测试网"
+            },
+            "src_addr": [
+                {
+                    "member": "42.30.4.0/24-信达期货",
+                    "type": "0"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_addr": [
+                {
+                    "member": "42.24.1.0/24上期",
+                    "type": "0"
+                },
+                {
+                    "member": "42.24.2.0/24中金",
+                    "type": "0"
+                },
+                {
+                    "member": "42.24.3.0/24大商所",
+                    "type": "0"
+                },
+                {
+                    "member": "42.24.4.0/24郑商所",
+                    "type": "0"
+                },
+                {
+                    "member": "42.0.9.0/24广期所",
+                    "type": "0"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "0",
+            "service": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "action": "2",
+            "enable": "2",
+            "schedname": [
+                {
+                    "name": "开放至7.22"
+                }
+            ],
+            "log_deny": "0",
+            "log_end": "0",
+            "log_start": "0",
+            "family": "2",
+            "seqno": "2"
+        },
+        {
+            "id": "5",
+            "name": {
+                "name": "信达期货-证联网监控"
+            },
+            "src_subnet": [
+                {
+                    "ip": "42.30.4.218",
+                    "netmask": "32"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_addr": [
+                {
+                    "member": "42.0.10.0/24-证联网监控",
+                    "type": "0"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "0",
+            "service": [
+                {
+                    "member": "HTTPS",
+                    "type": "0"
+                }
+            ],
+            "action": "2",
+            "enable": "3",
+            "log_deny": "0",
+            "log_end": "0",
+            "log_start": "0",
+            "family": "2",
+            "seqno": "3"
+        },
+        {
+            "id": "6",
+            "name": {
+                "name": "证联网测试网-信达期货"
+            },
+            "src_addr": [
+                {
+                    "member": "42.0.10.19-21-5期测试环境",
+                    "type": "0"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_subnet": [
+                {
+                    "ip": "42.30.4.218",
+                    "netmask": "32"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "0",
+            "service": [
+                {
+                    "member": "HTTPS",
+                    "type": "0"
+                }
+            ],
+            "action": "2",
+            "enable": "3",
+            "log_deny": "0",
+            "log_end": "0",
+            "log_start": "0",
+            "family": "2",
+            "seqno": "4"
+        },
+        {
+            "id": "1",
+            "name": {
+                "name": "Deny-any-默认"
+            },
+            "src_addr": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "src_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "dst_addr": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "dst_zone": [
+                {
+                    "name": "Any"
+                }
+            ],
+            "hit_count": "916",
+            "service": [
+                {
+                    "member": "Any",
+                    "type": "0"
+                }
+            ],
+            "description": {
+                "content": "默认禁止策略"
+            },
+            "action": "1",
+            "enable": "3",
+            "log_deny": "1",
+            "log_end": "1",
+            "log_start": "1",
+            "idp": {
+                "name": "predef_default"
+            },
+            "av": {
+                "name": "predef_high"
+            },
+            "family": "2",
+            "seqno": "5"
+        }
+    ],
+    "exception": {}
+}
