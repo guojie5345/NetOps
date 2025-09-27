@@ -1,4 +1,7 @@
 {
+  "project": {
+    "root_path": "e:/Development/Python/NetOps"
+  },
   "aliyun": {
     "region_id": "cn-zhengzhou-zcefc-d01",
     "access_key_id": "FpiqDG63LhQezSRa",
@@ -83,5 +86,47 @@
       "context_processor": "process_industry_cloud_to_industry_cloud",
       "change_type": "虚拟专用网接入"
     }
+  },
+  "scenario_fw_config": {
+    "互联网_行业云": {
+      "fw_url": "https://172.16.190.23",
+      "sxf_save_dir": "ad",
+      "fw_save_dir": "isp_fw"
+    },
+    "行业云_互联网": {
+      "fw_url": "https://172.16.190.23",
+      "sxf_save_dir": "ad",
+      "fw_save_dir": "isp_fw"
+    },
+    "行业云_证联网测试网": {
+      "fw_url": "https://172.16.190.41",
+      "fw_save_dir": "cdl_fw/zltest",
+      "fw_vsys": "ZLTest-vFW"
+    },
+    "行业云_ISP专线": {
+      "fw_url": "https://172.16.190.41",
+      "fw_save_dir": "cdl_fw/isp",
+      "fw_vsys": "ISP-zhuanxian-vFW"
+    },
+    "行业云_郑商所办公网": {
+      "fw_url": "https://172.16.190.41",
+      "fw_save_dir": "cdl_fw/zceoa",
+      "fw_vsys": "ZCEOA-vFW"
+    },
+    "行业云_易盛办公网": {
+      "fw_url": "https://172.16.190.45",
+      "fw_save_dir": "on_fw/esoa",
+      "fw_vsys": "ESOA-vFW"
+    },
+    "行业云_行业云": {
+      "fw_url": "https://172.16.190.35:8443/",
+      "fw_save_dir": "on_fw/esoa",
+      "fw_vsys": "ESOA-vFW"
+    }
+  },
+  "default_fw_config": {
+    "fw_url": "https://172.16.190.23",
+    "sxf_save_dir": "ad/default",
+    "fw_save_dir": "isp_fw/default"
   }
 }

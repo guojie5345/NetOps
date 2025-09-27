@@ -1,5 +1,5 @@
 1. 登录T38a7(41U)-ISP-LBsx1000A（172.16.190.21），{{ operation }}相关策略：
-1) 目的地址转换 
+1） 目的地址转换 
 位置序号：（预留）， 
 名称： {{ customer.organization }}-{{ customer.system_name }};
 源地址入接口： 指定链路，vlan1897-CT-IPV4(公用)，vlan1898-CM-IPV4(公用);

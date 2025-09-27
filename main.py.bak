@@ -98,7 +98,7 @@ def main(config_path=None, order_path=None, action=None):
             # 获取模板目录
             template_dir = os.path.join(base_dir, 'templates')
             # 使用OrderProcessor类处理订单
-            OrderProcessor(order_path, config, template_dir) 
+            OrderProcessor(order_path, config, template_dir)
             # logger.info(f'订单处理完成，生成内容 {content}')
         except Exception as e:
             logger.error(f'订单处理失败: {str(e)}')
@@ -117,5 +117,5 @@ def main(config_path=None, order_path=None, action=None):
 if __name__ == '__main__':
     # 在Python代码中直接调用
     main(config_path='src/config/config.json',
-         order_path='data/input/order/网络资源-信达期货-飞马掌厅.xlsx',
+         order_path='data/input/order/网络资源-浙商期货-白名单.xlsx',
          action='process')

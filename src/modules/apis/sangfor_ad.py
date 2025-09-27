@@ -1,4 +1,4 @@
-class SengforApiClient:
+class SangforApiClient:
     """
     深信服AD设备API客户端类，用于与深信服应用交付(AD)设备交互，获取DNAT配置和自定义地址组信息。
 

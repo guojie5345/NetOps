@@ -1,34 +1,106 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""订单处理模块
+"""订单处理模块，负责解析订单文件并生成配置脚本"""
 
-该模块负责处理用户需求订单，分析用户需求，并生成配置脚本。
-"""
-
-import os
-import sys
-import re
 import json
+from math import log
+import os
+import re
+import sys
 import ipaddress
+import requests
+import jsonpath
+from datetime import datetime
+from openpyxl import load_workbook
+from jinja2 import Environment, FileSystemLoader
 
-# 获取当前文件的绝对路径并添加项目根目录到系统路径
+# 动态添加项目根目录到sys.path
 current_file = os.path.abspath(__file__)
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_file))))
+
+# 从配置文件中读取项目根目录，如果配置文件中未设置，则使用自动计算的路径
+try:
+    config_file_path = os.path.join(project_root, 'src', 'config', 'config.json')
+    if os.path.exists(config_file_path):
+        with open(config_file_path, 'r', encoding='utf-8') as f:
+            config_data = json.load(f)
+            if config_data.get('project', {}).get('root_path'):
+                project_root = config_data['project']['root_path']
+except Exception as e:
+    pass  # 如果读取配置文件出错，继续使用自动计算的路径
+
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from src.core.config_manager import ConfigManager
+from src.utils.logger import setup_logger, get_module_logger
+
+# 定义项目根目录和相关路径
 config_path = os.path.join(project_root, 'src', 'config', 'config.json')
 template_dir = os.path.join(project_root, 'templates')
 jsons_dir = os.path.join(project_root, 'data', 'output', 'json_files')
-# 将项目根目录添加到系统路径中，使Python能够正确解析以'src'开头的导入
-sys.path.insert(0, project_root)
 
-from datetime import datetime
-from src.utils.logger import setup_logger
-from openpyxl import load_workbook
-from jinja2 import Environment, FileSystemLoader
-from src.core.config_manager import ConfigManager
+logger = get_module_logger(__name__)
 
-# 在模块级别初始化一次日志系统
-logger = setup_logger()
+def save_response_to_json(response: object, filename: object, logger=None) -> None:
+    """
+    将API响应结果保存为 JSON 文件到 json_files 文件夹下。
+
+    :param response: API响应结果（字节流）
+    :param filename: API操作名称
+    :param logger: 日志记录器实例
+    """
+    if response is None:
+        if logger:
+            logger.error("响应数据为空")
+        return
+
+    # 确保 json_files 文件夹存在
+    if not os.path.exists(jsons_dir):
+        os.makedirs(jsons_dir)
+    file_path = os.path.join(jsons_dir, f'{filename}')
+
+    try:
+        # 类型一：将字节流转换为字符串并解析为JSON
+        if isinstance(response, bytes):
+            response_str = response.decode('utf-8')
+            response_json = json.loads(response_str)
+        # 类型二：直接使用 response.json() 方法解析 JSON
+        elif isinstance(response, requests.models.Response):
+            response_json = response.json()
+        # 类型三：直接使用列表
+        elif isinstance(response, list):
+            response_json = response
+        else:
+            if logger:
+                logger.error(f"响应数据类型不符合保存类型, 当前类型为：{type(response)}")
+            return
+        # 将JSON数据写入文件
+        with open(file_path, 'w', newline='', encoding='utf-8') as f:
+            json.dump(response_json, f, ensure_ascii=False, indent=4)  # type: ignore
+        if logger:
+            logger.info(f"响应数据已保存到 {file_path}")
+    except Exception as e:
+        if logger:
+            logger.error(f"保存响应数据到文件时出错: {e}")
+
+
+def extract_jsonpath(data, path, default=None):
+    """
+    使用 jsonpath 从数据中提取值，如果未匹配到则返回默认值。
+
+    Args:
+        data (dict): 要提取数据的 JSON 对象。
+        path (str): jsonpath 表达式。
+        default: 未匹配到值时返回的默认值，默认为 None。
+
+    Returns:
+        匹配到的值或默认值。
+    """
+    result = jsonpath.jsonpath(data, path)
+    return result[0] if result else default
+
 
 def _load_json_file(file_path):
     """加载JSON文件并返回数据，包含错误处理"""
@@ -70,9 +142,8 @@ def get_combine_net_infos(ips, vpcs_data):
             logger.info(f"IP {ip} 未找到所属VPC")
 
     return combine_net_infos
-
-
 class OrderProcessor:
+
     """订单处理器类，封装订单处理的核心功能"""
 
     def __init__(self, order_path, config, templates_dir):
@@ -80,8 +151,7 @@ class OrderProcessor:
         self.order_path = order_path
         self.config = config
         self.templates_dir = templates_dir
-
-        self.logger = logger
+        self.logger = get_module_logger(__name__)
         self._process_order()
 
     def _process_order(self):
@@ -154,7 +224,7 @@ class OrderProcessor:
                - API调用超时: 实现重试机制(最多3次)，仍失败则降级处理
            """
 
-        wb = load_workbook(self.order_path, read_only=False)  # 设为可写模式
+        wb = load_workbook(self.order_path, read_only=False, data_only=True)  # 设为可写模式
         ws = wb.active
 
         # 用于存储所有需求的列表
@@ -376,7 +446,7 @@ class OrderProcessor:
             source_target_pair=source_target_pair
         )
 
-        self.logger.info(f"生成变更原因: {reason}")
+        self.logger.info(f"生成变更原因:\n {reason}")
         return reason
 
     def generate_scheme(self, customer_info, requirement_info):
@@ -395,16 +465,16 @@ class OrderProcessor:
         # 复用场景配置（多处使用）
         # 1. 构建通用上下文
         common_context = self._get_common_context(customer_info, requirement_info, scenario_type)
-        logger.debug(f"通用上下文: {common_context}")
+        self.logger.debug(f"通用上下文: {common_context}")
         # 调用特定场景上下文处理器
         # 查询config配置文件获取场景上下文处理器,通过反射器，调用类方法
         context_processor_str = config.get('context_processor', '')
-        logger.debug(context_processor_str)  # 建议使用logger替代print进行调试
+        self.logger.debug(context_processor_str)  # 建议使用logger替代print进行调试
 
         # 修复反射调用：移除多余的self参数，调整参数顺序以匹配方法定义
         if context_processor_str and hasattr(self, context_processor_str):
             scenario_context = getattr(self, context_processor_str)(customer_info, requirement_info)
-            logger.debug(f"调用场景上下文处理器: {scenario_context}")
+            self.logger.debug(f"调用场景上下文处理器: {scenario_context}")
         else:
             self.logger.error(f"上下文处理器不存在: {context_processor_str}")
             scenario_context = {}
@@ -425,7 +495,7 @@ class OrderProcessor:
         # processed_scheme = check_existing_config(raw_scheme, requirement, source_target_pair)
         # return processed_scheme
 
-        self.logger.info(f"生成变更原因:{scheme}")
+        self.logger.info(f"生成变更方案:\n {scheme}")
         return scheme
 
     def get_source_target_config(self, requirement):
@@ -494,31 +564,6 @@ class OrderProcessor:
 
         return context
 
-    def get_isp_address(self, customer):
-        """获取客户的ISP地址列表
-        
-        :param customer: 客户信息字典
-        :return: ISP地址列表
-        """
-        # 模拟实现，返回空列表或默认值
-        self.logger.warning("使用模拟实现的get_isp_address函数")
-        return []
-
-    def get_isp_name_addresses(self, customer, isp_ips):
-        """获取ISP名称和地址的映射
-        
-        :param customer: 客户信息字典
-        :param isp_ips: ISP IP地址列表
-        :return: ISP名称和地址的映射字典
-        """
-        # 模拟实现，返回空字典或示例数据
-        self.logger.warning("使用模拟实现的get_isp_name_addresses函数")
-        # 返回一个示例映射，实际应用中需要根据实际情况实现
-        result = {}
-        for ip in isp_ips:
-            result[f"ISP_{ip}"] = ip
-        return result
-
     def _process_internet_industry_cloud_common(self, customer, requirement, ip_field):
         """互联网与行业云互访场景的通用处理函数
 
@@ -531,22 +576,42 @@ class OrderProcessor:
         aliyun_processor = AliYunProcessor({})
         eip_ips = aliyun_processor.get_eip_address(customer, requirement, ip_field)
         if eip_ips is None:  # 处理EIP检索失败的情况
-            return None
-        context["eip_ips"] = eip_ips
+            context["eip_ips"] = "请检查EIP是否正确关联"
+        else:
+            context["eip_ips"] = eip_ips
 
         # -------------------------- 2. IPAM获取并筛选运营商地址 (名称：IP地址)--------------------------
         # 可抽象为通用函数的逻辑
         isp_ips = requirement['公网IP']
         if isp_ips == r"/":
-            isp_ips = self.get_isp_address(customer)
-        context["isp_ips"] = isp_ips
+            # 创建IpamProcessor实例来调用get_isp_address方法
+            ipam_processor = IpamProcessor(None)  # 传入None作为占位符，实际使用时可能需要真实数据
+            isp_ips = ipam_processor.get_isp_address(customer)
+        isp_ips_info = {}
+        for ip in isp_ips:
+            if ip.startswith("1.192.170"):
+                isp_ips_info[ip] = "电信"
+            elif ip.startswith("218.28.38"):
+                isp_ips_info[ip] = "联通"
+            elif ip.startswith("39.165.248") or ip.startswith("2409:8745"):
+                isp_ips_info[ip] = "移动"
 
+        context["isp_ips_info"] = isp_ips_info
+
+        self.logger.info(f"IPAM-客户{customer['organization']}的运营商地址为: {isp_ips_info}")
+
+        # 查找运营商地址名称
         if '117.160.150.30' not in isp_ips and '218.28.144.146' not in isp_ips:
-            isp_name_address = self.get_isp_name_addresses(customer, isp_ips)
+            # 创建IpamProcessor实例来调用get_isp_name_addresses方法
+            ipam_processor = IpamProcessor(None)  # 传入None作为占位符，实际使用时可能需要真实数据
+            isp_name_address = ipam_processor.get_isp_name_addresses(customer, isp_ips)
 
             if not isp_name_address:
                 error_msg = f"IPAM-未找到匹配的运营商地址（公网IP: {isp_ips}，组织名: {customer['organization']}）,请核实地址并登记。"
                 self.logger.error(error_msg)
+            else:
+                self.logger.info(f"IPAM-客户{customer['organization']}的运营商名称: {isp_name_address}")
+                context["isp_ips_name"] = isp_name_address
 
         # -------------------------- 3. 深信服地址组匹配 --------------------------
         with open(os.path.join(jsons_dir, "ad", "custom_addresses.json"), "r", encoding="utf-8") as f:
@@ -564,9 +629,9 @@ class OrderProcessor:
                 break
 
         if ad_isp_address_name:
-            self.logger.info(f"深信服-找到ISP地址组: {ad_isp_address_name}（IP: {isp_ips}）")
+            self.logger.info(f"深信服-ISP地址组: {ad_isp_address_name}，成员IP: {isp_ips}")
         if ad_eip_address_name:
-            self.logger.info(f"深信服-找到EIP地址组: {ad_eip_address_name}（IP: {eip_ips}）")
+            self.logger.info(f"深信服-EIP地址组: {ad_eip_address_name}，成员IP: {eip_ips}")
 
         if not ad_isp_address_name or not ad_eip_address_name:
             missing = []
@@ -595,29 +660,34 @@ class OrderProcessor:
     def process_industry_cloud_to_internet(self, customer, requirement):
         """行业云→互联网场景的上下文处理器"""
         context = self._process_internet_industry_cloud_common(customer, requirement, ip_field="源IP")
+        self.logger.info(f"行业云→互联网场景的上下文处理器: {context}")
+        # exit()
         if not context:
             return None
         return context
 
-    def process_industry_cloud_to_zltest(customer, requirement):
+    def process_industry_cloud_to_zltest(self, customer, requirement):
         context = {}
 
         # -------------------------- 1. 检索阿里云EIP --------------------------
         # 调用抽象后的EIP检索函数
-        eip_ips = get_eip_address(customer, requirement, ip_field='源IP')
+        # 创建AliYunProcessor实例来调用get_eip_address方法
+        aliyun_processor = AliYunProcessor(None)  # 传入None作为占位符，实际使用时可能需要真实数据
+        eip_ips = aliyun_processor.get_eip_address(customer, requirement, ip_field='源IP')
         if eip_ips is None:  # 处理EIP检索失败的情况
             return None
         context["eip_ips"] = eip_ips
 
         # -------------------------- 2. 检索IPAM 是否登记备案地址 --------------------------
         # 调用抽象后的IPAM检索函数
-        # isp_ips = get_isp_address(customer, ip_field='公网IP')
+        # 创建IpamProcessor实例来调用get_isp_address方法
+        # ipam_processor = IpamProcessor(None)  # 传入None作为占位符，实际使用时可能需要真实数据
+        # isp_ips = ipam_processor.get_isp_address(customer, ip_field='公网IP')
         # if isp_ips is None:  # 处理IPAM检索失败的情况
         #     return None
         # context["isp_ips"] = isp_ips
         #
         return context
-
     def process_industry_cloud_to_industry_cloud(self, customer, requirement):
         """
         行业云→互联网场景的上下文处理器
@@ -648,13 +718,13 @@ class OrderProcessor:
 
             # 3. 查找IP所在VPC
             combine_net_infos = get_combine_net_infos(all_ips, vpcs_data)
-            logger.debug(f"combine_net_infos: {combine_net_infos}")
+            self.logger.debug(f"combine_net_infos: {combine_net_infos}")
 
             # 4. 获取IPAM子网信息
             # 创建IpamProcessor实例并调用_get_ipam_cidrs方法
             ipam_processor = IpamProcessor(subnets_data)
             ipam_cidrs = ipam_processor.get_ipam_cidrs(subnets_data)
-            logger.debug(f"ipam_all_cidrs: {ipam_cidrs}")
+            self.logger.debug(f"ipam_all_cidrs: {ipam_cidrs}")
 
             # 5. 整合并网信息
             ipam_processor.enrich_combin_net_info_with_ipam(combine_net_infos, ipam_cidrs, TARGET_CIDR)
@@ -676,79 +746,47 @@ class GetInformation:
     def __init__(self, config):
         """初始化方法，设置日志系统"""
         self.config = config
-        self.logger = self.logger.getself.logger(__name__)
-
+        self.logger = get_module_logger(__name__)
     def fetch_api_data(self, source_target_pair=None):
         """获取并保存各系统API数据（阿里云/深信服/山石）"""
-        # 场景配置字典：统一管理不同场景的防火墙URL和存储路径
-        scenario_config = {
-            ("互联网", "行业云"): {
-                "fw_url": "https://172.16.190.23",
-                "sxf_save_dir": "ad",
-                "fw_save_dir": "isp_fw"
-            },
-            ("行业云", "互联网"): {
-                "fw_url": "https://172.16.190.23",  # 假设不同场景对应不同防火墙URL
-                "sxf_save_dir": "ad",
-                "fw_save_dir": "isp_fw"
-            },
-            ("行业云", "证联网测试网"): {
-                "fw_url": "https://172.16.190.41",  # 假设不同场景对应不同防火墙URL
-                "fw_save_dir": "cdl_fw/zltest",
-                "fw_vsys": "ZLTest-vFW"
-            },
-            ("行业云", "ISP专线"): {
-                "fw_url": "https://172.16.190.41",  # 假设不同场景对应不同防火墙URL
-                "fw_save_dir": "cdl_fw/isp",
-                "fw_vsys": "ISP-zhuanxian-vFW"
-            },
-            ("行业云", "郑商所办公网"): {
-                "fw_url": "https://172.16.190.41",  # 假设不同场景对应不同防火墙URL
-                "fw_save_dir": "cdl_fw/zceoa",
-                "fw_vsys": "ZCEOA-vFW"
-            },
-            ("行业云", "易盛办公网"): {
-                "fw_url": "https://172.16.190.45",  # 假设不同场景对应不同防火墙URL
-                "fw_save_dir": "on_fw/esoa",
-                "fw_vsys": "ESOA-vFW"
-            },
-            ("行业云", "行业云"): {
-                "fw_url": "https://172.16.190.35:8443/",  # 假设不同场景对应不同防火墙URL
-                "fw_save_dir": "on_fw/esoa",
-                "fw_vsys": "ESOA-vFW"
-            },
-        }
-        # 默认配置（未指定场景时使用）
-        default_config = {
+        # 从配置文件加载场景配置
+        scenario_fw_config = self.config.get('scenario_fw_config', {})
+        default_config = self.config.get('default_fw_config', {
             "fw_url": "https://172.16.190.23",
             "sxf_save_dir": "ad/default",
             "fw_save_dir": "isp_fw/default"
-        }
+        })
+
+        # 转换配置键为元组格式，以便与现有代码兼容
+        scenario_config = {}
+        for key, value in scenario_fw_config.items():
+            source_target = tuple(key.split('_'))
+            scenario_config[source_target] = value
 
         # ======================== 通用数据获取（所有场景均执行）========================
         # 1. 阿里云API - 获取实例和网络接口信息
-        # from src.modules.apis.aliyun_api import AliYunApiClient
+        from src.modules.apis.aliyun_api import AliYunApiClient
         from src.modules.apis.sangfor_ad import SangforApiClient
         from src.modules.apis.phpipam_api import PhpIpamApiClient
         from src.modules.apis.hillstone_fw import HillstoneApiClient
         # 1. 阿里云API - 获取实例和网络接口信息
         ali_api_client = AliYunApiClient()
         instances_info = ali_api_client.describe_instances()
-        save_response_to_json(instances_info, "ali_cloud/instances.json")
+        save_response_to_json(instances_info, "ali_cloud/instances.json", self.logger)
 
         network_interfaces_info = ali_api_client.describe_network_interfaces()
-        save_response_to_json(network_interfaces_info, "ali_cloud/network_interfaces.json")
+        save_response_to_json(network_interfaces_info, "ali_cloud/network_interfaces.json", self.logger)
 
         eips_info = ali_api_client.describe_eip_addresses()
-        save_response_to_json(eips_info, "ali_cloud/eips.json")
+        save_response_to_json(eips_info, "ali_cloud/eips.json", self.logger)
 
         # 2. IPAM API - 获取地址信息
         ipam_api_client = PhpIpamApiClient()
         addresses_info = ipam_api_client.get_addresses()
-        save_response_to_json(addresses_info, "ipam/addresses.json")
+        save_response_to_json(addresses_info, "ipam/addresses.json", self.logger)
 
         subnets_info = ipam_api_client.get_subnets()
-        save_response_to_json(subnets_info, "ipam/subnets.json")
+        save_response_to_json(subnets_info, "ipam/subnets.json", self.logger)
 
         # ======================== 场景特定数据获取（按source_target_pair执行）========================
         # 获取当前场景配置（优先场景 config，其次默认 config）
@@ -757,12 +795,12 @@ class GetInformation:
 
         # 3. 深信服AD API - 特定场景数据获取
         if source_target_pair == ("互联网", "行业云") or source_target_pair == ("行业云", "互联网"):
-            sxf_api_client = SengforApiClient()
+            sxf_api_client = SangforApiClient()
             dnat_info = sxf_api_client.get_dnat()
-            save_response_to_json(dnat_info, f"{current_config['sxf_save_dir']}/dnat.json")
+            save_response_to_json(dnat_info, f"{current_config['sxf_save_dir']}/dnat.json", self.logger)
 
             custom_address_info = sxf_api_client.get_custom_addresses()
-            save_response_to_json(custom_address_info, f"{current_config['sxf_save_dir']}/custom_addresses.json")
+            save_response_to_json(custom_address_info, f"{current_config['sxf_save_dir']}/custom_addresses.json", self.logger)
 
         # 4. 山石防火墙API - 按场景URL和路径获取数据
         hs_api_client = HillstoneApiClient(current_config["fw_url"])
@@ -775,63 +813,27 @@ class GetInformation:
             fw_save_dir = current_config["fw_save_dir"]
 
             policy_info = hs_api_client.get_policy()
-            save_response_to_json(policy_info, f"{fw_save_dir}/policy.json")
+            save_response_to_json(policy_info, f"{fw_save_dir}/policy.json", self.logger)
 
             addrbook_info = hs_api_client.get_addrbook()
-            save_response_to_json(addrbook_info, f"{fw_save_dir}/addrbook.json")
+            save_response_to_json(addrbook_info, f"{fw_save_dir}/addrbook.json", self.logger)
 
             servicebook_info = hs_api_client.get_servicebook()
-            save_response_to_json(servicebook_info, f"{fw_save_dir}/servicebook.json")
+            save_response_to_json(servicebook_info, f"{fw_save_dir}/servicebook.json", self.logger)
 
             servicegroup_info = hs_api_client.get_servicegroup()
-            save_response_to_json(servicegroup_info, f"{fw_save_dir}/servicegroup.json")
+            save_response_to_json(servicegroup_info, f"{fw_save_dir}/servicegroup.json", self.logger)
 
         else:
             policy_info = hs_api_client.get_vsys_policy(current_config['fw_vsys'])
-            save_response_to_json(policy_info, f"{fw_save_dir}/policy.json")
+            save_response_to_json(policy_info, f"{fw_save_dir}/policy.json", self.logger)
 
             addrbook_info = hs_api_client.get_vsys_addrbook(current_config['fw_vsys'])
-            save_response_to_json(addrbook_info, f"{fw_save_dir}/addrbook.json")
+            save_response_to_json(addrbook_info, f"{fw_save_dir}/addrbook.json", self.logger)
 
             servicebook_info = hs_api_client.get_vsys_servicebook(current_config['fw_vsys'])
-            save_response_to_json(servicebook_info, f"{fw_save_dir}/servicebook.json")
+            save_response_to_json(servicebook_info, f"{fw_save_dir}/servicebook.json", self.logger)
 
-    def save_response_to_json(self, response: object, filename: object) -> None:
-        """
-        将API响应结果保存为 JSON 文件到 json_files 文件夹下。
-
-        :param response: API响应结果（字节流）
-        :param filename: API操作名称
-        """
-        if response is None:
-            self.logger.error("响应数据为空")
-            return
-
-        # 确保 json_files 文件夹存在
-        json_dir = r'json_files'
-        if not os.path.exists(json_dir):
-            os.makedirs(json_dir)
-        file_path = os.path.join(json_dir, f'{filename}')
-
-        try:
-            # 类型一：将字节流转换为字符串并解析为JSON
-            if isinstance(response, bytes):
-                response_str = response.decode('utf-8')
-                response_json = json.loads(response_str)
-            # 类型二：直接使用 response.json() 方法解析 JSON
-            elif isinstance(response, requests.models.Response):
-                response_json = response.json()
-            # 类型三：直接使用列表
-            elif isinstance(response, list):
-                response_json = response
-            else:
-                return self.logger.error(f"响应数据类型不符合保存类型, 当前类型为：{type(response)}")
-            # 将JSON数据写入文件
-            with open(file_path, 'w', newline='', encoding='utf-8') as f:
-                json.dump(response_json, f, ensure_ascii=False, indent=4)  # type: ignore
-            self.logger.info(f"响应数据已保存到 {file_path}")
-        except Exception as e:
-            self.logger.error(f"保存响应数据到文件时出错: {e}")
 
 
 class IpamProcessor:
@@ -840,7 +842,7 @@ class IpamProcessor:
     def __init__(self, ipam_data):
         """初始化方法，设置日志系统"""
         self.ipam_data = ipam_data
-        self.logger = logger
+        self.logger = get_module_logger(__name__)
 
     def get_ipam_cidrs(self, subnets_data):
         """从IPAM数据中提取子网和描述信息"""
@@ -848,6 +850,54 @@ class IpamProcessor:
             f"{subnet['subnet']}/{subnet['mask']}": subnet['description']
             for subnet in subnets_data
         }
+
+    def get_isp_address(self, customer, ip=None):
+        """获取客户的ISP地址列表
+
+        :param customer: 客户信息字典
+        :return: ISP地址列表
+        """
+        addresses_json_file = os.path.join(jsons_dir, "ipam", "addresses.json")
+        with open(addresses_json_file, "r", encoding="utf-8") as f:
+            addresses_json = json.load(f)
+
+        # 1. 如果筛选主机名匹配的地址
+        if ip:
+            isp_addresses = []
+            for item in addresses_json:
+                # 显式处理hostname为None的情况：仅当hostname存在且非空时才检查前缀
+                hostname = item.get('hostname')
+                if hostname is not None and hostname.startswith(customer["organization"]):
+                    isp_addresses.append(item['ip'])
+            self.logger.info(f"IPAM-客户{customer['organization']}的ISP地址列表: {isp_addresses}")
+            return isp_addresses
+
+        # 模拟实现，返回空列表或默认值
+        self.logger.warning("使用模拟实现的get_isp_address函数")
+        return []
+
+    def get_isp_name_addresses(self, customer, isp_ips):
+        """获取ISP名称和地址的映射
+
+        :param customer: 客户信息字典
+        :param isp_ips: ISP IP地址列表
+        :return: ISP名称和地址的映射字典
+        """
+        addresses_json_file = os.path.join(jsons_dir, "ipam", "addresses.json")
+        with open(addresses_json_file, "r", encoding="utf-8") as f:
+            addresses_json = json.load(f)
+
+        # 匹配目标IP或主机名
+        isp_addresses_name = set()
+        for ip in isp_ips:
+            hostname = jsonpath.jsonpath(addresses_json, f"$[?(@.ip == '{ip}')].hostname")
+            if hostname:
+                isp_addresses_name.add(hostname[0])
+        if len(isp_addresses_name) > 1:
+            self.logger.error(
+                f"客户 {customer['organization']} 下的IP {isp_ips} 关联了多个主机名 {isp_addresses_name}，请检查IPAM配置。")
+
+        return isp_addresses_name
 
     def enrich_combin_net_info_with_ipam(self, combin_net_infos, ipam_cidrs, target_cidr):
         """整合IPAM中的并网信息到网络信息中"""
@@ -870,7 +920,7 @@ class IpamProcessor:
             # 添加IPAM信息
             info.update({
                 'vlan': combine_net_vlan,
-                'description': re.search("(\S+)【", ipam_description).group(1),
+                'description': re.search(r"(\S+)【", ipam_description).group(1),
                 'vpn_instance': f"VPC-{combine_net_vlan}"
             })
 
@@ -891,10 +941,10 @@ class IpamProcessor:
                 if desc and vlan in desc:
                     network = ipaddress.ip_network(net)
                     if network.subnet_of(target_network):
-                        logger.info(f"找到并网对接网段: {net}")
+                        self.logger.info(f"找到并网对接网段: {net}")
                         return net, self.get_ip_at_position(net, 3), self.get_ip_at_position(net,4), self.get_ip_at_position(net, 5)
             except ValueError as e:
-                logger.warning(f"处理网段 {net} 时出错: {str(e)}")
+                self.logger.warning(f"处理网段 {net} 时出错: {str(e)}")
                 continue
 
         return None, None, None, None
@@ -952,10 +1002,17 @@ class IpamProcessor:
             return None
 
 
+class SangforAdProcessor:
+    def __init__(self, sangfor_ad_data):
+        self.sangfor_ad_data = sangfor_ad_data
+        self.logger = get_module_logger(__name__)
+
+
+
 class AliYunProcessor:
     def __init__(self, aliyun_data):
         self.aliyun_data = aliyun_data
-        self.logger = logger
+        self.logger = get_module_logger(__name__)
 
     def get_eip_address(self, customer, requirement, ip_field):
         """从阿里云网络接口数据中检索EIP地址列表
@@ -969,7 +1026,7 @@ class AliYunProcessor:
             # 确保ip_field的值存在且是列表
             if ip_field not in requirement:
                 self.logger.error(f"字段 {ip_field} 在需求信息中不存在")
-                return []
+                return None
 
             # 处理IP列表
             ip_list = requirement[ip_field]
@@ -979,10 +1036,29 @@ class AliYunProcessor:
             eip_addresses = []
             # 简单模拟EIP检索逻辑，避免依赖未定义的extract_jsonpath函数
             for ip in ip_list:
-                # 这里简化处理，实际应用中可能需要根据实际情况调整
-                eip_addresses.append(ip)
-
-            self.logger.info(f"阿里云-处理的IP地址为：{eip_addresses}")
+                if ipaddress.ip_address(ip) in ipaddress.ip_network("172.27.136.0/22"):
+                    eip_addresses.append(ip)
+                else:
+                    # 通过JSONPath查询关联的公网EIP
+                    eip_jsonpath = f'$.NetworkInterfaceSets.NetworkInterfaceSet[?(@.PrivateIpAddress=="{ip}")].AssociatedPublicIp.PublicIpAddress'
+                    # 使用相对路径而不是硬编码的绝对路径
+                    network_interfaces_path = os.path.join(jsons_dir, "ali_cloud", "network_interfaces.json")
+                    try:
+                        with open(network_interfaces_path, "r", encoding="utf-8") as f:
+                            network_interfaces_json = json.load(f)
+                        eip = extract_jsonpath(network_interfaces_json, eip_jsonpath)
+                        if eip is None:
+                            self.logger.error(f"ECS实例IP {ip} 未关联公网EIP，请关联后重新执行。")
+                            exit()
+                        # 将检索到的EIP加入eips
+                        eip_addresses.append(eip)
+                    except FileNotFoundError:
+                        self.logger.error(f"网络接口JSON文件未找到: {network_interfaces_path}")
+                        return None
+                    except json.JSONDecodeError:
+                        self.logger.error(f"网络接口JSON文件解析错误: {network_interfaces_path}")
+                        return None
+                    self.logger.info(f"阿里云-云内IP： {ip} <-> EIP地址为：{eip}")
             return eip_addresses
         except Exception as e:
             self.logger.error(f"获取EIP地址时出错：{str(e)}")
@@ -993,7 +1069,10 @@ def main():
     """
     主函数，用于直接运行模块时调用
     """
+    # 定义日志
+    logger = get_module_logger(__name__)
     # 加载配置
+
     config_manager = ConfigManager(config_path)
     config = config_manager.load_config()
     logger.info('配置加载完成')
@@ -1011,13 +1090,13 @@ def main():
     #             # print(content)
 
     order_path = os.path.join(project_root, 'data', 'input', 'order',
-                              '西部期货-官网.xlsx')
+                              '网络资源-信达期货-飞马系统.xlsx')
 
     logger.info(f'开始处理订单: {order_path}')
     #
-    content = OrderProcessor(order_path, config, template_dir)
-    # print(content)
+    OrderProcessor(order_path, config, template_dir)
 
 
 if __name__ == '__main__':
+
     main()
