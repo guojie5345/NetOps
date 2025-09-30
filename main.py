@@ -58,9 +58,9 @@ def main(config_path=None, ssh_config_path=None, api_config_path=None, order_pat
     
     # 解析命令行参数
     parser = argparse.ArgumentParser(description='ITSM变更自动化工具')
-    parser.add_argument('--config', type=str, default='src/config/config.json', help='通用配置文件路径')
-    parser.add_argument('--ssh-config', type=str, default='src/config/ssh_config.json', help='SSH配置文件路径')
-    parser.add_argument('--api-config', type=str, default='src/config/api_config.json', help='API配置文件路径')
+    parser.add_argument('--config', type=str, default='config/config.json', help='通用配置文件路径')
+    parser.add_argument('--ssh-config', type=str, default='config/ssh_config.json', help='SSH配置文件路径')
+    parser.add_argument('--api-config', type=str, default='config/api_config.json', help='API配置文件路径')
     parser.add_argument('--order', type=str, help='订单文件路径')
     parser.add_argument('--action', type=str, choices=['process', 'collect', 'generate', 'baseline'], default='process',
                         help='执行动作: process(处理订单), collect(采集数据), generate(生成配置), baseline(基线检查)')
@@ -78,9 +78,9 @@ def main(config_path=None, ssh_config_path=None, api_config_path=None, order_pat
         args = parser.parse_args([])
         config_path = args.config
     elif ssh_config_path is None:
-        ssh_config_path = 'src/config/ssh_config.json'
+        ssh_config_path = 'config/ssh_config.json'
     elif api_config_path is None:
-        api_config_path = 'src/config/api_config.json'
+        api_config_path = 'config/api_config.json'
     elif action is None:
         action = 'process'
 

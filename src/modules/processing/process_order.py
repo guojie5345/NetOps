@@ -25,7 +25,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(c
 
 # 从配置文件中读取项目根目录，如果配置文件中未设置，则使用自动计算的路径
 try:
-    config_file_path = os.path.join(project_root, 'src', 'config', 'config.json')
+    config_file_path = os.path.join(project_root, 'config', 'config.json')
     if os.path.exists(config_file_path):
         with open(config_file_path, 'r', encoding='utf-8') as f:
             config_data = json.load(f)
@@ -41,7 +41,7 @@ from src.core.config_manager import ConfigManager
 from src.utils.logger import setup_logger, get_module_logger
 
 # 定义项目根目录和相关路径
-config_path = os.path.join(project_root, 'src', 'config', 'config.json')
+config_path = os.path.join(project_root, 'config', 'config.json')
 template_dir = os.path.join(project_root, 'templates')
 jsons_dir = os.path.join(project_root, 'data', 'output', 'json_files')
 

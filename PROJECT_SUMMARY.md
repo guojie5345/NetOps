@@ -44,6 +44,14 @@
 ```
 项目根目录/
 ├── main.py                    # 主程序入口
+├── config/                    # 配置文件目录（已迁移）
+│   ├── baseline_rules.yaml    # 基线检查规则配置
+│   ├── ssh_config.json        # SSH设备配置
+│   ├── api_config.json        # API配置
+│   ├── config.json            # 通用配置
+│   ├── device_commands.json   # 设备命令配置
+│   ├── device_mapping_config.json # 设备映射配置
+│   └── scenario_config.json   # 场景配置
 ├── src/
 │   ├── core/                  # 核心模块
 │   ├── modules/               # 功能模块
@@ -55,11 +63,6 @@
 │   │   ├── management/        # 管理模块
 │   │   ├── inventory_converter/ # 库存转换模块
 │   │   └── itsm/              # ITSM接口模块
-│   ├── config/                # 配置文件目录
-│   │   ├── baseline_rules.yaml # 基线检查规则配置
-│   │   ├── ssh_config.json    # SSH设备配置
-│   │   ├── api_config.json    # API配置
-│   │   └── config.json        # 通用配置
 │   └── utils/                 # 工具模块
 ├── templates/                 # 模板文件目录
 ├── reports/                   # 报告输出目录
@@ -72,10 +75,10 @@
 ```
 
 ## 配置文件说明
-- `src/config/ssh_config.json`: SSH设备连接配置
-- `src/config/api_config.json`: API接口配置
-- `src/config/baseline_rules.yaml`: 基线检查规则配置
-- `src/config/config.json`: 通用配置
+- `config/ssh_config.json`: SSH设备连接配置
+- `config/api_config.json`: API接口配置
+- `config/baseline_rules.yaml`: 基线检查规则配置
+- `config/config.json`: 通用配置
 
 ## 测试与验证
 - 已通过`test_all_functions.py`脚本验证所有功能正常工作

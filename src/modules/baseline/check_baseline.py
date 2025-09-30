@@ -149,7 +149,7 @@ class BaselineChecker:
             current_dir = os.path.dirname(os.path.abspath(__file__))
             # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
             project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-            rules_file = os.path.join(project_root, 'src', 'config', 'baseline_rules.yaml')
+            rules_file = os.path.join(project_root, 'config', 'baseline_rules.yaml')
             
         self.rules = self._load_rules(rules_file)
         self.max_workers = max_workers

@@ -78,3 +78,40 @@
 2025-10-01 02:01:21 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
 2025-10-01 02:01:27 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
 2025-10-01 02:01:33 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:05:00 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:05:00 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:05:00 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:05:06 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
+2025-10-01 02:05:12 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
+2025-10-01 02:05:18 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:07:38 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:07:38 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:07:38 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:07:44 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
+2025-10-01 02:07:50 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
+2025-10-01 02:07:56 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:12:50 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:12:50 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:12:50 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:12:56 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
+2025-10-01 02:13:02 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
+2025-10-01 02:13:08 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:13:13 - root - ERROR - 请提供有效的动作和参数
+2025-10-01 02:13:23 - src.modules.processing.process_order - ERROR - 订单处理失败: openpyxl does not support .json file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+Traceback (most recent call last):
+  File "E:\Development\Python\NetOps\src\modules\processing\process_order.py", line 177, in _process_order
+    customer_info, requirement_infos = self.parse_order_file()
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\src\modules\processing\process_order.py", line 236, in parse_order_file
+    wb = load_workbook(self.order_path, read_only=False, data_only=True)  # 设为可写模式
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\.venv\Lib\site-packages\openpyxl\reader\excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\.venv\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\.venv\Lib\site-packages\openpyxl\reader\excel.py", line 93, in _validate_archive
+    raise InvalidFileException(msg)
+openpyxl.utils.exceptions.InvalidFileException: openpyxl does not support .json file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+2025-10-01 02:13:23 - root - ERROR - 订单处理失败: openpyxl does not support .json file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm

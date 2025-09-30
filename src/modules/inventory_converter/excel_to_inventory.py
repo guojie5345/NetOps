@@ -25,7 +25,7 @@ from src.utils.logger import setup_logger
 logger = setup_logger()
 
 # 加载设备映射配置
-device_mapping_config_path = os.path.join(project_root, 'src', 'config', 'device_mapping_config.json')
+device_mapping_config_path = os.path.join(project_root, 'config', 'device_mapping_config.json')
 if os.path.exists(device_mapping_config_path):
     with open(device_mapping_config_path, 'r', encoding='utf-8') as f:
         DEVICE_MAPPING_CONFIG = json.load(f)

@@ -1416,3 +1416,566 @@
 2025-10-01 02:02:38 - root - INFO - 基线检查完成
 2025-10-01 02:02:38 - root - INFO - 基线检查结果: 成功 2 台, 失败 0 台
 2025-10-01 02:03:52 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:04:39 - test_baseline - INFO - 开始测试基线检查，共 2 台设备
+2025-10-01 02:04:39 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:04:39 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:04:39 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:04:39 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:04:39 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:04:39 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:04:39 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:04:39 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:04:39 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:04:39 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:04:40 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:04:40 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:04:40 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:04:41 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:04:41 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:04:41 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_020441.html
+2025-10-01 02:04:41 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_020441.xlsx
+2025-10-01 02:04:41 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:04:41 - test_baseline - INFO - 基线检查测试完成
+2025-10-01 02:04:41 - test_baseline - INFO - 总设备数: 2
+2025-10-01 02:04:41 - test_baseline - INFO - 成功检查: 2
+2025-10-01 02:04:41 - test_baseline - INFO - 检查失败: 0
+2025-10-01 02:04:41 - test_baseline - INFO - 设备 192.168.80.21: 通过 1/7 条规则
+2025-10-01 02:04:41 - test_baseline - INFO - 设备 192.168.80.22: 通过 1/7 条规则
+2025-10-01 02:04:55 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:04:55 - root - INFO - 配置加载完成
+2025-10-01 02:04:55 - root - INFO - 开始信息采集...
+2025-10-01 02:04:56 - src.modules.collection.collector - INFO - 开始采集所有信息
+2025-10-01 02:04:56 - src.modules.collection.collector - INFO - 开始采集SSH设备信息
+2025-10-01 02:04:56 - src.modules.collection.collector - INFO - 采集设备 192.168.80.21 的信息
+2025-10-01 02:04:56 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:04:56 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:04:56 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:04:56 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show version
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ip interface brief
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show vlan brief
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show arp
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:04:57 - src.modules.collection.collector - INFO - 采集设备 192.168.80.22 的信息
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:04:57 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:04:57 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:04:58 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:04:58 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:04:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show version
+2025-10-01 02:04:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:04:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ip interface brief
+2025-10-01 02:04:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show vlan brief
+2025-10-01 02:04:59 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces
+2025-10-01 02:04:59 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show arp
+2025-10-01 02:04:59 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:04:59 - src.modules.collection.collector - INFO - 所有 2 台设备采集成功
+2025-10-01 02:04:59 - src.modules.collection.collector - INFO - 开始采集API端点信息
+2025-10-01 02:04:59 - src.modules.collection.collector - INFO - 采集API端点 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04 的信息
+2025-10-01 02:04:59 - src.modules.collection.api_collector - INFO - 开始采集 servers 资源信息
+2025-10-01 02:04:59 - src.modules.collection.api_collector - INFO - 采集 servers 资源信息
+2025-10-01 02:04:59 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/servers
+2025-10-01 02:05:00 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:05:00 - src.modules.collection.api_collector - WARNING - 采集 servers 资源信息失败
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 开始采集 networks 资源信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 采集 networks 资源信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/networks
+2025-10-01 02:05:00 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:05:00 - src.modules.collection.api_collector - WARNING - 采集 networks 资源信息失败
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 开始采集 volumes 资源信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 采集 volumes 资源信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/volumes
+2025-10-01 02:05:00 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:05:00 - src.modules.collection.api_collector - WARNING - 采集 volumes 资源信息失败
+2025-10-01 02:05:00 - src.modules.collection.collector - INFO - 采集API端点 https://api.cloudprovider.com/v2 的信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 开始采集 instances 资源信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 采集 instances 资源信息
+2025-10-01 02:05:00 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/instances
+2025-10-01 02:05:00 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C4E54F7A0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:05:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C50014410>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:05:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C504FA150>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:05:06 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
+2025-10-01 02:05:06 - src.modules.collection.api_collector - WARNING - 采集 instances 资源信息失败
+2025-10-01 02:05:06 - src.modules.collection.api_collector - INFO - 开始采集 networks 资源信息
+2025-10-01 02:05:06 - src.modules.collection.api_collector - INFO - 采集 networks 资源信息
+2025-10-01 02:05:06 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/networks
+2025-10-01 02:05:06 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C506AE6F0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:05:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C506AE8D0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:05:12 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C50528140>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:05:12 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
+2025-10-01 02:05:12 - src.modules.collection.api_collector - WARNING - 采集 networks 资源信息失败
+2025-10-01 02:05:12 - src.modules.collection.api_collector - INFO - 开始采集 storage 资源信息
+2025-10-01 02:05:12 - src.modules.collection.api_collector - INFO - 采集 storage 资源信息
+2025-10-01 02:05:12 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/storage
+2025-10-01 02:05:12 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C506AE4E0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:05:14 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C506AEB70>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:05:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016C506AED20>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:05:18 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:05:18 - src.modules.collection.api_collector - WARNING - 采集 storage 资源信息失败
+2025-10-01 02:05:18 - src.modules.collection.collector - INFO - 所有信息采集完成
+2025-10-01 02:05:18 - root - INFO - 信息采集完成
+2025-10-01 02:05:19 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:05:19 - root - INFO - 配置加载完成
+2025-10-01 02:05:19 - root - INFO - 开始基线检查...
+2025-10-01 02:05:19 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:05:19 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:05:19 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:05:19 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:05:19 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:05:19 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:05:19 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:05:19 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:05:19 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:05:19 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:05:20 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:05:20 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:05:20 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:05:21 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:05:21 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:05:21 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_020521.html
+2025-10-01 02:05:21 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_020521.xlsx
+2025-10-01 02:05:21 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:05:21 - root - INFO - 基线检查完成
+2025-10-01 02:05:21 - root - INFO - 基线检查结果: 成功 2 台, 失败 0 台
+2025-10-01 02:05:26 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:05:26 - root - INFO - 配置加载完成
+2025-10-01 02:05:26 - root - INFO - 开始基线检查...
+2025-10-01 02:05:27 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:05:27 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:05:27 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:05:27 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:05:27 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:05:27 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:05:27 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:05:27 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:05:27 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:05:27 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:05:27 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:05:27 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:05:28 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:05:29 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:05:29 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_020529.html
+2025-10-01 02:05:29 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_020529.xlsx
+2025-10-01 02:05:29 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:05:29 - root - INFO - 基线检查完成
+2025-10-01 02:05:29 - root - INFO - 基线检查结果: 成功 2 台, 失败 0 台
+2025-10-01 02:07:14 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:07:14 - root - INFO - 配置加载完成
+2025-10-01 02:07:14 - root - INFO - 开始基线检查...
+2025-10-01 02:07:14 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:07:14 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:07:14 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:07:14 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:07:14 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:14 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:14 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:07:14 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:07:14 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:14 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:15 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:15 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:07:15 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:07:16 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:07:16 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:07:16 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_020716.html
+2025-10-01 02:07:16 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_020716.xlsx
+2025-10-01 02:07:16 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:07:16 - root - INFO - 基线检查完成
+2025-10-01 02:07:16 - root - INFO - 基线检查结果: 成功 2 台, 失败 0 台
+2025-10-01 02:07:26 - test_baseline - INFO - 开始测试基线检查，共 2 台设备
+2025-10-01 02:07:26 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:07:26 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:07:26 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:07:26 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:07:26 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:26 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:26 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:07:26 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:07:26 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:26 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:26 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:26 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:07:27 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:07:28 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:07:28 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:07:28 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_020728.html
+2025-10-01 02:07:28 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_020728.xlsx
+2025-10-01 02:07:28 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:07:28 - test_baseline - INFO - 基线检查测试完成
+2025-10-01 02:07:28 - test_baseline - INFO - 总设备数: 2
+2025-10-01 02:07:28 - test_baseline - INFO - 成功检查: 2
+2025-10-01 02:07:28 - test_baseline - INFO - 检查失败: 0
+2025-10-01 02:07:28 - test_baseline - INFO - 设备 192.168.80.21: 通过 1/7 条规则
+2025-10-01 02:07:28 - test_baseline - INFO - 设备 192.168.80.22: 通过 1/7 条规则
+2025-10-01 02:07:33 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:07:33 - root - INFO - 配置加载完成
+2025-10-01 02:07:33 - root - INFO - 开始信息采集...
+2025-10-01 02:07:33 - src.modules.collection.collector - INFO - 开始采集所有信息
+2025-10-01 02:07:33 - src.modules.collection.collector - INFO - 开始采集SSH设备信息
+2025-10-01 02:07:33 - src.modules.collection.collector - INFO - 采集设备 192.168.80.21 的信息
+2025-10-01 02:07:33 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:33 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:07:33 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:34 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:34 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:07:34 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show version
+2025-10-01 02:07:34 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:07:34 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ip interface brief
+2025-10-01 02:07:34 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show vlan brief
+2025-10-01 02:07:35 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces
+2025-10-01 02:07:35 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show arp
+2025-10-01 02:07:35 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:07:35 - src.modules.collection.collector - INFO - 采集设备 192.168.80.22 的信息
+2025-10-01 02:07:35 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:35 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:07:35 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:36 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show version
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ip interface brief
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show vlan brief
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces
+2025-10-01 02:07:36 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show arp
+2025-10-01 02:07:37 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:07:37 - src.modules.collection.collector - INFO - 所有 2 台设备采集成功
+2025-10-01 02:07:37 - src.modules.collection.collector - INFO - 开始采集API端点信息
+2025-10-01 02:07:37 - src.modules.collection.collector - INFO - 采集API端点 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04 的信息
+2025-10-01 02:07:37 - src.modules.collection.api_collector - INFO - 开始采集 servers 资源信息
+2025-10-01 02:07:37 - src.modules.collection.api_collector - INFO - 采集 servers 资源信息
+2025-10-01 02:07:37 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/servers
+2025-10-01 02:07:38 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:07:38 - src.modules.collection.api_collector - WARNING - 采集 servers 资源信息失败
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 开始采集 networks 资源信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 采集 networks 资源信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/networks
+2025-10-01 02:07:38 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:07:38 - src.modules.collection.api_collector - WARNING - 采集 networks 资源信息失败
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 开始采集 volumes 资源信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 采集 volumes 资源信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/volumes
+2025-10-01 02:07:38 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:07:38 - src.modules.collection.api_collector - WARNING - 采集 volumes 资源信息失败
+2025-10-01 02:07:38 - src.modules.collection.collector - INFO - 采集API端点 https://api.cloudprovider.com/v2 的信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 开始采集 instances 资源信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 采集 instances 资源信息
+2025-10-01 02:07:38 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/instances
+2025-10-01 02:07:38 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0B9FB5850>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:07:40 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC023920>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:07:44 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC0CE360>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:07:44 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
+2025-10-01 02:07:44 - src.modules.collection.api_collector - WARNING - 采集 instances 资源信息失败
+2025-10-01 02:07:44 - src.modules.collection.api_collector - INFO - 开始采集 networks 资源信息
+2025-10-01 02:07:44 - src.modules.collection.api_collector - INFO - 采集 networks 资源信息
+2025-10-01 02:07:44 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/networks
+2025-10-01 02:07:44 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC0CE6F0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:07:46 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC0CE8D0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:07:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC023920>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:07:50 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
+2025-10-01 02:07:50 - src.modules.collection.api_collector - WARNING - 采集 networks 资源信息失败
+2025-10-01 02:07:50 - src.modules.collection.api_collector - INFO - 开始采集 storage 资源信息
+2025-10-01 02:07:50 - src.modules.collection.api_collector - INFO - 采集 storage 资源信息
+2025-10-01 02:07:50 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/storage
+2025-10-01 02:07:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC0CE3F0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:07:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC0CEB70>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:07:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F0BC0CED20>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:07:56 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:07:56 - src.modules.collection.api_collector - WARNING - 采集 storage 资源信息失败
+2025-10-01 02:07:56 - src.modules.collection.collector - INFO - 所有信息采集完成
+2025-10-01 02:07:56 - root - INFO - 信息采集完成
+2025-10-01 02:07:56 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:07:56 - root - INFO - 配置加载完成
+2025-10-01 02:07:56 - root - INFO - 开始基线检查...
+2025-10-01 02:07:57 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:07:57 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:07:57 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:07:57 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:07:57 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:57 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:07:57 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:07:57 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:07:57 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:57 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:07:57 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:58 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:07:58 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:07:59 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:07:59 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_020759.html
+2025-10-01 02:07:59 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_020759.xlsx
+2025-10-01 02:07:59 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:07:59 - root - INFO - 基线检查完成
+2025-10-01 02:07:59 - root - INFO - 基线检查结果: 成功 2 台, 失败 0 台
+2025-10-01 02:12:16 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:12:16 - root - INFO - 配置加载完成
+2025-10-01 02:12:16 - root - INFO - 开始基线检查...
+2025-10-01 02:12:17 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:12:17 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:12:17 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:12:17 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:12:17 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:12:17 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:12:17 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:12:17 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:12:17 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:12:17 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:12:17 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:12:17 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:12:18 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:12:19 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:12:19 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_021219.html
+2025-10-01 02:12:19 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_021219.xlsx
+2025-10-01 02:12:19 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:12:19 - root - INFO - 基线检查完成
+2025-10-01 02:12:19 - root - INFO - 基线检查结果: 成功 2 台, 失败 0 台
+2025-10-01 02:12:37 - test_baseline - INFO - 开始测试基线检查，共 2 台设备
+2025-10-01 02:12:37 - src.modules.baseline.check_baseline - WARNING - 模板文件不存在: E:\Development\Python\NetOps\templates\baseline_report.html，将使用默认模板
+2025-10-01 02:12:37 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-01 02:12:37 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-01 02:12:37 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-01 02:12:37 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:12:37 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:12:37 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:12:37 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:12:37 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:12:37 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:12:38 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:12:38 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces status
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ntp status
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces status
+2025-10-01 02:12:38 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ntp status
+2025-10-01 02:12:39 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:12:39 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:12:39 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: reports/baseline_report_20251001_021239.html
+2025-10-01 02:12:39 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: reports/baseline_report_20251001_021239.xlsx
+2025-10-01 02:12:39 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-01 02:12:39 - test_baseline - INFO - 基线检查测试完成
+2025-10-01 02:12:39 - test_baseline - INFO - 总设备数: 2
+2025-10-01 02:12:39 - test_baseline - INFO - 成功检查: 2
+2025-10-01 02:12:39 - test_baseline - INFO - 检查失败: 0
+2025-10-01 02:12:39 - test_baseline - INFO - 设备 192.168.80.21: 通过 1/7 条规则
+2025-10-01 02:12:39 - test_baseline - INFO - 设备 192.168.80.22: 通过 1/7 条规则
+2025-10-01 02:12:45 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:12:45 - root - INFO - 配置加载完成
+2025-10-01 02:12:45 - root - INFO - 开始信息采集...
+2025-10-01 02:12:45 - src.modules.collection.collector - INFO - 开始采集所有信息
+2025-10-01 02:12:45 - src.modules.collection.collector - INFO - 开始采集SSH设备信息
+2025-10-01 02:12:45 - src.modules.collection.collector - INFO - 采集设备 192.168.80.21 的信息
+2025-10-01 02:12:45 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:12:45 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.21
+2025-10-01 02:12:45 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:12:46 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:12:46 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-01 02:12:46 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show version
+2025-10-01 02:12:46 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show running-config
+2025-10-01 02:12:46 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show ip interface brief
+2025-10-01 02:12:47 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show vlan brief
+2025-10-01 02:12:47 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show interfaces
+2025-10-01 02:12:47 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.21 上执行命令: show arp
+2025-10-01 02:12:47 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-01 02:12:47 - src.modules.collection.collector - INFO - 采集设备 192.168.80.22 的信息
+2025-10-01 02:12:47 - src.modules.collection.ssh_collector - INFO - 成功加载设备命令配置文件: E:\Development\Python\NetOps\src\config\device_commands.json
+2025-10-01 02:12:47 - src.modules.collection.ssh_collector - INFO - 正在连接设备 192.168.80.22
+2025-10-01 02:12:47 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-01 02:12:48 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-01 02:12:48 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-01 02:12:48 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show version
+2025-10-01 02:12:48 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show running-config
+2025-10-01 02:12:48 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show ip interface brief
+2025-10-01 02:12:48 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show vlan brief
+2025-10-01 02:12:48 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show interfaces
+2025-10-01 02:12:49 - src.modules.collection.ssh_collector - INFO - 在设备 192.168.80.22 上执行命令: show arp
+2025-10-01 02:12:49 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-01 02:12:49 - src.modules.collection.collector - INFO - 所有 2 台设备采集成功
+2025-10-01 02:12:49 - src.modules.collection.collector - INFO - 开始采集API端点信息
+2025-10-01 02:12:49 - src.modules.collection.collector - INFO - 采集API端点 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04 的信息
+2025-10-01 02:12:49 - src.modules.collection.api_collector - INFO - 开始采集 servers 资源信息
+2025-10-01 02:12:49 - src.modules.collection.api_collector - INFO - 采集 servers 资源信息
+2025-10-01 02:12:49 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/servers
+2025-10-01 02:12:50 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:12:50 - src.modules.collection.api_collector - WARNING - 采集 servers 资源信息失败
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 开始采集 networks 资源信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 采集 networks 资源信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/networks
+2025-10-01 02:12:50 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:12:50 - src.modules.collection.api_collector - WARNING - 采集 networks 资源信息失败
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 开始采集 volumes 资源信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 采集 volumes 资源信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04/volumes
+2025-10-01 02:12:50 - src.modules.collection.api_collector - ERROR - HTTP错误: 403 - {"error":{"status":403,"type":"https://dev.qweather.com/docs/resource/error-code/#invalid-host","title":"Invalid Host","detail":"An invalid or unauthorized API Host."}}
+2025-10-01 02:12:50 - src.modules.collection.api_collector - WARNING - 采集 volumes 资源信息失败
+2025-10-01 02:12:50 - src.modules.collection.collector - INFO - 采集API端点 https://api.cloudprovider.com/v2 的信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 开始采集 instances 资源信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 采集 instances 资源信息
+2025-10-01 02:12:50 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/instances
+2025-10-01 02:12:50 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E86EBA40>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:12:52 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E80F5790>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:12:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E65FB0B0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/instances
+2025-10-01 02:12:56 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/instances
+2025-10-01 02:12:56 - src.modules.collection.api_collector - WARNING - 采集 instances 资源信息失败
+2025-10-01 02:12:56 - src.modules.collection.api_collector - INFO - 开始采集 networks 资源信息
+2025-10-01 02:12:56 - src.modules.collection.api_collector - INFO - 采集 networks 资源信息
+2025-10-01 02:12:56 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/networks
+2025-10-01 02:12:56 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E8716CC0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:12:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E8716EA0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:13:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E811E5A0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/networks
+2025-10-01 02:13:02 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/networks
+2025-10-01 02:13:02 - src.modules.collection.api_collector - WARNING - 采集 networks 资源信息失败
+2025-10-01 02:13:02 - src.modules.collection.api_collector - INFO - 开始采集 storage 资源信息
+2025-10-01 02:13:02 - src.modules.collection.api_collector - INFO - 采集 storage 资源信息
+2025-10-01 02:13:02 - src.modules.collection.api_collector - INFO - 发起 GET 请求到 https://api.cloudprovider.com/v2/storage
+2025-10-01 02:13:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E8716960>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:13:04 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E8717140>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:13:08 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000151E87172F0>: Failed to resolve 'api.cloudprovider.com' ([Errno 11001] getaddrinfo failed)")': /v2/storage
+2025-10-01 02:13:08 - src.modules.collection.api_collector - ERROR - 连接错误: https://api.cloudprovider.com/v2/storage
+2025-10-01 02:13:08 - src.modules.collection.api_collector - WARNING - 采集 storage 资源信息失败
+2025-10-01 02:13:08 - src.modules.collection.collector - INFO - 所有信息采集完成
+2025-10-01 02:13:08 - root - INFO - 信息采集完成
+2025-10-01 02:13:13 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:13:13 - root - INFO - 配置加载完成
+2025-10-01 02:13:13 - root - ERROR - 请提供有效的动作和参数
+2025-10-01 02:13:23 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:13:23 - root - INFO - 配置加载完成
+2025-10-01 02:13:23 - root - INFO - 开始处理订单 orders/sample_order.json
+2025-10-01 02:13:23 - src.modules.processing.process_order - INFO - 开始处理订单文件: orders/sample_order.json
+2025-10-01 02:13:23 - src.modules.processing.process_order - ERROR - 订单处理失败: openpyxl does not support .json file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+Traceback (most recent call last):
+  File "E:\Development\Python\NetOps\src\modules\processing\process_order.py", line 177, in _process_order
+    customer_info, requirement_infos = self.parse_order_file()
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\src\modules\processing\process_order.py", line 236, in parse_order_file
+    wb = load_workbook(self.order_path, read_only=False, data_only=True)  # 设为可写模式
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\.venv\Lib\site-packages\openpyxl\reader\excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\.venv\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Development\Python\NetOps\.venv\Lib\site-packages\openpyxl\reader\excel.py", line 93, in _validate_archive
+    raise InvalidFileException(msg)
+openpyxl.utils.exceptions.InvalidFileException: openpyxl does not support .json file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+2025-10-01 02:13:23 - root - ERROR - 订单处理失败: openpyxl does not support .json file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+2025-10-01 02:13:39 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:13:39 - root - INFO - 配置加载完成
+2025-10-01 02:13:39 - root - INFO - 开始处理订单 data/input/order/网络资源-信达期货-VPC互访.xlsx
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 开始处理订单文件: data/input/order/网络资源-信达期货-VPC互访.xlsx
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 合并前需求列表: [{'源归属': '行业云', '源主机': '数据中台', '源IP': ['172.28.128.193'], '源端口': [0], '公网IP': ['Any'], '公网端口': [], '目的归属': '行业云', '目的主机': '自研生产', '目的IP': ['172.28.130.64/26'], '目的端口': [6001, 3306, 9030, 5236], '协议': 'TCP', '操作': '新增', '生效时间': '全天24小时', '用途': '数据中台访问自研生产'}]
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 合并后需求列表: [{'源归属': '行业云', '源主机': '数据中台', '源IP': ['172.28.128.193'], '源端口': [0], '公网IP': ['Any'], '公网端口': [], '目的归属': '行业云', '目的主机': '自研生产', '目的IP': ['172.28.130.64/26'], '目的端口': [6001, 3306, 9030, 5236], '协议': 'TCP', '操作': '新增', '生效时间': '全天24小时', '用途': '数据中台访问自研生产'}]
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 生成变更标题: 信达期货网络策略变更申请
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 生成变更原因:
+ 接信达期货变更需求，计划新增数据中台、自研生产行业云访问行业云的策略。
+源归属: 行业云， 源主机: 数据中台，
+目的归属: 行业云， 目的主机: 自研生产，
+源IP: ['172.28.128.193']，源端口: [0]
+目的IP: ['172.28.130.64/26']，目的端口: [6001, 3306, 9030, 5236]协议: TCP，生效时间:全天24小时
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 变更中地址： 172.28.128.193 在VPC网段 172.28.128.192/26 中
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 变更中地址： 172.28.130.64/26 在VPC网段 172.28.130.64/26 中
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 行业云并网对接网段: 172.27.31.136/29
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 行业云并网对接网段: 172.27.31.192/29
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 生成变更方案:
+ 1. 登录T38A3(6U)-FC-FWhw12004A（172.16.190.35），新增相关策略：
+1) 安全策略设置-新增 (策略 -> 安全策略 -> 安全策略)
+名称：VPC互访015
+源安全区域：any，源地址：['172.28.128.193']，
+目的安全区域: any，目的地址：['172.28.130.64/26']，
+服务：[6001, 3306, 9030, 5236]
+动作：新增
+
+2. 登录T38A5A6(21U)-FC-DSu7800A（172.16.190.37），新增相关配置：
+vlan 1017
+ name FCA-信达期货-数据中台VPC-业务子网
+
+ip vpn-instance VPC-1017
+ description FCA-信达期货-数据中台VPC-业务子网
+
+interface Vlan-interface1017
+ description FCA-信达期货-数据中台VPC-业务子网
+ ip binding vpn-instance VPC-1017
+ ip address 172.27.31.139 255.255.255.248
+
+ip route-static vpn_instance VPC-trust 172.28.128.192 26 vpn-instance VPC-1017 172.27.31.140 description FCA-信达期货-数据中台VPC-业务子网
+ip route-static vpn-instance VPC-trust 172.28.128.192 26 vpn-instance VPC-1017 172.27.31.141 description FCA-信达期货-数据中台VPC-业务子网
+ip route-static vpn-instance VPC-1017 172.28.0.0 16 vpn-instance VPC-trust 172.27.255.33 description To_FC_Other_VPC
+
+vlan 1024
+ name FCA-信达期货-自研生产VPC-业务子网
+
+ip vpn-instance VPC-1024
+ description FCA-信达期货-自研生产VPC-业务子网
+
+interface Vlan-interface1024
+ description FCA-信达期货-自研生产VPC-业务子网
+ ip binding vpn-instance VPC-1024
+ ip address 172.27.31.195 255.255.255.248
+
+ip route-static vpn_instance VPC-trust 172.28.130.64 26 vpn-instance VPC-1024 172.27.31.196 description FCA-信达期货-自研生产VPC-业务子网
+ip route-static vpn-instance VPC-trust 172.28.130.64 26 vpn-instance VPC-1024 172.27.31.197 description FCA-信达期货-自研生产VPC-业务子网
+ip route-static vpn-instance VPC-1024 172.28.0.0 16 vpn-instance VPC-trust 172.27.255.33 description To_FC_Other_VPC
+
+
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 结果已保存至: /data/output/change_scripts\20251001\新增信达期货-管理系统-访问策略变更.json
+2025-10-01 02:13:39 - src.modules.processing.process_order - INFO - 订单处理完成
+2025-10-01 02:13:46 - root - INFO - ITSM变更自动化工具启动
+2025-10-01 02:13:46 - root - INFO - 配置加载完成
+2025-10-01 02:13:46 - root - INFO - 开始生成配置
+2025-10-01 02:13:46 - root - INFO - 配置生成完成
