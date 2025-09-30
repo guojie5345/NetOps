@@ -10,7 +10,8 @@ import json
 # 获取当前文件所在目录的绝对路径
 base_dir = os.path.dirname(os.path.abspath(__file__))
 # 添加项目根目录到系统路径
-sys.path.insert(0, base_dir)
+project_root = os.path.dirname(base_dir)
+sys.path.insert(0, project_root)
 
 from src.modules.collection.collector import collect_all
 from src.core.config_manager import ConfigManager
