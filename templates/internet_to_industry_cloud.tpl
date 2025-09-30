@@ -1,10 +1,18 @@
 1. 登录T38a7(41U)-ISP-LBsx1000A（172.16.190.21），{{ operation }}相关策略：
 1） 目的地址转换 
-位置序号：（预留）， 
 名称： {{ customer.organization }}-{{ customer.system_name }};
-源地址入接口： 指定链路，vlan1897-CT-IPV4(公用)，vlan1898-CM-IPV4(公用);
+源地址入接口： 指定链路，
+{%- for ip,isp in isp_ips_info.items() %}
+{%- if isp=="电信" -%}
+vlan1897-CT-IPV4（公用），
+{%- elif isp=="联通" -%}
+vlan1899-CU-IPV4(公用)，
+{%- elif isp=="移动" -%}
+vlan1898-CM-IPV4（公用），
+{%- endif -%}
+{% endfor %}
 源IP地址： 所有IP;
-目的IP地址： 用户地址集 -> {{ ad_isp_address_name }} -> {{ isp_ips }};
+目的IP地址： 用户地址集 -> {{ ad_isp_address_name }} -> {% for key in isp_ips_info.keys() %} {{ key }} {% endfor %};
 协议条件 协议类型：TCP; 源端口范围：{{ requirement.源端口 }};  目的端口范围：{{ requirement.公网端口 }};
 转换规则 转换目的IP： 指定IP -> 详细地址：{{ eip_ips }};  转换端口：{{ requirement.目的端口 }};
 

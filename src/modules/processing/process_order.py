@@ -9,11 +9,15 @@ import os
 import re
 import sys
 import ipaddress
+import jinja2
 import requests
 import jsonpath
+import warnings
 from datetime import datetime
 from openpyxl import load_workbook
 from jinja2 import Environment, FileSystemLoader
+
+warnings.filterwarnings('ignore', message="Data Validation extension is not supported and will be removed")
 
 # 动态添加项目根目录到sys.path
 current_file = os.path.abspath(__file__)
@@ -42,6 +46,7 @@ template_dir = os.path.join(project_root, 'templates')
 jsons_dir = os.path.join(project_root, 'data', 'output', 'json_files')
 
 logger = get_module_logger(__name__)
+
 
 def save_response_to_json(response: object, filename: object, logger=None) -> None:
     """
@@ -142,8 +147,9 @@ def get_combine_net_infos(ips, vpcs_data):
             logger.info(f"IP {ip} 未找到所属VPC")
 
     return combine_net_infos
-class OrderProcessor:
 
+
+class OrderProcessor:
     """订单处理器类，封装订单处理的核心功能"""
 
     def __init__(self, order_path, config, templates_dir):
@@ -180,8 +186,6 @@ class OrderProcessor:
                 # 生成变更方案
                 scheme = self.generate_scheme(customer_info, requirement_info)
 
-                self.logger.info("订单处理完成")
-
                 # 组合返回结果
                 result = {
                     "title": title,
@@ -189,6 +193,11 @@ class OrderProcessor:
                     "scheme": scheme
                 }
                 results.append(result)
+
+            # 保存结果到JSON文件
+            self._save_results_to_json(results, customer_info)
+            
+            self.logger.info("订单处理完成")
 
             return json.dumps(results, ensure_ascii=False)
 
@@ -661,15 +670,17 @@ class OrderProcessor:
         """行业云→互联网场景的上下文处理器"""
         context = self._process_internet_industry_cloud_common(customer, requirement, ip_field="源IP")
         self.logger.info(f"行业云→互联网场景的上下文处理器: {context}")
-        # exit()
         if not context:
             return None
         return context
 
     def process_industry_cloud_to_zltest(self, customer, requirement):
+        SUBNETS_JSON_PATH = os.path.join(jsons_dir, "ipam", "subnets.json")
+        subnets_data = _load_json_file(SUBNETS_JSON_PATH)
+
         context = {}
 
-        # -------------------------- 1. 检索阿里云EIP --------------------------
+        # -------------------------- 1. 检索阿里云 EIP --------------------------
         # 调用抽象后的EIP检索函数
         # 创建AliYunProcessor实例来调用get_eip_address方法
         aliyun_processor = AliYunProcessor(None)  # 传入None作为占位符，实际使用时可能需要真实数据
@@ -678,16 +689,19 @@ class OrderProcessor:
             return None
         context["eip_ips"] = eip_ips
 
-        # -------------------------- 2. 检索IPAM 是否登记备案地址 --------------------------
+        # -------------------------- 2. 检索IPAM zlnet网段 --------------------------
         # 调用抽象后的IPAM检索函数
         # 创建IpamProcessor实例来调用get_isp_address方法
-        # ipam_processor = IpamProcessor(None)  # 传入None作为占位符，实际使用时可能需要真实数据
-        # isp_ips = ipam_processor.get_isp_address(customer, ip_field='公网IP')
-        # if isp_ips is None:  # 处理IPAM检索失败的情况
-        #     return None
-        # context["isp_ips"] = isp_ips
+        ipam_processor = IpamProcessor(subnets_data)
+        ipam_cidrs = ipam_processor.get_ipam_cidrs(subnets_data)
+        ipam_net = ipam_processor.get_longest_match_subnet(eip_ips, ipam_cidrs)
+        if ipam_net is None:  # 处理IPAM检索失败的情况
+            return None
+        # 将返回的子网字符串转换为包含cidr字段的字典列表，以匹配模板期望的格式
+        context["nets"] = [{"cidr": ipam_net}]
         #
         return context
+
     def process_industry_cloud_to_industry_cloud(self, customer, requirement):
         """
         行业云→互联网场景的上下文处理器
@@ -739,6 +753,32 @@ class OrderProcessor:
             self.logger.error(f"处理网络信息时发生错误: {str(e)}", exc_info=True)
             return {"combin_net_infos": [], "error": str(e)}
 
+    def _save_results_to_json(self, results, customer_info):
+        """将处理结果保存为JSON文件
+        
+        Args:
+            results: 处理结果数据
+            customer_info: 客户信息
+        """
+        try:
+            # 创建输出目录
+            current_date = datetime.now().strftime("%Y%m%d")
+            output_dir = os.path.join("/data/output/change_scripts", current_date)
+            os.makedirs(output_dir, exist_ok=True)
+            
+            # 生成文件名
+            org_name = customer_info.get("organization", "未知客户")
+            filename = f"新增{org_name}-管理系统-访问策略变更.json"
+            filepath = os.path.join(output_dir, filename)
+            
+            # 保存结果到JSON文件
+            with open(filepath, 'w', encoding='utf-8-sig') as f:
+                json.dump(results, f, ensure_ascii=False, indent=2)
+            
+            self.logger.info(f"结果已保存至: {filepath}")
+        except Exception as e:
+            self.logger.error(f"保存结果到JSON文件时发生错误: {str(e)}", exc_info=True)
+
 
 class GetInformation:
     """获取信息类"""
@@ -747,6 +787,7 @@ class GetInformation:
         """初始化方法，设置日志系统"""
         self.config = config
         self.logger = get_module_logger(__name__)
+
     def fetch_api_data(self, source_target_pair=None):
         """获取并保存各系统API数据（阿里云/深信服/山石）"""
         # 从配置文件加载场景配置
@@ -800,7 +841,8 @@ class GetInformation:
             save_response_to_json(dnat_info, f"{current_config['sxf_save_dir']}/dnat.json", self.logger)
 
             custom_address_info = sxf_api_client.get_custom_addresses()
-            save_response_to_json(custom_address_info, f"{current_config['sxf_save_dir']}/custom_addresses.json", self.logger)
+            save_response_to_json(custom_address_info, f"{current_config['sxf_save_dir']}/custom_addresses.json",
+                                  self.logger)
 
         # 4. 山石防火墙API - 按场景URL和路径获取数据
         hs_api_client = HillstoneApiClient(current_config["fw_url"])
@@ -815,25 +857,24 @@ class GetInformation:
             policy_info = hs_api_client.get_policy()
             save_response_to_json(policy_info, f"{fw_save_dir}/policy.json", self.logger)
 
-            addrbook_info = hs_api_client.get_addrbook()
-            save_response_to_json(addrbook_info, f"{fw_save_dir}/addrbook.json", self.logger)
+            addr_book_info = hs_api_client.get_addrbook()
+            save_response_to_json(addr_book_info, f"{fw_save_dir}/addr_book.json", self.logger)
 
-            servicebook_info = hs_api_client.get_servicebook()
-            save_response_to_json(servicebook_info, f"{fw_save_dir}/servicebook.json", self.logger)
+            service_ebook_info = hs_api_client.get_servicebook()
+            save_response_to_json(service_ebook_info, f"{fw_save_dir}/service_book.json", self.logger)
 
-            servicegroup_info = hs_api_client.get_servicegroup()
-            save_response_to_json(servicegroup_info, f"{fw_save_dir}/servicegroup.json", self.logger)
+            service_group_info = hs_api_client.get_servicegroup()
+            save_response_to_json(service_group_info, f"{fw_save_dir}/service_group.json", self.logger)
 
         else:
             policy_info = hs_api_client.get_vsys_policy(current_config['fw_vsys'])
             save_response_to_json(policy_info, f"{fw_save_dir}/policy.json", self.logger)
 
-            addrbook_info = hs_api_client.get_vsys_addrbook(current_config['fw_vsys'])
-            save_response_to_json(addrbook_info, f"{fw_save_dir}/addrbook.json", self.logger)
+            addr_book_info = hs_api_client.get_vsys_addrbook(current_config['fw_vsys'])
+            save_response_to_json(addr_book_info, f"{fw_save_dir}/addr_book.json", self.logger)
 
-            servicebook_info = hs_api_client.get_vsys_servicebook(current_config['fw_vsys'])
-            save_response_to_json(servicebook_info, f"{fw_save_dir}/servicebook.json", self.logger)
-
+            service_ebook_info = hs_api_client.get_vsys_servicebook(current_config['fw_vsys'])
+            save_response_to_json(service_ebook_info, f"{fw_save_dir}/service_book.json", self.logger)
 
 
 class IpamProcessor:
@@ -850,6 +891,35 @@ class IpamProcessor:
             f"{subnet['subnet']}/{subnet['mask']}": subnet['description']
             for subnet in subnets_data
         }
+
+    def get_longest_match_subnet(self, ips, subnets=None):
+        """
+        遵循最长匹配原则查找子网(支持IPv4/IPv6)
+        :param ips: 要查询的IP地址列表
+        :param subnets: 可选的自定义子网字典，格式{子网: 描述}
+        :return: 最长匹配子网 或 None
+        """
+        try:
+            ip_objs = [ipaddress.ip_address(ip) for ip in ips]
+            target_subnets = subnets or self.ipam_data
+
+            # 收集所有包含该IP的子网
+            matched = []
+            for subnet, desc in target_subnets.items():
+                try:
+                    net = ipaddress.ip_network(subnet, strict=False)
+                    if any(ip_obj in net for ip_obj in ip_objs):
+                        matched.append((net.prefixlen, subnet, desc))
+                except ValueError:
+                    continue
+
+            # 按前缀长度降序排列
+            if matched:
+                matched.sort(reverse=True)
+                return matched[0][1]  # 返回子网
+            return None
+        except ValueError:
+            return None
 
     def get_isp_address(self, customer, ip=None):
         """获取客户的ISP地址列表
@@ -941,8 +1011,10 @@ class IpamProcessor:
                 if desc and vlan in desc:
                     network = ipaddress.ip_network(net)
                     if network.subnet_of(target_network):
-                        self.logger.info(f"找到并网对接网段: {net}")
-                        return net, self.get_ip_at_position(net, 3), self.get_ip_at_position(net,4), self.get_ip_at_position(net, 5)
+                        self.logger.info(f"行业云并网对接网段: {net}")
+                        return net, self.get_ip_at_position(net, 3), self.get_ip_at_position(net,
+                                                                                             4), self.get_ip_at_position(
+                            net, 5)
             except ValueError as e:
                 self.logger.warning(f"处理网段 {net} 时出错: {str(e)}")
                 continue
@@ -1006,7 +1078,6 @@ class SangforAdProcessor:
     def __init__(self, sangfor_ad_data):
         self.sangfor_ad_data = sangfor_ad_data
         self.logger = get_module_logger(__name__)
-
 
 
 class AliYunProcessor:
@@ -1076,8 +1147,8 @@ def main():
     config_manager = ConfigManager(config_path)
     config = config_manager.load_config()
     logger.info('配置加载完成')
-    logger.info(f"{config}")
-    logger.info(f"{config['scenario_config'].keys()}")
+    logger.debug(f"配置信息：{config}")
+    logger.debug(f"配置场景：{config['scenario_config'].keys()}")
 
     # 向上回溯两级到项目根目录（根据实际情况调整）
     # for root, dirs, files in os.walk(os.path.join(project_root, 'data', 'input', 'order')):
@@ -1090,7 +1161,7 @@ def main():
     #             # print(content)
 
     order_path = os.path.join(project_root, 'data', 'input', 'order',
-                              '网络资源-信达期货-飞马系统.xlsx')
+                              '网络资源-信达期货-证联网测试网.xlsx')
 
     logger.info(f'开始处理订单: {order_path}')
     #
@@ -1098,5 +1169,4 @@ def main():
 
 
 if __name__ == '__main__':
-
     main()

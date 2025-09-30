@@ -1,0 +1,17 @@
+﻿2025-09-30 14:09:23 - src.modules.collection.ssh_collector - ERROR - 连接设备 192.168.1.1 超时
+2025-09-30 14:09:23 - src.modules.collection.ssh_collector - ERROR - 无法连接到设备 192.168.1.1
+2025-09-30 14:09:25 - src.modules.collection.api_collector - ERROR - HTTP错误: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
+
+2025-09-30 14:09:25 - src.modules.collection.api_collector - ERROR - HTTP错误: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
+
+2025-09-30 14:09:25 - src.modules.collection.api_collector - ERROR - HTTP错误: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
+

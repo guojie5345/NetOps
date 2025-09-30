@@ -1,0 +1,61 @@
+{
+  "industry_cloud_to_internet": {
+    "ip_mapping": {
+      "public_ip": "公网IP",
+      "private_ip": "源IP"
+    },
+    "port_fields": [
+      "源端口",
+      "公网端口"
+    ],
+    "data_fetcher": "fetch_api_data",
+    "template": "industry_cloud_to_internet.tpl",
+    "context_processor": "process_industry_cloud_to_internet",
+    "change_type": "互联网接入"
+  },
+  "internet_to_industry_cloud": {
+    "ip_mapping": {
+      "public_ip": "公网IP",
+      "private_ip": "目的IP"
+    },
+    "port_fields": [
+      "目的端口",
+      "公网端口"
+    ],
+    "data_fetcher": "fetch_api_data",
+    "template": "internet_to_industry_cloud.tpl",
+    "context_processor": "process_internet_to_industry_cloud",
+    "change_type": "互联网接入",
+    "fw_url": "https://172.16.190.23",
+    "sxf_save_dir": "ad",
+    "fw_save_dir": "isp_fw"
+  },
+  "industry_cloud_to_zltest": {
+    "ip_mapping": {
+      "public_ip": "公网IP",
+      "private_ip": "源IP"
+    },
+    "port_fields": [
+      "源端口",
+      "目的端口"
+    ],
+    "data_fetcher": "fetch_api_data",
+    "template": "industry_cloud_to_zltest.tpl",
+    "context_processor": "process_industry_cloud_to_zltest",
+    "change_type": "证联网测试网接入"
+  },
+  "industry_cloud_to_industry_cloud": {
+    "ip_mapping": {
+      "public_ip": "公网IP",
+      "private_ip": "源IP"
+    },
+    "port_fields": [
+      "源端口",
+      "目的端口"
+    ],
+    "data_fetcher": "fetch_api_data",
+    "template": "industry_cloud_to_industry_cloud.tpl",
+    "context_processor": "process_industry_cloud_to_industry_cloud",
+    "change_type": "虚拟专用网接入"
+  }
+}

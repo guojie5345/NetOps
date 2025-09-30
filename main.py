@@ -82,13 +82,18 @@ def main(config_path=None, order_path=None, action=None):
 
     # 根据动作执行不同的功能
     if action == 'collect':
-        logger.info('开始采集数据')
+        logger.info('开始信息采集...')
         try:
-            # 示例: 采集阿里云资源信息
-            aliyun_info = get_aliyun_resource_info(config['aliyun'])
-            logger.info(f'数据采集完成，共采集 {len(aliyun_info)} 条记录')
+            # 导入信息采集模块
+            from src.modules.collection.collector import collect_all
+            
+            # 采集信息
+            # 注意：这里需要一个配置文件来指定要采集的设备和API端点
+            # 示例配置文件可以在 src/modules/collection/config_example.json 找到
+            collect_all(config)
+            logger.info('信息采集完成')
         except Exception as e:
-            logger.error(f'数据采集失败: {str(e)}')
+            logger.error(f'信息采集失败: {str(e)}')
     elif action == 'process' and order_path:
         logger.info(f'开始处理订单 {order_path}')
         try:
@@ -116,6 +121,4 @@ def main(config_path=None, order_path=None, action=None):
 
 if __name__ == '__main__':
     # 在Python代码中直接调用
-    main(config_path='src/config/config.json',
-         order_path='data/input/order/网络资源-信达期货-飞马掌厅.xlsx',
-         action='process')
+    main()

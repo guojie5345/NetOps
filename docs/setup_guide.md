@@ -162,6 +162,20 @@
    - `default_YYYYMMDD_HHMMSS.yaml` - YAML格式的默认配置文件
    - `config_YYYYMMDD_HHMMSS.yaml` - YAML格式的配置文件
 
+## 环境设置（推荐方式）
+
+为了简化环境设置过程，我们提供了专门的批处理脚本：
+
+1. **重置环境**
+   - 运行 `reset_environment.bat` 来重新创建整个开发环境
+   - 该脚本会自动创建虚拟环境、安装依赖包等
+
+2. **启动CMD环境**
+   - 运行 `start_cmd.bat` 来启动配置好的CMD开发环境
+   - 该脚本会自动激活虚拟环境并设置工作目录
+
+详细说明请查看项目根目录下的 `ENVIRONMENT_SETUP.md` 文件。
+
 ## 如何测试项目
 
 1. **运行单元测试**
