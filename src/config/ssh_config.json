@@ -1,0 +1,18 @@
+{
+  "ssh_devices": [
+    {
+      "device_type": "cisco_ios",
+      "host": "192.168.80.21",
+      "username": "nms",
+      "password": "cisco",
+      "port": 22
+    },
+    {
+      "device_type": "cisco_ios",
+      "host": "192.168.80.22",
+      "username": "nms",
+      "password": "cisco",
+      "port": 22
+    }
+  ]
+}

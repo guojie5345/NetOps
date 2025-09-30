@@ -1,0 +1,13 @@
+{
+  "api_endpoints": [
+    {
+      "url": "https://devapi.qweather.com/v7/weather/3d?location=%E5%8C%97%E4%BA%AC&key=aa13b88faef9416786aad46eb5f7bb04"
+
+    },
+    {
+      "url": "https://api.cloudprovider.com/v2",
+      "api_key": "another_api_key_here",
+      "resource_types": ["instances", "networks", "storage"]
+    }
+  ]
+}

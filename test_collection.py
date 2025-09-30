@@ -13,48 +13,48 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, base_dir)
 
 from src.modules.collection.collector import collect_all
+from src.core.config_manager import ConfigManager
 
 def create_test_config():
     """创建测试配置文件"""
-    config = {
+    # 创建SSH配置
+    ssh_config = {
         "ssh_devices": [
             {
-                "device_type": "huawei",
-                "host": "192.168.1.1",
-                "username": "testuser",
-                "password": "testpass",
+                "device_type": "cisco_ios",
+                "host": "192.168.80.21",
+                "username": "nms",
+                "password": "cisco",
                 "port": 22
-            }
-        ],
-        "api_endpoints": [
+            },
             {
-                "name": "测试API",
-                "url": "https://httpbin.org/get",
-                "method": "GET",
-                "headers": {
-                    "User-Agent": "NetOps-Tool/1.0"
-                }
+                "device_type": "cisco_ios",
+                "host": "192.168.80.22",
+                "username": "nms",
+                "password": "cisco1",
+                "port": 22
             }
         ]
     }
     
-    # 保存配置到文件
-    config_path = os.path.join(base_dir, 'test_collection_config.json')
-    with open(config_path, 'w', encoding='utf-8') as f:
-        json.dump(config, f, ensure_ascii=False, indent=2)
+    # 保存SSH配置到文件
+    ssh_config_path = os.path.join(base_dir, 'test_ssh_config.json')
+    with open(ssh_config_path, 'w', encoding='utf-8') as f:
+        json.dump(ssh_config, f, ensure_ascii=False, indent=2)
+        print(f"测试SSH配置文件已创建: {ssh_config_path}")
     
-    return config_path
+    return ssh_config_path
 
 def test_collect_all():
     """测试collect_all函数"""
     print("开始测试信息采集功能...")
     
     # 创建测试配置
-    config_path = create_test_config()
+    ssh_config_path = create_test_config()
     
-    # 加载配置
-    with open(config_path, 'r', encoding='utf-8') as f:
-        config = json.load(f)
+    # 使用ConfigManager加载配置
+    config_manager = ConfigManager(ssh_config_path=ssh_config_path)
+    config = config_manager.load_config()
     
     try:
         # 调用采集函数
@@ -63,9 +63,9 @@ def test_collect_all():
     except Exception as e:
         print(f"信息采集测试失败: {str(e)}")
     finally:
-        # 清理测试配置文件
-        if os.path.exists(config_path):
-            os.remove(config_path)
+        # 不再自动删除配置文件，而是提示用户
+        print(f"测试SSH配置文件已保留: {ssh_config_path}")
+        print("如需删除配置文件，请手动执行删除操作。")
 
 if __name__ == '__main__':
     test_collect_all()

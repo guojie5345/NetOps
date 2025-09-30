@@ -1,0 +1,7 @@
+{
+  "有效配置": "success",
+  "缺少SSH设备配置": "success",
+  "缺少API端点配置": "success",
+  "空配置": "success",
+  "不完整的设备配置": "success"
+}

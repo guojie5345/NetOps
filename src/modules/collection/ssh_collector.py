@@ -9,6 +9,7 @@ SSH信息采集器
 
 import json
 import logging
+import os
 from typing import Dict, Any, List, Optional
 from netmiko import ConnectHandler, NetMikoTimeoutException, NetMikoAuthenticationException
 from paramiko.ssh_exception import SSHException
@@ -17,6 +18,61 @@ from src.utils.logger import get_module_logger
 
 # 获取模块日志器
 logger = get_module_logger(__name__)
+
+# 获取项目根目录
+# 使用更可靠的路径计算方法
+import inspect
+
+# 获取当前文件所在目录的绝对路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 向上找到项目根目录 (假设当前在 src/modules/collection/ 目录下)
+# 从 collection -> modules -> src -> NetOps (项目根目录)
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+# 命令配置文件路径
+COMMANDS_CONFIG_PATH = os.path.join(project_root, 'src', 'config', 'device_commands.json')
+
+# 添加调试日志以便诊断路径问题
+logger.debug(f"当前文件目录: {current_dir}")
+logger.debug(f"项目根目录: {project_root}")
+logger.debug(f"命令配置文件路径: {COMMANDS_CONFIG_PATH}")
+
+
+def load_commands_config() -> Dict[str, Any]:
+    """加载设备命令配置文件
+    
+    Returns:
+        Dict[str, Any]: 设备命令配置字典
+    """
+    try:
+        with open(COMMANDS_CONFIG_PATH, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            logger.info(f"成功加载设备命令配置文件: {COMMANDS_CONFIG_PATH}")
+            return config.get('device_commands', {})
+    except Exception as e:
+        logger.error(f"加载设备命令配置文件时发生错误: {str(e)}")
+        # 返回默认配置
+        return {
+            'cisco': {
+                'basic_info': ['show version', 'show running-config', 'show ip interface brief', 'show vlan brief'],
+                'interface_info': 'show interfaces',
+                'arp_info': 'show arp'
+            },
+            'huawei': {
+                'basic_info': ['display version', 'display current-configuration', 'display ip interface brief', 'display vlan brief'],
+                'interface_info': 'display interface',
+                'arp_info': 'display arp'
+            },
+            'hp_comware': {
+                'basic_info': ['display version', 'display current-configuration', 'display ip interface brief', 'display vlan brief'],
+                'interface_info': 'display interface',
+                'arp_info': 'display arp'
+            },
+            'default': {
+                'basic_info': ['show version'],
+                'interface_info': 'show interfaces',
+                'arp_info': 'show arp'
+            }
+        }
 
 
 class SSHCollector:
@@ -40,6 +96,8 @@ class SSHCollector:
         self.device_info = device_info
         self.connection = None
         self.is_connected = False
+        # 加载命令配置
+        self.commands_config = load_commands_config()
         
     def connect(self) -> bool:
         """建立SSH连接
@@ -113,6 +171,24 @@ class SSHCollector:
             results[command] = self.execute_command(command)
         return results
     
+    def _get_device_type_key(self, device_type: str) -> str:
+        """根据设备类型获取配置键
+        
+        Args:
+            device_type (str): 设备类型
+            
+        Returns:
+            str: 配置键
+        """
+        if 'cisco' in device_type:
+            return 'cisco'
+        elif 'huawei' in device_type:
+            return 'huawei'
+        elif 'hp_comware' in device_type:
+            return 'hp_comware'
+        else:
+            return 'default'
+    
     def collect_basic_info(self) -> Dict[str, Any]:
         """采集设备基本信息
         
@@ -128,28 +204,12 @@ class SSHCollector:
             'device_type': self.device_info.get('device_type', ''),
         }
         
-        # 根据设备类型执行不同的命令
+        # 获取设备类型对应的配置键
         device_type = self.device_info.get('device_type', '')
+        device_key = self._get_device_type_key(device_type)
         
-        if 'cisco' in device_type:
-            commands = [
-                'show version',
-                'show running-config',
-                'show ip interface brief',
-                'show vlan brief'
-            ]
-        elif 'huawei' in device_type or 'hp_comware' in device_type:
-            commands = [
-                'display version',
-                'display current-configuration',
-                'display ip interface brief',
-                'display vlan brief'
-            ]
-        else:
-            # 默认命令
-            commands = [
-                'show version'
-            ]
+        # 从配置中获取命令
+        commands = self.commands_config.get(device_key, {}).get('basic_info', ['show version'])
         
         # 执行命令并收集结果
         command_results = self.execute_commands(commands)
@@ -172,16 +232,12 @@ class SSHCollector:
             'device_type': self.device_info.get('device_type', ''),
         }
         
-        # 根据设备类型执行不同的命令
+        # 获取设备类型对应的配置键
         device_type = self.device_info.get('device_type', '')
+        device_key = self._get_device_type_key(device_type)
         
-        if 'cisco' in device_type:
-            command = 'show interfaces'
-        elif 'huawei' in device_type or 'hp_comware' in device_type:
-            command = 'display interface'
-        else:
-            # 默认命令
-            command = 'show interfaces'
+        # 从配置中获取命令
+        command = self.commands_config.get(device_key, {}).get('interface_info', 'show interfaces')
         
         # 执行命令并收集结果
         result = self.execute_command(command)
@@ -204,16 +260,12 @@ class SSHCollector:
             'device_type': self.device_info.get('device_type', ''),
         }
         
-        # 根据设备类型执行不同的命令
+        # 获取设备类型对应的配置键
         device_type = self.device_info.get('device_type', '')
+        device_key = self._get_device_type_key(device_type)
         
-        if 'cisco' in device_type:
-            command = 'show arp'
-        elif 'huawei' in device_type or 'hp_comware' in device_type:
-            command = 'display arp'
-        else:
-            # 默认命令
-            command = 'show arp'
+        # 从配置中获取命令
+        command = self.commands_config.get(device_key, {}).get('arp_info', 'show arp')
         
         # 执行命令并收集结果
         result = self.execute_command(command)

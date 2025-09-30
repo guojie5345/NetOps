@@ -1,0 +1,39 @@
+{
+  "device_commands": {
+    "cisco": {
+      "basic_info": [
+        "show version",
+        "show running-config",
+        "show ip interface brief",
+        "show vlan brief"
+      ],
+      "interface_info": "show interfaces",
+      "arp_info": "show arp"
+    },
+    "huawei": {
+      "basic_info": [
+        "display version",
+        "display current-configuration",
+        "display ip interface brief",
+        "display vlan brief"
+      ],
+      "interface_info": "display interface",
+      "arp_info": "display arp"
+    },
+    "hp_comware": {
+      "basic_info": [
+        "display version",
+        "display current-configuration",
+        "display ip interface brief",
+        "display vlan brief"
+      ],
+      "interface_info": "display interface",
+      "arp_info": "display arp"
+    },
+    "default": {
+      "basic_info": ["show version"],
+      "interface_info": "show interfaces",
+      "arp_info": "show arp"
+    }
+  }
+}

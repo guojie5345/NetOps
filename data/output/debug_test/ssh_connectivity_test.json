@@ -1,0 +1,17 @@
+{
+  "172.16.1.1": {
+    "connected": false,
+    "connect_time": 10.014786720275879,
+    "error": null
+  },
+  "172.16.1.2": {
+    "connected": false,
+    "connect_time": 10.017153024673462,
+    "error": null
+  },
+  "172.16.1.3": {
+    "connected": false,
+    "connect_time": 10.01492691040039,
+    "error": null
+  }
+}
