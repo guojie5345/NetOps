@@ -11,9 +11,10 @@
 3. **信息处理**：将采集后的信息转换为可用于后续处理的格式
 4. **配置生成**：通过配置模板，生成最终的配置文件
 5. **配置管理**：利用配置文件管理应用程序的配置信息
-6. **自动备份**：自动备份数据库和文件（暂停开发）
-7. **自动监控**：自动监控服务器和应用程序的运行状态（暂停开发）
-8. **自动报警**：自动报警当服务器或应用程序出现问题时（暂停开发）
+6. **基线检查**：检查网络设备配置是否符合安全基线要求
+7. **自动备份**：自动备份数据库和文件（暂停开发）
+8. **自动监控**：自动监控服务器和应用程序的运行状态（暂停开发）
+9. **自动报警**：自动报警当服务器或应用程序出现问题时（暂停开发）
 
 ## 技术栈
 - **编程语言**：Python 3.12
@@ -120,7 +121,28 @@
    ```bash
    python main.py --action process --order data/input/orders/your_order_file.xlsx
    ```
-3. 查看运行结果和日志
+3. 运行基线检查
+   ```bash
+   python main.py --action baseline
+   ```
+4. 查看运行结果和日志
+
+### 基线检查功能
+基线检查功能用于检查网络设备配置是否符合安全基线要求。该功能支持多种设备平台（Cisco、华为、H3C等），可以检查配置合规性、接口状态和系统服务状态。
+
+**功能特点**：
+- 支持多种设备平台（Cisco IOS/NX-OS、华为VRP、H3C Comware等）
+- 可配置的基线规则（通过`src/config/baseline_rules.yaml`文件）
+- 生成HTML和Excel格式的检查报告
+- 支持并行检查多台设备
+
+**配置文件**：
+- `src/config/baseline_rules.yaml` - 基线检查规则定义文件
+- `src/config/ssh_config.json` - SSH设备连接配置文件
+
+**生成的报告**：
+- HTML格式报告：`reports/baseline_report_YYYYMMDD_HHMMSS.html`
+- Excel格式报告：`reports/baseline_report_YYYYMMDD_HHMMSS.xlsx`
 
 ### 从Excel生成设备Inventory文件
 除了主程序外，项目还包含一个专门用于从Excel生成网络设备登录inventory文件的脚本。

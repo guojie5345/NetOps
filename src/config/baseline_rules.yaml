@@ -1,0 +1,39 @@
+common:
+  - rule: "service password-encryption"
+    description: "密码加密必须启用"
+  - rule: "logging buffered"
+    description: "必须配置日志缓冲"
+
+cisco_ios:
+  - rule: "aaa new-model"
+    description: "必须启用AAA认证"
+  - rule: "ip ssh version 2"
+    description: "SSH必须使用版本2"
+  - rule: "no ip domain-lookup"
+    description: "禁用域名解析"
+
+huawei_vrp:
+  - rule: "stelnet server enable"
+    description: "必须启用SSH服务器"
+  - rule: "info-center loghost"
+    description: "必须配置日志服务器"
+
+hp_comware:
+  - rule: "password hash"
+    description: "必须配置用户密码密文"
+  - rule: "radius scheme"
+    description: "必须配置RADIUS服务器"
+  - rule: "info-center loghost"
+    description: "必须配置日志服务器"
+  - rule: "ntp-service unicast-server"
+    description: "必须配置NTP服务器"
+  - rule: "ssh server enable"
+    description: "必须启用SSH服务器"
+  - rule: "acl number 3000"
+    description: "必须配置SSH ACL规则"
+  - rule: "ssh server acl 3000"
+    description: "必须启用SSH ACL规则"
+  - rule: "idle-timeout"
+    description: "必须配置SSH会话超时时间"
+  - rule: "snmp-server community read"
+    description: "必须配置只读SNMP社区字符串"
