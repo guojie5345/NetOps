@@ -7,12 +7,13 @@ _root_logger = None
 _log_dir = None
 
 
-def setup_logger(name=None):
+def setup_logger(name=None, level=logging.INFO):
     """
     设置并返回日志器实例，确保只初始化一次
 
     Args:
         name (str, optional): logger名称，如果提供则返回子logger
+        level (int, optional): 日志级别，默认为INFO
 
     Returns:
         logging.Logger: 配置好的logger实例
@@ -39,7 +40,7 @@ def setup_logger(name=None):
 
     # 设置根日志器
     _root_logger = logging.getLogger()
-    _root_logger.setLevel(logging.INFO)
+    _root_logger.setLevel(level)
 
     # 清除现有的处理器，避免重复添加
     _root_logger.handlers.clear()

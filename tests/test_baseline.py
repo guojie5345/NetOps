@@ -67,7 +67,7 @@ def test_baseline():
     """
     try:
         # 获取当前文件所在目录的绝对路径
-        current_dir = os.path.dirname(os.path.abspath(__file__))
+        current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         
         # 定义配置文件路径
         ssh_config_path = os.path.join(current_dir, 'config', 'ssh_config.json')

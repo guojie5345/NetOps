@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}基线检查 - 自动化运维工具{% endblock %}
+
+{% block content %}
+<h2>基线检查</h2>
+
+<div class="check-section">
+    <h3>执行基线检查</h3>
+    <p>点击下面的按钮开始对所有配置设备执行基线检查。</p>
+    
+    <form method="POST" id="checkForm">
+        <button type="submit" class="btn btn-primary btn-lg" id="checkButton">开始检查</button>
+    </form>
+    
+    <div id="progressSection" style="display: none; margin-top: 20px;">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar">0%</div>
+        </div>
+        <p id="progressText">正在准备检查...</p>
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>基线检查说明</h3>
+    <p>基线检查功能将对网络设备进行一系列合规性检查，包括：</p>
+    <ul>
+        <li>设备配置检查</li>
+        <li>安全策略验证</li>
+        <li>性能参数评估</li>
+        <li>最佳实践符合性检查</li>
+    </ul>
+    <p>检查完成后，系统将生成详细的报告，包括合规项和不合规项，以及修复建议。</p>
+</div>
+
+<script>
+    let checkInterval;
+    
+    document.getElementById('checkForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 显示进度区域
+        document.getElementById('progressSection').style.display = 'block';
+        const checkButton = document.getElementById('checkButton');
+        checkButton.disabled = true;
+        checkButton.textContent = '检查中...';
+        
+        // 发送POST请求启动基线检查
+        fetch('/baseline_check/start', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'started') {
+                // 开始轮询检查状态
+                checkInterval = setInterval(checkStatus, 1000);
+            } else if (data.status === 'error') {
+                // 检查启动失败，显示错误信息
+                document.getElementById('progressText').textContent = '检查启动失败: ' + data.message;
+                checkButton.disabled = false;
+                checkButton.textContent = '开始检查';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('progressText').textContent = '检查启动过程中发生错误，请查看控制台了解详情。';
+            checkButton.disabled = false;
+            checkButton.textContent = '开始检查';
+        });
+    });
+    
+    function checkStatus() {
+        fetch('/baseline_check/status', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'running') {
+                // 更新进度条
+                const progressBar = document.getElementById('progressBar');
+                const progressText = document.getElementById('progressText');
+                progressBar.style.width = data.progress + '%';
+                progressBar.textContent = data.progress + '%';
+                progressText.textContent = data.message;
+            } else if (data.status === 'completed') {
+                // 检查完成，跳转到报告页面
+                clearInterval(checkInterval);
+                document.getElementById('progressText').textContent = '检查完成，正在跳转到报告页面...';
+                setTimeout(() => {
+                    window.location.href = '/reports';
+                }, 1000);
+            } else if (data.status === 'error') {
+                // 检查失败，显示错误信息
+                clearInterval(checkInterval);
+                document.getElementById('progressText').textContent = '检查失败: ' + data.message;
+                const checkButton = document.getElementById('checkButton');
+                checkButton.disabled = false;
+                checkButton.textContent = '开始检查';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            clearInterval(checkInterval);
+            document.getElementById('progressText').textContent = '检查过程中发生错误，请查看控制台了解详情。';
+            const checkButton = document.getElementById('checkButton');
+            checkButton.disabled = false;
+            checkButton.textContent = '开始检查';
+        });
+    }
+</script>
+{% endblock %}

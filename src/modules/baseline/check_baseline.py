@@ -51,7 +51,17 @@ class ConfigRule:
         """
         if self.regex and self.pattern:
             return bool(self.pattern.search(config))
-        return self.rule in config
+        
+        # 对于某些特定规则，需要更精确的匹配逻辑
+        if self.rule == "aaa new-model":
+            # 对于AAA规则，需要确保存在"aaa new-model"但不存在"no aaa new-model"
+            lines = config.split('\n')
+            has_aaa = any(line.strip() == "aaa new-model" for line in lines)
+            has_no_aaa = any(line.strip() == "no aaa new-model" for line in lines)
+            return has_aaa and not has_no_aaa
+        else:
+            # 默认的字符串包含检查
+            return self.rule in config
 
 
 class StatusCheck:
@@ -144,14 +154,18 @@ class BaselineChecker:
             max_workers: 最大工作线程数
         """
         # 如果未提供规则文件路径，使用默认路径
+        # 获取当前文件所在目录的绝对路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        
         if rules_file is None:
-            # 获取当前文件所在目录的绝对路径
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
-            project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
             rules_file = os.path.join(project_root, 'config', 'baseline_rules.yaml')
             
         self.rules = self._load_rules(rules_file)
+        # 加载修复建议
+        suggestions_file = os.path.join(project_root, 'config', 'remediation_suggestions.yaml')
+        self.remediation_suggestions = self._load_remediation_suggestions(suggestions_file)
         self.max_workers = max_workers
         self.executor = ThreadPoolExecutor(max_workers=max_workers)
         # 初始化状态检查列表
@@ -172,7 +186,7 @@ class BaselineChecker:
         current_dir = os.path.dirname(os.path.abspath(__file__))
         # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
         project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-        template_path = os.path.join(project_root, 'templates', 'baseline_report.html')
+        template_path = os.path.join(project_root, 'templates', 'html','baseline_report.html')
         
         try:
             with open(template_path, 'r', encoding='utf-8') as f:
@@ -185,6 +199,32 @@ class BaselineChecker:
             logger.error(f"加载模板文件时出错: {e}")
             # 返回默认模板
             return self._get_default_template()
+            
+    def _load_summary_report_template(self) -> str:
+        """加载汇总报告模板
+        
+        Returns:
+            str: 汇总报告模板内容
+            
+        Raises:
+            FileNotFoundError: 模板文件不存在时抛出
+        """
+        # 获取当前文件所在目录的绝对路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        template_path = os.path.join(project_root, 'templates', 'html', 'summary_report.html')
+        
+        try:
+            with open(template_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        except FileNotFoundError:
+            # 如果模板文件不存在，记录警告但不抛出异常
+            logger.warning(f"汇总报告模板文件不存在: {template_path}")
+            return None
+        except Exception as e:
+            logger.error(f"加载汇总报告模板文件时出错: {e}")
+            return None
     
     def _get_default_template(self) -> str:
         """获取默认的HTML报告模板
@@ -206,7 +246,21 @@ class BaselineChecker:
         .pass { background-color: #d4edda; }
         .fail { background-color: #f8d7da; }
         .device-section { margin-bottom: 30px; }
+        .remediation-link { color: #007bff; text-decoration: none; }
+        .remediation-link:hover { text-decoration: underline; }
+        .remediation-content { display: none; background-color: #f8f9fa; padding: 10px; border: 1px solid #dee2e6; margin-top: 5px; }
+        .show-remediation { display: block; }
     </style>
+    <script>
+        function toggleRemediation(deviceId, ruleIndex) {
+            var content = document.getElementById('remediation-' + deviceId + '-' + ruleIndex);
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>基线检查报告</h1>
@@ -214,18 +268,37 @@ class BaselineChecker:
     
     {% for device in devices %}
     <div class="device-section">
-        <h2>设备: {{ device.name }} ({{ device.hostname }})</h2>
+        <h2 id="device-{{ loop.index }}">设备: {{ device.name }} ({{ device.hostname }}) 
+            <a href="#remediation-all-{{ loop.index }}" onclick="document.getElementById('remediation-all-{{ loop.index }}').classList.toggle('show-remediation'); return false;" class="remediation-link">[显示所有修复建议]</a>
+        </h2>
+        <div id="remediation-all-{{ loop.index }}" class="remediation-content">
+            <h3>设备 {{ device.hostname }} 的完整修复配置:</h3>
+            <pre>{% for result in device.results %}{% if not result.compliant and result.remediation != '无修复建议' %}! {{ result.description }}
+{{ result.remediation }}
+{% endif %}{% endfor %}</pre>
+        </div>
         <table>
             <tr>
                 <th>规则描述</th>
                 <th>检查结果</th>
                 <th>实际配置</th>
+                <th>参考配置</th>
             </tr>
             {% for result in device.results %}
             <tr class="{{ 'pass' if result.compliant else 'fail' }}">
                 <td>{{ result.description }}</td>
                 <td>{{ '通过' if result.compliant else '未通过' }}</td>
                 <td><pre>{{ result.actual_config }}</pre></td>
+                <td>
+                    {% if not result.compliant and result.remediation and result.remediation not in ['无', '无修复建议'] %}
+                    <a href="javascript:void(0)" onclick="toggleRemediation({{ loop.parent.loop.index }}, {{ loop.index }})" class="remediation-link">查看修复建议</a>
+                    <div id="remediation-{{ loop.parent.loop.index }}-{{ loop.index }}" class="remediation-content">
+                        <pre>{{ result.remediation }}</pre>
+                    </div>
+                    {% else %}
+                    无
+                    {% endif %}
+                </td>
             </tr>
             {% endfor %}
         </table>
@@ -261,12 +334,35 @@ class BaselineChecker:
             logger.error(f"加载规则文件时出错: {e}")
             return {}
 
-    def check_compliance(self, config: str, rules: List[ConfigRule]) -> list:
+    def _load_remediation_suggestions(self, suggestions_file: str) -> Dict[str, Dict[str, Dict[str, str]]]:
+        """加载修复建议
+        
+        Args:
+            suggestions_file: 修复建议文件路径
+            
+        Returns:
+            Dict[str, Dict[str, Dict[str, str]]]: 修复建议映射
+        """
+        try:
+            # 尝试使用utf-8-sig编码（处理BOM）
+            try:
+                with open(suggestions_file, 'r', encoding='utf-8-sig') as f:
+                    return yaml.safe_load(f)
+            except UnicodeDecodeError:
+                # 如果失败，尝试使用utf-8编码
+                with open(suggestions_file, 'r', encoding='utf-8') as f:
+                    return yaml.safe_load(f)
+        except Exception as e:
+            logger.error(f"加载修复建议文件时出错: {e}")
+            return {}
+
+    def check_compliance(self, config: str, rules: List[ConfigRule], platform: str = 'common') -> list:
         """检查配置是否符合规则列表
         
         Args:
             config: 设备配置字符串
             rules: 规则列表
+            platform: 设备平台类型
             
         Returns:
             list: 检查结果列表
@@ -274,11 +370,14 @@ class BaselineChecker:
         results = []
         for rule in rules:
             compliant = rule.check_compliance(config)
+            # 获取修复建议
+            remediation = self._get_remediation_suggestion(rule.rule, platform)
             results.append({
                 'rule': rule.rule,
                 'description': rule.description,
                 'compliant': compliant,
-                'actual_config': self._find_related_config(config, rule)
+                'actual_config': self._find_related_config(config, rule),
+                'remediation': remediation
             })
         return results
 
@@ -299,6 +398,29 @@ class BaselineChecker:
             lines = config.split('\n')
             matched_lines = [line for line in lines if rule.rule in line]
         return '\n'.join(matched_lines) if matched_lines else "未找到相关配置"
+
+    def _get_remediation_suggestion(self, rule_text: str, platform: str) -> str:
+        """获取特定规则的修复建议
+        
+        Args:
+            rule_text: 规则文本
+            platform: 设备平台
+            
+        Returns:
+            str: 修复建议
+        """
+        # 首先查找平台特定的修复建议
+        if platform in self.remediation_suggestions:
+            if rule_text in self.remediation_suggestions[platform]:
+                return self.remediation_suggestions[platform][rule_text].get('suggestion', '无修复建议')
+        
+        # 然后查找通用修复建议
+        if 'common' in self.remediation_suggestions:
+            if rule_text in self.remediation_suggestions['common']:
+                return self.remediation_suggestions['common'][rule_text].get('suggestion', '无修复建议')
+        
+        # 如果没有找到修复建议，返回默认值
+        return '无修复建议'
 
     def _process_interface_status(self, interface_output: str, platform: str) -> List[str]:
         """处理接口状态输出
@@ -415,7 +537,7 @@ class BaselineChecker:
                         seen_rules.add(rule_key)
 
                 # 执行配置检查
-                check_results = self.check_compliance(config, applicable_rules)
+                check_results = self.check_compliance(config, applicable_rules, platform)
 
                 # 添加接口状态检查结果
                 interface_check = {
@@ -536,31 +658,113 @@ class BaselineChecker:
             results: 检查结果字典
         """
         # 准备报告数据
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        summary_report_filename = f"summary_report_{timestamp}.html"
         report_data = {
             'timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'devices': []
+            'devices': [],
+            'summary_report_filename': summary_report_filename
         }
+
+        # 为每台设备生成修复建议汇总文件
+        remediation_files = {}  # 存储设备名到修复建议文件的映射
 
         for host, result in results.items():
             if result.get('failed', False):
                 continue
-            report_data['devices'].append({
+                
+            # 调试信息：打印每个检查结果的修复建议
+            logger.info(f"设备 {host} 的检查结果:")
+            for check_result in result['results']:
+                logger.info(f"  检查项 '{check_result['description']}' 的修复建议: {check_result.get('remediation', '无')}")
+                
+            # 计算合规和不合规项数量
+            compliant_count = sum(1 for r in result['results'] if r['compliant'])
+            non_compliant_count = len(result['results']) - compliant_count
+            
+            device_info = {
                 'name': result['device_name'],
                 'hostname': result['device_hostname'],
-                'results': result['results']
-            })
+                'results': result['results'],
+                'compliant_count': compliant_count,
+                'non_compliant_count': non_compliant_count
+            }
+            report_data['devices'].append(device_info)
+            
+            # 生成该设备的修复建议汇总文件
+            remediation_content = self._generate_device_remediation_file(
+                device_info['name'], 
+                device_info['hostname'], 
+                result['results']
+            )
+            remediation_files[device_info['name']] = remediation_content
 
-        # 生成报告
+        # 生成详细报告
         template = Template(self.report_template)
         report_html = template.render(**report_data)
 
-        # 保存报告
+        # 保存详细报告
         os.makedirs('reports', exist_ok=True)
-        report_file = f"reports/baseline_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.html"
+        report_file = f"reports/baseline_report_{timestamp}.html"
 
-        with open(report_file, 'w', encoding='utf-8') as f:
+        with open(report_file, 'w', encoding='utf-8-sig') as f:
             f.write(report_html)
         logger.info(f"HTML报告已生成: {report_file}")
+        
+        # 保存每台设备的修复建议文件
+        for device_name, content in remediation_files.items():
+            # 清理设备名中的特殊字符，用于文件名
+            clean_device_name = re.sub(r'[<>:"/\\|?*\x00-\x1F]', '_', device_name)
+            # 使用与HTML模板一致的时间戳格式
+            timestamp_clean = timestamp.replace('-', '').replace(' ', '').replace(':', '')
+            remediation_file = f"reports/remediation_{clean_device_name}_{timestamp_clean}.txt"
+            with open(remediation_file, 'w', encoding='utf-8-sig') as f:
+                f.write(content)
+            logger.info(f"设备 {device_name} 的修复建议文件已生成: {remediation_file}")
+            
+        # 生成汇总报告
+        summary_report_filename = f"summary_report_{timestamp}.html"
+        self._generate_summary_report(report_data, f"baseline_report_{timestamp}.html", summary_report_filename)
+
+    def _generate_summary_report(self, report_data: Dict[str, Any], detailed_report_filename: str, summary_report_filename: str = None):
+        """生成汇总报告
+        
+        Args:
+            report_data: 详细报告数据
+            detailed_report_filename: 详细报告文件名
+            summary_report_filename: 汇总报告文件名
+        """
+        # 加载汇总报告模板
+        summary_template_content = self._load_summary_report_template()
+        if not summary_template_content:
+            logger.warning("无法加载汇总报告模板，跳过生成汇总报告")
+            return
+            
+        # 如果没有提供汇总报告文件名，则使用默认名称
+        if not summary_report_filename:
+            timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+            summary_report_filename = f"summary_report_{timestamp}.html"
+            
+        # 准备汇总报告数据
+        summary_data = {
+            'timestamp': report_data['timestamp'],
+            'devices': report_data['devices'],
+            'compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_count'] == 0),
+            'non_compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_count'] > 0),
+            'report_filename': detailed_report_filename,
+            'summary_report_filename': summary_report_filename
+        }
+        
+        # 生成汇总报告
+        template = Template(summary_template_content)
+        summary_html = template.render(**summary_data)
+        
+        # 保存汇总报告
+        summary_file = f"reports/{summary_report_filename}"
+        
+        with open(summary_file, 'w', encoding='utf-8-sig') as f:
+            f.write(summary_html)
+        logger.info(f"汇总报告已生成: {summary_file}")
 
     def _generate_excel_report(self, results: Dict[str, Dict[str, Any]]):
         """生成 Excel 报告
@@ -573,7 +777,7 @@ class BaselineChecker:
         ws.title = "基线检查报告"
 
         # 添加表头
-        headers = ["设备名称", "管理IP", "规则描述", "检查结果", "实际配置"]
+        headers = ["设备名称", "管理IP", "规则描述", "检查结果", "实际配置", "参考配置"]
         ws.append(headers)
 
         for host, result in results.items():
@@ -581,7 +785,7 @@ class BaselineChecker:
                 # 添加失败的设备信息
                 device_name = result.get('device_name', host)
                 device_hostname = result.get('device_hostname', host)
-                ws.append([device_name, device_hostname, "设备连接或检查失败", "未通过", result.get('error', '未知错误')])
+                ws.append([device_name, device_hostname, "设备连接或检查失败", "未通过", result.get('error', '未知错误'), "无"])
                 continue
                 
             device_name = result['device_name']
@@ -590,13 +794,48 @@ class BaselineChecker:
                 rule_description = check_result['description']
                 compliant = "通过" if check_result['compliant'] else "未通过"
                 actual_config = check_result['actual_config']
-                ws.append([device_name, device_hostname, rule_description, compliant, actual_config])
+                remediation = check_result.get('remediation', '无') if not check_result['compliant'] else '无'
+                ws.append([device_name, device_hostname, rule_description, compliant, actual_config, remediation])
 
         # 保存 Excel 文件
         os.makedirs('reports', exist_ok=True)
         report_file = f"reports/baseline_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
         wb.save(report_file)
         logger.info(f"Excel 报告已生成: {report_file}")
+
+    def _generate_device_remediation_file(self, device_name: str, hostname: str, results: list) -> str:
+        """生成设备修复建议汇总文件内容
+        
+        Args:
+            device_name: 设备名称
+            hostname: 设备主机名
+            results: 检查结果列表
+            
+        Returns:
+            str: 修复建议文件内容
+        """
+        content = f"设备 {device_name} ({hostname}) 的修复建议汇总\n"
+        content += "=" * 50 + "\n\n"
+        
+        # 收集所有不合规项的修复建议
+        remediation_suggestions = []
+        for result in results:
+            if not result['compliant'] and result.get('remediation') and result['remediation'] != '无修复建议':
+                remediation_suggestions.append(result['remediation'])
+        
+        # 根据设备类型处理修复建议格式
+        if 'cisco' in device_name.lower() or 'cisco' in hostname.lower():
+            # 思科设备使用"#"分割不同的建议
+            content += "#\n".join(remediation_suggestions)
+        else:
+            # 其他设备直接换行分隔
+            content += "\n!\n".join(remediation_suggestions)
+            
+        return content
+
+
+
+
 
 
 def check_devices_baseline(device_list: List[Dict[str, Any]], rules_file=None, max_workers: int = 10) -> Dict[str, Dict[str, Any]]:

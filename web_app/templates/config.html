@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}配置管理 - 自动化运维工具{% endblock %}
+
+{% block content %}
+<h2>配置管理</h2>
+
+<div class="config-section">
+    <h3>设备配置</h3>
+    <p>在这里您可以管理设备的配置信息。</p>
+    <button class="btn btn-primary">编辑设备配置</button>
+</div>
+
+<div class="config-section">
+    <h3>规则配置</h3>
+    <p>在这里您可以管理基线检查的规则配置。</p>
+    <button class="btn btn-primary">编辑规则配置</button>
+</div>
+
+<div class="config-section">
+    <h3>系统设置</h3>
+    <p>在这里您可以管理系统的一般设置。</p>
+    <button class="btn btn-primary">编辑系统设置</button>
+</div>
+{% endblock %}

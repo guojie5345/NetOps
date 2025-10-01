@@ -6,6 +6,7 @@
 import sys
 import os
 import argparse
+import logging
 
 from src.modules.processing.process_order import OrderProcessor
 from src.modules.apis.aliyun_api import AliYunApiClient
@@ -52,18 +53,42 @@ def main(config_path=None, ssh_config_path=None, api_config_path=None, order_pat
         order_path (str, optional): 订单文件路径. Defaults to None.
         action (str, optional): 执行动作: process(处理订单), collect(采集数据), generate(生成配置). Defaults to None.
     """
-    # 初始化日志
-    logger = setup_logger()
-    logger.info('ITSM变更自动化工具启动')
-    
     # 解析命令行参数
     parser = argparse.ArgumentParser(description='ITSM变更自动化工具')
     parser.add_argument('--config', type=str, default='config/config.json', help='通用配置文件路径')
     parser.add_argument('--ssh-config', type=str, default='config/ssh_config.json', help='SSH配置文件路径')
     parser.add_argument('--api-config', type=str, default='config/api_config.json', help='API配置文件路径')
     parser.add_argument('--order', type=str, help='订单文件路径')
-    parser.add_argument('--action', type=str, choices=['process', 'collect', 'generate', 'baseline'], default='process',
-                        help='执行动作: process(处理订单), collect(采集数据), generate(生成配置), baseline(基线检查)')
+    parser.add_argument('--action', type=str, choices=['process', 'collect', 'generate', 'baseline', 'summary'], default='process',
+                        help='执行动作: process(处理订单), collect(采集数据), generate(生成配置), baseline(基线检查), summary(汇总报告)')
+    parser.add_argument('--log-level', type=str, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], default='INFO',
+                        help='日志级别: DEBUG, INFO, WARNING, ERROR')
+    
+    # 如果没有提供参数，则使用命令行参数
+    if config_path is None and ssh_config_path is None and api_config_path is None and order_path is None and action is None:
+        args = parser.parse_args()
+        config_path = args.config
+        ssh_config_path = args.ssh_config
+        api_config_path = args.api_config
+        order_path = args.order
+        action = args.action
+        log_level = getattr(logging, args.log_level.upper())
+    # 如果提供了部分参数，则使用提供的参数，其余使用默认值
+    elif config_path is None:
+        args = parser.parse_args([])
+        config_path = args.config
+    elif ssh_config_path is None:
+        ssh_config_path = 'config/ssh_config.json'
+    elif api_config_path is None:
+        api_config_path = 'config/api_config.json'
+    elif action is None:
+        action = 'process'
+    else:
+        log_level = logging.INFO
+    
+    # 初始化日志
+    logger = setup_logger(level=log_level)
+    logger.info('ITSM变更自动化工具启动')
 
     # 如果没有提供参数，则使用命令行参数
     if config_path is None and ssh_config_path is None and api_config_path is None and order_path is None and action is None:
@@ -128,6 +153,19 @@ def main(config_path=None, ssh_config_path=None, api_config_path=None, order_pat
                 logger.info(f'基线检查结果: 成功 {success_count} 台, 失败 {failed_count} 台')
         except Exception as e:
             logger.error(f'基线检查失败: {str(e)}')
+    elif action == 'summary':
+        # 生成汇总报告
+        logger.info("开始生成汇总报告...")
+        try:
+            from src.modules.baseline.generate_summary_report import generate_summary_report
+            summary_report_path = generate_summary_report()
+            if summary_report_path:
+                logger.info(f"汇总报告生成成功: {summary_report_path}")
+            else:
+                logger.error("汇总报告生成失败")
+        except Exception as e:
+            logger.error(f"汇总报告生成失败: {str(e)}")
+        logger.info("汇总报告生成完成")
     elif action == 'process' and order_path:
         logger.info(f'开始处理订单 {order_path}')
         try:

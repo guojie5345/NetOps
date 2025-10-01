@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <h2>欢迎使用自动化运维工具</h2>
+    <p>这是一个功能强大的自动化运维工具，可以帮助您简化运维任务，提高工作效率。</p>
+    
+    <div class="features">
+        <div class="feature-card">
+            <h3>自动部署</h3>
+            <p>自动部署应用程序到目标服务器</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>信息采集</h3>
+            <p>利用设备API或SSH方式采集设备信息</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>信息处理</h3>
+            <p>将采集后的信息转换为可用于后续处理的格式</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>配置生成</h3>
+            <p>通过配置模板，将处理后的信息运用到配置模板中，生成最终的配置文件</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>配置管理</h3>
+            <p>利用配置文件管理应用程序的配置信息</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>自动备份</h3>
+            <p>自动备份数据库和文件</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>自动监控</h3>
+            <p>自动监控服务器和应用程序的运行状态</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>自动报警</h3>
+            <p>自动报警当服务器或应用程序出现问题时</p>
+        </div>
+    </div>
+    
+    <div class="cta">
+        <a href="{{ url_for('baseline_check') }}" class="btn btn-primary">开始基线检查</a>
+        <a href="{{ url_for('reports') }}" class="btn btn-secondary">查看报告</a>
+    </div>
+</div>
+{% endblock %}

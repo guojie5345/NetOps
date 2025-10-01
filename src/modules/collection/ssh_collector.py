@@ -109,6 +109,16 @@ class SSHCollector:
             logger.info(f"正在连接设备 {self.device_info.get('host', 'Unknown')}")
             self.connection = ConnectHandler(**self.device_info)
             self.is_connected = True
+            
+            # 如果设备信息中包含secret，则尝试进入特权模式
+            if 'secret' in self.device_info and self.device_info['secret']:
+                try:
+                    logger.info("尝试进入特权模式")
+                    self.connection.enable()
+                    logger.info("成功进入特权模式")
+                except Exception as e:
+                    logger.warning(f"进入特权模式失败: {str(e)}")
+            
             logger.info(f"成功连接到设备 {self.device_info.get('host', 'Unknown')}")
             return True
         except NetMikoTimeoutException:
