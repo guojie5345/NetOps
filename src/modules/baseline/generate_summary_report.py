@@ -22,7 +22,11 @@ def find_latest_baseline_report() -> Optional[str]:
     Returns:
         str: 最新基线检查报告的路径，如果未找到则返回None
     """
-    reports_dir = 'reports'
+    # 获取项目根目录路径
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+    reports_dir = os.path.join(project_root, 'reports')
+    
     if not os.path.exists(reports_dir):
         logger.warning(f"报告目录 {reports_dir} 不存在")
         return None
@@ -70,28 +74,43 @@ def parse_baseline_report(report_path: str) -> Dict[str, Any]:
         
         # 提取设备信息
         devices = []
-        # 查找所有设备div块
-        device_divs = re.split(r'(<div class="device"[^>]*id="[^"]+">)', content)
-        # 重新组合设备div块
-        device_blocks = []
-        for i in range(1, len(device_divs), 2):
-            if i + 1 < len(device_divs):
-                device_blocks.append(device_divs[i] + device_divs[i+1])
+        # 查找所有设备div块 - 修复正则表达式以正确匹配设备div的实际结构
+        device_pattern = r'<div class="device"[^>]*id="([^"]+)">.*?<h2>设备: ([^(<]+)'
+        device_matches = re.findall(device_pattern, content, re.DOTALL)
         
-        for device_content in device_blocks:
-            # 提取设备ID（IP地址格式）
-            device_id_match = re.search(r'id="([^"]+)"', device_content)
-            if device_id_match:
-                device_id = device_id_match.group(1)
-                device_name = device_id.replace('-', '.')
+        for device_id, device_name in device_matches:
+            # 清理设备名称，只保留IP地址部分
+            clean_device_name = device_name.strip().split(' ')[0]
+            
+            # 为每台设备查找合规和不合规项
+            # 查找设备div的完整内容，直到下一个设备div或文件结束
+            # 找到当前设备div的起始位置
+            device_start_pattern = rf'<div class="device"[^>]*id="{device_id}"'
+            device_start_match = re.search(device_start_pattern, content)
+            
+            if device_start_match:
+                # 从当前设备div开始查找，直到下一个设备div或文件结束
+                remaining_content = content[device_start_match.start():]
+                # 查找下一个设备div的位置
+                next_device_pattern = r'<div class="device"'
+                # 从当前位置之后开始查找下一个设备div
+                next_device_match = re.search(next_device_pattern, remaining_content[1:])
+                
+                if next_device_match:
+                    # 如果找到下一个设备div，截取到那里为止
+                    device_content = remaining_content[:next_device_match.start()+1]
+                else:
+                    # 如果没有下一个设备div，截取到文件末尾
+                    device_content = remaining_content
                 
                 # 统计合规和不合规项
+                # 更新正则表达式以正确匹配合规和不合规项
                 compliant_count = len(re.findall(r'class="compliant"', device_content))
                 non_compliant_count = len(re.findall(r'class="non-compliant"', device_content))
                 total_checks = compliant_count + non_compliant_count
                 
                 devices.append({
-                    'name': device_name,
+                    'name': clean_device_name,
                     'total_checks': total_checks,
                     'compliant_checks': compliant_count,
                     'non_compliant_checks': non_compliant_count
@@ -117,7 +136,12 @@ def load_summary_template() -> Optional[str]:
     Returns:
         str: 模板内容，如果加载失败则返回None
     """
-    template_path = 'templates/html/summary_report.html'
+    # 获取当前文件所在目录的绝对路径
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+    template_path = os.path.join(project_root, 'templates', 'html', 'summary_report.html')
+    
     if not os.path.exists(template_path):
         logger.error(f"汇总报告模板文件不存在: {template_path}")
         return None
@@ -174,11 +198,16 @@ def generate_summary_report_from_data(report_data: Dict[str, Any], detailed_repo
         template = Template(template_content)
         summary_html = template.render(**summary_data)
         
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+        
         # 保存汇总报告
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        summary_file = f"reports/summary_report_{timestamp}.html"
+        summary_file = os.path.join(reports_dir, f"summary_report_{timestamp}.html")
         
-        os.makedirs('reports', exist_ok=True)
+        os.makedirs(reports_dir, exist_ok=True)
         with open(summary_file, 'w', encoding='utf-8-sig') as f:
             f.write(summary_html)
             

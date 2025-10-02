@@ -108,6 +108,26 @@
             color: #e74c3c;
             font-weight: bold;
         }
+        /* 返回按钮样式 */
+        .back-to-reports {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-to-reports:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -163,5 +183,8 @@
         </div>
         {% endfor %}
     </div>
+    
+    <!-- 返回报告页面按钮 -->
+    <a href="/reports" class="back-to-reports">返回报告页面</a>
 </body>
 </html>

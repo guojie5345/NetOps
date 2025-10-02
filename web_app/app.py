@@ -63,19 +63,32 @@ def run_baseline_check(devices):
         check_status['is_running'] = True
         check_status['progress'] = 0
         check_status['message'] = '正在初始化检查...'
+        check_status['completed'] = False  # 确保开始时 completed 为 False
         
-        # 模拟进度更新
+        # 初始化进度
+        check_status['progress'] = 5
+        check_status['message'] = '正在准备检查环境...'
+        
+        # 连接设备进度
         check_status['progress'] = 10
         check_status['message'] = '正在连接设备...'
         
         # 执行基线检查
         checker = BaselineChecker()
+        
+        # 更新进度 - 开始检查
+        check_status['progress'] = 20
+        check_status['message'] = f'开始检查 {len(devices)} 台设备...'
+        
+        # 执行检查
         checker.check_baseline(devices)
         
+        # 更新进度到100%
         check_status['progress'] = 100
         check_status['message'] = '检查完成'
         check_status['completed'] = True
     except Exception as e:
+        check_status['progress'] = 100  # 即使出错也将进度设为100%，以便用户能看到错误信息
         check_status['message'] = f'执行基线检查时出错: {str(e)}'
         check_status['completed'] = False
     finally:
@@ -102,14 +115,11 @@ def load_ssh_config():
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
             config = json.load(f)
-            # 转换设备类型以匹配基线检查器的期望
+            # 保持设备类型不变，基线检查器支持cisco_ios类型
             devices = []
             for device in config.get('ssh_devices', []):
                 # 复制设备信息
                 new_device = device.copy()
-                # 如果设备类型是cisco_ios，转换为hillstone（根据之前的代码）
-                if new_device.get('device_type') == 'cisco_ios':
-                    new_device['device_type'] = 'hillstone'
                 devices.append(new_device)
             return devices
     except FileNotFoundError:
