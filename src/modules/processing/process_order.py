@@ -150,24 +150,34 @@ def get_combine_net_infos(ips, vpcs_data):
 
 
 class OrderProcessor:
-    """订单处理器类，封装订单处理的核心功能"""
+    """订单处理器类，用于处理Excel订单文件并生成网络配置方案
+    
+    该类负责解析订单文件、提取客户需求、生成配置方案并保存结果。
+    支持Excel格式的订单文件，能够处理复杂的网络配置需求。
+    """
 
-    def __init__(self, order_path, config, templates_dir):
-        """初始化方法，设置日志系统"""
+    def __init__(self, order_path, config, template_dir):
+        """初始化订单处理器
+        
+        :param order_path: str - 订单文件路径
+        :param config: dict - 配置信息字典
+        :param template_dir: str - 模板目录路径
+        """
         self.order_path = order_path
         self.config = config
-        self.templates_dir = templates_dir
+        self.template_dir = template_dir
         self.logger = get_module_logger(__name__)
         self._process_order()
 
     def _process_order(self):
-        """处理用户需求订单，分析用户需求，生成配置脚本
-
-        Args:
-            order_path (str): 订单文件路径
-
-        Returns:
-            str: 生成的配置脚本内容
+        """处理订单文件的主要流程
+        
+        该方法是订单处理的核心流程，负责协调整个处理过程：
+        1. 解析订单文件，提取客户信息和需求详情
+        2. 为每个需求生成变更标题、原因和配置方案
+        3. 将所有结果保存到JSON文件中
+        
+        :raises Exception: 当处理过程中发生错误时抛出异常
         """
         results = []
         try:
@@ -206,34 +216,15 @@ class OrderProcessor:
             raise
 
     def parse_order_file(self):
+        """解析订单文件，支持Excel格式
+        
+        该方法负责解析Excel格式的订单文件，提取客户信息和网络需求详情。
+        处理合并单元格的情况，并对IP地址和端口进行标准化处理。
+        
+        :return: tuple - 客户信息字典和需求信息列表
         """
-           订单处理主函数：解析订单文件，整合网络信息并生成变更方案
-
-           参数:
-               file_path (str): 订单文件的绝对路径，支持格式包括JSON和Excel
-
-           返回值:
-               dict: 包含以下键的处理结果字典:
-                   - 'status' (str): 处理状态，'success'或'failed'
-                   - 'message' (str): 处理结果描述信息
-                   - 'data' (dict): 包含网络信息和变更方案的详细数据
-                   - 'errors' (list): 错误信息列表，处理成功时为空
-
-           主要处理流程:
-               1. 验证输入文件路径和格式
-               2. 解析订单文件获取需求信息
-               3. 调用外部API获取网络资源数据
-               4. 整合阿里云CIDR与IPAM注册信息
-               5. 生成网络变更原因和实施方案
-               6. 返回标准化处理结果
-
-           异常处理:
-               - 文件不存在: 记录错误并返回状态'failed'
-               - 格式解析失败: 捕获解析异常并返回详细错误信息
-               - API调用超时: 实现重试机制(最多3次)，仍失败则降级处理
-           """
-
-        wb = load_workbook(self.order_path, read_only=False, data_only=True)  # 设为可写模式
+        # 加载工作簿，设置为可写模式以处理合并单元格
+        wb = load_workbook(self.order_path, read_only=False, data_only=True)
         ws = wb.active
 
         # 用于存储所有需求的列表
@@ -246,12 +237,12 @@ class OrderProcessor:
         # 构建包含客户信息的字典
         customer = {"organization": organization.value, "system_name": system_name.value}
 
-        # 获取工作表第 9 行 C 列到 P 列的单元格范围
+        # 获取工作表第 9 行 C 列到 P 列的单元格范围（标题行）
         tts = ws['C9:P9']
         # 使用列表推导式将单元格的值展平为一个列表，并移除值中的星号
         tt_list = [cell.value.replace('*', '') for row in tts for cell in row if cell.value is not None]
 
-        # 从第 10 行开始遍历到工作表的最后一行
+        # 从第 10 行开始遍历到工作表的最后一行（数据行）
         for row_num in range(10, ws.max_row + 1):
             # 复制合并单元格范围列表，避免在遍历过程中修改集合导致错误
             merged_ranges = list(ws.merged_cells.ranges)
@@ -278,6 +269,7 @@ class OrderProcessor:
                 continue
             # 将标题列表和当前行的值列表合并为字典
             d = dict(zip(tt_list, values_list))
+            # 对IP地址和端口字段进行标准化处理
             d['源IP'] = self.extra_ip(d['源IP'])
             d['目的IP'] = self.extra_ip(d['目的IP'])
             d['公网IP'] = self.extra_ip(d['公网IP'])
@@ -417,28 +409,34 @@ class OrderProcessor:
         return list(merged_dict.values())
 
     def generate_title(self, customer_info, requirement_info):
-        """生成变更标题
-
-        Args:
-            customer_info (dict): 客户信息
-            requirement_info (dict): 需求信息
-
-        Returns:
-            str: 变更标题
+        """生成网络策略变更申请标题
+        
+        根据客户组织名称生成标准格式的网络策略变更申请标题。
+        标题格式为"{客户组织}网络策略变更申请"。
+        
+        :param customer_info: 客户信息字典，必须包含'organization'键
+        :type customer_info: dict
+        :param requirement_info: 需求信息字典
+        :type requirement_info: dict
+        :return: 格式化的变更申请标题字符串
+        :rtype: str
         """
         title = f"{customer_info['organization']}网络策略变更申请"
         self.logger.info(f"生成变更标题: {title}")
         return title
 
     def generate_reason(self, customer_info, requirement_info):
-        """生成变更原因
+        """生成网络策略变更原因说明
 
-        Args:
-            customer_info (dict): 客户信息
-            requirement_info (dict): 需求信息
-
-        Returns:
-            str: 变更原因
+        使用Jinja2模板引擎渲染变更原因模板，生成详细的变更原因说明。
+        模板文件为'reason.tpl'，包含客户信息和需求信息上下文。
+        
+        :param customer_info: 客户信息字典，包含组织名称、系统名称等信息
+        :type customer_info: dict
+        :param requirement_info: 需求信息字典，包含源IP、目的IP、端口等网络策略信息
+        :type requirement_info: dict
+        :return: 渲染后的变更原因说明文本
+        :rtype: str
         """
         #
         st_info = self.get_source_target_config(requirement_info)
@@ -459,14 +457,19 @@ class OrderProcessor:
         return reason
 
     def generate_scheme(self, customer_info, requirement_info):
-        """生成变更方案
+        """生成网络策略变更方案
 
-        Args:
-            customer_info (dict): 客户信息
-            requirement_info (dict): 需求信息
-
-        Returns:
-            str: 变更方案
+        根据场景类型和需求信息生成相应的网络策略变更方案。
+        支持多种场景：互联网->行业云、行业云->互联网、行业云->zltest、行业云->行业云。
+        通过反射机制调用对应的上下文处理器，结合Jinja2模板渲染生成最终方案。
+        
+        :param customer_info: 客户信息字典，包含组织名称、系统名称等信息
+        :type customer_info: dict
+        :param requirement_info: 需求信息字典，包含场景、源IP、目的IP、端口等网络策略信息
+        :type requirement_info: dict
+        :return: 渲染后的变更方案文本
+        :rtype: str
+        :raises ValueError: 当场景信息缺失或不支持时抛出异常
         """
 
         scenario_type, config = self.get_scenario_config(requirement_info["源归属"], requirement_info["目的归属"])
@@ -508,7 +511,15 @@ class OrderProcessor:
         return scheme
 
     def get_source_target_config(self, requirement):
-        """获取源归属-目标归属组合的配置信息"""
+        """获取源归属-目标归属组合的配置信息
+        
+        从需求信息中提取源归属和目标归属字段，确定场景类型并获取对应的场景配置。
+        
+        :param requirement: 需求信息字典，必须包含"源归属"和"目的归属"键
+        :type requirement: dict
+        :return: 包含源目标组合、场景配置和场景类型的字典
+        :rtype: dict
+        """
         source_attribution = requirement.get("源归属")
         target_attribution = requirement.get("目的归属")
         source_target_pair = (source_attribution, target_attribution)
@@ -523,8 +534,17 @@ class OrderProcessor:
         }
 
     def get_scenario_config(self, source, dest):
-        """
-        统一场景解析函数，避免重复条件判断
+        """统一场景解析函数，避免重复条件判断
+        
+        根据源归属和目标归属的组合确定场景类型，并返回对应的场景配置信息。
+        
+        :param source: 源归属字符串，如"行业云"、"互联网"等
+        :type source: str
+        :param dest: 目标归属字符串，如"行业云"、"互联网"等
+        :type dest: str
+        :return: 包含场景类型和场景配置的元组
+        :rtype: tuple
+        :raises ValueError: 当场景组合未定义时抛出异常
         """
         scenario_mapping = {
             ("行业云", "行业云"): "industry_cloud_to_industry_cloud",
@@ -541,13 +561,20 @@ class OrderProcessor:
         return scenario_type, self.config['scenario_config'][scenario_type]
 
     def _get_common_context(self, customer, requirement, scenario_type):
-        """
-            获取通用上下文信息，支持多场景处理
-
-            :param customer: 客户信息字典
-            :param requirement: 需求信息字典
-            :param scenario_type: 场景类型字符串，对应SCENARIO_CONFIG中的键
-            :return: 构建好的上下文字典
+        """获取通用上下文信息，支持多场景处理
+        
+        根据场景类型从配置中提取IP映射关系和端口字段，构建通用的上下文字典。
+        该方法为不同场景提供统一的上下文数据结构，便于模板渲染使用。
+        
+        :param customer: 客户信息字典，包含组织名称等信息
+        :type customer: dict
+        :param requirement: 需求信息字典，包含IP地址、端口等网络策略信息
+        :type requirement: dict
+        :param scenario_type: 场景类型字符串，对应SCENARIO_CONFIG中的键
+        :type scenario_type: str
+        :return: 构建好的上下文字典，包含IP映射和操作类型等信息
+        :rtype: dict
+        :raises ValueError: 当场景类型不支持时抛出异常
         """
         # 验证场景类型是否支持
         if scenario_type not in self.config["scenario_config"]:
@@ -575,8 +602,20 @@ class OrderProcessor:
 
     def _process_internet_industry_cloud_common(self, customer, requirement, ip_field):
         """互联网与行业云互访场景的通用处理函数
-
+        
+        处理互联网与行业云互访场景的通用逻辑，包括：
+        1. 检索阿里云EIP地址
+        2. 获取并筛选IPAM运营商地址
+        3. 匹配深信服地址组
+        
+        :param customer: 客户信息字典，包含组织名称等信息
+        :type customer: dict
+        :param requirement: 需求信息字典，包含公网IP等网络策略信息
+        :type requirement: dict
         :param ip_field: 用于检索EIP的IP字段名（"源IP"或"目的IP"）
+        :type ip_field: str
+        :return: 包含EIP、ISP地址信息和深信服地址组名称的上下文字典
+        :rtype: dict
         """
         context = {}
 
@@ -660,14 +699,34 @@ class OrderProcessor:
         return context
 
     def process_internet_to_industry_cloud(self, customer, requirement):
-        """互联网→行业云场景的上下文处理器"""
+        """互联网→行业云场景的上下文处理器
+        
+        处理互联网到行业云的网络策略变更场景，调用通用处理函数处理EIP、ISP地址和深信服地址组匹配。
+        
+        :param customer: 客户信息字典，包含组织名称等信息
+        :type customer: dict
+        :param requirement: 需求信息字典，包含目的IP等网络策略信息
+        :type requirement: dict
+        :return: 包含EIP、ISP地址信息和深信服地址组名称的上下文字典，处理失败时返回None
+        :rtype: dict or None
+        """
         context = self._process_internet_industry_cloud_common(customer, requirement, ip_field="目的IP")
         if not context:
             return None
         return context
 
     def process_industry_cloud_to_internet(self, customer, requirement):
-        """行业云→互联网场景的上下文处理器"""
+        """行业云→互联网场景的上下文处理器
+        
+        处理行业云到互联网的网络策略变更场景，调用通用处理函数处理EIP、ISP地址和深信服地址组匹配。
+        
+        :param customer: 客户信息字典，包含组织名称等信息
+        :type customer: dict
+        :param requirement: 需求信息字典，包含源IP等网络策略信息
+        :type requirement: dict
+        :return: 包含EIP、ISP地址信息和深信服地址组名称的上下文字典，处理失败时返回None
+        :rtype: dict or None
+        """
         context = self._process_internet_industry_cloud_common(customer, requirement, ip_field="源IP")
         self.logger.info(f"行业云→互联网场景的上下文处理器: {context}")
         if not context:
@@ -675,6 +734,19 @@ class OrderProcessor:
         return context
 
     def process_industry_cloud_to_zltest(self, customer, requirement):
+        """行业云→zltest场景的上下文处理器
+        
+        处理行业云到zltest测试环境的网络策略变更场景，主要功能包括：
+        1. 检索阿里云EIP地址
+        2. 检索并匹配IPAM zlnet网段
+        
+        :param customer: 客户信息字典，包含组织名称等信息
+        :type customer: dict
+        :param requirement: 需求信息字典，包含源IP等网络策略信息
+        :type requirement: dict
+        :return: 包含EIP地址和匹配网段信息的上下文字典，处理失败时返回None
+        :rtype: dict or None
+        """
         SUBNETS_JSON_PATH = os.path.join(jsons_dir, "ipam", "subnets.json")
         subnets_data = _load_json_file(SUBNETS_JSON_PATH)
 
@@ -703,17 +775,18 @@ class OrderProcessor:
         return context
 
     def process_industry_cloud_to_industry_cloud(self, customer, requirement):
-        """
-        行业云→互联网场景的上下文处理器
-
-        功能：整合阿里云VPC信息与IPAM并网信息，合并相同网络属性的IP地址
-
-        参数：
-            customer: 客户信息
-            requirement: 需求信息，包含源IP和目的IP
-
-        返回：
-            dict: 包含合并后的网络信息上下文
+        """行业云→行业云场景的上下文处理器
+        
+        处理行业云到行业云的网络策略变更场景，主要功能包括：
+        1. 整合阿里云VPC信息与IPAM并网信息
+        2. 合并相同网络属性的IP地址
+        
+        :param customer: 客户信息字典，包含组织名称等信息
+        :type customer: dict
+        :param requirement: 需求信息字典，包含源IP和目的IP等网络策略信息
+        :type requirement: dict
+        :return: 包含合并后的网络信息上下文，处理失败时返回包含错误信息的字典
+        :rtype: dict
         """
         # 常量定义 - 提取配置参数，便于维护
         VPCS_JSON_PATH = os.path.join(jsons_dir, "ali_cloud", "vpcs.json")
@@ -756,9 +829,12 @@ class OrderProcessor:
     def _save_results_to_json(self, results, customer_info):
         """将处理结果保存为JSON文件
         
-        Args:
-            results: 处理结果数据
-            customer_info: 客户信息
+        将网络策略变更处理结果保存为JSON格式文件，文件名包含客户组织名称和当前日期。
+        
+        :param results: 处理结果数据，通常为包含网络策略信息的字典
+        :type results: dict
+        :param customer_info: 客户信息字典，必须包含"organization"键
+        :type customer_info: dict
         """
         try:
             # 创建输出目录
