@@ -7,7 +7,8 @@
 import os
 import sys
 import json
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+import datetime
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify
 
 # 将项目根目录添加到Python路径中
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -29,6 +30,14 @@ app = Flask(__name__,
 app.config['SECRET_KEY'] = 'your-secret_key_here'
 # 使用项目根目录下的reports文件夹，与check_baseline.py保持一致
 app.config['REPORTS_DIR'] = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'reports')
+
+# 添加自定义过滤器来格式化日期时间
+@app.template_filter('datetimeformat')
+def datetimeformat(value, format='%Y-%m-%d %H:%M:%S'):
+    """将时间戳格式化为指定格式的日期时间字符串"""
+    if value is None:
+        return ""
+    return datetime.datetime.fromtimestamp(value).strftime(format)
 
 @app.route('/')
 def index():
@@ -183,17 +192,26 @@ def reports():
     if os.path.exists(reports_dir):
         try:
             for filename in os.listdir(reports_dir):
-                if filename.endswith('.html') and filename.startswith('baseline_report_'):
-                    html_reports.append(filename)
-                elif filename.endswith('.html') and filename.startswith('summary_report_'):
-                    summary_reports.append(filename)
-                elif filename.endswith('.xlsx') and filename.startswith('baseline_report_'):
-                    excel_reports.append(filename)
+                file_path = os.path.join(reports_dir, filename)
+                if os.path.isfile(file_path):  # 确保是文件而不是目录
+                    # 获取文件的修改时间
+                    mtime = os.path.getmtime(file_path)
+                    report_info = {
+                        'filename': filename,
+                        'mtime': mtime
+                    }
+                    
+                    if filename.endswith('.html') and filename.startswith('baseline_report_'):
+                        html_reports.append(report_info)
+                    elif filename.endswith('.html') and filename.startswith('summary_report_'):
+                        summary_reports.append(report_info)
+                    elif filename.endswith('.xlsx') and filename.startswith('baseline_report_'):
+                        excel_reports.append(report_info)
             
             # 按修改时间排序
-            html_reports.sort(key=lambda x: os.path.getmtime(os.path.join(reports_dir, x)), reverse=True)
-            summary_reports.sort(key=lambda x: os.path.getmtime(os.path.join(reports_dir, x)), reverse=True)
-            excel_reports.sort(key=lambda x: os.path.getmtime(os.path.join(reports_dir, x)), reverse=True)
+            html_reports.sort(key=lambda x: x['mtime'], reverse=True)
+            summary_reports.sort(key=lambda x: x['mtime'], reverse=True)
+            excel_reports.sort(key=lambda x: x['mtime'], reverse=True)
         except Exception as e:
             print(f"读取报告目录时出错: {e}")
     
@@ -206,6 +224,57 @@ def report_file(filename):
         return send_from_directory(app.config['REPORTS_DIR'], filename)
     except Exception as e:
         return f"无法找到文件: {filename}", 404
+
+@app.route('/reports/delete/<path:filename>', methods=['POST'])
+def delete_report(filename):
+    """删除报告文件及其相关文件"""
+    try:
+        # 提取文件的时间戳部分（例如：20251002_155504）
+        # 文件名格式为：summary_report_20251002_155504.html 或 baseline_report_20251002_155504.html 或 baseline_report_20251002_155504.xlsx
+        import re
+        timestamp_match = re.search(r'(\d{8}_\d{6})', filename)
+        if not timestamp_match:
+            return jsonify({'status': 'error', 'message': '无法识别文件时间戳'}), 400
+        
+        timestamp = timestamp_match.group(1)
+        
+        # 查找所有包含相同时戳的报告文件
+        reports_dir = app.config['REPORTS_DIR']
+        related_files = []
+        
+        if os.path.exists(reports_dir):
+            for file in os.listdir(reports_dir):
+                if timestamp in file and os.path.isfile(os.path.join(reports_dir, file)):
+                    related_files.append(file)
+        
+        # 删除所有相关文件
+        deleted_files = []
+        error_files = []
+        
+        for file in related_files:
+            file_path = os.path.join(reports_dir, file)
+            # 确保文件存在且在报告目录中
+            if os.path.exists(file_path) and os.path.isfile(file_path):
+                # 检查文件是否在报告目录中，防止路径遍历攻击
+                reports_dir_abs = os.path.abspath(reports_dir)
+                file_path_abs = os.path.abspath(file_path)
+                if file_path_abs.startswith(reports_dir_abs):
+                    try:
+                        os.remove(file_path)
+                        deleted_files.append(file)
+                    except Exception as e:
+                        error_files.append(file)
+                else:
+                    error_files.append(file)
+            else:
+                error_files.append(file)
+        
+        if error_files:
+            return jsonify({'status': 'error', 'message': f'部分文件删除失败: {", ".join(error_files)}'}), 500
+        else:
+            return jsonify({'status': 'success', 'message': f'已删除 {len(deleted_files)} 个相关文件', 'deleted_files': deleted_files})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'删除文件时出错: {str(e)}'}), 500
 
 @app.route('/config')
 def config():

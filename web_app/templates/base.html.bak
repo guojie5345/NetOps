@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}自动化运维工具{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">自动化运维工具</h1>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">主页</a></li>
+                <li><a href="{{ url_for('devices') }}">设备管理</a></li>
+                <li><a href="{{ url_for('baseline_check') }}">基线检查</a></li>
+                <li><a href="{{ url_for('reports') }}">报告查看</a></li>
+                <li><a href="{{ url_for('config') }}">配置管理</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 自动化运维工具. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

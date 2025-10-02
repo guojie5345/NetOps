@@ -1,0 +1,904 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+基线检查模块
+
+该模块提供网络设备基线配置检查功能，支持多种设备平台，可检查配置合规性、接口状态和系统服务状态。
+"""
+
+import yaml
+import datetime
+from jinja2 import Template
+import os
+import re
+from concurrent.futures import ThreadPoolExecutor
+from typing import List, Dict, Any
+import logging
+from openpyxl import Workbook
+
+# 导入SSH采集器
+from src.modules.collection.ssh_collector import SSHCollector
+from src.utils.logger import get_module_logger
+
+# 设置日志
+logger = get_module_logger(__name__)
+
+
+class ConfigRule:
+    """配置规则类"""
+    def __init__(self, rule: str, description: str, regex: bool = False):
+        self.rule = rule
+        self.description = description
+        self.regex = regex
+        if regex:
+            try:
+                self.pattern = re.compile(rule)
+            except re.error as e:
+                logger.error(f"无效的正则表达式模式 '{rule}': {e}")
+                self.pattern = None
+        else:
+            self.pattern = None
+
+    def check_compliance(self, config: str) -> bool:
+        """检查配置是否符合规则
+        
+        Args:
+            config: 设备配置字符串
+            
+        Returns:
+            bool: 是否符合规则
+        """
+        if self.regex and self.pattern:
+            return bool(self.pattern.search(config))
+        
+        # 对于某些特定规则，需要更精确的匹配逻辑
+        if self.rule == "aaa new-model":
+            # 对于AAA规则，需要确保存在"aaa new-model"但不存在"no aaa new-model"
+            lines = config.split('\n')
+            has_aaa = any(line.strip() == "aaa new-model" for line in lines)
+            has_no_aaa = any(line.strip() == "no aaa new-model" for line in lines)
+            return has_aaa and not has_no_aaa
+        else:
+            # 默认的字符串包含检查
+            return self.rule in config
+
+
+class StatusCheck:
+    """状态检查基类"""
+
+    def __init__(self, name: str, description: str):
+        self.name = name
+        self.description = description
+        self.platform_commands = {}
+        self.success_patterns = {}  # 结构：{平台：[re.Pattern]}
+
+    def add_platform_command(self, platform: str, command: str):
+        """添加平台特定的命令
+        
+        Args:
+            platform: 设备平台名称
+            command: 要执行的命令
+        """
+        self.platform_commands[platform] = command
+
+    def set_success_pattern(self, platform: str, pattern: str, flags=re.IGNORECASE):
+        """设置成功匹配的模式
+        
+        Args:
+            platform: 设备平台名称
+            pattern: 正则表达式匹配模式
+            flags: 正则表达式标志
+            
+        Raises:
+            ValueError: 正则表达式无效时抛出
+        """
+        if platform not in self.success_patterns:
+            self.success_patterns[platform] = []
+        try:
+            compiled = re.compile(pattern, flags)
+            self.success_patterns[platform].append(compiled)
+        except re.error as e:
+            raise ValueError(f"无效的正则表达式 '{pattern}': {e}")
+
+    def check_output(self, output: str, platform: str) -> bool:
+        """检查命令输出是否符合预期
+        
+        Args:
+            output: 命令输出结果
+            platform: 设备平台名称
+            
+        Returns:
+            bool: 是否符合预期
+        """
+        patterns = self.success_patterns.get(platform, [])
+        return any(pattern.search(output) for pattern in patterns)
+
+    def get_command(self, platform: str) -> str:
+        """获取平台对应的命令
+        
+        Args:
+            platform: 设备平台名称
+            
+        Returns:
+            str: 命令字符串或None
+        """
+        return self.platform_commands.get(platform)
+
+
+class NTPStatusCheck(StatusCheck):
+    """NTP状态检查类"""
+
+    def __init__(self):
+        super().__init__("ntp_status", "NTP同步状态检查")
+        # 配置各平台的命令
+        self.add_platform_command("cisco_ios", "show ntp status")
+        self.add_platform_command("hp_comware", "display ntp-service status")
+        self.add_platform_command("huawei_vrp", "display ntp status")
+        self.add_platform_command("cisco_nxos", "show ntp peer-status")
+        # 配置成功匹配模式
+        self.set_success_pattern("cisco_ios", r"\ssynchronized")
+        self.set_success_pattern("hp_comware", r"\ssynchronized")
+        self.set_success_pattern("huawei_vrp", r"\ssynchronized")
+        self.set_success_pattern("cisco_nxos", r"\*\d+")
+
+
+class BaselineChecker:
+    """基线检查主类"""
+    
+    def __init__(self, rules_file=None, max_workers: int = 10):
+        """初始化基线检查器
+        
+        Args:
+            rules_file: 规则文件路径
+            max_workers: 最大工作线程数
+        """
+        # 如果未提供规则文件路径，使用默认路径
+        # 获取当前文件所在目录的绝对路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        
+        if rules_file is None:
+            rules_file = os.path.join(project_root, 'config', 'baseline_rules.yaml')
+            
+        self.rules = self._load_rules(rules_file)
+        # 加载修复建议
+        suggestions_file = os.path.join(project_root, 'config', 'remediation_suggestions.yaml')
+        self.remediation_suggestions = self._load_remediation_suggestions(suggestions_file)
+        self.max_workers = max_workers
+        self.executor = ThreadPoolExecutor(max_workers=max_workers)
+        # 初始化状态检查列表
+        self.status_checks = [NTPStatusCheck()]
+        # 加载HTML报告模板
+        self.report_template = self._load_report_template()
+
+    def _load_report_template(self) -> str:
+        """加载HTML报告模板
+        
+        Returns:
+            str: 报告模板内容
+            
+        Raises:
+            FileNotFoundError: 模板文件不存在时抛出
+        """
+        # 获取当前文件所在目录的绝对路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        template_path = os.path.join(project_root, 'templates', 'html','baseline_report.html')
+        
+        try:
+            with open(template_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        except FileNotFoundError:
+            # 如果模板文件不存在，生成一个简单的模板
+            logger.warning(f"模板文件不存在: {template_path}，将使用默认模板")
+            return self._get_default_template()
+        except Exception as e:
+            logger.error(f"加载模板文件时出错: {e}")
+            # 返回默认模板
+            return self._get_default_template()
+            
+    def _load_summary_report_template(self) -> str:
+        """加载汇总报告模板
+        
+        Returns:
+            str: 汇总报告模板内容
+            
+        Raises:
+            FileNotFoundError: 模板文件不存在时抛出
+        """
+        # 获取当前文件所在目录的绝对路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # 向上找到项目根目录 (假设当前在 src/modules/baseline/ 目录下)
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        template_path = os.path.join(project_root, 'templates', 'html', 'summary_report.html')
+        
+        try:
+            with open(template_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        except FileNotFoundError:
+            # 如果模板文件不存在，记录警告但不抛出异常
+            logger.warning(f"汇总报告模板文件不存在: {template_path}")
+            return None
+        except Exception as e:
+            logger.error(f"加载汇总报告模板文件时出错: {e}")
+            return None
+    
+    def _get_default_template(self) -> str:
+        """获取默认的HTML报告模板
+        
+        Returns:
+            str: 默认模板内容
+        """
+        return '''<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>基线检查报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        .pass { background-color: #d4edda; }
+        .fail { background-color: #f8d7da; }
+        .device-section { margin-bottom: 30px; }
+        .remediation-link { color: #007bff; text-decoration: none; }
+        .remediation-link:hover { text-decoration: underline; }
+        .remediation-content { display: none; background-color: #f8f9fa; padding: 10px; border: 1px solid #dee2e6; margin-top: 5px; }
+        .show-remediation { display: block; }
+    </style>
+    <script>
+        function toggleRemediation(deviceId, ruleIndex) {
+            var content = document.getElementById('remediation-' + deviceId + '-' + ruleIndex);
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>基线检查报告</h1>
+    <p>生成时间: {{ timestamp }}</p>
+    
+    {% for device in devices %}
+    <div class="device-section">
+        <h2 id="device-{{ loop.index }}">设备: {{ device.name }} ({{ device.hostname }}) 
+            <a href="#remediation-all-{{ loop.index }}" onclick="document.getElementById('remediation-all-{{ loop.index }}').classList.toggle('show-remediation'); return false;" class="remediation-link">[显示所有修复建议]</a>
+        </h2>
+        <div id="remediation-all-{{ loop.index }}" class="remediation-content">
+            <h3>设备 {{ device.hostname }} 的完整修复配置:</h3>
+            <pre>{% for result in device.results %}{% if not result.compliant and result.remediation != '无修复建议' %}! {{ result.description }}
+{{ result.remediation }}
+{% endif %}{% endfor %}</pre>
+        </div>
+        <table>
+            <tr>
+                <th>规则描述</th>
+                <th>检查结果</th>
+                <th>实际配置</th>
+                <th>参考配置</th>
+            </tr>
+            {% for result in device.results %}
+            <tr class="{{ 'pass' if result.compliant else 'fail' }}">
+                <td>{{ result.description }}</td>
+                <td>{{ '通过' if result.compliant else '未通过' }}</td>
+                <td><pre>{{ result.actual_config }}</pre></td>
+                <td>
+                    {% if not result.compliant and result.remediation and result.remediation not in ['无', '无修复建议'] %}
+                    <a href="javascript:void(0)" onclick="toggleRemediation({{ loop.parent.loop.index }}, {{ loop.index }})" class="remediation-link">查看修复建议</a>
+                    <div id="remediation-{{ loop.parent.loop.index }}-{{ loop.index }}" class="remediation-content">
+                        <pre>{{ result.remediation }}</pre>
+                    </div>
+                    {% else %}
+                    无
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endfor %}
+</body>
+</html>'''
+
+    def _load_rules(self, rules_file: str) -> Dict[str, List[ConfigRule]]:
+        """加载基线规则
+        
+        Args:
+            rules_file: 规则文件路径
+            
+        Returns:
+            Dict[str, List[ConfigRule]]: 平台到规则列表的映射
+        """
+        try:
+            with open(rules_file, 'r', encoding='utf-8') as f:
+                raw_rules = yaml.safe_load(f)
+                processed_rules = {}
+                for platform, rules in raw_rules.items():
+                    processed_rules[platform] = [
+                        ConfigRule(
+                            rule=rule['rule'],
+                            description=rule['description'],
+                            regex=rule.get('regex', False)
+                        )
+                        for rule in rules
+                    ]
+                return processed_rules
+        except Exception as e:
+            logger.error(f"加载规则文件时出错: {e}")
+            return {}
+
+    def _load_remediation_suggestions(self, suggestions_file: str) -> Dict[str, Dict[str, Dict[str, str]]]:
+        """加载修复建议
+        
+        Args:
+            suggestions_file: 修复建议文件路径
+            
+        Returns:
+            Dict[str, Dict[str, Dict[str, str]]]: 修复建议映射
+        """
+        try:
+            # 尝试使用utf-8-sig编码（处理BOM）
+            try:
+                with open(suggestions_file, 'r', encoding='utf-8-sig') as f:
+                    return yaml.safe_load(f)
+            except UnicodeDecodeError:
+                # 如果失败，尝试使用utf-8编码
+                with open(suggestions_file, 'r', encoding='utf-8') as f:
+                    return yaml.safe_load(f)
+        except Exception as e:
+            logger.error(f"加载修复建议文件时出错: {e}")
+            return {}
+
+    def check_compliance(self, config: str, rules: List[ConfigRule], platform: str = 'common') -> list:
+        """检查配置是否符合规则列表
+        
+        Args:
+            config: 设备配置字符串
+            rules: 规则列表
+            platform: 设备平台类型
+            
+        Returns:
+            list: 检查结果列表
+        """
+        results = []
+        for rule in rules:
+            compliant = rule.check_compliance(config)
+            # 获取修复建议
+            remediation = self._get_remediation_suggestion(rule.rule, platform)
+            results.append({
+                'rule': rule.rule,
+                'description': rule.description,
+                'compliant': compliant,
+                'actual_config': self._find_related_config(config, rule),
+                'remediation': remediation
+            })
+        return results
+
+    def _find_related_config(self, config: str, rule: ConfigRule) -> str:
+        """查找配置中与规则相关的部分
+        
+        Args:
+            config: 设备配置字符串
+            rule: 配置规则
+            
+        Returns:
+            str: 相关配置部分
+        """
+        if rule.regex and rule.pattern:
+            matches = rule.pattern.finditer(config)
+            matched_lines = [match.group(0) for match in matches]
+        else:
+            lines = config.split('\n')
+            matched_lines = [line for line in lines if rule.rule in line]
+        return '\n'.join(matched_lines) if matched_lines else "未找到相关配置"
+
+    def _get_remediation_suggestion(self, rule_text: str, platform: str) -> str:
+        """获取特定规则的修复建议
+        
+        Args:
+            rule_text: 规则文本
+            platform: 设备平台
+            
+        Returns:
+            str: 修复建议
+        """
+        # 首先查找平台特定的修复建议
+        if platform in self.remediation_suggestions:
+            if rule_text in self.remediation_suggestions[platform]:
+                return self.remediation_suggestions[platform][rule_text].get('suggestion', '无修复建议')
+        
+        # 然后查找通用修复建议
+        if 'common' in self.remediation_suggestions:
+            if rule_text in self.remediation_suggestions['common']:
+                return self.remediation_suggestions['common'][rule_text].get('suggestion', '无修复建议')
+        
+        # 如果没有找到修复建议，返回默认值
+        return '无修复建议'
+
+    def _process_interface_status(self, interface_output: str, platform: str) -> List[str]:
+        """处理接口状态输出
+        
+        Args:
+            interface_output: 接口状态命令输出
+            platform: 设备平台名称
+            
+        Returns:
+            List[str]: 关闭的接口列表
+        """
+        down_interfaces = []
+        for line in interface_output.split('\n'):
+            if platform == 'cisco_ios':
+                if 'notconnect' in line.lower():
+                    interface_name = line.split()[0]
+                    down_interfaces.append(interface_name)
+            elif platform == 'hp_comware':
+                if 'DOWN' in line:
+                    parts = line.split()
+                    down_interfaces.append(parts[0])
+            elif platform == 'huawei_vrp':
+                if 'down' in line.lower():
+                    if ':' in line:
+                        continue
+                    parts = line.split()
+                    if len(parts) >= 1:
+                        down_interfaces.append(parts[0])
+            elif platform == "cisco_nxos":
+                if 'notconnec' in line.lower():
+                    interface_name = line.split()[0]
+                    down_interfaces.append(interface_name)
+        return down_interfaces
+
+    def check_device(self, device_info: Dict[str, Any]) -> Dict[str, Any]:
+        """检查单个设备
+        
+        Args:
+            device_info: 设备连接信息
+            
+        Returns:
+            Dict[str, Any]: 检查结果
+        """
+        try:
+            host = device_info.get('host', 'Unknown')
+            logger.info(f"正在检查设备: {host}")
+
+            # 定义平台命令映射
+            platform_commands = {
+                'cisco_ios': {
+                    'config': 'show running-config',
+                    'interface': 'show interfaces status'
+                },
+                'hp_comware': {
+                    'config': 'display current-configuration',
+                    'interface': 'display interface brief'
+                },
+                'huawei_vrp': {
+                    'config': 'display current-configuration',
+                    'interface': 'display interface brief'
+                },
+                'cisco_nxos': {
+                    'config': 'show running-config',
+                    'interface': 'show interface status'
+                },
+                'juniper_junos': {
+                    'config': 'show configuration',
+                    'interface': 'show interfaces brief'
+                },
+                'juniper_screenos': {
+                    'config': 'get configuration',
+                    'interface': 'get interface'
+                }
+            }
+
+            # 创建SSH收集器并连接
+            collector = SSHCollector(device_info)
+            if not collector.connect():
+                raise Exception(f"无法连接到设备 {host}")
+
+            try:
+                platform = device_info.get('device_type', '')
+                if platform not in platform_commands:
+                    raise ValueError(f"不支持的平台类型: {platform}")
+
+                commands = platform_commands[platform]
+
+                # 获取配置和接口状态
+                config = collector.execute_command(commands['config'])
+                interface_output = collector.execute_command(commands['interface'])
+
+                # 处理接口状态
+                admin_down_interfaces = self._process_interface_status(
+                    interface_output, platform
+                )
+
+                # 修改获取适用规则的逻辑，确保规则不重复
+                applicable_rules = []
+                seen_rules = set()  # 用于追踪已添加的规则
+
+                # 首先添加平台特定的规则
+                if platform in self.rules:
+                    for rule in self.rules[platform]:
+                        rule_key = (rule.rule, rule.description)
+                        if rule_key not in seen_rules:
+                            applicable_rules.append(rule)
+                            seen_rules.add(rule_key)
+
+                # 然后添加通用规则（如果还没有添加过）
+                for rule in self.rules.get('common', []):
+                    rule_key = (rule.rule, rule.description)
+                    if rule_key not in seen_rules:
+                        applicable_rules.append(rule)
+                        seen_rules.add(rule_key)
+
+                # 执行配置检查
+                check_results = self.check_compliance(config, applicable_rules, platform)
+
+                # 添加接口状态检查结果
+                interface_check = {
+                    'rule': 'interface shutdown',
+                    'description': '主动关闭接口检查',
+                    'compliant': len(admin_down_interfaces) == 0,
+                    'actual_config': ', '.join(admin_down_interfaces) if admin_down_interfaces else '所有接口状态正常'
+                }
+                check_results.append(interface_check)
+
+                # 执行状态检查
+                status_results = []
+                for check in self.status_checks:
+                    command = check.get_command(platform)
+                    if command:
+                        try:
+                            status_output = collector.execute_command(command)
+                            compliant = check.check_output(status_output, platform)
+                            status_results.append({
+                                'rule': check.name,
+                                'description': check.description,
+                                'compliant': compliant,
+                                'actual_config': status_output.strip() if status_output else "无输出"
+                            })
+                        except Exception as e:
+                            logger.error(f"执行状态检查 {check.name} 失败: {str(e)}")
+                            status_results.append({
+                                'rule': check.name,
+                                'description': check.description,
+                                'compliant': False,
+                                'actual_config': f"检查失败: {str(e)}"
+                            })
+
+                # 合并所有检查结果
+                check_results.extend(status_results)
+
+                return {
+                    'device_name': host,
+                    'device_hostname': host,
+                    'check_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    'results': check_results,
+                    'failed': False
+                }
+            finally:
+                # 断开连接
+                collector.disconnect()
+
+        except Exception as e:
+            logger.error(f"设备 {device_info.get('host', 'Unknown')} 检查失败: {str(e)}", exc_info=True)
+            return {
+                'device_name': device_info.get('host', 'Unknown'),
+                'device_hostname': device_info.get('host', 'Unknown'),
+                'check_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'results': [],
+                'failed': True,
+                'error': str(e)
+            }
+
+    def check_baseline(self, devices: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+        """执行基线检查
+        
+        Args:
+            devices: 设备列表
+            
+        Returns:
+            Dict[str, Dict[str, Any]]: 设备到检查结果的映射
+        """
+        try:
+            logger.info(f"开始基线检查，共 {len(devices)} 台设备")
+            
+            # 执行设备检查
+            results = {}
+            futures = {}
+            
+            # 提交所有设备检查任务
+            for device in devices:
+                host = device.get('host', 'Unknown')
+                futures[host] = self.executor.submit(self.check_device, device)
+            
+            # 获取所有任务结果
+            for host, future in futures.items():
+                try:
+                    results[host] = future.result()
+                except Exception as e:
+                    logger.error(f"获取设备 {host} 检查结果时发生错误: {str(e)}")
+                    results[host] = {
+                        'device_name': host,
+                        'device_hostname': host,
+                        'check_time': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                        'results': [],
+                        'failed': True,
+                        'error': str(e)
+                    }
+
+            # 生成报告
+            self._generate_report(results)
+            self._generate_excel_report(results)
+
+            # 统计检查结果
+            success_count = sum(1 for result in results.values() if not result.get('failed', False))
+            failed_count = len(results) - success_count
+            
+            logger.info(f"基线检查完成: 成功 {success_count} 台, 失败 {failed_count} 台")
+            
+            return results
+
+        except Exception as e:
+            logger.error(f"执行基线检查时发生错误: {str(e)}", exc_info=True)
+            raise
+        finally:
+            # 清理线程池
+            self.executor.shutdown(wait=True)
+
+    def _generate_report(self, results: Dict[str, Dict[str, Any]]):
+        """生成HTML报告
+        
+        Args:
+            results: 检查结果字典
+        """
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+        
+        # 准备报告数据
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        summary_report_filename = f"summary_report_{timestamp}.html"
+        report_data = {
+            'timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'devices': [],
+            'summary_report_filename': summary_report_filename
+        }
+
+        # 为每台设备生成修复建议汇总文件
+        remediation_files = {}  # 存储设备名到修复建议文件的映射
+
+        for host, result in results.items():
+            if result.get('failed', False):
+                continue
+                
+            # 调试信息：打印每个检查结果的修复建议
+            logger.info(f"设备 {host} 的检查结果:")
+            for check_result in result['results']:
+                logger.info(f"  检查项 '{check_result['description']}' 的修复建议: {check_result.get('remediation', '无')}")
+                
+            # 计算合规和不合规项数量
+            compliant_count = sum(1 for r in result['results'] if r['compliant'])
+            non_compliant_count = len(result['results']) - compliant_count
+            
+            device_info = {
+                'name': result['device_name'],
+                'hostname': result['device_hostname'],
+                'results': result['results'],
+                'compliant_count': compliant_count,
+                'non_compliant_count': non_compliant_count
+            }
+            report_data['devices'].append(device_info)
+            
+            # 生成该设备的修复建议汇总文件
+            remediation_content = self._generate_device_remediation_file(
+                device_info['name'], 
+                device_info['hostname'], 
+                result['results']
+            )
+            remediation_files[device_info['name']] = remediation_content
+
+        # 生成详细报告
+        template = Template(self.report_template)
+        report_html = template.render(**report_data)
+
+        # 保存详细报告
+        os.makedirs(reports_dir, exist_ok=True)
+        report_file = os.path.join(reports_dir, f"baseline_report_{timestamp}.html")
+
+        with open(report_file, 'w', encoding='utf-8-sig') as f:
+            f.write(report_html)
+        logger.info(f"HTML报告已生成: {report_file}")
+        
+        # 保存每台设备的修复建议文件
+        for device_name, content in remediation_files.items():
+            # 清理设备名中的特殊字符，用于文件名
+            clean_device_name = re.sub(r'[<>:"/\\|?*\x00-\x1F]', '_', device_name)
+            # 使用与HTML模板一致的时间戳格式
+            timestamp_clean = timestamp.replace('-', '').replace(' ', '').replace(':', '')
+            remediation_file = os.path.join(reports_dir, f"remediation_{clean_device_name}_{timestamp_clean}.txt")
+            with open(remediation_file, 'w', encoding='utf-8-sig') as f:
+                f.write(content)
+            logger.info(f"设备 {device_name} 的修复建议文件已生成: {remediation_file}")
+            
+        # 生成汇总报告
+        summary_report_filename = f"summary_report_{timestamp}.html"
+        self._generate_summary_report(report_data, f"baseline_report_{timestamp}.html", summary_report_filename)
+
+    def _generate_summary_report(self, report_data: Dict[str, Any], detailed_report_filename: str, summary_report_filename: str = None):
+        """生成汇总报告
+        
+        Args:
+            report_data: 详细报告数据
+            detailed_report_filename: 详细报告文件名
+            summary_report_filename: 汇总报告文件名
+        """
+        # 加载汇总报告模板
+        summary_template_content = self._load_summary_report_template()
+        if not summary_template_content:
+            logger.warning("无法加载汇总报告模板，跳过生成汇总报告")
+            return
+            
+        # 如果没有提供汇总报告文件名，则使用默认名称
+        if not summary_report_filename:
+            timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+            summary_report_filename = f"summary_report_{timestamp}.html"
+            
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+            
+        # 准备汇总报告数据
+        summary_data = {
+            'timestamp': report_data['timestamp'],
+            'devices': report_data['devices'],
+            'compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_count'] == 0),
+            'non_compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_count'] > 0),
+            'report_filename': detailed_report_filename,
+            'summary_report_filename': summary_report_filename
+        }
+        
+        # 生成汇总报告
+        template = Template(summary_template_content)
+        summary_html = template.render(**summary_data)
+        
+        # 保存汇总报告
+        summary_file = os.path.join(reports_dir, summary_report_filename)
+        
+        with open(summary_file, 'w', encoding='utf-8-sig') as f:
+            f.write(summary_html)
+        logger.info(f"汇总报告已生成: {summary_file}")
+
+    def _generate_excel_report(self, results: Dict[str, Dict[str, Any]]):
+        """生成 Excel 报告
+        
+        Args:
+            results: 检查结果字典
+        """
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+        
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "基线检查报告"
+
+        # 添加表头
+        headers = ["设备名称", "管理IP", "规则描述", "检查结果", "实际配置", "参考配置"]
+        ws.append(headers)
+
+        for host, result in results.items():
+            if result.get('failed', False):
+                # 添加失败的设备信息
+                device_name = result.get('device_name', host)
+                device_hostname = result.get('device_hostname', host)
+                ws.append([device_name, device_hostname, "设备连接或检查失败", "未通过", result.get('error', '未知错误'), "无"])
+                continue
+                
+            device_name = result['device_name']
+            device_hostname = result['device_hostname']
+            for check_result in result['results']:
+                rule_description = check_result['description']
+                compliant = "通过" if check_result['compliant'] else "未通过"
+                actual_config = check_result['actual_config']
+                remediation = check_result.get('remediation', '无') if not check_result['compliant'] else '无'
+                ws.append([device_name, device_hostname, rule_description, compliant, actual_config, remediation])
+
+        # 保存 Excel 文件
+        os.makedirs(reports_dir, exist_ok=True)
+        report_file = os.path.join(reports_dir, f"baseline_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx")
+        wb.save(report_file)
+        logger.info(f"Excel 报告已生成: {report_file}")
+
+    def _generate_device_remediation_file(self, device_name: str, hostname: str, results: list) -> str:
+        """生成设备修复建议汇总文件内容
+        
+        Args:
+            device_name: 设备名称
+            hostname: 设备主机名
+            results: 检查结果列表
+            
+        Returns:
+            str: 修复建议文件内容
+        """
+        content = f"设备 {device_name} ({hostname}) 的修复建议汇总\n"
+        content += "=" * 50 + "\n\n"
+        
+        # 收集所有不合规项的修复建议
+        remediation_suggestions = []
+        for result in results:
+            if not result['compliant'] and result.get('remediation') and result['remediation'] != '无修复建议':
+                remediation_suggestions.append(result['remediation'])
+        
+        # 根据设备类型处理修复建议格式
+        if 'cisco' in device_name.lower() or 'cisco' in hostname.lower():
+            # 思科设备使用"#"分割不同的建议
+            content += "#\n".join(remediation_suggestions)
+        else:
+            # 其他设备直接换行分隔
+            content += "\n!\n".join(remediation_suggestions)
+            
+        return content
+
+
+
+
+
+
+def check_devices_baseline(device_list: List[Dict[str, Any]], rules_file=None, max_workers: int = 10) -> Dict[str, Dict[str, Any]]:
+    """
+    检查设备列表的基线配置
+    
+    Args:
+        device_list: 设备列表
+        rules_file: 规则文件路径
+        max_workers: 最大工作线程数
+        
+    Returns:
+        Dict[str, Dict[str, Any]]: 设备到检查结果的映射
+    """
+    # 创建检查器实例
+    checker = BaselineChecker(rules_file=rules_file, max_workers=max_workers)
+    
+    # 执行基线检查
+    results = checker.check_baseline(device_list)
+    
+    return results
+
+
+if __name__ == "__main__":
+    # 示例用法
+    import json
+    
+    # 示例设备配置
+    devices = [
+        {
+            "device_type": "cisco_ios",
+            "host": "192.168.80.21",
+            "username": "nms",
+            "password": "cisco",
+            "port": 22
+        }
+    ]
+    
+    try:
+        # 运行基线检查
+        print("开始基线检查...")
+        results = check_devices_baseline(devices)
+        print(f"基线检查完成，共 {len(results)} 台设备")
+        
+        # 打印结果统计
+        success_count = sum(1 for result in results.values() if not result.get('failed', False))
+        print(f"成功: {success_count} 台, 失败: {len(results) - success_count} 台")
+        
+    except Exception as e:
+        logger.error(f"程序执行失败: {str(e)}", exc_info=True)
+        print(f"程序执行失败: {str(e)}")

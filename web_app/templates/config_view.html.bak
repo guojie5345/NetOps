@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}查看配置文件 - 自动化运维工具{% endblock %}
+
+{% block content %}
+<h2>查看配置文件: {{ config_data.name }}</h2>
+
+<div class="config-view-actions">
+    <a href="{{ url_for('config') }}" class="btn btn-secondary">返回配置管理</a>
+    <a href="{{ url_for('edit_config', filename=config_data.name) }}" class="btn btn-warning">编辑文件</a>
+</div>
+
+<div class="config-content">
+    <h3>文件内容</h3>
+    {% if config_data.error %}
+    <div class="error-message">
+        <p><strong>错误:</strong> {{ config_data.error }}</p>
+    </div>
+    {% else %}
+    <div class="file-content">
+        {% if config_data.type == "JSON" %}
+        <pre class="json-content">{{ config_data.content }}</pre>
+        {% elif config_data.type == "YAML" %}
+        <pre class="yaml-content">{{ config_data.content }}</pre>
+        {% else %}
+        <pre class="text-content">{{ config_data.content }}</pre>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.config-view-actions {
+    margin-bottom: 20px;
+}
+
+.file-content {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.file-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.json-content {
+    color: #007acc;
+}
+
+.yaml-content {
+    color: #ff6600;
+}
+
+.text-content {
+    color: #333;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 15px;
+    color: #721c24;
+}
+</style>
+{% endblock %}

@@ -49,7 +49,7 @@ def find_latest_baseline_report() -> Optional[str]:
     return latest_report[0]
 
 def parse_baseline_report(report_path: str) -> Dict[str, Any]:
-    """解析基线检查报告，提取设备信息
+    """解析基线检查报告
     
     Args:
         report_path (str): 基线检查报告路径
@@ -74,43 +74,32 @@ def parse_baseline_report(report_path: str) -> Dict[str, Any]:
         
         # 提取设备信息
         devices = []
-        # 查找所有设备div块 - 修复正则表达式以正确匹配设备div的实际结构
-        device_pattern = r'<div class="device"[^>]*id="([^"]+)">.*?<h2>设备: ([^(<]+)'
+        # 查找所有设备div块 - 使用更准确的正则表达式匹配设备信息
+        # 匹配每个设备的完整div块，包括设备IP和表格内容
+        device_pattern = r'<div class="device"[^>]*id="[^"]+">.*?<h2>设备:\s*([0-9\.]+).*?</table>\s*</div>'
         device_matches = re.findall(device_pattern, content, re.DOTALL)
         
-        for device_id, device_name in device_matches:
-            # 清理设备名称，只保留IP地址部分
-            clean_device_name = device_name.strip().split(' ')[0]
-            
-            # 为每台设备查找合规和不合规项
-            # 查找设备div的完整内容，直到下一个设备div或文件结束
-            # 找到当前设备div的起始位置
-            device_start_pattern = rf'<div class="device"[^>]*id="{device_id}"'
-            device_start_match = re.search(device_start_pattern, content)
-            
-            if device_start_match:
-                # 从当前设备div开始查找，直到下一个设备div或文件结束
-                remaining_content = content[device_start_match.start():]
-                # 查找下一个设备div的位置
-                next_device_pattern = r'<div class="device"'
-                # 从当前位置之后开始查找下一个设备div
-                next_device_match = re.search(next_device_pattern, remaining_content[1:])
-                
-                if next_device_match:
-                    # 如果找到下一个设备div，截取到那里为止
-                    device_content = remaining_content[:next_device_match.start()+1]
-                else:
-                    # 如果没有下一个设备div，截取到文件末尾
-                    device_content = remaining_content
+        # 同时提取完整的设备块用于统计检查项
+        device_blocks = re.findall(r'<div class="device"[^>]*id="[^"]+">.*?</table>\s*</div>', content, re.DOTALL)
+        
+        for i, device_block in enumerate(device_blocks):
+            # 在每个设备块中查找设备IP
+            ip_match = re.search(r'<h2>设备:\s*([0-9\.]+)', device_block)
+            if ip_match:
+                device_ip = ip_match.group(1)
                 
                 # 统计合规和不合规项
-                # 更新正则表达式以正确匹配合规和不合规项
-                compliant_count = len(re.findall(r'class="compliant"', device_content))
-                non_compliant_count = len(re.findall(r'class="non-compliant"', device_content))
+                # 使用更准确的正则表达式来匹配检查项
+                # 匹配<td class="compliant">或<td class="non-compliant">标签
+                compliant_pattern = r'<td class="compliant">'
+                non_compliant_pattern = r'<td class="non-compliant">'
+                
+                compliant_count = len(re.findall(compliant_pattern, device_block, re.DOTALL))
+                non_compliant_count = len(re.findall(non_compliant_pattern, device_block, re.DOTALL))
                 total_checks = compliant_count + non_compliant_count
                 
                 devices.append({
-                    'name': clean_device_name,
+                    'name': device_ip,
                     'total_checks': total_checks,
                     'compliant_checks': compliant_count,
                     'non_compliant_checks': non_compliant_count

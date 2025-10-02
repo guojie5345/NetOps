@@ -657,6 +657,11 @@ class BaselineChecker:
         Args:
             results: 检查结果字典
         """
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+        
         # 准备报告数据
         timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
         summary_report_filename = f"summary_report_{timestamp}.html"
@@ -686,8 +691,9 @@ class BaselineChecker:
                 'name': result['device_name'],
                 'hostname': result['device_hostname'],
                 'results': result['results'],
-                'compliant_count': compliant_count,
-                'non_compliant_count': non_compliant_count
+                'compliant_checks': compliant_count,
+                'non_compliant_checks': non_compliant_count,
+                'total_checks': compliant_count + non_compliant_count
             }
             report_data['devices'].append(device_info)
             
@@ -704,8 +710,8 @@ class BaselineChecker:
         report_html = template.render(**report_data)
 
         # 保存详细报告
-        os.makedirs('reports', exist_ok=True)
-        report_file = f"reports/baseline_report_{timestamp}.html"
+        os.makedirs(reports_dir, exist_ok=True)
+        report_file = os.path.join(reports_dir, f"baseline_report_{timestamp}.html")
 
         with open(report_file, 'w', encoding='utf-8-sig') as f:
             f.write(report_html)
@@ -717,7 +723,7 @@ class BaselineChecker:
             clean_device_name = re.sub(r'[<>:"/\\|?*\x00-\x1F]', '_', device_name)
             # 使用与HTML模板一致的时间戳格式
             timestamp_clean = timestamp.replace('-', '').replace(' ', '').replace(':', '')
-            remediation_file = f"reports/remediation_{clean_device_name}_{timestamp_clean}.txt"
+            remediation_file = os.path.join(reports_dir, f"remediation_{clean_device_name}_{timestamp_clean}.txt")
             with open(remediation_file, 'w', encoding='utf-8-sig') as f:
                 f.write(content)
             logger.info(f"设备 {device_name} 的修复建议文件已生成: {remediation_file}")
@@ -745,12 +751,17 @@ class BaselineChecker:
             timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
             summary_report_filename = f"summary_report_{timestamp}.html"
             
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+            
         # 准备汇总报告数据
         summary_data = {
             'timestamp': report_data['timestamp'],
             'devices': report_data['devices'],
-            'compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_count'] == 0),
-            'non_compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_count'] > 0),
+            'compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_checks'] == 0),
+            'non_compliant_devices_count': sum(1 for d in report_data['devices'] if d['non_compliant_checks'] > 0),
             'report_filename': detailed_report_filename,
             'summary_report_filename': summary_report_filename
         }
@@ -760,7 +771,7 @@ class BaselineChecker:
         summary_html = template.render(**summary_data)
         
         # 保存汇总报告
-        summary_file = f"reports/{summary_report_filename}"
+        summary_file = os.path.join(reports_dir, summary_report_filename)
         
         with open(summary_file, 'w', encoding='utf-8-sig') as f:
             f.write(summary_html)
@@ -772,6 +783,11 @@ class BaselineChecker:
         Args:
             results: 检查结果字典
         """
+        # 获取项目根目录路径
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        reports_dir = os.path.join(project_root, 'reports')
+        
         wb = Workbook()
         ws = wb.active
         ws.title = "基线检查报告"
@@ -798,8 +814,8 @@ class BaselineChecker:
                 ws.append([device_name, device_hostname, rule_description, compliant, actual_config, remediation])
 
         # 保存 Excel 文件
-        os.makedirs('reports', exist_ok=True)
-        report_file = f"reports/baseline_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+        os.makedirs(reports_dir, exist_ok=True)
+        report_file = os.path.join(reports_dir, f"baseline_report_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx")
         wb.save(report_file)
         logger.info(f"Excel 报告已生成: {report_file}")
 
@@ -832,10 +848,6 @@ class BaselineChecker:
             content += "\n!\n".join(remediation_suggestions)
             
         return content
-
-
-
-
 
 
 def check_devices_baseline(device_list: List[Dict[str, Any]], rules_file=None, max_workers: int = 10) -> Dict[str, Dict[str, Any]]:

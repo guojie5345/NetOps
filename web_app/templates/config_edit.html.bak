@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}编辑配置文件 - 自动化运维工具{% endblock %}
+
+{% block content %}
+<h2>编辑配置文件: {{ config_data.name }}</h2>
+
+<div class="config-edit-actions">
+    <a href="{{ url_for('config') }}" class="btn btn-secondary">返回配置管理</a>
+    <a href="{{ url_for('view_config', filename=config_data.name) }}" class="btn btn-info">查看文件</a>
+</div>
+
+<form id="edit-config-form" method="POST">
+    <div class="form-group">
+        <label for="file_type">文件类型:</label>
+        <select id="file_type" name="file_type">
+            <option value="TEXT" {% if config_data.type == "TEXT" %}selected{% endif %}>文本</option>
+            <option value="JSON" {% if config_data.type == "JSON" %}selected{% endif %}>JSON</option>
+            <option value="YAML" {% if config_data.type == "YAML" %}selected{% endif %}>YAML</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="content">文件内容:</label>
+        <textarea id="content" name="content" rows="20" class="form-control">{{ config_data.content }}</textarea>
+    </div>
+    
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">保存配置</button>
+        <button type="button" class="btn btn-secondary" onclick="history.back()">取消</button>
+    </div>
+</form>
+
+<div id="save-result" class="save-result" style="display: none;"></div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.config-edit-actions {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.save-result {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.save-result.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.save-result.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('edit-config-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const resultDiv = document.getElementById('save-result');
+        resultDiv.style.display = 'block';
+        
+        if (data.success) {
+            resultDiv.className = 'save-result success';
+            resultDiv.innerHTML = '<strong>成功:</strong> ' + data.message;
+        } else {
+            resultDiv.className = 'save-result error';
+            resultDiv.innerHTML = '<strong>错误:</strong> ' + data.message;
+        }
+        
+        // 3秒后自动隐藏结果提示
+        setTimeout(() => {
+            resultDiv.style.display = 'none';
+        }, 3000);
+    })
+    .catch(error => {
+        const resultDiv = document.getElementById('save-result');
+        resultDiv.style.display = 'block';
+        resultDiv.className = 'save-result error';
+        resultDiv.innerHTML = '<strong>错误:</strong> 保存配置时发生错误: ' + error.message;
+        
+        // 3秒后自动隐藏结果提示
+        setTimeout(() => {
+            resultDiv.style.display = 'none';
+        }, 3000);
+    });
+});
+</script>
+{% endblock %}

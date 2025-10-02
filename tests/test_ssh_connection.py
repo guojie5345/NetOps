@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+测试SSH连接的脚本
+"""
+
+import json
+import os
+from netmiko import ConnectHandler
+from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationException
+
+def load_ssh_config():
+    """从配置文件加载SSH设备信息"""
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config', 'ssh_config.json')
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            return config.get('ssh_devices', [])
+    except FileNotFoundError:
+        print(f"配置文件未找到: {config_path}")
+        return []
+    except Exception as e:
+        print(f"读取配置文件时出错: {e}")
+        return []
+
+def test_ssh_connection(device_info):
+    """测试单个设备的SSH连接"""
+    print(f"正在测试连接到设备: {device_info['host']}")
+    
+    try:
+        # 创建连接
+        connection = ConnectHandler(**device_info)
+        print(f"成功连接到设备: {device_info['host']}")
+        
+        # 执行简单命令
+        output = connection.send_command("show version")
+        print(f"设备 {device_info['host']} 执行命令成功")
+        print(f"输出前200字符: {output[:200]}...")
+        
+        # 关闭连接
+        connection.disconnect()
+        print(f"已断开与设备 {device_info['host']} 的连接")
+        return True
+        
+    except NetMikoTimeoutException:
+        print(f"连接超时: 无法连接到设备 {device_info['host']}")
+    except NetMikoAuthenticationException:
+        print(f"认证失败: 无法认证到设备 {device_info['host']}")
+    except Exception as e:
+        print(f"连接设备 {device_info['host']} 时发生未知错误: {str(e)}")
+    
+    return False
+
+def main():
+    """主函数"""
+    print("开始测试SSH连接...")
+    
+    # 加载设备配置
+    devices = load_ssh_config()
+    
+    if not devices:
+        print("没有找到设备配置")
+        return
+    
+    print(f"找到 {len(devices)} 个设备配置")
+    
+    # 测试每个设备
+    success_count = 0
+    for device in devices:
+        if test_ssh_connection(device):
+            success_count += 1
+        print("-" * 50)
+    
+    print(f"连接测试完成: {success_count}/{len(devices)} 个设备连接成功")
+
+if __name__ == "__main__":
+    main()

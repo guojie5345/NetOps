@@ -1,6 +1,46 @@
 {% extends "base.html" %}
 
-{% block title %}报告查看 - 自动化运维工具{% endblock %}
+{% block title %}报告查看 - 自动动运维工具{% endblock %}
+
+{% block extra_css %}
+<style>
+    .report-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #ecf0f1;
+    }
+    
+    .report-item:last-child {
+        border-bottom: none;
+    }
+    
+    .report-info {
+        flex-grow: 1;
+    }
+    
+    .report-date {
+        color: #7f8c8d;
+        margin: 0 1rem;
+    }
+    
+    .delete-btn {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.875rem;
+        transition: background-color 0.3s;
+    }
+    
+    .delete-btn:hover {
+        background-color: #c0392b;
+    }
+</style>
+{% endblock %}
 
 {% block content %}
 <h2>报告查看</h2>
@@ -10,9 +50,12 @@
     {% if summary_reports %}
     <ul class="report-list">
         {% for report in summary_reports %}
-        <li>
-            <a href="{{ url_for('report_file', filename=report) }}" target="_blank">{{ report }}</a>
-            <span class="report-date">{{ report.split('_')[-1].split('.')[0] }}</span>
+        <li class="report-item">
+            <div class="report-info">
+                <a href="{{ url_for('report_file', filename=report.filename) }}">{{ report.filename }}</a>
+            </div>
+            <span class="report-date">{{ report.mtime|datetimeformat }}</span>
+            <button class="delete-btn" data-filename="{{ report.filename }}">删除</button>
         </li>
         {% endfor %}
     </ul>
@@ -26,9 +69,12 @@
     {% if html_reports %}
     <ul class="report-list">
         {% for report in html_reports %}
-        <li>
-            <a href="{{ url_for('report_file', filename=report) }}" target="_blank">{{ report }}</a>
-            <span class="report-date">{{ report.split('_')[-1].split('.')[0] }}</span>
+        <li class="report-item">
+            <div class="report-info">
+                <a href="{{ url_for('report_file', filename=report.filename) }}">{{ report.filename }}</a>
+            </div>
+            <span class="report-date">{{ report.mtime|datetimeformat }}</span>
+            <button class="delete-btn" data-filename="{{ report.filename }}">删除</button>
         </li>
         {% endfor %}
     </ul>
@@ -42,9 +88,12 @@
     {% if excel_reports %}
     <ul class="report-list">
         {% for report in excel_reports %}
-        <li>
-            <a href="{{ url_for('report_file', filename=report) }}">{{ report }}</a>
-            <span class="report-date">{{ report.split('_')[-1].split('.')[0] }}</span>
+        <li class="report-item">
+            <div class="report-info">
+                <a href="{{ url_for('report_file', filename=report.filename) }}">{{ report.filename }}</a>
+            </div>
+            <span class="report-date">{{ report.mtime|datetimeformat }}</span>
+            <button class="delete-btn" data-filename="{{ report.filename }}">删除</button>
         </li>
         {% endfor %}
     </ul>
@@ -52,4 +101,57 @@
     <p>暂无Excel报告。</p>
     {% endif %}
 </div>
+
+<script>
+    // 添加删除按钮的事件监听器
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filename = this.getAttribute('data-filename');
+                
+                // 确认删除
+                if (confirm(`确定要删除报告文件 "${filename}" 及其相关文件吗？此操作将同时删除所有相关联的报告文件。`)) {
+                    // 发送删除请求
+                    fetch(`/reports/delete/${filename}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            // 删除成功，从页面中移除所有相关项
+                            // 获取所有报告项
+                            const reportItems = document.querySelectorAll('.report-item');
+                            
+                            // 如果返回了删除文件列表，则根据文件名移除对应的项
+                            if (data.deleted_files && data.deleted_files.length > 0) {
+                                reportItems.forEach(item => {
+                                    const itemFilename = item.querySelector('.delete-btn').getAttribute('data-filename');
+                                    // 检查该项是否在删除的文件列表中
+                                    if (data.deleted_files.includes(itemFilename)) {
+                                        item.remove();
+                                    }
+                                });
+                            } else {
+                                // 如果没有返回删除文件列表，则至少移除当前项
+                                this.parentElement.remove();
+                            }
+                        } else {
+                            // 删除失败，显示错误信息
+                            alert('删除失败: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('删除过程中发生错误');
+                    });
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}

@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import chardet
+import os
+
+def detect_encoding(file_path):
+    """检测文件编码"""
+    with open(file_path, 'rb') as f:
+        raw_data = f.read()
+        result = chardet.detect(raw_data)
+        return result['encoding'], result['confidence']
+
+def check_project_files(root_dir):
+    """检查项目中所有Python和HTML文件的编码"""
+    for root, dirs, files in os.walk(root_dir):
+        # 跳过虚拟环境和缓存目录
+        dirs[:] = [d for d in dirs if d not in ['.venv', '__pycache__', '.pytest_cache']]
+        
+        for file in files:
+            if file.endswith(('.py', '.html')):
+                file_path = os.path.join(root, file)
+                try:
+                    encoding, confidence = detect_encoding(file_path)
+                    print(f"{file_path}: {encoding} (confidence: {confidence:.2f})")
+                except Exception as e:
+                    print(f"{file_path}: Error - {e}")
+
+if __name__ == "__main__":
+    project_root = r"E:\Development\Python\NetOps"
+    check_project_files(project_root)

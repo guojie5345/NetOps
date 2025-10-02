@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}缂栬緫閰嶇疆鏂囦欢 - 鑷姩鍖栬繍缁村伐鍏穥% endblock %}
+
+{% block content %}
+<h2>缂栬緫閰嶇疆鏂囦欢: {{ config_data.name }}</h2>
+
+<div class="config-edit-actions">
+    <a href="{{ url_for('config') }}" class="btn btn-secondary">杩斿洖閰嶇疆绠＄悊</a>
+    <a href="{{ url_for('view_config', filename=config_data.name) }}" class="btn btn-info">鏌ョ湅鏂囦欢</a>
+</div>
+
+<form id="edit-config-form" method="POST">
+    <div class="form-group">
+        <label for="file_type">鏂囦欢绫诲瀷:</label>
+        <select id="file_type" name="file_type">
+            <option value="TEXT" {% if config_data.type == "TEXT" %}selected{% endif %}>鏂囨湰</option>
+            <option value="JSON" {% if config_data.type == "JSON" %}selected{% endif %}>JSON</option>
+            <option value="YAML" {% if config_data.type == "YAML" %}selected{% endif %}>YAML</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="content">鏂囦欢鍐呭:</label>
+        <textarea id="content" name="content" rows="20" class="form-control">{{ config_data.content }}</textarea>
+    </div>
+    
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">淇濆瓨閰嶇疆</button>
+        <button type="button" class="btn btn-secondary" onclick="history.back()">鍙栨秷</button>
+    </div>
+</form>
+
+<div id="save-result" class="save-result" style="display: none;"></div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.config-edit-actions {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.save-result {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.save-result.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.save-result.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('edit-config-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const resultDiv = document.getElementById('save-result');
+        resultDiv.style.display = 'block';
+        
+        if (data.success) {
+            resultDiv.className = 'save-result success';
+            resultDiv.innerHTML = '<strong>鎴愬姛:</strong> ' + data.message;
+        } else {
+            resultDiv.className = 'save-result error';
+            resultDiv.innerHTML = '<strong>閿欒:</strong> ' + data.message;
+        }
+        
+        // 3绉掑悗鑷姩闅愯棌缁撴灉鎻愮ず
+        setTimeout(() => {
+            resultDiv.style.display = 'none';
+        }, 3000);
+    })
+    .catch(error => {
+        const resultDiv = document.getElementById('save-result');
+        resultDiv.style.display = 'block';
+        resultDiv.className = 'save-result error';
+        resultDiv.innerHTML = '<strong>閿欒:</strong> 淇濆瓨閰嶇疆鏃跺彂鐢熼敊璇? ' + error.message;
+        
+        // 3绉掑悗鑷姩闅愯棌缁撴灉鎻愮ず
+        setTimeout(() => {
+            resultDiv.style.display = 'none';
+        }, 3000);
+    });
+});
+</script>
+{% endblock %}

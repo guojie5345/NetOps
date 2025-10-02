@@ -1,0 +1,300 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+配置管理模块
+用于统一管理项目中的各种配置文件
+"""
+
+import os
+import json
+import yaml
+from typing import Dict, Any, List, Optional
+from pathlib import Path
+import logging
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class ConfigManager:
+    """配置管理器类"""
+
+    def __init__(self, config_dir: str = "config"):
+        """
+        初始化配置管理器
+
+        Args:
+            config_dir: 配置文件目录路径
+        """
+        self.config_dir = Path(config_dir)
+        if not self.config_dir.exists():
+            self.config_dir.mkdir(parents=True, exist_ok=True)
+            logger.info(f"创建配置目录: {self.config_dir}")
+
+    def _get_file_description(self, filename: str) -> str:
+        """
+        获取配置文件的描述信息
+        Args:
+            filename: 配置文件名
+        Returns:
+            文件描述信息
+        """
+        descriptions = {
+            "api_config.json": "API接口配置文件，包含各种API的访问地址和认证信息",
+            "baseline_rules.yaml": "基线检查规则配置文件，定义了各种设备类型的合规性检查规则",
+            "config.json": "系统主配置文件，包含应用程序的基本配置信息",
+            "device_commands.json": "设备命令配置文件，定义了不同设备类型的操作命令",
+            "device_mapping_config.json": "设备映射配置文件，用于设备类型映射",
+            "remediation_suggestions.yaml": "修复建议配置文件，包含各种问题的修复建议",
+            "scenario_config.json": "场景配置文件，定义了不同网络场景的配置信息",
+            "ssh_config.json": "SSH连接配置文件，包含SSH连接参数"
+        }
+        
+        # 如果是备份文件，添加标识
+        if filename.endswith('.bak'):
+            base_name = filename[:-4]  # 移除.bak后缀
+            base_desc = descriptions.get(base_name, "未知配置文件")
+            return f"{base_desc} (备份文件)"
+        
+        return descriptions.get(filename, "未知配置文件")
+
+    def list_config_files(self) -> List[Dict[str, Any]]:
+        """
+        列出所有配置文件信息
+
+        Returns:
+            配置文件信息列表
+        """
+        config_files = []
+        if not self.config_dir.exists():
+            return config_files
+
+        for file_path in self.config_dir.iterdir():
+            if file_path.is_file():
+                # 使用相对路径而不是绝对路径
+                relative_path = file_path.relative_to(self.config_dir)
+                
+                # 获取文件信息
+                stat = file_path.stat()
+                file_info = {
+                    "name": file_path.name,
+                    "path": str(relative_path),
+                    "size": stat.st_size,
+                    "type": self._get_file_type(file_path.name),
+                    "description": self._get_file_description(file_path.name)
+                }
+                config_files.append(file_info)
+
+        # 按文件类型分组排序
+        config_files.sort(key=lambda x: (x["type"], x["name"]))
+        return config_files
+
+    def _get_file_type(self, filename: str) -> str:
+        """
+        获取文件类型
+
+        Args:
+            filename: 文件名
+        Returns:
+            文件类型
+        """
+        if filename.endswith('.json'):
+            return 'JSON'
+        elif filename.endswith(('.yaml', '.yml')):
+            return 'YAML'
+        elif filename.endswith('.bak'):
+            return '备份'
+        else:
+            return 'TEXT'
+
+    def read_config_file(self, filename: str) -> Dict[str, Any]:
+        """
+        读取配置文件内容
+
+        Args:
+            filename: 配置文件名
+        Returns:
+            配置文件内容和状态信息
+        """
+        file_path = self.config_dir / filename
+        result = {
+            "success": False,
+            "content": "",
+            "type": "",
+            "message": ""
+        }
+
+        try:
+            if not file_path.exists():
+                result["message"] = f"文件 {filename} 不存在"
+                return result
+
+            # 确定文件类型
+            file_type = self._get_file_type(filename)
+            result["type"] = file_type
+
+            # 读取文件内容
+            with open(file_path, 'r', encoding='utf-8') as f:
+                if file_type == 'JSON':
+                    content = json.load(f)
+                    result["content"] = json.dumps(content, indent=2, ensure_ascii=False)
+                elif file_type == 'YAML':
+                    content = yaml.safe_load(f)
+                    result["content"] = yaml.dump(content, allow_unicode=True, default_flow_style=False)
+                else:
+                    result["content"] = f.read()
+
+            result["success"] = True
+            result["message"] = f"文件 {filename} 读取成功"
+
+        except Exception as e:
+            result["message"] = f"读取文件时出错: {str(e)}"
+            logger.error(result["message"])
+
+        return result
+
+    def save_config_file(self, filename: str, content: str) -> Dict[str, Any]:
+        """
+        保存配置文件内容
+
+        Args:
+            filename: 配置文件名
+            content: 配置文件内容
+        Returns:
+            操作结果字典
+        """
+        file_path = self.config_dir / filename
+        result = {
+            "success": False,
+            "message": ""
+        }
+
+        try:
+            # 创建备份
+            if file_path.exists():
+                backup_path = file_path.with_suffix(file_path.suffix + '.bak')
+                with open(file_path, 'r', encoding='utf-8') as src, \
+                     open(backup_path, 'w', encoding='utf-8') as dst:
+                    dst.write(src.read())
+
+            # 保存文件
+            with open(file_path, 'w', encoding='utf-8') as f:
+                # 根据文件类型格式化内容
+                if filename.endswith('.json'):
+                    try:
+                        json_content = json.loads(content)
+                        json.dump(json_content, f, indent=2, ensure_ascii=False)
+                    except json.JSONDecodeError:
+                        f.write(content)  # 如果不是有效的JSON，直接写入
+                elif filename.endswith(('.yaml', '.yml')):
+                    try:
+                        yaml_content = yaml.safe_load(content)
+                        yaml.dump(yaml_content, f, allow_unicode=True, default_flow_style=False)
+                    except Exception:
+                        f.write(content)  # 如果不是有效的YAML，直接写入
+                else:
+                    f.write(content)
+
+            result["success"] = True
+            result["message"] = f"文件 {filename} 保存成功"
+            logger.info(result["message"])
+
+        except Exception as e:
+            result["message"] = f"保存文件时出错: {str(e)}"
+            logger.error(result["message"])
+
+        return result
+
+    def create_config_file(self, filename: str, content: str = "", file_type: str = "text") -> Dict[str, Any]:
+        """
+        创建新的配置文件
+
+        Args:
+            filename: 配置文件名
+            content: 配置文件内容
+            file_type: 文件类型 (json/yaml/text)
+        Returns:
+            操作结果字典
+        """
+        file_path = self.config_dir / filename
+        result = {
+            "success": False,
+            "message": ""
+        }
+
+        try:
+            if file_path.exists():
+                result["message"] = f"文件 {filename} 已存在"
+                return result
+
+            # 根据文件类型生成默认内容
+            if file_type.lower() == "json":
+                default_content = content if content else "{}"
+            elif file_type.lower() == "yaml":
+                default_content = content if content else "{}"
+            else:
+                default_content = content if content else ""
+
+            # 创建文件
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(default_content)
+
+            result["success"] = True
+            result["message"] = f"文件 {filename} 创建成功"
+            logger.info(result["message"])
+
+        except Exception as e:
+            result["message"] = f"创建文件时出错: {str(e)}"
+            logger.error(result["message"])
+
+        return result
+
+    def delete_config_file(self, filename: str) -> Dict[str, Any]:
+        """
+        删除配置文件
+
+        Args:
+            filename: 配置文件名
+        Returns:
+            操作结果字典
+        """
+        file_path = self.config_dir / filename
+        result = {
+            "success": False,
+            "message": ""
+        }
+
+        try:
+            if not file_path.exists():
+                result["message"] = f"文件 {filename} 不存在"
+                return result
+
+            # 创建备份后再删除
+            backup_path = file_path.with_suffix(file_path.suffix + '.deleted')
+            with open(file_path, 'r', encoding='utf-8') as src, \
+                 open(backup_path, 'w', encoding='utf-8') as dst:
+                dst.write(src.read())
+
+            file_path.unlink()
+            result["success"] = True
+            result["message"] = f"文件 {filename} 已删除，备份保存为 {backup_path.name}"
+            logger.info(result["message"])
+
+        except Exception as e:
+            result["message"] = f"删除文件时出错: {str(e)}"
+            logger.error(result["message"])
+
+        return result
+
+
+# 全局配置管理器实例
+config_manager = ConfigManager("config")
+
+
+def get_config_manager() -> ConfigManager:
+    """
+    获取全局配置管理器实例
+    Returns:
+        ConfigManager实例
+    """
+    return config_manager

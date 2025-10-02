@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}配置管理 - 自动化运维工具{% endblock %}
+
+{% block content %}
+<h2>配置管理</h2>
+
+<div class="config-actions">
+    <a href="{{ url_for('create_config') }}" class="btn btn-primary">新建配置文件</a>
+</div>
+
+<div class="config-files">
+    <h3>配置文件列表</h3>
+    {% if config_files %}
+    <table class="config-table">
+        <thead>
+            <tr>
+                <th>文件名</th>
+                <th>类型</th>
+                <th>大小(字节)</th>
+                <th>描述</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in config_files %}
+            <tr>
+                <td>{{ file.name }}</td>
+                <td>{{ file.type }}</td>
+                <td>{{ file.size }}</td>
+                <td>{{ file.description }}</td>
+                <td>
+                    <a href="{{ url_for('view_config', filename=file.name) }}" class="btn btn-small btn-info">查看</a>
+                    <a href="{{ url_for('edit_config', filename=file.name) }}" class="btn btn-small btn-warning">编辑</a>
+                    <form method="POST" action="{{ url_for('create_backup', filename=file.name) }}" style="display: inline;" onsubmit="return confirm('确定要备份 {{ file.name }} 吗？')">
+                        <button type="submit" class="btn btn-small btn-secondary">备份</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('delete_config', filename=file.name) }}" style="display: inline;" onsubmit="return confirm('确定要删除 {{ file.name }} 吗？')">
+                        <button type="submit" class="btn btn-small btn-danger">删除</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>暂无配置文件。</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.config-actions {
+    margin-bottom: 20px;
+}
+
+.config-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.config-table th,
+.config-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.config-table th {
+    background-color: #f2f2f2;
+}
+
+.config-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.btn-small {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+</style>
+{% endblock %}

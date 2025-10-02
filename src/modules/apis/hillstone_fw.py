@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class HillstoneApiClient:
     # VSYS映射关系 - 提取为类常量，避免重复定义
 

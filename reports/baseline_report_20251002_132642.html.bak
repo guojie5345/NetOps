@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>网络设备基线检查报告</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+        }
+        .timestamp {
+            text-align: right;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .device {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        .device h2 {
+            color: #2980b9;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .remediation-link {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .remediation-link:hover {
+            text-decoration: underline;
+        }
+        .remediation-content {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            margin-top: 5px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .show-remediation {
+            display: block;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            /* 设置文本自动换行 */
+            word-wrap: break-word;
+            word-break: break-all;
+            max-width: 0;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        th:nth-child(1), td:nth-child(1) {
+            text-align: left;
+            width: 20%;
+        }
+        th:nth-child(2), td:nth-child(2) {
+            text-align: center;
+            width: 20%;
+            white-space: normal;
+        }
+        th:nth-child(3), td:nth-child(3) {
+            text-align: left;
+            width: 40%;
+        }
+        th:nth-child(4), td:nth-child(4) {
+            text-align: left;
+            width: 20%;
+            white-space: normal;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .compliant {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .non-compliant {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* 返回按钮样式 */
+        .back-to-summary {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .back-to-summary:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+    <script>
+        function toggleRemediation(deviceName, ruleIndex) {
+            var content = document.getElementById('remediation-' + deviceName + '-' + ruleIndex);
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+        
+        function toggleAllRemediations(deviceIndex) {
+            var allRemediations = document.querySelectorAll('[id^="remediation-' + deviceIndex + '-"]');
+            var showAllLink = document.getElementById('show-all-' + deviceIndex);
+            var allVisible = true;
+            
+            // 检查是否所有修复建议都已显示
+            for (var i = 0; i < allRemediations.length; i++) {
+                if (allRemediations[i].style.display === 'none' || allRemediations[i].style.display === '') {
+                    allVisible = false;
+                    break;
+                }
+            }
+            
+            // 切换所有修复建议的显示状态
+            for (var i = 0; i < allRemediations.length; i++) {
+                if (allVisible) {
+                    allRemediations[i].style.display = 'none';
+                } else {
+                    allRemediations[i].style.display = 'block';
+                }
+            }
+            
+            // 更新链接文本
+            showAllLink.textContent = allVisible ? '[显示所有修复建议]' : '[隐藏所有修复建议]';
+        }
+    </script>
+</head>
+<body>
+    <a href="summary_report_20251002_132642.html" class="back-to-summary">返回汇总报告</a>
+    <h1>网络设备基线检查报告</h1>
+    <div class="timestamp">生成时间: 2025-10-02 13:26:42</div>
+    
+    <div class="device" id="192-168-80-21">
+            <h2>设备: 192.168.80.21 (192.168.80.21)</h2>        <a href="remediation_192.168.80.21_20251002_132642.txt" class="remediation-link" target="_blank" style="font-size: 16px; margin-left: 20px;">[查看修复脚本]</a>
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>规则描述</th>
+                    <th>检查结果</th>
+                    <th>实际配置</th>
+                    <th>修复建议</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>必须启用AAA认证</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>aaa new-model</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>SSH必须使用版本2</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>ip ssh version 2</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>禁用域名解析</td>
+                    <td class="non-compliant">
+                        
+                            不符合
+                        
+                    </td>
+                    <td>未找到相关配置</td>
+                    <td>
+                        
+                            <a href="javascript:void(0)" onclick="toggleRemediation('192.168.80.21', 3)" class="remediation-link">查看修复建议</a>
+                            <div id="remediation-192.168.80.21-3" class="remediation-content">
+                                # 禁用域名解析以防止误解析
+no ip domain-lookup
+                            </div>
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>密码加密必须启用</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>no service password-encryption</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>必须配置日志缓冲</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>logging buffered 131072</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>主动关闭接口检查</td>
+                    <td class="compliant">
+                        
+                            配置正常
+                        
+                    </td>
+                    <td>所有接口状态正常</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>NTP同步状态检查</td>
+                    <td class="non-compliant">
+                        
+                            不符合
+                        
+                    </td>
+                    <td>Clock is unsynchronized, stratum 16, no reference clock
+nominal freq is 250.0000 Hz, actual freq is 250.0000 Hz, precision is 2**10
+ntp uptime is 357500 (1/100 of seconds), resolution is 4000
+reference time is 00000000.00000000 (08:00:00.000 CHN Mon Jan 1 1900)
+clock offset is 0.0000 msec, root delay is 0.00 msec
+root dispersion is 53.64 msec, peer dispersion is 0.00 msec
+loopfilter state is 'FSET' (Drift set from file), drift is 0.000000000 s/s
+system poll interval is 8, never updated.</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="device" id="192-168-80-22">
+            <h2>设备: 192.168.80.22 (192.168.80.22)</h2>        <a href="remediation_192.168.80.22_20251002_132642.txt" class="remediation-link" target="_blank" style="font-size: 16px; margin-left: 20px;">[查看修复脚本]</a>
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>规则描述</th>
+                    <th>检查结果</th>
+                    <th>实际配置</th>
+                    <th>修复建议</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>必须启用AAA认证</td>
+                    <td class="non-compliant">
+                        
+                            不符合
+                        
+                    </td>
+                    <td>no aaa new-model</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>SSH必须使用版本2</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>ip ssh version 2</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>禁用域名解析</td>
+                    <td class="non-compliant">
+                        
+                            不符合
+                        
+                    </td>
+                    <td>未找到相关配置</td>
+                    <td>
+                        
+                            <a href="javascript:void(0)" onclick="toggleRemediation('192.168.80.22', 3)" class="remediation-link">查看修复建议</a>
+                            <div id="remediation-192.168.80.22-3" class="remediation-content">
+                                # 禁用域名解析以防止误解析
+no ip domain-lookup
+                            </div>
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>密码加密必须启用</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>no service password-encryption</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>必须配置日志缓冲</td>
+                    <td class="compliant">
+                        
+                            符合
+                        
+                    </td>
+                    <td>logging buffered 131072</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>主动关闭接口检查</td>
+                    <td class="compliant">
+                        
+                            配置正常
+                        
+                    </td>
+                    <td>所有接口状态正常</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>NTP同步状态检查</td>
+                    <td class="non-compliant">
+                        
+                            不符合
+                        
+                    </td>
+                    <td>Clock is unsynchronized, stratum 16, no reference clock
+nominal freq is 250.0000 Hz, actual freq is 250.0000 Hz, precision is 2**10
+ntp uptime is 357300 (1/100 of seconds), resolution is 4000
+reference time is 00000000.00000000 (08:00:00.000 CHN Mon Jan 1 1900)
+clock offset is 0.0000 msec, root delay is 0.00 msec
+root dispersion is 53.59 msec, peer dispersion is 0.00 msec
+loopfilter state is 'FSET' (Drift set from file), drift is 0.000000000 s/s
+system poll interval is 8, never updated.</td>
+                    <td>
+                        
+                            无
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

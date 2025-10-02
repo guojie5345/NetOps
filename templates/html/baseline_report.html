@@ -172,7 +172,8 @@
     <div class="timestamp">生成时间: {{ timestamp }}</div>
     {% for device in devices %}
     <div class="device" id="{{ device.name|replace('.', '-') }}">
-            <h2>设备: {{ device.name }} ({{device.hostname}})</h2>        <a href="remediation_{{ device.name }}_{{ timestamp.replace('-', '').replace(' ', '_').replace(':', '') }}.txt" class="remediation-link" target="_blank" style="font-size: 16px; margin-left: 20px;">[查看修复脚本]</a>
+        <h2>设备: {{ device.name }} ({{device.hostname}})
+            <a href="remediation_{{ device.name }}_{{ timestamp.replace('-', '').replace(' ', '_').replace(':', '') }}.txt" class="remediation-link" style="font-size: 16px; margin-left: 20px;">[查看修复脚本]</a>
         </h2>
         <table>
             <thead>
@@ -197,7 +198,7 @@
                     <td>{{ check.actual_config }}</td>
                     <td>
                         {% if not check.compliant and check.remediation and check.remediation not in ['无', '无修复建议'] %}
-                            <a href="javascript:void(0)" onclick="toggleRemediation('{{ device.name }}', {{ loop.index }})" class="remediation-link">查看修复建议</a>
+                            <a href="javascript:void(0)" onclick="toggleRemediation('{{ device.name }}', '{{ loop.index }}')" class="remediation-link">查看修复建议</a>
                             <div id="remediation-{{ device.name }}-{{ loop.index }}" class="remediation-content">
                                 {{ check.remediation|trim }}
                             </div>

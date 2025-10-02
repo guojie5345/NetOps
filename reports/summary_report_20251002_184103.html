@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>网络设备基线检查汇总报告</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+        }
+        .timestamp {
+            text-align: right;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .summary-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .device-summary {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+        }
+        .device-summary:hover {
+            background-color: #f0f8ff;
+            cursor: pointer;
+        }
+        .device-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        .device-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 5px 10px;
+        }
+        .compliant-count {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .non-compliant-count {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .device-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .device-link:hover {
+            text-decoration: underline;
+        }
+        .report-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .report-link:hover {
+            background-color: #2980b9;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .compliant {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .non-compliant {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* 返回按钮样式 */
+        .back-to-reports {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-to-reports:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>网络设备基线检查汇总报告</h1>
+    <div class="timestamp">生成时间: 2025-10-02 18:41:03</div>
+    
+    <div class="summary-container">
+        <h2>检查概览</h2>
+        <div class="device-stats">
+            <div class="stat-item">
+                <div>总设备数</div>
+                <div style="font-size: 24px; font-weight: bold;">2</div>
+            </div>
+            <div class="stat-item">
+                <div>合规设备数</div>
+                <div class="compliant-count" style="font-size: 24px; font-weight: bold;">0</div>
+            </div>
+            <div class="stat-item">
+                <div>不合规设备数</div>
+                <div class="non-compliant-count" style="font-size: 24px; font-weight: bold;">2</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="summary-container">
+        <h2>设备详情</h2>
+        
+        <div class="device-summary" onclick="window.open('baseline_report_20251002_184103.html#192-168-80-21', '_blank')">
+            <div class="device-header" id="192-168-80-21">设备: 192.168.80.21</div>
+            <div class="device-stats">
+                <div class="stat-item">
+                    <div>检查项总数</div>
+                    <div style="font-size: 20px; font-weight: bold;">7</div>
+                </div>
+                <div class="stat-item">
+                    <div>合规项</div>
+                    <div class="compliant-count" style="font-size: 20px; font-weight: bold;">1</div>
+                </div>
+                <div class="stat-item">
+                    <div>不合规项</div>
+                    <div class="non-compliant-count" style="font-size: 20px; font-weight: bold;">6</div>
+                </div>
+            </div>
+            <a href="baseline_report_20251002_184103.html#192-168-80-21" class="report-link" target="_blank">查看详细报告</a>
+        </div>
+        
+        <div class="device-summary" onclick="window.open('baseline_report_20251002_184103.html#192-168-80-22', '_blank')">
+            <div class="device-header" id="192-168-80-22">设备: 192.168.80.22</div>
+            <div class="device-stats">
+                <div class="stat-item">
+                    <div>检查项总数</div>
+                    <div style="font-size: 20px; font-weight: bold;">7</div>
+                </div>
+                <div class="stat-item">
+                    <div>合规项</div>
+                    <div class="compliant-count" style="font-size: 20px; font-weight: bold;">1</div>
+                </div>
+                <div class="stat-item">
+                    <div>不合规项</div>
+                    <div class="non-compliant-count" style="font-size: 20px; font-weight: bold;">6</div>
+                </div>
+            </div>
+            <a href="baseline_report_20251002_184103.html#192-168-80-22" class="report-link" target="_blank">查看详细报告</a>
+        </div>
+        
+    </div>
+    
+    <!-- 返回报告页面按钮 -->
+    <a href="/reports" class="back-to-reports">返回报告页面</a>
+</body>
+</html>

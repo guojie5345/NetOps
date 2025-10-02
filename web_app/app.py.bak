@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+自动化运维工具Web应用程序
+"""
+
+import os
+import sys
+import json
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+
+# 将项目根目录添加到Python路径中
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# 导入基线检查模块
+try:
+    from src.modules.baseline.check_baseline import BaselineChecker
+    from src.modules.baseline.generate_summary_report import generate_summary_report_from_data
+except ImportError as e:
+    print(f"导入模块时出错: {e}")
+    BaselineChecker = None
+    generate_summary_report_from_data = None
+
+# 导入配置管理模块
+try:
+    from web_app.configs import get_config_manager
+    config_manager = get_config_manager()
+except ImportError as e:
+    print(f"导入配置管理模块时出错: {e}")
+    config_manager = None
+
+app = Flask(__name__,
+            template_folder='templates',
+            static_folder='static')
+
+# 配置
+app.config['SECRET_KEY'] = 'your-secret_key_here'
+# 使用项目根目录下的reports文件夹，与check_baseline.py保持一致
+app.config['REPORTS_DIR'] = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'reports')
+
+@app.route('/')
+def index():
+    """主页"""
+    return render_template('index.html')
+
+@app.route('/devices')
+def devices():
+    """设备管理页面"""
+    # 这里应该从配置文件或数据库中读取设备信息
+    # 为了简化，我们使用硬编码的数据
+    device_list = [
+        {'ip': '192.168.80.21', 'name': 'Device 1'},
+        {'ip': '192.168.80.22', 'name': 'Device 2'}
+    ]
+    return render_template('devices.html',
+                           devices=device_list)
+
+@app.route('/reports')
+def reports():
+    """报告页面"""
+    # 获取报告目录中的所有文件
+    reports_dir = app.config['REPORTS_DIR']
+    if not os.path.exists(reports_dir):
+        report_files = []
+    else:
+        report_files = [f for f in os.listdir(reports_dir) if os.path.isfile(os.path.join(reports_dir, f))]
+    
+    return render_template('reports.html',
+                           reports=report_files)
+
+@app.route('/reports/<path:filename>')
+def download_report(filename):
+    """下载报告文件"""
+    return send_from_directory(app.config['REPORTS_DIR'], filename, as_attachment=True)
+
+@app.route('/baseline_check', methods=['GET', 'POST'])
+def baseline_check():
+    """基线检查页面"""
+    if request.method == 'POST':
+        # 获取表单数据
+        device_ip = request.form.get('device_ip')
+        username = request.form.get('username')
+        password = request.form.get('password')
+        device_type = request.form.get('device_type', 'hillstone')
+        
+        if not all([device_ip, username, password]):
+            return render_template('baseline_check.html', 
+                                   error="请填写所有必填字段")
+        
+        try:
+            # 执行基线检查
+            checker = BaselineChecker(device_ip, username, password, device_type)
+            check_results = checker.run_all_checks()
+            
+            # 生成摘要报告
+            summary_data = {
+                'device_info': {
+                    'ip': device_ip,
+                    'type': device_type
+                },
+                'check_results': check_results
+            }
+            
+            # 生成报告文件
+            report_file = generate_summary_report_from_data(summary_data)
+            
+            return render_template('baseline_check.html', 
+                                   results=check_results,
+                                   device_ip=device_ip,
+                                   report_file=report_file)
+        except Exception as e:
+            return render_template('baseline_check.html', 
+                                   error=f"检查过程中出错: {str(e)}")
+    
+    return render_template('baseline_check.html')
+
+# 配置管理路由
+@app.route('/config')
+def config():
+    """配置管理页面"""
+    if config_manager is None:
+        return "配置管理模块未正确加载", 500
+    
+    # 获取配置文件列表
+    config_files = config_manager.list_config_files()
+    return render_template('config.html',
+                           config_files=config_files)
+
+@app.route('/config/view/<path:filename>')
+def view_config(filename):
+    """查看配置文件"""
+    if config_manager is None:
+        return "配置管理模块未正确加载", 500
+    
+    result = config_manager.read_config_file(filename)
+    if result["success"]:
+        return render_template('config_view.html',
+                               filename=filename,
+                               content=result["content"],
+                               file_type=result["type"])
+    else:
+        return result["message"], 404
+
+@app.route('/config/edit/<path:filename>', methods=['GET', 'POST'])
+def edit_config(filename):
+    """编辑配置文件"""
+    if config_manager is None:
+        return "配置管理模块未正确加载", 500
+    
+    if request.method == 'POST':
+        content = request.form.get('content', '')
+        result = config_manager.save_config_file(filename, content)
+        return json.dumps(result), 200, {'ContentType':'application/json'}
+    else:
+        result = config_manager.read_config_file(filename)
+        if result["success"]:
+            return render_template('config_edit.html',
+                                   filename=filename,
+                                   content=result["content"],
+                                   file_type=result["type"])
+        else:
+            return result["message"], 404
+
+@app.route('/config/create', methods=['GET', 'POST'])
+def create_config():
+    """创建配置文件"""
+    if config_manager is None:
+        return "配置管理模块未正确加载", 500
+    
+    if request.method == 'POST':
+        filename = request.form.get('filename')
+        file_type = request.form.get('file_type', 'text')
+        content = request.form.get('content', '')
+        
+        if not filename:
+            return json.dumps({"success": False, "message": "文件名不能为空"}), 400, {'ContentType':'application/json'}
+        
+        result = config_manager.create_config_file(filename, content, file_type)
+        return json.dumps(result), 200, {'ContentType':'application/json'}
+    
+    return render_template('config_create.html')
+
+@app.route('/config/delete/<path:filename>', methods=['POST'])
+def delete_config(filename):
+    """删除配置文件"""
+    if config_manager is None:
+        return "配置管理模块未正确加载", 500
+    
+    result = config_manager.delete_config_file(filename)
+    return json.dumps(result), 200, {'ContentType':'application/json'}
+
+@app.route('/config/backup/<path:filename>', methods=['POST'])
+def create_backup(filename):
+    """创建配置文件备份"""
+    if config_manager is None:
+        return "配置管理模块未正确加载", 500
+    
+    try:
+        # 创建备份文件
+        from pathlib import Path
+        import shutil
+        
+        config_dir = Path("config")
+        original_file = config_dir / filename
+        backup_file = config_dir / f"{filename}.bak"
+        
+        if not original_file.exists():
+            return json.dumps({"success": False, "message": f"文件 {filename} 不存在"}), 404, {'ContentType':'application/json'}
+        
+        # 复制文件作为备份
+        shutil.copy2(original_file, backup_file)
+        
+        return json.dumps({"success": True, "message": f"文件 {filename} 备份成功"}), 200, {'ContentType':'application/json'}
+    except Exception as e:
+        return json.dumps({"success": False, "message": f"备份文件时出错: {str(e)}"}), 500, {'ContentType':'application/json'}
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # _*_ coding:utf-8 _*_
 # @Project  :DevOps
 # @FileName :api返回数据调试.py

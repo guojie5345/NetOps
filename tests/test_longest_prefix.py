@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import ipaddress
 
 # 模拟network_group_mapping配置

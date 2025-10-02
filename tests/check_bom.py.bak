@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import codecs
+import os
+
+def check_bom(file_path):
+    """检查文件是否有BOM"""
+    with open(file_path, 'rb') as f:
+        first_bytes = f.read(3)
+        has_bom = first_bytes.startswith(codecs.BOM_UTF8)
+        return has_bom
+
+def check_project_files_bom(root_dir):
+    """检查项目中所有Python和HTML文件是否有BOM"""
+    for root, dirs, files in os.walk(root_dir):
+        # 跳过虚拟环境和缓存目录
+        dirs[:] = [d for d in dirs if d not in ['.venv', '__pycache__', '.pytest_cache']]
+        
+        for file in files:
+            if file.endswith(('.py', '.html')):
+                file_path = os.path.join(root, file)
+                try:
+                    has_bom = check_bom(file_path)
+                    if has_bom:
+                        print(f"{file_path}: Has BOM")
+                except Exception as e:
+                    print(f"{file_path}: Error - {e}")
+
+if __name__ == "__main__":
+    project_root = r"E:\Development\Python\NetOps"
+    check_project_files_bom(project_root)

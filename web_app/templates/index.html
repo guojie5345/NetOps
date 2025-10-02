@@ -17,8 +17,12 @@
         </div>
         
         <div class="feature-card">
-            <h3>信息处理</h3>
-            <p>将采集后的信息转换为可用于后续处理的格式</p>
+            <h3>基线检查</h3>
+            <p>对设备进行基线合规性检查</p>
+            <div class="feature-buttons">
+                <a href="{{ url_for('baseline_check') }}" class="btn btn-primary">开始检查</a>
+                <a href="{{ url_for('reports') }}" class="btn btn-secondary">查看报告</a>
+            </div>
         </div>
         
         <div class="feature-card">
@@ -45,11 +49,6 @@
             <h3>自动报警</h3>
             <p>自动报警当服务器或应用程序出现问题时</p>
         </div>
-    </div>
-    
-    <div class="cta">
-        <a href="{{ url_for('baseline_check') }}" class="btn btn-primary">开始基线检查</a>
-        <a href="{{ url_for('reports') }}" class="btn btn-secondary">查看报告</a>
     </div>
 </div>
 {% endblock %}

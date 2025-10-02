@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}报告查看 - 自动化运维工具{% endblock %}
+
+{% block content %}
+<h2>报告查看</h2>
+
+<div class="report-section">
+    <h3>汇总报告</h3>
+    {% if summary_reports %}
+    <ul class="report-list">
+        {% for report in summary_reports %}
+        <li>
+            <a href="{{ url_for('report_file', filename=report) }}" target="_blank">{{ report }}</a>
+            <span class="report-date">{{ report.split('_')[-1].split('.')[0] }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>暂无汇总报告。</p>
+    {% endif %}
+</div>
+
+<div class="report-section">
+    <h3>详细HTML报告</h3>
+    {% if html_reports %}
+    <ul class="report-list">
+        {% for report in html_reports %}
+        <li>
+            <a href="{{ url_for('report_file', filename=report) }}" target="_blank">{{ report }}</a>
+            <span class="report-date">{{ report.split('_')[-1].split('.')[0] }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>暂无详细HTML报告。</p>
+    {% endif %}
+</div>
+
+<div class="report-section">
+    <h3>Excel报告</h3>
+    {% if excel_reports %}
+    <ul class="report-list">
+        {% for report in excel_reports %}
+        <li>
+            <a href="{{ url_for('report_file', filename=report) }}">{{ report }}</a>
+            <span class="report-date">{{ report.split('_')[-1].split('.')[0] }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>暂无Excel报告。</p>
+    {% endif %}
+</div>
+{% endblock %}
