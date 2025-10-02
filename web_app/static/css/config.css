@@ -1,0 +1,304 @@
+.config-files-list {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.config-files-list h4 {
+    margin-top: 0;
+    color: #495057;
+    font-weight: 600;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    table-layout: fixed;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    padding: 20px 18px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* 列宽定义 */
+.filename-col {
+    width: 35%;
+    white-space: normal;
+    overflow: visible;
+    word-wrap: break-word;
+    max-width: 0;
+}
+
+.size-col {
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.date-col {
+    width: 15%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.action-col {
+    width: 45%;
+    white-space: nowrap;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #fff;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.btn-sm {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    margin: 0 3px;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-sm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-sm:active {
+    transform: translateY(0);
+}
+
+/* 渐变按钮样式 */
+.btn-gradient {
+    background: linear-gradient(45deg, #007bff, #00bcd4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #0056b3, #008ba3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+.btn-gradient.warning {
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+}
+
+.btn-gradient.warning:hover {
+    background: linear-gradient(45deg, #e68900, #e64a19);
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.action-btn {
+    min-width: 55px;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 0;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.config-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.config-section h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+.button-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* 表格列拖动样式 */
+.resizable-table {
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.resizable-col {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 固化列宽设置 - 基于当前调整后的宽度 */
+.filename-col {
+    width: 367px !important;
+    min-width: 367px !important;
+}
+
+.size-col {
+    width: 142px !important;
+    min-width: 142px !important;
+}
+
+.date-col {
+    width: 247px !important;
+    min-width: 247px !important;
+}
+
+.action-col {
+    /* 操作列宽度自动计算，不设置固定宽度 */
+    min-width: 300px !important; /* 设置最小宽度确保操作按钮有足够空间 */
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background: transparent;
+    cursor: col-resize;
+    z-index: 1;
+}
+
+.resize-handle:hover {
+    background-color: #007bff;
+}
+
+.resize-handle.active {
+    background-color: #0056b3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .resizable-table {
+        table-layout: auto;
+    }
+    
+    .resizable-col {
+        position: static;
+    }
+    
+    .resize-handle {
+        display: none;
+    }
+    
+    .table th, .table td {
+        padding: 15px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    
+    .action-btn {
+        margin-bottom: 5px;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .config-section {
+        padding: 15px;
+    }
+    
+    /* 在小屏幕上调整列宽 */
+    .filename-col {
+        width: 35%;
+    }
+    
+    .size-col {
+        width: 10%;
+    }
+    
+    .date-col {
+        width: 15%;
+    }
+    
+    .action-col {
+        width: 40%;
+    }
+}
+
+/* 响应式设计 - 中等屏幕 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .resizable-table {
+        table-layout: fixed;
+    }
+    
+    .filename-col {
+        width: 35%;
+    }
+    
+    .size-col {
+        width: 10%;
+    }
+    
+    .date-col {
+        width: 15%;
+    }
+    
+    .action-col {
+        width: 40%;
+    }
+}

@@ -1,0 +1,155 @@
+# 修复建议配置文件
+# 该文件定义了不同平台设备的修复建议
+
+# 通用修复建议（适用于所有平台）
+common:
+  "no radius scheme":
+    description: "配置RADIUS服务器地址（请替换为实际的RADIUS服务器IP）"
+    suggestion: |
+      # 配置RADIUS服务器地址（请替换为实际的RADIUS服务器IP）
+      radius server 192.168.1.1
+  "no info-center loghost":
+    description: "配置日志服务器地址（请替换为实际的日志服务器IP）"
+    suggestion: |
+      # 配置日志服务器地址（请替换为实际的日志服务器IP）
+      info-center loghost 192.168.1.1
+  "no ntp-service unicast-server":
+    description: "配置NTP服务器地址（请替换为实际的NTP服务器IP）"
+    suggestion: |
+      # 配置NTP服务器地址（请替换为实际的NTP服务器IP）
+      ntp server 192.168.1.1
+  "no aaa new-model":
+    description: "启用AAA认证"
+    suggestion: |
+      # 启用AAA认证框架
+      aaa new-model
+  "no login":
+    description: "配置控制台登录认证"
+    suggestion: |
+      # 配置控制台登录认证
+      line console 0
+       login
+       password YourConsolePassword
+  "no enable secret":
+    description: "配置特权模式密码"
+    suggestion: |
+      # 配置特权模式密码
+      enable secret YourEnablePassword
+  "no ip ssh version":
+    description: "配置SSH版本"
+    suggestion: |
+      # 配置SSH版本以提高安全性
+      ip ssh version 2
+  "no access-list":
+    description: "配置访问控制列表"
+    suggestion: |
+      # 配置访问控制列表以限制访问（请根据实际需求调整规则）
+      access-list 1 permit 192.168.1.0 0.0.0.255
+      access-list 1 deny any
+  "interface shutdown":
+    description: "关闭未使用的接口"
+    suggestion: |
+      # 关闭未使用的接口以提高安全性
+      interface [interface-name]
+       shutdown
+
+cisco_ios:
+  "no ip domain-lookup":
+    description: "禁用域名解析以防止误解析"
+    suggestion: |
+      # 禁用域名解析以防止误解析
+      no ip domain-lookup
+  "service password-encryption":
+    description: "启用密码加密"
+    suggestion: |
+      # 启用密码加密功能
+      service password-encryption
+  "no logging console":
+    description: "启用控制台日志记录"
+    suggestion: |
+      # 启用控制台日志记录
+      logging console
+  "no logging buffered":
+    description: "启用缓冲日志记录"
+    suggestion: |
+      # 启用缓冲日志记录
+      logging buffered
+  "no ip http server":
+    description: "禁用HTTP服务器"
+    suggestion: |
+      # 禁用HTTP服务器以提高安全性
+      no ip http server
+  "no snmp-server":
+    description: "禁用SNMP服务器"
+    suggestion: |
+      # 禁用SNMP服务器以提高安全性
+      no snmp-server
+  "no cdp run":
+    description: "禁用CDP协议"
+    suggestion: |
+      # 禁用CDP协议以提高安全性
+      no cdp run
+  "no lldp run":
+    description: "禁用LLDP协议"
+    suggestion: |
+      # 禁用LLDP协议以提高安全性
+      no lldp run
+
+huawei_vrp:
+  "no stelnet server enable":
+    description: "启用SSH服务器"
+    suggestion: |
+      # 启用SSH服务器
+      stelnet server enable
+  "no info-center loghost":
+    description: "配置日志服务器"
+    suggestion: |
+      # 配置日志服务器
+      info-center loghost 192.168.1.1
+
+hp_comware:
+  "no password hash":
+    description: "配置用户密码密文"
+    suggestion: |
+      # 配置用户密码密文
+      password hash
+  "no radius scheme":
+    description: "配置RADIUS服务器"
+    suggestion: |
+      # 配置RADIUS服务器
+      radius scheme
+  "no info-center loghost":
+    description: "配置日志服务器"
+    suggestion: |
+      # 配置日志服务器
+      info-center loghost 192.168.1.1
+  "no ntp-service unicast-server":
+    description: "配置NTP服务器"
+    suggestion: |
+      # 配置NTP服务器
+      ntp-service unicast-server 192.168.1.1
+  "no ssh server enable":
+    description: "启用SSH服务器"
+    suggestion: |
+      # 启用SSH服务器
+      ssh server enable
+  "no acl number 3000":
+    description: "配置SSH ACL规则"
+    suggestion: |
+      # 配置SSH ACL规则
+      acl number 3000
+  "no ssh server acl 3000":
+    description: "启用SSH ACL规则"
+    suggestion: |
+      # 启用SSH ACL规则
+      ssh server acl 3000
+  "no idle-timeout":
+    description: "配置SSH会话超时时间"
+    suggestion: |
+      # 配置SSH会话超时时间
+      idle-timeout
+  "no snmp-server community read":
+    description: "配置只读SNMP社区字符串"
+    suggestion: |
+      # 配置只读SNMP社区字符串
+      snmp-server community read

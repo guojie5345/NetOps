@@ -29,7 +29,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 # 从 collection -> modules -> src -> NetOps (项目根目录)
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
 # 命令配置文件路径
-COMMANDS_CONFIG_PATH = os.path.join(project_root, 'config', 'device_commands.json')
+COMMANDS_CONFIG_PATH = os.path.join(project_root, 'config', 'device', 'device_commands.json')
 
 # 添加调试日志以便诊断路径问题
 logger.debug(f"当前文件目录: {current_dir}")

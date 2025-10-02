@@ -14832,3 +14832,1522 @@ service password-encryption
 2025-10-02 18:44:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:44:47] "GET /config HTTP/1.1" 200 -
 2025-10-02 18:44:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:44:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-10-02 18:44:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:44:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:52:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:52:19] "GET / HTTP/1.1" 200 -
+2025-10-02 18:52:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:52:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:52:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:52:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:53:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:53:57] "GET /config HTTP/1.1" 200 -
+2025-10-02 18:53:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:53:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:53:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:53:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:54:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:27] "GET /?ide_webview_request_time=1759402467421 HTTP/1.1" 200 -
+2025-10-02 18:54:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:54:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:54:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:27] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 18:54:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:35] "GET / HTTP/1.1" 200 -
+2025-10-02 18:54:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:54:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:54:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:36] "GET /config HTTP/1.1" 200 -
+2025-10-02 18:54:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:54:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:54:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:57:10 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\web_app\\app.py', reloading
+2025-10-02 18:57:10 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 18:57:11 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 18:57:11 - werkzeug - INFO -  * Debugger PIN: 162-768-907
+2025-10-02 18:57:26 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 18:57:26 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 18:57:26 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 18:57:27 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 18:57:27 - werkzeug - INFO -  * Debugger PIN: 162-768-907
+2025-10-02 18:57:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:32] "GET / HTTP/1.1" 200 -
+2025-10-02 18:57:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:57:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:57:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:33] "GET /config HTTP/1.1" 200 -
+2025-10-02 18:57:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:33] "GET /config?ide_webview_request_time=1759402653980 HTTP/1.1" 200 -
+2025-10-02 18:57:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:57:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:57:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:34] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 18:57:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:57:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:57:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:37] "[35m[1mGET /config/view_device HTTP/1.1[0m" 500 -
+2025-10-02 18:57:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:37] "GET /config/view_device?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-02 18:57:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:37] "GET /config/view_device?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-02 18:57:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:38] "GET /config/view_device?__debugger__=yes&cmd=resource&f=console.png&s=7YWdNgCZh08P9jZG2LCS HTTP/1.1" 200 -
+2025-10-02 18:57:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:38] "GET /config/view_device?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-02 18:57:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:45] "GET /config?ide_webview_request_time=1759402665298 HTTP/1.1" 200 -
+2025-10-02 18:57:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:57:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:57:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:45] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 18:57:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:47] "[35m[1mGET /config/view_device?ide_webview_request_time=1759402667481 HTTP/1.1[0m" 500 -
+2025-10-02 18:57:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:47] "GET /config/view_device?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-02 18:57:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:47] "GET /config/view_device?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-02 18:57:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:47] "GET /config/view_device?__debugger__=yes&cmd=resource&f=console.png&s=7YWdNgCZh08P9jZG2LCS HTTP/1.1" 200 -
+2025-10-02 18:57:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:57:47] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 18:58:05 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 18:58:05 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 18:58:05 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 18:58:06 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 18:58:06 - werkzeug - INFO -  * Debugger PIN: 162-768-907
+2025-10-02 18:58:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:13] "GET /config?ide_webview_request_time=1759402693888 HTTP/1.1" 200 -
+2025-10-02 18:58:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:58:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 18:58:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:13] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 18:58:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:16] "[35m[1mGET /config/view_device?ide_webview_request_time=1759402696347 HTTP/1.1[0m" 500 -
+2025-10-02 18:58:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:16] "[36mGET /config/view_device?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-02 18:58:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:16] "[36mGET /config/view_device?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-02 18:58:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:16] "GET /config/view_device?__debugger__=yes&cmd=resource&f=console.png&s=JTMJXvkbXe1wdHsG8Cy5 HTTP/1.1" 200 -
+2025-10-02 18:58:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 18:58:16] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:00:18 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:00:18 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:00:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:27] "GET / HTTP/1.1" 200 -
+2025-10-02 19:00:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:28] "GET /config/view_device?ide_webview_request_time=1759402737099 HTTP/1.1" 200 -
+2025-10-02 19:00:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:28] "GET /config/view_device?ide_webview_request_time=1759402737099 HTTP/1.1" 200 -
+2025-10-02 19:00:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:28] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:00:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:30] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:00:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:31 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:31] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:00:31 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:31 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:36] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:00:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:38] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:00:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:42 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:42] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:00:42 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:42 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:00:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:55] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:00:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:00:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:00:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:01:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:01] "GET /config/view_device?ide_webview_request_time=1759402861478 HTTP/1.1" 200 -
+2025-10-02 19:01:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:01:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:01:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:01] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:01:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:05] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:01:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:01:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:01:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:19:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:46] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:19:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:19:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:19:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:47] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:19:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:19:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:19:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:52] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:19:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:19:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:19:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:21:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:21:35] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:21:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:21:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:21:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:21:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:22:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:22:49] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:22:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:22:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:22:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:22:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:25:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:05] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:25:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:25:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:25:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:06] "GET /config/view_device HTTP/1.1" 200 -
+2025-10-02 19:25:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:25:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:25:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:40] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:25:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:25:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:25:52 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:25:52 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:25:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:57] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:25:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:25:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:25:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:58] "GET /config/view_device?ide_webview_request_time=1759402861478 HTTP/1.1" 200 -
+2025-10-02 19:25:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:58] "GET /config/view_device?ide_webview_request_time=1759402861478 HTTP/1.1" 200 -
+2025-10-02 19:25:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:58] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:25:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:25:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:25:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:25:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:59] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:25:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:25:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:05] "GET /config/view/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:26:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:11] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:26:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:12] "GET /config/view/device_mapping_config.json HTTP/1.1" 200 -
+2025-10-02 19:26:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:17] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:26:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:33] "GET /config/view/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:26:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:45] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:26:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:48] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:26:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:26:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:49] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:26:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:26:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:26:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:10] "GET /config/view/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:27:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:16] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:27:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:27:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:27:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:17] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:27:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:27:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:27:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:18] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:27:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:27:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:27:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:22] "GET /config/device HTTP/1.1" 200 -
+2025-10-02 19:27:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:27:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:27:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:29:22 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:29:22 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:29:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:29:28] "GET /config?ide_webview_request_time=1759404568477 HTTP/1.1" 200 -
+2025-10-02 19:29:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:29:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:29:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:29:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:29:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:29:28] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:31:47 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:31:47 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:31:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:52] "[32mGET /config/device HTTP/1.1[0m" 302 -
+2025-10-02 19:31:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:52] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:31:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:31:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:31:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:53] "GET /config?ide_webview_request_time=1759404568477 HTTP/1.1" 200 -
+2025-10-02 19:31:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:53] "GET /config?ide_webview_request_time=1759404568477 HTTP/1.1" 200 -
+2025-10-02 19:31:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:31:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:31:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:53] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:31:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:57] "GET /config/view/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:31:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:31:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:31:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:35:08 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:35:08 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:35:09 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:09] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:35:09 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:35:09 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:35:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:17] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:35:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:35:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:35:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:25] "GET /config/edit/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:35:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:35:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:35:27 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:35:27 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:35:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:34] "GET /config?ide_webview_request_time=1759404934398 HTTP/1.1" 200 -
+2025-10-02 19:35:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:35:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:35:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:34] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:35:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:34] "POST /config/backup/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:35:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:37] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:35:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:35:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:35:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:46] "POST /config/restore/device_commands.json HTTP/1.1" 200 -
+2025-10-02 19:35:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:50] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:35:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:35:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:35:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:38:00 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:38:00 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:38:09 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:09] "GET /config?ide_webview_request_time=1759404934398 HTTP/1.1" 200 -
+2025-10-02 19:38:09 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:09] "GET /config?ide_webview_request_time=1759404934398 HTTP/1.1" 200 -
+2025-10-02 19:38:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:10] "GET /config?ide_webview_request_time=1759405090008 HTTP/1.1" 200 -
+2025-10-02 19:38:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:38:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:38:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:38:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:38:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:10] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:38:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:14] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:38:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:38:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:38:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:28] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:38:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:38:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:28] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:38:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:38:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:38:29] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-10-02 19:39:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:39:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:40:29 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:40:29 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:40:31 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:31] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:40:31 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:40:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:40:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:36] "GET /config?ide_webview_request_time=1759405236130 HTTP/1.1" 200 -
+2025-10-02 19:40:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:40:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:40:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:36] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:40:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:54] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:40:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:40:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:40:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:42:49 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:42:49 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:42:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:49] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:42:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:42:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:42:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:55] "GET /config?ide_webview_request_time=1759405375393 HTTP/1.1" 200 -
+2025-10-02 19:42:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:42:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:42:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:42:55] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:46:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:08] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:46:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:46:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:46:09 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:46:09 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:46:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:15] "GET /config?ide_webview_request_time=1759405575824 HTTP/1.1" 200 -
+2025-10-02 19:46:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:46:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:46:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:46:15] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:47:26 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:47:26] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:47:26 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:47:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:47:26 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:47:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:53:00 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:53:00 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:53:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:05] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:53:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:53:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:53:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:07] "GET /config?ide_webview_request_time=1759405987090 HTTP/1.1" 200 -
+2025-10-02 19:53:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:53:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:53:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:07] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:53:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:14] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:53:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:53:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:53:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:55:19 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:55:19 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:55:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:55:32] "[33mGET /test_css?ide_webview_request_time=1759406132590 HTTP/1.1[0m" 404 -
+2025-10-02 19:55:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:55:32] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:55:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:55:53] "[33mGET /test_css?ide_webview_request_time=1759406153091 HTTP/1.1[0m" 404 -
+2025-10-02 19:55:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:55:53] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:56:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:01] "GET /config?ide_webview_request_time=1759406161262 HTTP/1.1" 200 -
+2025-10-02 19:56:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:56:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:56:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:01] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:56:16 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:56:16 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:56:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:27] "GET /config?ide_webview_request_time=1759406187074 HTTP/1.1" 200 -
+2025-10-02 19:56:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:56:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:56:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:27] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:56:48 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:56:48 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:56:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:58] "GET /config?ide_webview_request_time=1759406218491 HTTP/1.1" 200 -
+2025-10-02 19:56:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:56:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:56:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:56:58] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:57:12 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:57:12 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:57:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:22] "GET /config?ide_webview_request_time=1759406242338 HTTP/1.1" 200 -
+2025-10-02 19:57:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:57:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:57:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:22] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:57:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:50] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:57:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:57:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:57:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:58:04 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:58:04 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:58:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:14] "GET /config?ide_webview_request_time=1759406294378 HTTP/1.1" 200 -
+2025-10-02 19:58:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:58:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:58:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:14] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:58:35 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:58:35 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:58:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:49] "GET /config?ide_webview_request_time=1759406329263 HTTP/1.1" 200 -
+2025-10-02 19:58:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:58:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:58:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:58:49] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:59:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:14] "GET /config HTTP/1.1" 200 -
+2025-10-02 19:59:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:59:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:59:27 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:59:27 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:59:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:34] "[33mGET /test_table?ide_webview_request_time=1759406374804 HTTP/1.1[0m" 404 -
+2025-10-02 19:59:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:34] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:59:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:36] "GET /config?ide_webview_request_time=1759406376910 HTTP/1.1" 200 -
+2025-10-02 19:59:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:59:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:59:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:36] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 19:59:48 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 19:59:48 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 19:59:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:57] "GET /config?ide_webview_request_time=1759406397738 HTTP/1.1" 200 -
+2025-10-02 19:59:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 19:59:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 19:59:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 19:59:57] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:00:33 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:00:33 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:00:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:45] "[33mGET /debug_table?ide_webview_request_time=1759406445151 HTTP/1.1[0m" 404 -
+2025-10-02 20:00:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:45] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:00:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:48] "GET /config?ide_webview_request_time=1759406448817 HTTP/1.1" 200 -
+2025-10-02 20:00:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:00:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:00:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:48] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:00:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:59] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:00:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:00:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:01:00 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:01:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:33] "GET / HTTP/1.1" 200 -
+2025-10-02 20:01:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:01:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:01:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:33] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:01:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:35] "GET /devices HTTP/1.1" 200 -
+2025-10-02 20:01:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:01:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:01:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:35] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:01:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:36] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 20:01:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:01:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:01:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:36] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:01:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:37] "GET /reports HTTP/1.1" 200 -
+2025-10-02 20:01:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:01:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:01:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:37] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:01:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:38] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:01:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:01:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:01:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:38] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:01:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:49] "[33mGET /debug_table?ide_webview_request_time=1759406509014 HTTP/1.1[0m" 404 -
+2025-10-02 20:01:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:49] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:01:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:51] "[33mGET /test_table?ide_webview_request_time=1759406511191 HTTP/1.1[0m" 404 -
+2025-10-02 20:01:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:01:51] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:02:23 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:02:23 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:02:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:02:32] "GET /config?ide_webview_request_time=1759406552981 HTTP/1.1" 200 -
+2025-10-02 20:02:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:02:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:02:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:02:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:02:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:02:33] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:03:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:03:15] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:04:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:04:27] "GET /static/css/config.css HTTP/1.1" 200 -
+2025-10-02 20:04:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:04:58] "GET /static/css/config.css HTTP/1.1" 200 -
+2025-10-02 20:05:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:06] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:05:39 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:05:39 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:05:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:49] "[33mGET /css_test?ide_webview_request_time=1759406749356 HTTP/1.1[0m" 404 -
+2025-10-02 20:05:49 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:49] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:05:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:53] "GET /config?ide_webview_request_time=1759406753587 HTTP/1.1" 200 -
+2025-10-02 20:05:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:05:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:05:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:05:53] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:06:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:06:01] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:06:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:06:14] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:06:23 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:06:23] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:06:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:06:37] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:06:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:06:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:06:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:06:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:07:45 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:07:45 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:07:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:07:54] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:08:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:08:03] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:09:18 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:09:18 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:09:26 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:09:26] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:09:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:09:55] "GET / HTTP/1.1" 200 -
+2025-10-02 20:09:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:09:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:09:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:09:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:09:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:09:55] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:10:09 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:10:09 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:10:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:10:17] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:11:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:11:30] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:11:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:11:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:11:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:11:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:12:15 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:12:15 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:12:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:12:21] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:12:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:12:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:12:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:12:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:12:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:12:21] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:12:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:12:22] "[33mGET /inheritance_test HTTP/1.1[0m" 404 -
+2025-10-02 20:12:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:12:40] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:13:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:13:38] "GET /static/css/config.css HTTP/1.1" 200 -
+2025-10-02 20:14:09 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:14:09 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:14:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:14:18] "[33mGET /simple_test HTTP/1.1[0m" 404 -
+2025-10-02 20:16:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:16:01] "[33mGET /simple_test HTTP/1.1[0m" 404 -
+2025-10-02 20:16:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:16:25] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:17:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:17:38] "[33mGET /inheritance_test_fixed HTTP/1.1[0m" 404 -
+2025-10-02 20:18:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:18:06] "GET / HTTP/1.1" 200 -
+2025-10-02 20:18:24 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:18:24] "[33mGET /inheritance_test HTTP/1.1[0m" 404 -
+2025-10-02 20:18:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:18:54] "[33mGET /inheritance_test_fixed HTTP/1.1[0m" 404 -
+2025-10-02 20:19:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:19:29] "[33mGET /inheritance_test_fixed HTTP/1.1[0m" 404 -
+2025-10-02 20:20:02 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:20:02] "[33mGET /inheritance_test_fixed HTTP/1.1[0m" 404 -
+2025-10-02 20:20:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:20:20] "[33mGET /simple_test HTTP/1.1[0m" 404 -
+2025-10-02 20:20:52 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 20:20:52 - werkzeug - INFO -  * Debugger PIN: 162-768-907
+2025-10-02 20:23:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:15] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:23:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:15] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-02 20:23:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:15] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-10-02 20:23:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:15] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:17] "GET / HTTP/1.1" 200 -
+2025-10-02 20:23:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:17] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:19] "GET /devices HTTP/1.1" 200 -
+2025-10-02 20:23:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:19] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:20] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 20:23:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:20] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "GET /reports HTTP/1.1" 200 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:21] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:22] "GET /reports HTTP/1.1" 200 -
+2025-10-02 20:23:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:22 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:22] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:23:23 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:23] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:23:23 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:23:23 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:23:23 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:23:23] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:26:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:26:38] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:26:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:26:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-02 20:26:39 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:26:39] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-10-02 20:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:10] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:10] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:27:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:10] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:27:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:35] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:27:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:27:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:27:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:29:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:35] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:29:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:29:36 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:29:38 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 20:29:38 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 20:29:38 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 20:29:39 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 20:29:39 - werkzeug - INFO -  * Debugger PIN: 162-768-907
+2025-10-02 20:29:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:50] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:29:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:50] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:29:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:29:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:29:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:50] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 20:29:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:55] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:29:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:29:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:29:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:30:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:34] "[33mGET /baseline HTTP/1.1[0m" 404 -
+2025-10-02 20:30:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-02 20:30:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:44] "GET / HTTP/1.1" 200 -
+2025-10-02 20:30:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-02 20:30:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:44] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-10-02 20:30:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-02 20:30:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:47] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 20:30:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:30:47 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:30:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:51] "POST /baseline_check/start HTTP/1.1" 200 -
+2025-10-02 20:30:51 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-02 20:30:51 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-02 20:30:51 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-02 20:30:51 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.21:22
+2025-10-02 20:30:51 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.22:22
+2025-10-02 20:30:51 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-02 20:30:51 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-02 20:30:51 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 20:30:51 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 20:30:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:52] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 20:30:52 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-02 20:30:52 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-02 20:30:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:53] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 20:30:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:54] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 20:30:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:55] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 20:30:55 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-02 20:30:55 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的检查结果:
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的检查结果:
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_203055.html
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.21_20251002_203055.txt
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.22_20251002_203055.txt
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - 汇总报告已生成: E:\Development\Python\NetOps\reports\summary_report_20251002_203055.html
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_203055.xlsx
+2025-10-02 20:30:55 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-02 20:30:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:56] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 20:30:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:57] "GET /reports HTTP/1.1" 200 -
+2025-10-02 20:30:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:30:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:30:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:30:59] "GET /reports/summary_report_20251002_203055.html HTTP/1.1" 200 -
+2025-10-02 20:31:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:03] "GET /reports/baseline_report_20251002_203055.xlsx HTTP/1.1" 200 -
+2025-10-02 20:31:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:06] "GET /reports/baseline_report_20251002_203055.html HTTP/1.1" 200 -
+2025-10-02 20:31:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:11] "GET / HTTP/1.1" 200 -
+2025-10-02 20:31:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:31:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:31:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:12] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:31:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:31:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:31:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:29] "GET / HTTP/1.1" 200 -
+2025-10-02 20:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-02 20:34:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:34] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:34:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:34:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:34:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:38] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:34:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:34:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 20:34:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:40] "GET /config HTTP/1.1" 200 -
+2025-10-02 20:34:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 20:34:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 20:34:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:55:53 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 21:55:53 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 21:55:53 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 21:55:54 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 21:55:54 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 21:56:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:06] "GET /?ide_webview_request_time=1759413366589 HTTP/1.1" 200 -
+2025-10-02 21:56:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 21:56:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:56:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:06] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 21:56:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:12] "GET /config HTTP/1.1" 200 -
+2025-10-02 21:56:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 21:56:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:12] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 21:56:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:12] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 21:56:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:56:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:12] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 21:56:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:18] "GET /devices HTTP/1.1" 200 -
+2025-10-02 21:56:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 21:56:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:56:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-02 21:56:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:21] "GET /config HTTP/1.1" 200 -
+2025-10-02 21:56:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 21:56:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:21] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 21:56:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:56:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:21] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 21:56:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:50] "GET /reports HTTP/1.1" 200 -
+2025-10-02 21:56:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 21:56:50 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:56:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:51] "GET /config HTTP/1.1" 200 -
+2025-10-02 21:56:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 21:56:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:51] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 21:56:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 21:56:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:56:51] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:02:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:21] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:02:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:02:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:21] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:02:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:02:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:21] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:02:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:25] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:02:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:02:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:25] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:02:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:02:25 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:25] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:02:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:02:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:02:46] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:03:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:32] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 22:03:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:03:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:03:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:34] "GET /reports HTTP/1.1" 200 -
+2025-10-02 22:03:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:03:34 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:03:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:35] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:03:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:03:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:35] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:03:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:35] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:03:35 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:03:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:04:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:48] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 22:04:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:54] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:04:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:04:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:54] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:04:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:04:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:04:54] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:07:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:05] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:07:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:05] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:07:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:07:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:06] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:07:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:07:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:06] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:07:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:07:06] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 22:08:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:53] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:08:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:08:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:53] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:08:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:53] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:55] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:08:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:08:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:55] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:08:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:55] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:56] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:08:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:08:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:09:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:32] "GET /config?ide_webview_request_time=1759414172182 HTTP/1.1" 200 -
+2025-10-02 22:09:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:09:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:09:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:32] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:09:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:32] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:09:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:32] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 22:09:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:46] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:09:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:09:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:46] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:09:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:09:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:09:46] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:13:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:13:28] "GET /config?ide_webview_request_time=1759414407997 HTTP/1.1" 200 -
+2025-10-02 22:13:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:13:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:13:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:13:28] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:13:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:13:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:13:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:13:28] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:13:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:13:28] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 22:15:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:15:18] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:15:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:15:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:15:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:15:18] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:15:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:15:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:15:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:15:18] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 22:16:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:16:16] "GET /config?ide_webview_request_time=1759414576423 HTTP/1.1" 200 -
+2025-10-02 22:16:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:16:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:16:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:16:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:16:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:16:16] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:16:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:16:16] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 22:16:16 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:16:16] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 22:19:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:40] "GET /config?ide_webview_request_time=1759414780774 HTTP/1.1" 200 -
+2025-10-02 22:19:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:19:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:19:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:40] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 22:19:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:40] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 22:19:40 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:40] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 22:19:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:58] "GET /config HTTP/1.1" 200 -
+2025-10-02 22:19:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:19:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:58] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:19:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:19:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:19:58] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 22:24:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:24:17] "GET /config?ide_webview_request_time=1759415057461 HTTP/1.1" 200 -
+2025-10-02 22:24:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:24:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 22:24:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:24:17] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 22:24:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:24:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 22:24:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:24:17] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 22:24:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 22:24:17] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:18:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:53] "GET / HTTP/1.1" 200 -
+2025-10-02 23:18:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:18:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:18:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:53] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:18:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:54] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 23:18:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:18:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:18:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:54] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:18:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:55] "POST /baseline_check/start HTTP/1.1" 200 -
+2025-10-02 23:18:55 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-02 23:18:55 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-02 23:18:55 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-02 23:18:55 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.21:22
+2025-10-02 23:18:55 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.22:22
+2025-10-02 23:18:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:56] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:18:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:57] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:18:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:58] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:18:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:18:59] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:00 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:00] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:01] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:02 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:02] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:03] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:04] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:05 - src.modules.collection.ssh_collector - ERROR - 连接到设备 192.168.80.22 失败: timed out
+2025-10-02 23:19:05 - src.modules.collection.ssh_collector - ERROR - 连接到设备 192.168.80.21 失败: timed out
+2025-10-02 23:19:05 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:05] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:05 - src.modules.baseline.check_baseline - ERROR - 设备 192.168.80.22 检查失败: 无法连接到设备 192.168.80.22
+Traceback (most recent call last):
+  File "E:\Development\Python\NetOps\src\modules\baseline\check_baseline.py", line 502, in check_device
+    raise Exception(f"无法连接到设备 {host}")
+Exception: 无法连接到设备 192.168.80.22
+2025-10-02 23:19:05 - src.modules.baseline.check_baseline - ERROR - 设备 192.168.80.21 检查失败: 无法连接到设备 192.168.80.21
+Traceback (most recent call last):
+  File "E:\Development\Python\NetOps\src\modules\baseline\check_baseline.py", line 502, in check_device
+    raise Exception(f"无法连接到设备 {host}")
+Exception: 无法连接到设备 192.168.80.21
+2025-10-02 23:19:05 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_231905.html
+2025-10-02 23:19:05 - src.modules.baseline.check_baseline - INFO - 汇总报告已生成: E:\Development\Python\NetOps\reports\summary_report_20251002_231905.html
+2025-10-02 23:19:05 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_231905.xlsx
+2025-10-02 23:19:05 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 0 台, 失败 2 台
+2025-10-02 23:19:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:06] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:19:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:07] "GET /reports HTTP/1.1" 200 -
+2025-10-02 23:19:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:19:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:19:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:07] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:19:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:10] "GET /reports/summary_report_20251002_231905.html HTTP/1.1" 200 -
+2025-10-02 23:19:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:19:10] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:29:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:53] "GET /reports HTTP/1.1" 200 -
+2025-10-02 23:29:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:29:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:29:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:53] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:29:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:56] "GET / HTTP/1.1" 200 -
+2025-10-02 23:29:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:29:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:29:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:29:56] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:32:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:51] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 23:32:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:32:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:32:51 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:51] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:32:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:52] "POST /baseline_check/start HTTP/1.1" 200 -
+2025-10-02 23:32:52 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 2 台设备
+2025-10-02 23:32:52 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-02 23:32:52 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.21:22
+2025-10-02 23:32:52 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-02 23:32:52 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.22:22
+2025-10-02 23:32:52 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-02 23:32:52 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-02 23:32:53 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 23:32:53 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 23:32:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:53] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:32:54 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-02 23:32:54 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-02 23:32:54 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:54] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:32:55 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:55] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:32:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:56] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:32:57 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-02 23:32:57 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的检查结果:
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的检查结果:
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_233257.html
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.21_20251002_233257.txt
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.22_20251002_233257.txt
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - 汇总报告已生成: E:\Development\Python\NetOps\reports\summary_report_20251002_233257.html
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_233257.xlsx
+2025-10-02 23:32:57 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 2 台, 失败 0 台
+2025-10-02 23:32:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:57] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:32:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:58] "GET /reports HTTP/1.1" 200 -
+2025-10-02 23:32:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:32:58 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:32:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:32:59] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:01] "GET /devices HTTP/1.1" 200 -
+2025-10-02 23:33:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:01 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:01] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:06] "GET /devices HTTP/1.1" 200 -
+2025-10-02 23:33:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:06] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:07] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:33:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:07] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:33:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:07] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:07] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:12] "GET /config/edit/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:33:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:12] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:32 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:32] "POST /config/edit/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:33:41 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:41] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:33:41 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:41] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:33:41 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:41 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:41 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:41] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:41 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:41] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:46] "GET /config/view/device_commands.json HTTP/1.1" 200 -
+2025-10-02 23:33:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:46 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:46] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:52] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:33:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:52] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:33:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:52] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:52 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:52] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:33:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:57] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:33:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:33:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:33:57 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:33:57] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:04] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:34:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:34:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:04] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:34:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:04] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:04 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:04] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:08] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-02 23:34:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:34:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:08] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:09 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:09] "POST /baseline_check/start HTTP/1.1" 200 -
+2025-10-02 23:34:09 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 3 台设备
+2025-10-02 23:34:09 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-02 23:34:09 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.21:22
+2025-10-02 23:34:09 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-02 23:34:09 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.23
+2025-10-02 23:34:09 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.22:22
+2025-10-02 23:34:09 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.23:22
+2025-10-02 23:34:09 - paramiko.transport - INFO - Connected (version 1.99, client Cisco-1.25)
+2025-10-02 23:34:09 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-02 23:34:09 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-02 23:34:09 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 23:34:09 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 23:34:09 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-02 23:34:10 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:10] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:34:10 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-02 23:34:10 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-02 23:34:10 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.23
+2025-10-02 23:34:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:11] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:34:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:12] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:34:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:13] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:34:13 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-02 23:34:13 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-02 23:34:13 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.23 的连接
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的检查结果:
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的检查结果:
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.23 的检查结果:
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_233413.html
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.21_20251002_233413.txt
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.22_20251002_233413.txt
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.23 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.23_20251002_233413.txt
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 汇总报告已生成: E:\Development\Python\NetOps\reports\summary_report_20251002_233413.html
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251002_233413.xlsx
+2025-10-02 23:34:13 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 3 台, 失败 0 台
+2025-10-02 23:34:14 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:14] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-02 23:34:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:15] "GET /reports HTTP/1.1" 200 -
+2025-10-02 23:34:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:34:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:15 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:15] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:17] "GET /reports/summary_report_20251002_233413.html HTTP/1.1" 200 -
+2025-10-02 23:34:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:17] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:20] "GET /reports/baseline_report_20251002_233413.html HTTP/1.1" 200 -
+2025-10-02 23:34:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:20] "GET /reports/baseline_report_20251002_233413.html?ide_webview_request_time=1759419260382 HTTP/1.1" 200 -
+2025-10-02 23:34:20 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:20] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:27] "[36mGET /reports/summary_report_20251002_233413.html HTTP/1.1[0m" 304 -
+2025-10-02 23:34:27 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:27] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:28] "GET /reports HTTP/1.1" 200 -
+2025-10-02 23:34:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:34:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:28 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:28] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:29] "GET / HTTP/1.1" 200 -
+2025-10-02 23:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:29 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:29] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:34:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:30] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:34:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:34:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:30] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:34:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:30] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:34:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:34:30] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:36:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:36:30] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:36:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:36:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:36:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:36:30] "GET /static/css/config.css?v=1.1 HTTP/1.1" 200 -
+2025-10-02 23:36:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:36:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:36:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:36:30] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 23:36:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:36:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-02 23:45:55 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\web_app\\configs.py', reloading
+2025-10-02 23:45:55 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:45:56 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:45:56 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:46:11 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\web_app\\app.py', reloading
+2025-10-02 23:46:11 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:46:12 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:46:12 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:46:43 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\web_app\\app.py', reloading
+2025-10-02 23:46:43 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:46:44 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:46:44 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:47:54 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 23:47:54 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 23:47:54 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:47:55 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:47:55 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:48:30 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 23:48:30 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 23:48:30 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:48:31 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:48:31 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:48:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:48:37] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:48:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:48:37] "[36mGET /reports/summary_report_20251002_233413.html HTTP/1.1[0m" 304 -
+2025-10-02 23:48:37 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:48:37] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:49:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:13] "GET /reports HTTP/1.1" 200 -
+2025-10-02 23:49:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:49:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:49:13 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:13] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:49:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:17] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:49:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:49:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:17] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:49:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:49:17 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:17] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 23:49:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:18] "GET /config/rule HTTP/1.1" 200 -
+2025-10-02 23:49:23 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:23] "GET /config/itsm HTTP/1.1" 200 -
+2025-10-02 23:49:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:30] "GET /config/itsm HTTP/1.1" 200 -
+2025-10-02 23:49:38 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:38] "GET /config/rule HTTP/1.1" 200 -
+2025-10-02 23:49:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:59] "GET /config/view_rule/baseline_rules.yaml HTTP/1.1" 200 -
+2025-10-02 23:49:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:49:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:49:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:03] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:50:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:03] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:50:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:03] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:06] "GET /config/view/api_config.json HTTP/1.1" 200 -
+2025-10-02 23:50:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:06 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:07] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:50:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:07] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:50:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:07 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:07] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:12] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:50:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:12 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:19] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:50:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:19] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:50:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:19 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:19] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:30] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:50:42 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:42] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:50:42 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:42 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:43 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:43] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:50:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:44] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:50:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:44] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:44 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:45 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:45] "GET /config/rule HTTP/1.1" 200 -
+2025-10-02 23:50:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:53] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:50:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:53 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:56] "[32mGET /config/device HTTP/1.1[0m" 302 -
+2025-10-02 23:50:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:56] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:50:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:50:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:56] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:50:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:50:56 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:50:56] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:51:00 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:00] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:51:00 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:51:00 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:51:02 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:02] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:51:02 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:51:02 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:51:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:08] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:51:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:51:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:08] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:51:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:51:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:08] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:51:11 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:11] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:51:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:18] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:51:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:30] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:51:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:51:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:30] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:51:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:51:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:30] "GET /static/js/config.js HTTP/1.1" 200 -
+2025-10-02 23:51:30 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:30] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:51:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:33] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:51:33 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:33] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:51:39 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:51:39] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:53:53 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 23:53:53 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 23:53:53 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:53:53 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:53:53 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:53:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:53:59] "GET /config?ide_webview_request_time=1759420439503 HTTP/1.1" 200 -
+2025-10-02 23:53:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:53:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:53:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:53:59] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:53:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:53:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:53:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:53:59] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:53:59 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:53:59] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:54:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:03] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:54:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:08] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:54:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:54:08 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:54:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:18] "GET /config HTTP/1.1" 200 -
+2025-10-02 23:54:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:54:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:54:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:18] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:54:18 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:18] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:54:21 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:54:21] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:55:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:55:03] "[35m[1mGET /config/edit/ssh_config.json HTTP/1.1[0m" 500 -
+2025-10-02 23:55:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:55:03] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:56:55 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-02 23:56:55 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 23:56:55 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:56:56 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:56:56 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-02 23:57:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:03] "GET /config?ide_webview_request_time=1759420623208 HTTP/1.1" 200 -
+2025-10-02 23:57:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:57:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:03] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-02 23:57:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:57:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:03] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-02 23:57:03 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:03] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:57:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:48] "GET /config/edit/ssh_config.json HTTP/1.1" 200 -
+2025-10-02 23:57:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-02 23:57:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-02 23:57:48 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 23:57:48] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-02 23:59:57 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\web_app\\app.py', reloading
+2025-10-02 23:59:57 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 23:59:58 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 23:59:58 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-03 00:00:03 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-03 00:00:03 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-03 00:00:03 - werkzeug - INFO -  * Restarting with stat
+2025-10-03 00:00:04 - werkzeug - WARNING -  * Debugger is active!
+2025-10-03 00:00:04 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-03 00:00:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:12] "GET /config?ide_webview_request_time=1759420812112 HTTP/1.1" 200 -
+2025-10-03 00:00:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:00:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:12] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:00:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:00:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:12] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:00:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:12] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:00:22 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:22] "GET /config/edit/ssh_config.json HTTP/1.1" 200 -
+2025-10-03 00:00:22 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:00:22 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:00:22 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:22] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:00:59 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:00:59] "POST /config/edit/ssh_config.json HTTP/1.1" 200 -
+2025-10-03 00:01:01 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:01] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:01:01 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:01:01 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:01] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:01:01 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:01 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:01] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:01 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:01] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:01:08 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:08] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-03 00:01:08 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:08 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:01:08 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:08] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:01:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:12] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:01:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:01:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:12] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:01:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:12] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:12 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:12] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:01:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:15] "GET /config/view/api_config.json HTTP/1.1" 200 -
+2025-10-03 00:01:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:01:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:15] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:01:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:21] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:01:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:01:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:21] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:01:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:21] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:21] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:01:24 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:24] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-03 00:01:24 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:01:24 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:01:24 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:01:24] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:02:29 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.111.52:5000
+2025-10-03 00:02:29 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-03 00:02:29 - werkzeug - INFO -  * Restarting with stat
+2025-10-03 00:02:30 - werkzeug - WARNING -  * Debugger is active!
+2025-10-03 00:02:30 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-03 00:02:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:35] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-03 00:02:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:35] "GET /config/view/ssh_config.json HTTP/1.1" 200 -
+2025-10-03 00:02:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:02:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:35] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:02:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:42] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:02:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:02:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:42] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:02:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:42] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:42] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:02:46 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:46] "GET /config/rule HTTP/1.1" 200 -
+2025-10-03 00:02:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:48] "GET /config/view_rule/remediation_suggestions.yaml HTTP/1.1" 200 -
+2025-10-03 00:02:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:02:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:48] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:02:50 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:50] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:02:50 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:02:50 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:50 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:50] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:02:50 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:50] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:50 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:50] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:02:52 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:52] "GET /config/itsm HTTP/1.1" 200 -
+2025-10-03 00:02:55 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:55] "GET /config/view_itsm/scenario_config.json HTTP/1.1" 200 -
+2025-10-03 00:02:55 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:02:55 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:55 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:55] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:02:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:58] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:02:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:02:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:58] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:02:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:58] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:02:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:02:58] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:02] "GET / HTTP/1.1" 200 -
+2025-10-03 00:03:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:03:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:03:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:02] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:13 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:13] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-03 00:03:13 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:03:13 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:03:13 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:13] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:14 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:14] "POST /baseline_check/start HTTP/1.1" 200 -
+2025-10-03 00:03:14 - src.modules.baseline.check_baseline - ERROR - 加载规则文件时出错: [Errno 2] No such file or directory: 'E:\\Development\\Python\\NetOps\\config\\baseline_rules.yaml'
+2025-10-03 00:03:14 - src.modules.baseline.check_baseline - ERROR - 加载修复建议文件时出错: [Errno 2] No such file or directory: 'E:\\Development\\Python\\NetOps\\config\\remediation_suggestions.yaml'
+2025-10-03 00:03:14 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 3 台设备
+2025-10-03 00:03:14 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-03 00:03:14 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.21:22
+2025-10-03 00:03:14 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-03 00:03:14 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.23
+2025-10-03 00:03:14 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.22:22
+2025-10-03 00:03:14 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.23:22
+2025-10-03 00:03:14 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-03 00:03:14 - paramiko.transport - INFO - Connected (version 1.99, client Cisco-1.25)
+2025-10-03 00:03:14 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-03 00:03:15 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-03 00:03:15 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-03 00:03:15 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-03 00:03:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:15] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:03:16 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.23
+2025-10-03 00:03:16 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-03 00:03:16 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-03 00:03:16 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:16] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:03:17 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:17] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:03:18 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:18] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:03:19 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.23 的连接
+2025-10-03 00:03:19 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-03 00:03:19 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的检查结果:
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的检查结果:
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.23 的检查结果:
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251003_000319.html
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.21_20251003_000319.txt
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.22_20251003_000319.txt
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.23 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.23_20251003_000319.txt
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 汇总报告已生成: E:\Development\Python\NetOps\reports\summary_report_20251003_000319.html
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251003_000319.xlsx
+2025-10-03 00:03:19 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 3 台, 失败 0 台
+2025-10-03 00:03:19 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:19] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:03:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:20] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:03:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:03:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:03:21 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:21] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:23 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:23] "GET /reports/summary_report_20251003_000319.html HTTP/1.1" 200 -
+2025-10-03 00:03:23 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:23] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:27 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:27] "GET /reports/baseline_report_20251003_000319.html HTTP/1.1" 200 -
+2025-10-03 00:03:27 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:27] "GET /reports/baseline_report_20251003_000319.html?ide_webview_request_time=1759421007734 HTTP/1.1" 200 -
+2025-10-03 00:03:27 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:27] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:31 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:31] "GET /reports/remediation_192.168.80.21_20251003_000319.txt HTTP/1.1" 200 -
+2025-10-03 00:03:31 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:31] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:35] "GET /reports/baseline_report_20251003_000319.html?ide_webview_request_time=1759421007652 HTTP/1.1" 200 -
+2025-10-03 00:03:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:35] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2025-10-03 00:03:41 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:41] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:03:41 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:03:41 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:03:43 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:43] "GET /reports/summary_report_20251003_000319.html HTTP/1.1" 200 -
+2025-10-03 00:03:45 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:45] "GET /reports/baseline_report_20251003_000319.html HTTP/1.1" 200 -
+2025-10-03 00:03:59 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:59] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:03:59 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:03:59 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:03:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:04:10 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:10] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:04:10 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:04:10 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:04:11 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:11] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:04:11 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:04:11 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:04:14 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:14] "[36mGET /reports/summary_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:04:18 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:18] "[36mGET /reports/baseline_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:04:23 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:23] "[36mGET /reports/summary_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:04:30 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:30] "[36mGET /reports/baseline_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:04:44 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:44] "[36mGET /reports/summary_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:04:51 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:51] "[36mGET /reports/summary_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:04:53 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:53] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:04:53 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:04:53 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:04:54 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:04:54] "[36mGET /reports/summary_report_20251003_000319.html HTTP/1.1[0m" 304 -
+2025-10-03 00:05:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:05:02] "GET / HTTP/1.1" 200 -
+2025-10-03 00:05:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:05:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:05:02 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:05:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:08:09 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\src\\modules\\baseline\\check_baseline.py', reloading
+2025-10-03 00:08:10 - werkzeug - INFO -  * Restarting with stat
+2025-10-03 00:08:10 - werkzeug - WARNING -  * Debugger is active!
+2025-10-03 00:08:10 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-03 00:08:18 - werkzeug - INFO -  * Detected change in 'E:\\Development\\Python\\NetOps\\tests\\test_baseline.py', reloading
+2025-10-03 00:08:18 - werkzeug - INFO -  * Restarting with stat
+2025-10-03 00:08:19 - werkzeug - WARNING -  * Debugger is active!
+2025-10-03 00:08:19 - werkzeug - INFO -  * Debugger PIN: 806-504-706
+2025-10-03 00:21:38 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:38] "GET / HTTP/1.1" 200 -
+2025-10-03 00:21:38 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:21:38 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:21:39 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:39] "GET /baseline_check HTTP/1.1" 200 -
+2025-10-03 00:21:39 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:21:39 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:21:40 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:40] "POST /baseline_check/start HTTP/1.1" 200 -
+2025-10-03 00:21:40 - src.modules.baseline.check_baseline - INFO - 开始基线检查，共 3 台设备
+2025-10-03 00:21:40 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.21
+2025-10-03 00:21:40 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.21:22
+2025-10-03 00:21:40 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.22
+2025-10-03 00:21:40 - src.modules.baseline.check_baseline - INFO - 正在检查设备: 192.168.80.23
+2025-10-03 00:21:40 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.22:22
+2025-10-03 00:21:40 - src.modules.collection.ssh_collector - INFO - 正在连接到设备 192.168.80.23:22
+2025-10-03 00:21:41 - paramiko.transport - INFO - Connected (version 1.99, client Cisco-1.25)
+2025-10-03 00:21:41 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-03 00:21:41 - paramiko.transport - INFO - Connected (version 2.0, client Cisco-1.25)
+2025-10-03 00:21:41 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-03 00:21:41 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-03 00:21:41 - paramiko.transport - INFO - Authentication (password) successful!
+2025-10-03 00:21:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:42] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:21:42 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.23
+2025-10-03 00:21:42 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.22
+2025-10-03 00:21:42 - src.modules.collection.ssh_collector - INFO - 成功连接到设备 192.168.80.21
+2025-10-03 00:21:42 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:42] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:21:43 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:43] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:21:44 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:44] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:21:45 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.23 的连接
+2025-10-03 00:21:45 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.22 的连接
+2025-10-03 00:21:45 - src.modules.collection.ssh_collector - INFO - 已断开与设备 192.168.80.21 的连接
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的检查结果:
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的检查结果:
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.23 的检查结果:
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '必须启用AAA认证' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 'SSH必须使用版本2' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '禁用域名解析' 的修复建议: # 禁用域名解析以防止误解析
+no ip domain-lookup
+
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '密码加密必须启用' 的修复建议: # 启用密码加密功能
+service password-encryption
+
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '必须配置日志缓冲' 的修复建议: 无修复建议
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 '主动关闭接口检查' 的修复建议: 无
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO -   检查项 'NTP同步状态检查' 的修复建议: 无
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - HTML报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251003_002145.html
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.21 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.21_20251003_002145.txt
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.22 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.22_20251003_002145.txt
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 设备 192.168.80.23 的修复建议文件已生成: E:\Development\Python\NetOps\reports\remediation_192.168.80.23_20251003_002145.txt
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 汇总报告已生成: E:\Development\Python\NetOps\reports\summary_report_20251003_002145.html
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - Excel 报告已生成: E:\Development\Python\NetOps\reports\baseline_report_20251003_002145.xlsx
+2025-10-03 00:21:45 - src.modules.baseline.check_baseline - INFO - 基线检查完成: 成功 3 台, 失败 0 台
+2025-10-03 00:21:46 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:46] "GET /baseline_check/status HTTP/1.1" 200 -
+2025-10-03 00:21:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:48] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:21:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:21:48 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:21:55 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:55] "GET /reports/summary_report_20251003_002145.html HTTP/1.1" 200 -
+2025-10-03 00:21:58 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:21:58] "GET /reports/baseline_report_20251003_002145.html HTTP/1.1" 200 -
+2025-10-03 00:22:04 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:04] "GET /reports/remediation_192.168.80.21_20251003_002145.txt HTTP/1.1" 200 -
+2025-10-03 00:22:09 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:09] "[36mGET /reports/summary_report_20251003_002145.html HTTP/1.1[0m" 304 -
+2025-10-03 00:22:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:15] "GET /reports HTTP/1.1" 200 -
+2025-10-03 00:22:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:22:15 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:22:18 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:18] "GET / HTTP/1.1" 200 -
+2025-10-03 00:22:18 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:22:18 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:22:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:20] "GET /config HTTP/1.1" 200 -
+2025-10-03 00:22:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:22:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:20] "[36mGET /static/css/config.css?v=1.1 HTTP/1.1[0m" 304 -
+2025-10-03 00:22:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-10-03 00:22:20 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:20] "[36mGET /static/js/config.js HTTP/1.1[0m" 304 -
+2025-10-03 00:22:24 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:24] "GET /config/rule HTTP/1.1" 200 -
+2025-10-03 00:22:27 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:27] "GET /config/itsm HTTP/1.1" 200 -
+2025-10-03 00:22:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:35] "GET / HTTP/1.1" 200 -
+2025-10-03 00:22:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-03 00:22:35 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 00:22:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -

@@ -120,7 +120,7 @@ def baseline_check():
 
 def load_ssh_config():
     """从配置文件加载SSH设备信息"""
-    config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'ssh_config.json')
+    config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device', 'ssh_config.json')
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
             config = json.load(f)
@@ -279,7 +279,615 @@ def delete_report(filename):
 @app.route('/config')
 def config():
     """配置管理页面"""
-    return render_template('config.html')
+    try:
+        # 获取config/device目录下的所有文件
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device')
+        config_files = []
+        
+        if os.path.exists(config_dir):
+            for filename in os.listdir(config_dir):
+                file_path = os.path.join(config_dir, filename)
+                if os.path.isfile(file_path):
+                    # 获取文件的修改时间
+                    mtime = os.path.getmtime(file_path)
+                    # 获取文件大小
+                    size = os.path.getsize(file_path)
+                    config_files.append({
+                        'filename': filename,
+                        'mtime': mtime,
+                        'size': size
+                    })
+        
+        # 按文件名排序
+        config_files.sort(key=lambda x: x['filename'])
+        
+        return render_template('config.html', config_files=config_files)
+    except Exception as e:
+        return f"读取配置文件列表时出错: {str(e)}", 500
+
+@app.route('/config/device')
+def list_device_configs():
+    """列出设备配置文件"""
+    return redirect(url_for('config'))
+
+@app.route('/config/rule')
+def list_rule_configs():
+    """列出规则配置文件"""
+    try:
+        # 获取config/rule目录下的所有文件
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'rule')
+        config_files = []
+        
+        if os.path.exists(config_dir):
+            for filename in os.listdir(config_dir):
+                file_path = os.path.join(config_dir, filename)
+                if os.path.isfile(file_path):
+                    # 获取文件的修改时间
+                    mtime = os.path.getmtime(file_path)
+                    # 获取文件大小
+                    size = os.path.getsize(file_path)
+                    config_files.append({
+                        'filename': filename,
+                        'mtime': mtime,
+                        'size': size
+                    })
+        
+        # 按文件名排序
+        config_files.sort(key=lambda x: x['filename'])
+        
+        return jsonify({'status': 'success', 'config_files': config_files})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'读取规则配置文件列表时出错: {str(e)}'}), 500
+
+@app.route('/config/itsm')
+def list_system_configs():
+    """列出系统配置文件"""
+    try:
+        # 获取config/itsm目录下的所有文件
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'itsm')
+        config_files = []
+        
+        if os.path.exists(config_dir):
+            for filename in os.listdir(config_dir):
+                file_path = os.path.join(config_dir, filename)
+                if os.path.isfile(file_path):
+                    # 获取文件的修改时间
+                    mtime = os.path.getmtime(file_path)
+                    # 获取文件大小
+                    size = os.path.getsize(file_path)
+                    config_files.append({
+                        'filename': filename,
+                        'mtime': mtime,
+                        'size': size
+                    })
+        
+        # 按文件名排序
+        config_files.sort(key=lambda x: x['filename'])
+        
+        return jsonify({'status': 'success', 'config_files': config_files})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'读取系统配置文件列表时出错: {str(e)}'}), 500
+
+@app.route('/config/view_rule/<path:filename>')
+def view_rule_config(filename):
+    """查看规则配置文件"""
+    try:
+        # 构建文件路径
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'rule')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/rule目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return "文件访问被拒绝", 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return "文件未找到", 404
+            
+        # 读取文件内容
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 确定文件类型
+        if filename.endswith('.json'):
+            file_type = 'JSON'
+        elif filename.endswith('.yaml') or filename.endswith('.yml'):
+            file_type = 'YAML'
+        else:
+            file_type = 'TEXT'
+            
+        # 准备传递给模板的数据
+        config_data = {
+            'name': filename,
+            'type': file_type,
+            'content': content
+        }
+        
+        return render_template('config_view.html', config_data=config_data)
+    except Exception as e:
+        config_data = {
+            'name': filename,
+            'error': f'读取配置文件时出错: {str(e)}'
+        }
+        return render_template('config_view.html', config_data=config_data)
+
+@app.route('/config/view_itsm/<path:filename>')
+def view_system_config(filename):
+    """查看系统配置文件"""
+    try:
+        # 构建文件路径
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'itsm')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/itsm目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return "文件访问被拒绝", 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return "文件未找到", 404
+            
+        # 读取文件内容
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 确定文件类型
+        if filename.endswith('.json'):
+            file_type = 'JSON'
+        elif filename.endswith('.yaml') or filename.endswith('.yml'):
+            file_type = 'YAML'
+        else:
+            file_type = 'TEXT'
+            
+        # 准备传递给模板的数据
+        config_data = {
+            'name': filename,
+            'type': file_type,
+            'content': content
+        }
+        
+        return render_template('config_view.html', config_data=config_data)
+    except Exception as e:
+        config_data = {
+            'name': filename,
+            'error': f'读取配置文件时出错: {str(e)}'
+        }
+        return render_template('config_view.html', config_data=config_data)
+
+@app.route('/config/edit_rule/<path:filename>', methods=['GET', 'POST'])
+def edit_rule_config(filename):
+    """编辑规则配置文件"""
+    config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'rule')
+    file_path = os.path.join(config_dir, filename)
+    
+    if request.method == 'POST':
+        try:
+            content = request.form.get('content', '')
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return json.dumps({"success": True, "message": "文件保存成功"}), 200, {'ContentType':'application/json'}
+        except Exception as e:
+            return json.dumps({"success": False, "message": f"保存文件时出错: {str(e)}"}), 500, {'ContentType':'application/json'}
+    else:
+        try:
+            # 确保文件存在且在config目录中
+            if not os.path.exists(file_path) or not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+                return "文件未找到", 404
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # 确定文件类型
+            if filename.endswith('.json'):
+                file_type = 'JSON'
+            elif filename.endswith('.yaml') or filename.endswith('.yml'):
+                file_type = 'YAML'
+            else:
+                file_type = 'TEXT'
+                
+            return render_template('config_edit.html',
+                                   filename=filename,
+                                   content=content,
+                                   file_type=file_type)
+        except Exception as e:
+            return f"读取文件时出错: {str(e)}", 500
+
+@app.route('/config/edit_itsm/<path:filename>', methods=['GET', 'POST'])
+def edit_system_config(filename):
+    """编辑系统配置文件"""
+    config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'itsm')
+    file_path = os.path.join(config_dir, filename)
+    
+    if request.method == 'POST':
+        try:
+            content = request.form.get('content', '')
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return json.dumps({"success": True, "message": "文件保存成功"}), 200, {'ContentType':'application/json'}
+        except Exception as e:
+            return json.dumps({"success": False, "message": f"保存文件时出错: {str(e)}"}), 500, {'ContentType':'application/json'}
+    else:
+        try:
+            # 确保文件存在且在config目录中
+            if not os.path.exists(file_path) or not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+                return "文件未找到", 404
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # 确定文件类型
+            if filename.endswith('.json'):
+                file_type = 'JSON'
+            elif filename.endswith('.yaml') or filename.endswith('.yml'):
+                file_type = 'YAML'
+            else:
+                file_type = 'TEXT'
+                
+            return render_template('config_edit.html',
+                                   filename=filename,
+                                   content=content,
+                                   file_type=file_type)
+        except Exception as e:
+            return f"读取文件时出错: {str(e)}", 500
+
+@app.route('/config/delete_rule/<path:filename>', methods=['POST'])
+def delete_rule_config(filename):
+    """删除规则配置文件"""
+    try:
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'rule')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/rule目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return jsonify({'status': 'error', 'message': '文件访问被拒绝'}), 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return jsonify({'status': 'error', 'message': '文件未找到'}), 404
+            
+        # 删除文件
+        os.remove(file_path)
+        return jsonify({'status': 'success', 'message': f'文件 {filename} 已成功删除'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'删除文件时出错: {str(e)}'}), 500
+
+@app.route('/config/delete_itsm/<path:filename>', methods=['POST'])
+def delete_system_config(filename):
+    """删除系统配置文件"""
+    try:
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'itsm')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/itsm目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return jsonify({'status': 'error', 'message': '文件访问被拒绝'}), 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return jsonify({'status': 'error', 'message': '文件未找到'}), 404
+            
+        # 删除文件
+        os.remove(file_path)
+        return jsonify({'status': 'success', 'message': f'文件 {filename} 已成功删除'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'删除文件时出错: {str(e)}'}), 500
+
+@app.route('/config/backup_rule/<path:filename>', methods=['POST'])
+def backup_rule_config(filename):
+    """备份规则配置文件"""
+    try:
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'rule')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/rule目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return jsonify({'status': 'error', 'message': '文件访问被拒绝'}), 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return jsonify({'status': 'error', 'message': '文件未找到'}), 404
+            
+        # 创建备份文件名
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        backup_filename = f"{filename}.bak_{timestamp}"
+        backup_path = os.path.join(config_dir, backup_filename)
+        
+        # 复制文件作为备份
+        import shutil
+        shutil.copy2(file_path, backup_path)
+        
+        return jsonify({'status': 'success', 'message': f'文件 {filename} 已成功备份为 {backup_filename}'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'备份文件时出错: {str(e)}'}), 500
+
+@app.route('/config/backup_itsm/<path:filename>', methods=['POST'])
+def backup_system_config(filename):
+    """备份系统配置文件"""
+    try:
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'itsm')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/itsm目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return jsonify({'status': 'error', 'message': '文件访问被拒绝'}), 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return jsonify({'status': 'error', 'message': '文件未找到'}), 404
+            
+        # 创建备份文件名
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        backup_filename = f"{filename}.bak_{timestamp}"
+        backup_path = os.path.join(config_dir, backup_filename)
+        
+        # 复制文件作为备份
+        import shutil
+        shutil.copy2(file_path, backup_path)
+        
+        return jsonify({'status': 'success', 'message': f'文件 {filename} 已成功备份为 {backup_filename}'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'备份文件时出错: {str(e)}'}), 500
+
+@app.route('/config/restore_rule/<path:filename>', methods=['POST'])
+def restore_rule_config(filename):
+    """恢复规则配置文件（从备份）"""
+    config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'rule')
+    file_path = os.path.join(config_dir, filename)
+    
+    # 安全检查：确保文件在config/rule目录中
+    if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+        return jsonify({'status': 'error', 'message': '无效的文件路径'}), 400
+    
+    # 查找最新的备份文件
+    backup_prefix = f"{filename}.bak_"
+    latest_backup = None
+    latest_time = 0
+    
+    if os.path.exists(config_dir):
+        for file in os.listdir(config_dir):
+            if file.startswith(backup_prefix):
+                backup_time = os.path.getmtime(os.path.join(config_dir, file))
+                if backup_time > latest_time:
+                    latest_time = backup_time
+                    latest_backup = file
+    
+    if latest_backup:
+        backup_path = os.path.join(config_dir, latest_backup)
+        try:
+            # 复制备份文件覆盖原文件
+            import shutil
+            shutil.copy2(backup_path, file_path)
+            return jsonify({'status': 'success', 'message': f'配置文件 {filename} 已从备份恢复'})
+        except Exception as e:
+            return jsonify({'status': 'error', 'message': f'恢复配置文件时出错: {str(e)}'}), 500
+    else:
+        return jsonify({'status': 'error', 'message': '未找到备份文件'}), 404
+
+@app.route('/config/restore_itsm/<path:filename>', methods=['POST'])
+def restore_system_config(filename):
+    """恢复系统配置文件（从备份）"""
+    config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'itsm')
+    file_path = os.path.join(config_dir, filename)
+    
+    # 安全检查：确保文件在config/itsm目录中
+    if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+        return jsonify({'status': 'error', 'message': '无效的文件路径'}), 400
+    
+    # 查找最新的备份文件
+    backup_prefix = f"{filename}.bak_"
+    latest_backup = None
+    latest_time = 0
+    
+    if os.path.exists(config_dir):
+        for file in os.listdir(config_dir):
+            if file.startswith(backup_prefix):
+                backup_time = os.path.getmtime(os.path.join(config_dir, file))
+                if backup_time > latest_time:
+                    latest_time = backup_time
+                    latest_backup = file
+    
+    if latest_backup:
+        backup_path = os.path.join(config_dir, latest_backup)
+        try:
+            # 复制备份文件覆盖原文件
+            import shutil
+            shutil.copy2(backup_path, file_path)
+            return jsonify({'status': 'success', 'message': f'配置文件 {filename} 已从备份恢复'})
+        except Exception as e:
+            return jsonify({'status': 'error', 'message': f'恢复配置文件时出错: {str(e)}'}), 500
+    else:
+        return jsonify({'status': 'error', 'message': '未找到备份文件'}), 404
+
+@app.route('/config/view/<path:filename>')
+def view_config_file(filename):
+    """查看指定的配置文件"""
+    try:
+        # 构建文件路径
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/device目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return "文件访问被拒绝", 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return "文件未找到", 404
+            
+        # 读取文件内容
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 确定文件类型
+        if filename.endswith('.json'):
+            file_type = 'JSON'
+        elif filename.endswith('.yaml') or filename.endswith('.yml'):
+            file_type = 'YAML'
+        else:
+            file_type = 'TEXT'
+            
+        # 准备传递给模板的数据
+        config_data = {
+            'name': filename,
+            'type': file_type,
+            'content': content
+        }
+        
+        return render_template('config_view.html', config_data=config_data)
+    except Exception as e:
+        config_data = {
+            'name': filename,
+            'error': f'读取配置文件时出错: {str(e)}'
+        }
+        return render_template('config_view.html', config_data=config_data)
+
+@app.route('/config/edit/<path:filename>', methods=['GET', 'POST'])
+def edit_config(filename):
+    """编辑配置文件"""
+    config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device')
+    file_path = os.path.join(config_dir, filename)
+    
+    if request.method == 'POST':
+        try:
+            content = request.form.get('content', '')
+            # 保持文件末尾的换行符格式
+            if content and not content.endswith('\n'):
+                # 检查原文件是否以换行符结尾
+                original_content = ""
+                if os.path.exists(file_path):
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        original_content = f.read()
+                # 如果原文件以换行符结尾，则保持这个习惯
+                if original_content.endswith('\n') or original_content.endswith('\r\n'):
+                    content += '\n'
+            
+            with open(file_path, 'w', encoding='utf-8', newline='') as f:
+                f.write(content)
+            return json.dumps({"success": True, "message": "文件保存成功"}), 200, {'ContentType':'application/json'}
+        except Exception as e:
+            return json.dumps({"success": False, "message": f"保存文件时出错: {str(e)}"}), 500, {'ContentType':'application/json'}
+    else:
+        try:
+            # 确保文件存在且在config目录中
+            if not os.path.exists(file_path) or not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+                return "文件未找到", 404
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # 确定文件类型
+            if filename.endswith('.json'):
+                file_type = 'JSON'
+            elif filename.endswith('.yaml') or filename.endswith('.yml'):
+                file_type = 'YAML'
+            else:
+                file_type = 'TEXT'
+                
+            return render_template('config_edit.html',
+                                   filename=filename,
+                                   content=content,
+                                   file_type=file_type)
+        except Exception as e:
+            return f"读取文件时出错: {str(e)}", 500
+
+@app.route('/config/delete/<path:filename>', methods=['POST'])
+def delete_config(filename):
+    """删除配置文件"""
+    try:
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/device目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return jsonify({'status': 'error', 'message': '文件访问被拒绝'}), 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return jsonify({'status': 'error', 'message': '文件未找到'}), 404
+            
+        # 删除文件
+        os.remove(file_path)
+        return jsonify({'status': 'success', 'message': f'文件 {filename} 已成功删除'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'删除文件时出错: {str(e)}'}), 500
+
+@app.route('/config/backup/<path:filename>', methods=['POST'])
+def backup_config(filename):
+    """备份配置文件"""
+    try:
+        config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device')
+        file_path = os.path.join(config_dir, filename)
+        
+        # 安全检查：确保文件在config/device目录中
+        if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+            return jsonify({'status': 'error', 'message': '文件访问被拒绝'}), 403
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_path):
+            return jsonify({'status': 'error', 'message': '文件未找到'}), 404
+            
+        # 创建备份文件名
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        backup_filename = f"{filename}.bak_{timestamp}"
+        backup_path = os.path.join(config_dir, backup_filename)
+        
+        # 复制文件作为备份
+        import shutil
+        shutil.copy2(file_path, backup_path)
+        
+        return jsonify({'status': 'success', 'message': f'文件 {filename} 已成功备份为 {backup_filename}'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f'备份文件时出错: {str(e)}'}), 500
+
+@app.route('/config/restore/<path:filename>', methods=['POST'])
+def restore_config(filename):
+    """恢复配置文件（从备份）"""
+    config_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config', 'device')
+    file_path = os.path.join(config_dir, filename)
+    
+    # 安全检查：确保文件在config/device目录中
+    if not os.path.abspath(file_path).startswith(os.path.abspath(config_dir)):
+        return jsonify({'status': 'error', 'message': '无效的文件路径'}), 400
+    
+    # 查找最新的备份文件
+    backup_prefix = f"{filename}.bak_"
+    latest_backup = None
+    latest_time = 0
+    
+    if os.path.exists(config_dir):
+        for file in os.listdir(config_dir):
+            if file.startswith(backup_prefix):
+                backup_time = os.path.getmtime(os.path.join(config_dir, file))
+                if backup_time > latest_time:
+                    latest_time = backup_time
+                    latest_backup = file
+    
+    if latest_backup:
+        backup_path = os.path.join(config_dir, latest_backup)
+        try:
+            # 复制备份文件覆盖原文件
+            import shutil
+            shutil.copy2(backup_path, file_path)
+            return jsonify({'status': 'success', 'message': f'配置文件 {filename} 已从备份恢复'})
+        except Exception as e:
+            return jsonify({'status': 'error', 'message': f'恢复配置文件时出错: {str(e)}'}), 500
+    else:
+        return jsonify({'status': 'error', 'message': '未找到备份文件'}), 404
+
+@app.route('/test_css')
+def test_css():
+    """测试CSS样式"""
+    return render_template('test_css.html')
+
+@app.route('/test_table')
+def test_table():
+    """测试表格样式"""
+    return render_template('test_table.html')
+
+@app.route('/debug_table')
+def debug_table():
+    """调试表格样式"""
+    return render_template('debug_table.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

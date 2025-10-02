@@ -1,31 +1,30 @@
 {% extends "base.html" %}
 
-{% block title %}鏌ョ湅閰嶇疆鏂囦欢 - 鑷姩鍖栬繍缁村伐鍏穥% endblock %}
+{% block title %}查看配置文件 - 自动化运维工具{% endblock %}
 
 {% block content %}
-<h2>鏌ョ湅閰嶇疆鏂囦欢: {{ config_data.name }}</h2>
+<h2>查看配置文件</h2>
 
 <div class="config-view-actions">
-    <a href="{{ url_for('config') }}" class="btn btn-secondary">杩斿洖閰嶇疆绠＄悊</a>
-    <a href="{{ url_for('edit_config', filename=config_data.name) }}" class="btn btn-warning">缂栬緫鏂囦欢</a>
+    <a href="{{ url_for('config') }}" class="btn btn-secondary">返回配置管理</a>
+    <!-- <a href="{{ url_for('edit_config', filename=config_data.name) }}" class="btn btn-primary">编辑文件</a> -->
+    <!-- 编辑功能暂未实现，暂时注释掉 -->
 </div>
 
 <div class="config-content">
-    <h3>鏂囦欢鍐呭</h3>
+    <h3>{{ config_data.name }}</h3>
     {% if config_data.error %}
-    <div class="error-message">
-        <p><strong>閿欒:</strong> {{ config_data.error }}</p>
-    </div>
+        <div class="alert alert-danger">
+            <strong>错误:</strong> {{ config_data.error }}
+        </div>
     {% else %}
-    <div class="file-content">
-        {% if config_data.type == "JSON" %}
-        <pre class="json-content">{{ config_data.content }}</pre>
-        {% elif config_data.type == "YAML" %}
-        <pre class="yaml-content">{{ config_data.content }}</pre>
+        {% if config_data.type == 'JSON' %}
+            <pre class="config-pre json">{{ config_data.content }}</pre>
+        {% elif config_data.type == 'YAML' %}
+            <pre class="config-pre yaml">{{ config_data.content }}</pre>
         {% else %}
-        <pre class="text-content">{{ config_data.content }}</pre>
+            <pre class="config-pre text">{{ config_data.content }}</pre>
         {% endif %}
-    </div>
     {% endif %}
 </div>
 {% endblock %}
@@ -36,41 +35,48 @@
     margin-bottom: 20px;
 }
 
-.file-content {
+.config-content {
+    margin-top: 20px;
+}
+
+.config-content h3 {
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.config-pre {
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
     border-radius: 4px;
     padding: 15px;
-    overflow-x: auto;
-}
-
-.file-content pre {
-    margin: 0;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     line-height: 1.4;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
-.json-content {
-    color: #007acc;
+.config-pre.json {
+    border-left: 4px solid #007bff;
 }
 
-.yaml-content {
-    color: #ff6600;
+.config-pre.yaml {
+    border-left: 4px solid #28a745;
 }
 
-.text-content {
-    color: #333;
+.config-pre.text {
+    border-left: 4px solid #6c757d;
 }
 
-.error-message {
+.alert-danger {
+    color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
     border-radius: 4px;
-    padding: 15px;
-    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 </style>
 {% endblock %}

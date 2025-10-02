@@ -12,11 +12,11 @@ function showMessage(message, type = 'info') {
     const messageElement = document.createElement('div');
     messageElement.className = `message message-${type}`;
     messageElement.textContent = message;
-    
+
     // 添加到页面顶部
     const container = document.querySelector('.container');
     container.insertBefore(messageElement, container.firstChild);
-    
+
     // 3秒后自动移除消息
     setTimeout(() => {
         messageElement.remove();
@@ -34,13 +34,13 @@ function confirmAction(message, callback) {
 function validateForm(formId) {
     const form = document.getElementById(formId);
     const inputs = form.querySelectorAll('input[required]');
-    
+
     for (let input of inputs) {
         if (!input.value.trim()) {
             showMessage(`请输入${input.previousElementSibling.textContent}`, 'error');
             return false;
         }
     }
-    
+
     return true;
 }

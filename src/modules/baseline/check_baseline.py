@@ -160,11 +160,11 @@ class BaselineChecker:
         project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
         
         if rules_file is None:
-            rules_file = os.path.join(project_root, 'config', 'baseline_rules.yaml')
+            rules_file = os.path.join(project_root, 'config', 'rule', 'baseline_rules.yaml')
             
         self.rules = self._load_rules(rules_file)
         # 加载修复建议
-        suggestions_file = os.path.join(project_root, 'config', 'remediation_suggestions.yaml')
+        suggestions_file = os.path.join(project_root, 'config', 'rule', 'remediation_suggestions.yaml')
         self.remediation_suggestions = self._load_remediation_suggestions(suggestions_file)
         self.max_workers = max_workers
         self.executor = ThreadPoolExecutor(max_workers=max_workers)

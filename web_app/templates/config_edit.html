@@ -1,33 +1,33 @@
 {% extends "base.html" %}
 
-{% block title %}缂栬緫閰嶇疆鏂囦欢 - 鑷姩鍖栬繍缁村伐鍏穥% endblock %}
+{% block title %}编辑配置文件 - 自动化运维工具{% endblock %}
 
 {% block content %}
-<h2>缂栬緫閰嶇疆鏂囦欢: {{ config_data.name }}</h2>
+<h2>编辑配置文件: {{ filename }}</h2>
 
 <div class="config-edit-actions">
-    <a href="{{ url_for('config') }}" class="btn btn-secondary">杩斿洖閰嶇疆绠＄悊</a>
-    <a href="{{ url_for('view_config', filename=config_data.name) }}" class="btn btn-info">鏌ョ湅鏂囦欢</a>
+    <a href="{{ url_for('config') }}" class="btn btn-secondary">返回配置管理</a>
+    <a href="{{ url_for('view_config_file', filename=filename) }}" class="btn btn-info">查看文件</a>
 </div>
 
-<form id="edit-config-form" method="POST">
+<form id="edit-config-form" method="POST" action="{{ url_for('edit_config', filename=filename) }}">
     <div class="form-group">
-        <label for="file_type">鏂囦欢绫诲瀷:</label>
+        <label for="file_type">文件类型:</label>
         <select id="file_type" name="file_type">
-            <option value="TEXT" {% if config_data.type == "TEXT" %}selected{% endif %}>鏂囨湰</option>
-            <option value="JSON" {% if config_data.type == "JSON" %}selected{% endif %}>JSON</option>
-            <option value="YAML" {% if config_data.type == "YAML" %}selected{% endif %}>YAML</option>
+            <option value="TEXT" {% if file_type == "TEXT" %}selected{% endif %}>文本</option>
+            <option value="JSON" {% if file_type == "JSON" %}selected{% endif %}>JSON</option>
+            <option value="YAML" {% if file_type == "YAML" %}selected{% endif %}>YAML</option>
         </select>
     </div>
     
     <div class="form-group">
-        <label for="content">鏂囦欢鍐呭:</label>
-        <textarea id="content" name="content" rows="20" class="form-control">{{ config_data.content }}</textarea>
+        <label for="content">文件内容:</label>
+        <textarea id="content" name="content" rows="20" class="form-control">{{ content }}</textarea>
     </div>
     
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary">淇濆瓨閰嶇疆</button>
-        <button type="button" class="btn btn-secondary" onclick="history.back()">鍙栨秷</button>
+        <button type="submit" class="btn btn-primary">保存配置</button>
+        <button type="button" class="btn btn-secondary" onclick="history.back()">取消</button>
     </div>
 </form>
 
@@ -102,13 +102,13 @@ document.getElementById('edit-config-form').addEventListener('submit', function(
         
         if (data.success) {
             resultDiv.className = 'save-result success';
-            resultDiv.innerHTML = '<strong>鎴愬姛:</strong> ' + data.message;
+            resultDiv.innerHTML = '<strong>成功:</strong> ' + data.message;
         } else {
             resultDiv.className = 'save-result error';
-            resultDiv.innerHTML = '<strong>閿欒:</strong> ' + data.message;
+            resultDiv.innerHTML = '<strong>错误:</strong> ' + data.message;
         }
         
-        // 3绉掑悗鑷姩闅愯棌缁撴灉鎻愮ず
+        // 3秒后自动隐藏结果提示
         setTimeout(() => {
             resultDiv.style.display = 'none';
         }, 3000);
@@ -117,9 +117,9 @@ document.getElementById('edit-config-form').addEventListener('submit', function(
         const resultDiv = document.getElementById('save-result');
         resultDiv.style.display = 'block';
         resultDiv.className = 'save-result error';
-        resultDiv.innerHTML = '<strong>閿欒:</strong> 淇濆瓨閰嶇疆鏃跺彂鐢熼敊璇? ' + error.message;
+        resultDiv.innerHTML = '<strong>错误:</strong> 保存配置时发生错误: ' + error.message;
         
-        // 3绉掑悗鑷姩闅愯棌缁撴灉鎻愮ず
+        // 3秒后自动隐藏结果提示
         setTimeout(() => {
             resultDiv.style.display = 'none';
         }, 3000);

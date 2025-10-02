@@ -1,11 +1,13 @@
-# -*- coding: utf-8 -*-
+# ITSM变更自动化工具开发指南
 
 ## 项目概述
-自动化运维工具是一个Python项目，用于简化运维任务，提高效率。该工具能够自动化IT服务管理(ITSM)的变更流程，包括但不限于信息采集、处理、配置生成等功能。
+
+ITSM变更自动化工具是一个用于自动化IT服务管理(ITSM)中变更流程的Python项目。它能够自动部署应用程序到目标服务器，采集设备信息，处理采集的数据，生成配置文件，并管理应用程序的配置。
 
 ## 技术栈
+
 - **编程语言**: Python 3.12
-- **依赖库**: 
+- **依赖库**:
   - requests: 用于发送HTTP请求和API调用
   - pytest: 用于编写和运行测试用例
   - netmiko: 用于SSH连接和配置设备
@@ -16,157 +18,77 @@
   - mysql-connector-python: 用于连接和操作MySQL数据库
   - sendgrid: 用于发送邮件
 
-## 项目目录结构
-项目采用模块化结构设计，主要包含以下目录和文件：
-- `.gitignore`: Git忽略文件
-- `.idea/`: IDE配置文件
-- `.trae/`: Trae配置文件
-- `README.md`: 项目说明文档
-- `main.py`: 主程序入口
-- `project_organization.md`: 项目组织优化建议
-- `requirements.txt`: 依赖包列表
-- `setup_guide.md`: 安装设置指南
-- `src/`: 源代码目录
-  - `__init__.py`: 包初始化文件
-  - `core/`: 核心功能模块
-    - `config_manager.py`: 配置管理类
-  - `modules/`: 各功能模块
-    - `ali_cloud_apis/`: 阿里云API模块
-      - `aliyun_api.py`: 实现阿里云API数据获取
-    - `collection/`: 信息采集模块
-    - `configuration/`: 配置生成模块
-    - `deployment/`: 自动部署模块
-    - `itsm/`: ITSM模块
-      - `itsm.py`: 调用ITSM，完成变更填写
-    - `management/`: 配置管理模块
-    - `processing/`: 信息处理模块
-      - `process_order.py`: 处理用户需求订单，生成配置脚本
-  - `utils/`: 通用工具函数
-    - `logger.py`: 日志工具
-  - `config/`: 配置文件
-    - `config.json`: 配置文件
-- `tests/`: 测试代码
-- `docs/`: 文档
-  - `README.md`: 文档目录说明
-  - `DEVELOPMENT.md`: 开发文档
-- `scripts/`: 脚本工具
-  - `install_linux.sh`: Linux安装脚本
-  - `install_windows.bat`: Windows安装脚本
-- `templates/`: 模板文件
-  - `hillstone/`: Hillstone模板
-  - `*.xlsx`: Excel模板
-- `data/`: 数据存储
-  - `input/`: 输入数据
-    - `order/`: 订单数据
-    - `test_order/`: 测试订单
-  - `output/`: 输出数据
-    - `change_scripts/`: 变更脚本
-- `packages/`: 依赖包存储
-  - `win_packages/`: Windows依赖包
-  - `linux_packages/`: Linux依赖包
-- `logs/`: 日志文件
-- `.venv/`: Python虚拟环境
-- `task.md`: 项目任务清单与状态跟踪
+## 详细目录结构
+
+```
+NetOps/
+├── config/                 # 配置文件目录
+│   ├── device/            # 设备相关配置
+│   ├── itsm/              # ITSM相关配置
+│   └── rule/              # 规则配置文件
+├── data/                  # 数据目录
+│   ├── input/             # 输入数据
+│   │   └── inventory/     # Inventory文件
+│   └── output/            # 输出数据
+│       └── debug_test/    # 调试测试输出
+├── docs/                  # 文档目录
+├── logs/                  # 日志目录
+├── src/                   # 源代码目录
+│   └── modules/           # 功能模块
+│       ├── apis/          # API相关模块
+│       ├── baseline/      # 基线检查模块
+│       ├── collection/    # 信息采集模块
+│       ├── inventory_converter/  # Inventory转换模块
+│       ├── itsm/          # ITSM流程处理模块
+│       ├── processing/    # 数据处理模块
+│       └── web_app/       # Web应用模块
+└── tests/                 # 测试目录
+```
 
 ## 功能模块
 
-### 1. 基础架构搭建
-- 项目目录结构设计
-- 虚拟环境配置(Python 3.12)
-- 依赖包安装与管理
-- 版本控制初始化
+### 1. 基线检查模块 (src/modules/baseline)
 
-### 2. 自动部署模块
-- 设计部署流程和策略
-- 开发应用程序打包功能
-- 实现目标服务器连接管理
-- 开发文件传输功能
-- 实现应用程序安装与启动脚本
-- 添加部署结果验证
+实现网络设备配置基线检查功能，支持多种设备平台。
 
-### 3. 信息采集模块
-- 设计设备信息采集接口
-- 实现基于API的信息采集功能(使用requests库)
-- 实现基于SSH的信息采集功能(使用netmiko库)
-- 开发数据存储机制
-- 添加采集任务调度功能
+主要文件：
+- `check_baseline.py` - 基线检查核心逻辑
+- `generate_summary_report.py` - 生成汇总报告
 
-### 4. 信息处理模块
-- 设计数据转换接口
-- 实现原始数据清洗功能
-- 开发数据格式化处理功能
-- 实现数据标准化功能
-- 添加异常数据处理机制
+### 2. 信息采集模块 (src/modules/collection)
 
-### 5. Excel到设备Inventory转换模块
-- 实现Excel文件读取和解析功能(使用pandas和openpyxl库)
-- 开发设备信息智能识别功能(IP地址、主机名、端口等)
-- 添加数据过滤功能(只包含有效IP地址且状态为'启用'的设备)
-- 实现设备类型自动识别功能(支持Cisco、Huawei等常见网络设备)
-- 开发多格式inventory文件生成功能(JSON和INI格式)
-- 添加结果验证和日志记录
+通过SSH或API方式采集设备信息。
 
-### 5. 配置生成模块
-- 设计配置模板系统(使用jinja2库)
-- 开发模板管理功能
-- 实现数据与模板的绑定功能
-- 添加配置文件生成与导出功能
-- 实现配置文件验证功能
+### 3. 数据处理模块 (src/modules/processing)
 
-### 6. 配置管理模块
-- 设计配置文件存储结构
-- 实现配置文件版本控制
-- 开发配置文件比较功能
-- 添加配置文件回滚功能
-- 实现配置文件导入导出功能
+处理采集到的数据，转换为可用格式。
 
-### 7. 自动备份模块(暂停开发)
-- 设计备份策略和计划
-- 实现数据库备份功能(使用mysql-connector-python库)
-- 开发文件系统备份功能
-- 添加备份压缩和加密功能
-- 实现备份存储管理和清理功能
-- 开发备份恢复功能
+### 4. Inventory转换模块 (src/modules/inventory_converter)
 
-### 8. 自动监控模块(暂停开发)
-- 设计监控指标体系
-- 实现服务器资源监控(CPU、内存、磁盘、网络)
-- 开发应用程序运行状态监控
-- 添加监控数据采集和存储
-- 实现监控告警阈值设置
+将Excel格式的设备信息转换为Inventory文件。
 
-### 9. 自动报警模块(暂停开发)
-- 设计告警规则和级别
-- 实现邮件报警功能(使用sendgrid库)
-- 开发短信或其他通知渠道
-- 添加告警确认和处理流程
-- 实现告警统计和报表功能
+### 5. ITSM流程处理模块 (src/modules/itsm)
 
-### 10. 测试与质量保障
-- 编写单元测试用例(使用pytest库)
-- 开发集成测试用例
-- 实现自动化测试流程
-- 添加代码质量检查
-- 开发性能测试功能
+处理ITSM工单，与ITSM系统交互。
 
-### 11. 文档与部署
-- 编写用户手册
-- 开发API文档
-- 编写部署指南
-- 添加系统维护文档
-- 实现帮助文档集成
+### 6. API相关模块 (src/modules/apis)
 
-## 依赖管理
-- **Python版本**: 必须使用Python 3.12
-- **虚拟环境**: 建议使用虚拟环境进行开发
-- **依赖包下载**: 
-  - 需分别下载Windows和Linux平台的依赖包
-  - Windows依赖包放置在win_packages文件夹
-  - Linux依赖包放置在linux_packages文件夹
-  - 所有依赖包应使用清华源进行下载
+处理与各种API的交互。
 
-## 注意事项
-1. 前期工作已完成部分功能，包括阿里云API数据获取和ITSM操作
-2. 编码过程中应利用已有脚本完成相关功能
-3. 7/8/9模块(自动备份、自动监控、自动报警)应暂停开发
-4. 所有操作应遵循项目规范和最佳实践
+### 7. Web应用模块 (src/modules/web_app)
+
+提供Web界面用于查看报告和管理配置。
+
+## 依赖管理注意事项
+
+1. 所有依赖包应使用清华源进行下载
+2. 定期更新依赖包版本
+3. 分离开发依赖和生产依赖
+4. 使用虚拟环境隔离依赖
+
+## 开发环境设置
+
+1. 克隆项目到本地
+2. 创建虚拟环境: `python -m venv .venv`
+3. 激活虚拟环境: `source .venv/bin/activate` (Linux/Mac) 或 `.venv\Scripts\activate` (Windows)
+4. 安装依赖: `pip install -r requirements.txt -r requirements-dev.txt`

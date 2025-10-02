@@ -9,7 +9,7 @@ import json
 import os
 
 # 配置文件路径
-CONFIG_PATH = os.path.join('e:/Development/Python/NetOps/config', 'device_mapping_config.json')
+CONFIG_PATH = os.path.join('e:/Development/Python/NetOps/config', 'device', 'device_mapping_config.json')
 
 def load_config():
     """加载配置文件"""

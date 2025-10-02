@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 class ConfigManager:
     """配置管理器类"""
 
-    def __init__(self, config_dir: str = "config"):
+    def __init__(self, config_dir: str = "config/device"):
         """
         初始化配置管理器
 
@@ -30,6 +30,21 @@ class ConfigManager:
         if not self.config_dir.exists():
             self.config_dir.mkdir(parents=True, exist_ok=True)
             logger.info(f"创建配置目录: {self.config_dir}")
+
+    @classmethod
+    def get_device_config_manager(cls):
+        """获取设备配置管理器实例"""
+        return cls("config/device")
+    
+    @classmethod
+    def get_rule_config_manager(cls):
+        """获取规则配置管理器实例"""
+        return cls("config/rule")
+    
+    @classmethod
+    def get_system_config_manager(cls):
+        """获取系统配置管理器实例"""
+        return cls("config/itsm")
 
     def _get_file_description(self, filename: str) -> str:
         """

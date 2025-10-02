@@ -1,9 +1,14 @@
+# 基线检查规则配置文件
+# 该文件定义了不同平台设备的基线检查规则
+
+# 通用规则（适用于所有平台）
 common:
   - rule: "service password-encryption"
     description: "密码加密必须启用"
   - rule: "logging buffered"
     description: "必须配置日志缓冲"
 
+# Cisco IOS平台规则
 cisco_ios:
   - rule: "aaa new-model"
     description: "必须启用AAA认证"
@@ -12,12 +17,14 @@ cisco_ios:
   - rule: "no ip domain-lookup"
     description: "禁用域名解析"
 
+# 华为VRP平台规则
 huawei_vrp:
   - rule: "stelnet server enable"
     description: "必须启用SSH服务器"
   - rule: "info-center loghost"
     description: "必须配置日志服务器"
 
+# H3C/HP Comware平台规则
 hp_comware:
   - rule: "password hash"
     description: "必须配置用户密码密文"

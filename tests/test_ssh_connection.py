@@ -11,7 +11,7 @@ from netmiko.exceptions import NetMikoTimeoutException, NetMikoAuthenticationExc
 
 def load_ssh_config():
     """从配置文件加载SSH设备信息"""
-    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config', 'ssh_config.json')
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config', 'device', 'ssh_config.json')
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
             config = json.load(f)

@@ -70,8 +70,8 @@ def test_baseline():
         current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         
         # 定义配置文件路径
-        ssh_config_path = os.path.join(current_dir, 'config', 'ssh_config.json')
-        rules_file_path = os.path.join(current_dir, 'config', 'baseline_rules.yaml')
+        ssh_config_path = os.path.join(current_dir, 'config', 'device', 'ssh_config.json')
+        rules_file_path = os.path.join(current_dir, 'config', 'rule', 'baseline_rules.yaml')
         
         # 检查配置文件是否存在
         if not os.path.exists(ssh_config_path):
